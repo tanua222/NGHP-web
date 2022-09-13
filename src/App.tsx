@@ -1,34 +1,31 @@
-import React from 'react';
-import {BrowserRouter, Route, Routes, Navigate} from 'react-router-dom';
+import React, {Suspense} from 'react';
+import {Route, Routes} from 'react-router-dom';
+import {ROUTER_KEYS} from './utils/routeKeys';
+
+// import CSSReset from '@tds/core-css-reset';
+// import type {AlliumProvider} from '@telus-uds/ds-allium';
 // import GlobalStylesAllium from './IvsGlobalStyle.js';
-
-// const CSSReset = require('@tds/core-css-reset');
-// const AlliumProvider = require('@telus-uds/ds-allium');
-
+import APP_ROUTES from './config/routes';
 import './App.scss';
-import Home from './components/Home/Home';
 
 const App: React.FC = () => {
     return (
-        <BrowserRouter>
-            <div>HOMEEEEEE</div>
+        <Suspense fallback={<></>}>
             <Routes>
-                <Route path="/" element={Home} />
-            </Routes>
-            <Navigate to="/" />
-        </BrowserRouter>
-    );
+                {APP_ROUTES.map((item, index) => {
+                    const GET_COMPONENT = item[ROUTER_KEYS.COMPONENT] ?? <></>;
 
-    //   return (
-    //     <AlliumProvider>
-    //         <BrowserRouter>
-    //             <CSSReset />
-    //             <GlobalStylesAllium />
-    //             <Route path="/" element={Home} />
-    //             <Navigate to="/" />
-    //         </BrowserRouter>
-    //     </AlliumProvider>
-    // );
+                    return (
+                        <Route
+                            path={item[ROUTER_KEYS.PATH_NAME]}
+                            element={<GET_COMPONENT />}
+                            key={index}
+                        />
+                    );
+                })}
+            </Routes>
+        </Suspense>
+    );
 };
 
 export default App;
