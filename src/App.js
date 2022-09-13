@@ -22,7 +22,11 @@ const App = () => {
                         return (
                             <Route
                                 path={item[ROUTER_KEYS.PATH_NAME]}
-                                element={<GET_COMPONENT />}
+                                element={
+                                    <div className="px-15px">
+                                        <GET_COMPONENT />
+                                    </div>
+                                }
                                 key={index}
                             />
                         );

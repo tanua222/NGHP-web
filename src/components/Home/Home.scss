@@ -1,5 +1,10 @@
 .home {
     &-title-root {
-        padding: 50px 0 0 50px;
+        padding: 40px 0 0 35px;
+    }
+
+    &-entries-dropdown {
+        display: flex;
+        gap: 7px;
     }
 }
