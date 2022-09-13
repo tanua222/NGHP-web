@@ -4,12 +4,12 @@ import {useCallback, useEffect, useState} from 'react';
 import {REACT_APP_NODE_JS_BACKEND_URL} from '../utils/axiosInstances';
 
 const useAxiosGet = (
-    url: string,
+    url,
     initialFetch = true,
     api = REACT_APP_NODE_JS_BACKEND_URL,
     initialRes = {},
 ) => {
-    const [response, setResponse] = useState<object>(initialRes);
+    const [response, setResponse] = useState(initialRes);
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(true);
 
@@ -61,7 +61,7 @@ const useAxiosGet = (
                             setIsLoading(false);
                         }
                     });
-            } catch (err: any) {
+            } catch (err) {
                 if (err.response && err.response.status === 400) {
                     setError(err.response.data);
                 } else if (!axios.isCancel(err)) {

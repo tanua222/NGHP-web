@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import './Home.scss';
 import useAxiosGet from '../../hooks/useAxiosGet';
-import SelectDropDown from '../shared/SelectDropDown/SelectDropDown';
 
 const DUMMY_OPTIONS = [
     {label: 'Audi', value: 'Audi'},
@@ -18,11 +17,6 @@ const Home = () => {
             <div className="home-title-root">
                 <h4>Homepage</h4>
             </div>
-            <SelectDropDown
-                options={DUMMY_OPTIONS}
-                getState={showEntriesDropdown}
-                setState={setShowEntriesDropdown}
-            />
         </div>
     );
 };
