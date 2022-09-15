@@ -1,6 +1,6 @@
 import React, {Suspense} from 'react';
 import {Route, Routes} from 'react-router-dom';
-import {ROUTER_KEYS} from './utils/routeKeys';
+import {ROUTER_KEYS} from './Components/Util/routeKeys';
 
 import CSSReset from '@tds/core-css-reset';
 import {AlliumProvider} from '@telus-uds/ds-allium';

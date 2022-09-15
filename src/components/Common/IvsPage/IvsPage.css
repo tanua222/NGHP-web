@@ -1,0 +1,11 @@
+.IvsTitleBar {
+	background: #4b286d;
+	color: white;
+	font-weight: bold;
+} 
+
+.IvsBox {
+	margin: 4px;
+	border: 1px solid #71757b;
+	padding: 4px;
+}

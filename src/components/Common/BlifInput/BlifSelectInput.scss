@@ -23,4 +23,12 @@
     &-small-width {
         width: 70px;
     }
+
+    &-BlifSelectInput > div > div:hover > select:not(:focus) {
+        border-color: #66afe9 !important;
+    }
+
+    &-BlifSelectInput > div > div > select:focus {
+        border-color: #66afe9 !important;
+    }
 }

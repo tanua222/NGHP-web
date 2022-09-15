@@ -1,7 +1,7 @@
 import axios from 'axios';
 import {useCallback, useEffect, useState} from 'react';
 
-import {REACT_APP_NODE_JS_BACKEND_URL} from '../utils/axiosInstances';
+import {REACT_APP_NODE_JS_BACKEND_URL} from '../Components/Util/axiosInstances';
 
 const useAxiosGet = (
     url,

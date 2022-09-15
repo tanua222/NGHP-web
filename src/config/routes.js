@@ -1,5 +1,5 @@
 import React from 'react';
-import {ROUTER_KEYS} from '../utils/routeKeys';
+import {ROUTER_KEYS} from '../Components/Util/routeKeys';
 
 const Home = React.lazy(() => import('../Components/Home/Home'));
 const Search = React.lazy(() => import('../Components/Search/Search'));

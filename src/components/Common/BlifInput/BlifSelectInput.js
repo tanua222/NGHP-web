@@ -1,10 +1,10 @@
 import React, {useState, useEffect, useRef} from 'react';
-import validate from '../../Validations/FieldValidation';
+import validate from '../../../Validations/FieldValidation';
 import {useTranslation} from 'react-i18next';
 import {Select} from '@telus-uds/ds-allium';
-import './IvsSelectInput.scss';
+import './BlifSelectInput.scss';
 
-const IvsSelectInput = (props) => {
+const BlifSelectInput = (props) => {
     const {
         label,
         smallInputHeight,
@@ -62,7 +62,8 @@ const IvsSelectInput = (props) => {
         <div
             ref={ref}
             className={`${smallInputHeight && 'Select-input-small-height'}
-            ${smallInputWidth && 'Select-input-small-width'}`}>
+            ${smallInputWidth && 'Select-input-small-width'}
+            Select-input-BlifSelectInput`}>
             <Select
                 hint={hint}
                 hintPosition={hintPosition}
@@ -106,4 +107,4 @@ const IvsSelectOption = ({option}) => (
     <Select.Item value={option.value}>{option.text}</Select.Item>
 );
 
-export default IvsSelectInput;
+export default BlifSelectInput;

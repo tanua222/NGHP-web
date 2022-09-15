@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import './Home.scss';
 import useAxiosGet from '../../hooks/useAxiosGet';
-import IvsSelectInput from '../BlifInput/IvsSelectInput';
+import BlifSelectInput from '../Common/BlifInput/BlifSelectInput';
+import DataTableTest from '../Common/IvsDataTable/DataTableTest';
 
 let options = [
     {text: '1', value: '1'},
@@ -19,7 +20,7 @@ const Home = () => {
             </div>
             <div className="home-entries-dropdown">
                 <div className="font-14px">Show</div>
-                <IvsSelectInput
+                <BlifSelectInput
                     smallInputHeight
                     smallInputWidth
                     placeholder={' '}
@@ -35,6 +36,8 @@ const Home = () => {
                 />
                 <div className="font-14px">entries</div>
             </div>
+
+            <DataTableTest />
         </div>
     );
 };

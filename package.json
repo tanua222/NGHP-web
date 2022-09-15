@@ -3,7 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@tds/core-box": "^2.4.3",
+    "@tds/core-checkbox": "^2.1.7",
+    "@tds/core-colours": "^2.2.4",
     "@tds/core-css-reset": "^3.0.4",
+    "@tds/core-interactive-icon": "^2.4.3",
+    "@tds/core-text": "^3.2.3",
     "@telus-uds/ds-allium": "1.8.0",
     "@telus-uds/palette-allium": "^2.1.0",
     "@types/node": "^16.11.57",
