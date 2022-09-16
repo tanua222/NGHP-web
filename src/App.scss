@@ -1,3 +1,13 @@
+// Variables
+:root {
+    --navbar-height: 55px;
+    --telus-text-purple-color: #49166d;
+}
+
+.paragraph {
+    font-size: 14px;
+}
+
 .h1,
 .h2,
 .h3,
@@ -39,9 +49,67 @@
     line-height: 20px;
 }
 
-// font-sizes
+// Colors
+
+.purple-text {
+    color: var(--telus-text-purple-color);
+}
+
+// fonts
 .font-14px {
     font-size: 14px;
+}
+
+.font-15px {
+    font-size: 15px;
+}
+
+.font-16px {
+    font-size: 16px;
+}
+
+.font-17px {
+    font-size: 17px;
+}
+
+.font-18px {
+    font-size: 18px;
+}
+
+.font-19px {
+    font-size: 19px;
+}
+
+.font-20px {
+    font-size: 20px;
+}
+
+.font-weight-100 {
+    font-weight: 100;
+}
+
+.font-weight-200 {
+    font-weight: 200;
+}
+
+.font-weight-300 {
+    font-weight: 300;
+}
+
+.font-weight-400 {
+    font-weight: 400;
+}
+
+.font-weight-500 {
+    font-weight: 500;
+}
+
+.font-weight-600 {
+    font-weight: 600;
+}
+
+.font-weight-700 {
+    font-weight: 700;
 }
 
 //paddings

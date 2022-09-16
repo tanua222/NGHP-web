@@ -1,0 +1,26 @@
+.header {
+    &-root {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        height: var(--navbar-height);
+    }
+
+    &-first-section {
+        display: flex;
+        gap: 40px;
+    }
+
+    &-logo-root {
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+    }
+
+    &-logo-text {
+        border-left: 1px solid #e2e2e2;
+        padding-left: 10px;
+    }
+}
