@@ -6,11 +6,18 @@
         align-items: center;
         gap: 20px;
         height: var(--navbar-height);
+        box-shadow: rgb(169 169 169) 0px 4px 8px -2px;
     }
 
     &-first-section {
         display: flex;
-        gap: 40px;
+        gap: 30px;
+        height: 100%;
+    }
+
+    &-tabs-root {
+        display: flex;
+        align-items: flex-end;
     }
 
     &-logo-root {

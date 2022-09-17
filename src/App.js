@@ -26,7 +26,7 @@ const App = () => {
                                 path={item[ROUTER_KEYS.PATH_NAME]}
                                 element={
                                     <>
-                                        <div className="px-15px">
+                                        <div className="header-margin-top px-15px">
                                             <GET_COMPONENT />
                                         </div>
                                     </>

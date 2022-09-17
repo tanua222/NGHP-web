@@ -47,11 +47,11 @@ const Header = () => {
                         width={160}
                         height={46}
                     />
-                    <p className="font-19px purple-text font-weight-500 header-logo-text">
+                    <p className="font-19px purple-text font-weight-500 header-logo-text no-wrap">
                         BLIF - CLEC
                     </p>
                 </div>
-                <div className="">
+                <div className="header-tabs-root">
                     <BlifTabs
                         options={blifTabOptions}
                         value={headerTabsValue}

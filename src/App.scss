@@ -4,6 +4,10 @@
     --telus-text-purple-color: #49166d;
 }
 
+.header-margin-top {
+    margin-top: var(--navbar-height);
+}
+
 .paragraph {
     font-size: 14px;
 }
@@ -115,4 +119,9 @@
 //paddings
 .px-15px {
     padding: 0 15px;
+}
+
+// wrap
+.no-wrap {
+    white-space: nowrap;
 }
