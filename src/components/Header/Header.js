@@ -107,7 +107,7 @@ const Header = () => {
                         <FlexGrid gutter={false} limitWidth={false}>
                             <FlexGrid.Col flex="true">
                                 <FlexGrid.Row verticalAlign="middle">
-                                    <FlexGrid.Col flex="true" xlOffset={0}>
+                                    <FlexGrid.Col flex="true">
                                         <Image
                                             alt="Telus header logo"
                                             src={telus_header}
