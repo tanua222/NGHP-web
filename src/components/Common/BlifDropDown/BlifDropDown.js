@@ -11,6 +11,8 @@ const BlifDropDown = ({
     TITLE_LABEL = '',
     DROPDOWN_OPTIONS = [],
     selectedDropDownValue,
+    styles,
+    Icon = <></>,
 }) => {
     const ref = useRef();
 
@@ -32,14 +34,18 @@ const BlifDropDown = ({
                     showDropdownOptions && 'BlifDropDown-activate-green-color'
                 }`}>
                 <Tab
-                    label={TITLE_LABEL}
                     value={TITLE_LABEL}
                     onClick={toggleDropdown}
+                    icon={Icon}
+                    iconPosition="end"
+                    label={TITLE_LABEL}
                 />
             </Tabs>
 
             {showDropdownOptions && (
-                <div className="z-ultra-high position-absolute BlifDropDown-root">
+                <div
+                    className="z-ultra-high position-absolute BlifDropDown-root"
+                    style={styles}>
                     {DROPDOWN_OPTIONS.map((item, index) => (
                         <div
                             className={`BlifDropDown-child ${

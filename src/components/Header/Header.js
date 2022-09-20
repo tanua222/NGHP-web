@@ -13,6 +13,9 @@ import {MISCELLANEOUS_KEYS} from '../../utils/languageKeys/miscellaneousKeys';
 import COMMON_LANGUAGE_KEYS from '../../utils/languageKeys/commonKeys';
 import {FlexGrid} from '@telus-uds/ds-allium';
 import {Typography} from '@telus-uds/ds-allium';
+import {Divider} from '@telus-uds/ds-allium';
+import {CaretDown} from '@telus-uds/palette-allium/build/web/icons';
+import {Icon} from '@telus-uds/ds-allium';
 
 const Header = () => {
     const location = useLocation();
@@ -93,74 +96,98 @@ const Header = () => {
     };
 
     return (
-        <FlexGrid limitWidth={false}>
-            <FlexGrid.Row
-                outsideGutter={false}
-                horizontalAlign="start"
-                distribute="between"
-                verticalAlign="top">
-                <FlexGrid.Col>
-                    <FlexGrid gutter={false} limitWidth={false}>
-                        <FlexGrid.Col flex="true">
-                            <FlexGrid.Row verticalAlign="middle">
-                                <FlexGrid.Col flex="true" xlOffset={0}>
-                                    <Image
-                                        alt="Telus header logo"
-                                        src={telus_header}
-                                        width={160}
-                                        height={46}
-                                    />
-                                </FlexGrid.Col>
-                                <FlexGrid.Col verticalAlign="middle">
-                                    <Typography
-                                        variant={{size: 'h3'}}
-                                        heading="h3">
-                                        BLIF - CLEC
-                                    </Typography>
-                                </FlexGrid.Col>
-
-                                <FlexGrid.Col>
-                                    <BlifTabs
-                                        options={blifTabOptions}
-                                        value={headerTabsValue}
-                                        handleChange={handleTabsOnChange}
-                                    />
-                                </FlexGrid.Col>
-
-                                <FlexGrid.Col>
-                                    <FlexGrid.Row>
-                                        <BlifDropDown
-                                            showDropdownOptions={
-                                                showMenuDropdownOptions
-                                            }
-                                            setShowDropdownOptions={
-                                                setShowMenuDropdownOptions
-                                            }
-                                            TITLE_LABEL={MODE_LABEL}
-                                            DROPDOWN_OPTIONS={MODE_OPTIONS}
+        <>
+            <FlexGrid limitWidth={false}>
+                <FlexGrid.Row
+                    outsideGutter={false}
+                    horizontalAlign="start"
+                    distribute="between"
+                    verticalAlign="top">
+                    <FlexGrid.Col>
+                        <FlexGrid gutter={false} limitWidth={false}>
+                            <FlexGrid.Col flex="true">
+                                <FlexGrid.Row verticalAlign="middle">
+                                    <FlexGrid.Col flex="true" xlOffset={0}>
+                                        <Image
+                                            alt="Telus header logo"
+                                            src={telus_header}
+                                            width={160}
+                                            height={46}
                                         />
+                                    </FlexGrid.Col>
+                                    <FlexGrid.Col verticalAlign="middle">
+                                        <Typography
+                                            variant={{size: 'h3'}}
+                                            heading="h3">
+                                            BLIF - CLEC
+                                        </Typography>
+                                    </FlexGrid.Col>
 
-                                        <BlifDropDown
-                                            showDropdownOptions={
-                                                showLanguageDropdownOptions
-                                            }
-                                            setShowDropdownOptions={
-                                                setShowLanguageDropdownOptions
-                                            }
-                                            TITLE_LABEL={LANGUAGE_LABEL}
-                                            DROPDOWN_OPTIONS={LANGUAGE_OPTIONS}
-                                            selectedDropDownValue={
-                                                getLocalLanguage
-                                            }
+                                    <FlexGrid.Col>
+                                        <BlifTabs
+                                            options={blifTabOptions}
+                                            value={headerTabsValue}
+                                            handleChange={handleTabsOnChange}
                                         />
-                                    </FlexGrid.Row>
-                                </FlexGrid.Col>
-                            </FlexGrid.Row>
-                        </FlexGrid.Col>
-                    </FlexGrid>
-                </FlexGrid.Col>
-            </FlexGrid.Row>
-        </FlexGrid>
+                                    </FlexGrid.Col>
+
+                                    <FlexGrid.Col>
+                                        <FlexGrid.Row>
+                                            <BlifDropDown
+                                                showDropdownOptions={
+                                                    showMenuDropdownOptions
+                                                }
+                                                setShowDropdownOptions={
+                                                    setShowMenuDropdownOptions
+                                                }
+                                                TITLE_LABEL={MODE_LABEL}
+                                                DROPDOWN_OPTIONS={MODE_OPTIONS}
+                                                styles={{left: 0}}
+                                                Icon={
+                                                    <Icon
+                                                        icon={CaretDown}
+                                                        variant={{
+                                                            size: 'micro',
+                                                            rank: 'primary',
+                                                        }}
+                                                    />
+                                                }
+                                            />
+
+                                            <BlifDropDown
+                                                showDropdownOptions={
+                                                    showLanguageDropdownOptions
+                                                }
+                                                setShowDropdownOptions={
+                                                    setShowLanguageDropdownOptions
+                                                }
+                                                TITLE_LABEL={LANGUAGE_LABEL}
+                                                DROPDOWN_OPTIONS={
+                                                    LANGUAGE_OPTIONS
+                                                }
+                                                selectedDropDownValue={
+                                                    getLocalLanguage
+                                                }
+                                                Icon={
+                                                    <Icon
+                                                        icon={CaretDown}
+                                                        variant={{
+                                                            size: 'micro',
+                                                            rank: 'primary',
+                                                        }}
+                                                    />
+                                                }
+                                            />
+                                        </FlexGrid.Row>
+                                    </FlexGrid.Col>
+                                </FlexGrid.Row>
+                            </FlexGrid.Col>
+                        </FlexGrid>
+                    </FlexGrid.Col>
+                </FlexGrid.Row>
+            </FlexGrid>
+            <Divider />
+        </>
     );
 };
 

@@ -16,6 +16,15 @@
         font-weight: 400 !important;
         padding: 4px 10px !important;
         border-bottom: 4px solid transparent;
+        display: flex !important;
+        gap: 5px !important;
+        min-height: 48px !important;
+    }
+
+    &-tabs > div > div {
+        // height: 48px;
+        display: flex;
+        align-items: center;
     }
 
     &-label-flex-end {
