@@ -1,7 +1,11 @@
 // Variables
 :root {
     --navbar-height: 55px;
+
+    //colors
     --telus-text-purple-color: #49166d;
+    --telus-text-green-color: #6c0;
+    --telus-pure-white-color: #fff;
 }
 
 .header-margin-top {
@@ -124,4 +128,18 @@
 // wrap
 .no-wrap {
     white-space: nowrap;
+}
+
+// z-indexes
+.z-ultra-high {
+    z-index: 10000000000;
+}
+
+// positions
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
 }

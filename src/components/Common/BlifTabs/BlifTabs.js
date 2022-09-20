@@ -1,7 +1,7 @@
 import React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import {LABEL_VALUE_INDEX_KEYS} from '../../../utils/commonKeys';
+import {ARRAY_MAP_KEYS} from '../../../utils/commonKeys';
 import './BlifTabs.scss';
 
 const BlifTabs = ({options = [], value, handleChange}) => {
@@ -10,14 +10,13 @@ const BlifTabs = ({options = [], value, handleChange}) => {
             <Tabs
                 value={value}
                 onChange={handleChange}
-                aria-label="basic tabs example"
                 className="blifTabs-tabs">
                 {options &&
-                    options.map((item, index) => (
+                    options.map((item) => (
                         <Tab
-                            label={item[LABEL_VALUE_INDEX_KEYS.LABEL]}
-                            value={item[LABEL_VALUE_INDEX_KEYS.VALUE]}
-                            key={item[LABEL_VALUE_INDEX_KEYS.ID]}
+                            label={item[ARRAY_MAP_KEYS.LABEL]}
+                            value={item[ARRAY_MAP_KEYS.VALUE]}
+                            key={item[ARRAY_MAP_KEYS.ID]}
                         />
                     ))}
             </Tabs>
