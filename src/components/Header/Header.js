@@ -11,6 +11,8 @@ import {ROUTER_KEYS} from '../../utils/routeKeys';
 import BlifDropDown from '../Common/BlifDropDown/BlifDropDown';
 import {MISCELLANEOUS_KEYS} from '../../utils/languageKeys/miscellaneousKeys';
 import COMMON_LANGUAGE_KEYS from '../../utils/languageKeys/commonKeys';
+import {FlexGrid} from '@telus-uds/ds-allium';
+import {Typography} from '@telus-uds/ds-allium';
 
 const Header = () => {
     const location = useLocation();
@@ -91,45 +93,74 @@ const Header = () => {
     };
 
     return (
-        <div className="header-root">
-            <div className="header-first-section">
-                <div className="header-logo-root">
-                    <Image
-                        alt="Telus header logo"
-                        src={telus_header}
-                        width={160}
-                        height={46}
-                    />
-                    <p className="font-19px purple-text font-weight-500 header-logo-text no-wrap">
-                        BLIF - CLEC
-                    </p>
-                </div>
-                <div className="header-tabs-root">
-                    <BlifTabs
-                        options={blifTabOptions}
-                        value={headerTabsValue}
-                        handleChange={handleTabsOnChange}
-                    />
-                </div>
-            </div>
+        <FlexGrid limitWidth={false}>
+            <FlexGrid.Row
+                outsideGutter={false}
+                horizontalAlign="start"
+                distribute="between"
+                verticalAlign="top">
+                <FlexGrid.Col>
+                    <FlexGrid gutter={false} limitWidth={false}>
+                        <FlexGrid.Col flex="true">
+                            <FlexGrid.Row verticalAlign="middle">
+                                <FlexGrid.Col flex="true" xlOffset={0}>
+                                    <Image
+                                        alt="Telus header logo"
+                                        src={telus_header}
+                                        width={160}
+                                        height={46}
+                                    />
+                                </FlexGrid.Col>
+                                <FlexGrid.Col verticalAlign="middle">
+                                    <Typography
+                                        variant={{size: 'h3'}}
+                                        heading="h3">
+                                        BLIF - CLEC
+                                    </Typography>
+                                </FlexGrid.Col>
 
-            <div className="header-second-section">
-                <BlifDropDown
-                    showDropdownOptions={showMenuDropdownOptions}
-                    setShowDropdownOptions={setShowMenuDropdownOptions}
-                    TITLE_LABEL={MODE_LABEL}
-                    DROPDOWN_OPTIONS={MODE_OPTIONS}
-                />
+                                <FlexGrid.Col>
+                                    <BlifTabs
+                                        options={blifTabOptions}
+                                        value={headerTabsValue}
+                                        handleChange={handleTabsOnChange}
+                                    />
+                                </FlexGrid.Col>
 
-                <BlifDropDown
-                    showDropdownOptions={showLanguageDropdownOptions}
-                    setShowDropdownOptions={setShowLanguageDropdownOptions}
-                    TITLE_LABEL={LANGUAGE_LABEL}
-                    DROPDOWN_OPTIONS={LANGUAGE_OPTIONS}
-                    selectedDropDownValue={getLocalLanguage}
-                />
-            </div>
-        </div>
+                                <FlexGrid.Col>
+                                    <FlexGrid.Row>
+                                        <BlifDropDown
+                                            showDropdownOptions={
+                                                showMenuDropdownOptions
+                                            }
+                                            setShowDropdownOptions={
+                                                setShowMenuDropdownOptions
+                                            }
+                                            TITLE_LABEL={MODE_LABEL}
+                                            DROPDOWN_OPTIONS={MODE_OPTIONS}
+                                        />
+
+                                        <BlifDropDown
+                                            showDropdownOptions={
+                                                showLanguageDropdownOptions
+                                            }
+                                            setShowDropdownOptions={
+                                                setShowLanguageDropdownOptions
+                                            }
+                                            TITLE_LABEL={LANGUAGE_LABEL}
+                                            DROPDOWN_OPTIONS={LANGUAGE_OPTIONS}
+                                            selectedDropDownValue={
+                                                getLocalLanguage
+                                            }
+                                        />
+                                    </FlexGrid.Row>
+                                </FlexGrid.Col>
+                            </FlexGrid.Row>
+                        </FlexGrid.Col>
+                    </FlexGrid>
+                </FlexGrid.Col>
+            </FlexGrid.Row>
+        </FlexGrid>
     );
 };
 
