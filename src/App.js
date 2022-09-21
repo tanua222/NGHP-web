@@ -4,7 +4,7 @@ import {ROUTER_KEYS} from './utils/routeKeys';
 
 import CSSReset from '@tds/core-css-reset';
 import {AlliumProvider} from '@telus-uds/ds-allium';
-// import GlobalStylesAllium from './IvsGlobalStyle.js';
+import GlobalStylesAllium from './IvsGlobalStyle.js';
 import useRoutes from './hooks/useRoutes';
 import './App.scss';
 import Header from './components/Header/Header';
@@ -15,6 +15,7 @@ const App = () => {
     return (
         <AlliumProvider>
             <CSSReset />
+            <GlobalStylesAllium />
             <Header />
             <Suspense fallback={<></>}>
                 <Routes>

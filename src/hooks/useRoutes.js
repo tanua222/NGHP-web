@@ -7,7 +7,6 @@ import {HEADER_LANGUAGE_KEYS} from '../utils/languageKeys/headerEnglishKeys';
 const Home = React.lazy(() => import('../components/Home/Home'));
 const Search = React.lazy(() => import('../components/Search/Search'));
 const PreCheck = React.lazy(() => import('../components/PreCheck/PreCheck'));
-const Reporting = React.lazy(() => import('../components/Reporting/Reporting'));
 const Exchanges = React.lazy(() => import('../components/Exchanges/Exchanges'));
 const BlifDownloads = React.lazy(() =>
     import('../components/BlifDownloads/BlifDownloads'),
@@ -18,7 +17,6 @@ export const ALL_ROUTES = Object.freeze({
     PRE_CHECK: '/Pre-check',
     SEARCH_ROUTE: '/Search',
     BLIF_DOWNLOADS: '/Blif-downloads',
-    REPORTING: '/Reporting',
     EXCHANGES: '/Exchanges',
 });
 
@@ -53,12 +51,6 @@ const useRoutes = () => {
                 HEADER_LANGUAGE_KEYS.HEADER_BLIF_DOWNLOADS,
             ),
             [ARRAY_MAP_KEYS.ID]: 4,
-        },
-        {
-            [ROUTER_KEYS.PATH_NAME]: ALL_ROUTES.REPORTING,
-            [ROUTER_KEYS.COMPONENT]: Reporting,
-            [ROUTER_KEYS.NAVBAR_NAME]: t(HEADER_LANGUAGE_KEYS.HEADER_REPORTING),
-            [ARRAY_MAP_KEYS.ID]: 5,
         },
         {
             [ROUTER_KEYS.PATH_NAME]: ALL_ROUTES.EXCHANGES,

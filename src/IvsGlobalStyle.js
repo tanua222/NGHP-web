@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import {createGlobalStyle} from 'styled-components';
 
 const GlobalStylesAllium = createGlobalStyle`
     @font-face {
@@ -21,7 +21,6 @@ const GlobalStylesAllium = createGlobalStyle`
         src: url('https://cdn.telus.digital/uds/v2_1_0-HelveticaNow-700-kEJDAiw_-zJyYhrVbNwbP.otf');
         font-display: block;
     }
-`; 
+`;
 
-export default GlobalStylesAllium
-
+export default GlobalStylesAllium;
