@@ -5,18 +5,20 @@ import {ROUTER_KEYS} from './utils/routeKeys';
 import CSSReset from '@tds/core-css-reset';
 import {AlliumProvider} from '@telus-uds/ds-allium';
 // import GlobalStylesAllium from './IvsGlobalStyle.js';
-import APP_ROUTES from './config/routes';
+import useRoutes from './hooks/useRoutes';
 import './App.scss';
 import Header from './components/Header/Header';
 
 const App = () => {
+    const getRoutes = useRoutes();
+
     return (
         <AlliumProvider>
             <CSSReset />
             <Header />
             <Suspense fallback={<></>}>
                 <Routes>
-                    {APP_ROUTES.map((item, index) => {
+                    {getRoutes?.map((item, index) => {
                         const GET_COMPONENT = item[ROUTER_KEYS.COMPONENT] ?? (
                             <></>
                         );
