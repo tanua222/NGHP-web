@@ -2,13 +2,13 @@ import React from 'react';
 import {ROUTER_KEYS} from '../utils/routeKeys';
 import {LABEL_VALUE_INDEX_KEYS} from '../utils/commonKeys';
 
-const Home = React.lazy(() => import('../Components/Home/Home'));
-const Search = React.lazy(() => import('../Components/Search/Search'));
-const PreCheck = React.lazy(() => import('../Components/PreCheck/PreCheck'));
-const Reporting = React.lazy(() => import('../Components/Reporting/Reporting'));
-const Exchanges = React.lazy(() => import('../Components/Exchanges/Exchanges'));
+const Home = React.lazy(() => import('../components/Home/Home'));
+const Search = React.lazy(() => import('../components/Search/Search'));
+const PreCheck = React.lazy(() => import('../components/PreCheck/PreCheck'));
+const Reporting = React.lazy(() => import('../components/Reporting/Reporting'));
+const Exchanges = React.lazy(() => import('../components/Exchanges/Exchanges'));
 const BlifDownloads = React.lazy(() =>
-    import('../Components/BlifDownloads/BlifDownloads'),
+    import('../components/BlifDownloads/BlifDownloads'),
 );
 
 export const ALL_ROUTES = Object.freeze({

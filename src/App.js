@@ -7,7 +7,7 @@ import {AlliumProvider} from '@telus-uds/ds-allium';
 // import GlobalStylesAllium from './IvsGlobalStyle.js';
 import APP_ROUTES from './config/routes';
 import './App.scss';
-import Header from './Components/Header/Header';
+import Header from './components/Header/Header';
 
 const App = () => {
     return (

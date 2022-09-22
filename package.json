@@ -16,7 +16,7 @@
     "@tds/core-image": "^2.1.3",
     "@tds/core-interactive-icon": "^2.4.3",
     "@tds/core-text": "^3.2.3",
-    "@telus-uds/ds-allium": "1.8.0",
+    "@telus-uds/ds-allium": "^1.8.0",
     "@telus-uds/palette-allium": "^2.1.0",
     "@types/node": "^16.11.57",
     "@types/react": "^17.0.2",
