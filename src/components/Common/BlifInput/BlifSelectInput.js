@@ -23,6 +23,7 @@ const BlifSelectInput = (props) => {
         stopValidate,
         name,
         disabled,
+        tokens,
     } = props;
     const {t} = useTranslation();
     const [error, setError] = useState();
