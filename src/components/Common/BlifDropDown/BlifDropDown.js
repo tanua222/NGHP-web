@@ -4,6 +4,7 @@ import './BlifDropDown.scss';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import {ARRAY_MAP_KEYS} from '../../../utils/commonKeys';
+import {Box} from '@telus-uds/ds-allium';
 
 const BlifDropDown = ({
     showDropdownOptions,
@@ -25,7 +26,7 @@ const BlifDropDown = ({
     };
 
     return (
-        <div
+        <Box
             className="position-relative BlifDropDown-label-flex-end"
             ref={ref}>
             <Tabs
@@ -64,7 +65,7 @@ const BlifDropDown = ({
                     ))}
                 </div>
             )}
-        </div>
+        </Box>
     );
 };
 

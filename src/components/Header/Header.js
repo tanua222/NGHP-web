@@ -8,33 +8,22 @@ import {ARRAY_MAP_KEYS, LOCAL_LANGUAGE} from '../../utils/commonKeys';
 import {useNavigate, useLocation} from 'react-router-dom';
 import useRoutes, {HOME_ROUTE_INDEX} from '../../hooks/useRoutes';
 import {ROUTER_KEYS} from '../../utils/routeKeys';
-import BlifDropDown from '../Common/BlifDropDown/BlifDropDown';
 import {MISCELLANEOUS_KEYS} from '../../utils/languageKeys/miscellaneousKeys';
 import COMMON_LANGUAGE_KEYS from '../../utils/languageKeys/commonKeys';
 import {FlexGrid} from '@telus-uds/ds-allium';
 import {Typography} from '@telus-uds/ds-allium';
 import {Divider} from '@telus-uds/ds-allium';
-import {CaretDown} from '@telus-uds/palette-allium/build/web/icons';
-import {Icon} from '@telus-uds/ds-allium';
+import {Spacer} from '@telus-uds/ds-allium';
+import {TextButton} from '@telus-uds/ds-allium';
 
 const Header = () => {
     const location = useLocation();
     const {t, i18n} = useTranslation();
     const getRoutes = useRoutes();
-    const getLocalLanguage = localStorage.getItem(LOCAL_LANGUAGE);
 
     const [headerTabsValue, setHeaderTabsValue] = useState(
         getRoutes?.[HOME_ROUTE_INDEX][ROUTER_KEYS.PATH_NAME],
     );
-
-    const [showMenuDropdownOptions, setShowMenuDropdownOptions] =
-        useState(false);
-
-    const [showLanguageDropdownOptions, setShowLanguageDropdownOptions] =
-        useState(false);
-
-    const MODE_LABEL = t(MISCELLANEOUS_KEYS.MODE);
-    const LANGUAGE_LABEL = t(MISCELLANEOUS_KEYS.LANGUAGE);
 
     const blifTabOptions = getRoutes?.map((item) => ({
         [ARRAY_MAP_KEYS.LABEL]: item[ROUTER_KEYS.NAVBAR_NAME],
@@ -51,7 +40,7 @@ const Header = () => {
         if (getSelectedRoute) {
             setHeaderTabsValue(getSelectedRoute[ARRAY_MAP_KEYS.VALUE]);
         }
-    }, [location.pathname]);
+    }, [location.pathname, blifTabOptions]);
 
     const navigate = useNavigate();
 
@@ -60,33 +49,7 @@ const Header = () => {
 
         localStorage.setItem(LOCAL_LANGUAGE, language);
         i18n.changeLanguage(language);
-
-        setShowLanguageDropdownOptions(false);
     };
-
-    const changeMode = () => undefined;
-
-    const LANGUAGE_OPTIONS = [
-        {
-            [ARRAY_MAP_KEYS.VALUE]: COMMON_LANGUAGE_KEYS.ENGLISH,
-            [ARRAY_MAP_KEYS.LABEL]: t(MISCELLANEOUS_KEYS.ENGLISH),
-            [ARRAY_MAP_KEYS.ON_CLICK]: changeLanguage,
-        },
-
-        {
-            [ARRAY_MAP_KEYS.VALUE]: COMMON_LANGUAGE_KEYS.FRENCH,
-            [ARRAY_MAP_KEYS.LABEL]: t(MISCELLANEOUS_KEYS.FRENCH),
-            [ARRAY_MAP_KEYS.ON_CLICK]: changeLanguage,
-        },
-    ];
-
-    const MODE_OPTIONS = [
-        {
-            [ARRAY_MAP_KEYS.VALUE]: 'TELUS',
-            [ARRAY_MAP_KEYS.LABEL]: t(MISCELLANEOUS_KEYS.TELUS),
-            [ARRAY_MAP_KEYS.ON_CLICK]: changeMode,
-        },
-    ];
 
     const handleTabsOnChange = (event, newValue) => {
         if (!newValue) return;
@@ -105,9 +68,9 @@ const Header = () => {
                     verticalAlign="top">
                     <FlexGrid.Col>
                         <FlexGrid gutter={false} limitWidth={false}>
-                            <FlexGrid.Col flex="true">
+                            <FlexGrid.Col flex={true}>
                                 <FlexGrid.Row verticalAlign="middle">
-                                    <FlexGrid.Col flex="true">
+                                    <FlexGrid.Col flex={true}>
                                         <Image
                                             alt="Telus header logo"
                                             src={telus_header}
@@ -118,8 +81,9 @@ const Header = () => {
                                     <FlexGrid.Col verticalAlign="middle">
                                         <Typography
                                             variant={{size: 'h3'}}
-                                            heading="h3">
-                                            BLIF - CLEC
+                                            heading="h3"
+                                            tokens={{fontWeight: '400'}}>
+                                            TELUS - CLEC
                                         </Typography>
                                     </FlexGrid.Col>
 
@@ -130,55 +94,47 @@ const Header = () => {
                                             handleChange={handleTabsOnChange}
                                         />
                                     </FlexGrid.Col>
+                                    <Spacer space={10} direction="row" />
 
-                                    <FlexGrid.Col>
-                                        <FlexGrid.Row>
-                                            <BlifDropDown
-                                                showDropdownOptions={
-                                                    showMenuDropdownOptions
-                                                }
-                                                setShowDropdownOptions={
-                                                    setShowMenuDropdownOptions
-                                                }
-                                                TITLE_LABEL={MODE_LABEL}
-                                                DROPDOWN_OPTIONS={MODE_OPTIONS}
-                                                styles={{left: 0}}
-                                                Icon={
-                                                    <Icon
-                                                        icon={CaretDown}
-                                                        variant={{
-                                                            size: 'micro',
-                                                            rank: 'primary',
-                                                        }}
-                                                    />
-                                                }
-                                            />
-
-                                            <BlifDropDown
-                                                showDropdownOptions={
-                                                    showLanguageDropdownOptions
-                                                }
-                                                setShowDropdownOptions={
-                                                    setShowLanguageDropdownOptions
-                                                }
-                                                TITLE_LABEL={LANGUAGE_LABEL}
-                                                DROPDOWN_OPTIONS={
-                                                    LANGUAGE_OPTIONS
-                                                }
-                                                selectedDropDownValue={
-                                                    getLocalLanguage
-                                                }
-                                                Icon={
-                                                    <Icon
-                                                        icon={CaretDown}
-                                                        variant={{
-                                                            size: 'micro',
-                                                            rank: 'primary',
-                                                        }}
-                                                    />
-                                                }
-                                            />
-                                        </FlexGrid.Row>
+                                    <FlexGrid.Col horizontalAlign="right">
+                                        {/* {userLoginName && (
+                                            <Text>{headerUser}</Text>
+                                        )}
+                                        {userLoginName && (
+                                            <Text bold>&nbsp;|&nbsp;</Text>
+                                        )} */}
+                                        <TextButton
+                                            onPress={() =>
+                                                changeLanguage(
+                                                    COMMON_LANGUAGE_KEYS.ENGLISH,
+                                                )
+                                            }>
+                                            {t(MISCELLANEOUS_KEYS.ENGLISH)}
+                                        </TextButton>
+                                        <Typography bold>
+                                            &nbsp;|&nbsp;
+                                        </Typography>
+                                        <TextButton
+                                            onPress={() =>
+                                                changeLanguage(
+                                                    COMMON_LANGUAGE_KEYS.FRENCH,
+                                                )
+                                            }>
+                                            {t(MISCELLANEOUS_KEYS.FRENCH)}
+                                        </TextButton>
+                                        {/* <Typography bold>
+                                            &nbsp;|&nbsp;
+                                        </Typography>
+                                        {
+                                            <Link
+                                                href={urlBasedOnAuthentication}
+                                                to="#"
+                                                onClick={() => {
+                                                    resetUserContext();
+                                                }}>
+                                                {t(menuBasedOnAuthenticated)}
+                                            </Link>
+                                        } */}
                                     </FlexGrid.Col>
                                 </FlexGrid.Row>
                             </FlexGrid.Col>
