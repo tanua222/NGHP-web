@@ -6,7 +6,7 @@ const BlifTextInput = ({
     hint,
     hintPosition,
     tooltip,
-    tokens,
+    tokens = {},
     variant,
     value,
     readOnly,
@@ -15,13 +15,18 @@ const BlifTextInput = ({
     inactive,
     children,
 }) => {
+    const TEXT_INPUT_TOKENS = {
+        // borderColor: '#66afe9',
+
+        ...tokens,
+    };
     return (
         <TextInput
             label={label}
             hint={hint}
             hintPosition={hintPosition}
             tooltip={tooltip}
-            tokens={tokens}
+            tokens={TEXT_INPUT_TOKENS}
             variant={variant}
             value={value}
             readOnly={readOnly}

@@ -1,19 +1,16 @@
-import React, {useState} from 'react';
-import BlifSelectInput from '../Common/BlifInput/BlifSelectInput';
-import BlifButton from '../Common/Buttons/BlifButton';
+import React from 'react';
 import BlifTypography from '../Common/BlifTypography/BlifTypography';
-import BlifBox from '../Common/Box/BlifBox';
-import BlifFlexGrid from '../Common/BlifFlexGrid/BlifFlexGrid';
-import {TextInput, Select, Spacer} from '@telus-uds/ds-allium';
-import BlifTextInput from '../Common/Inputs/BlifTextInput';
-import {btnCss, boxCss, selectCss, textInputCss} from './PreCheckComponentsCss';
+import BlifStackView from '../Common/BlifStackView/BlifStackView';
 
+import BlifBox from '../Common/Box/BlifBox';
 import {
-    FileCol,
-    ProvinceCol,
-    BrgIndicatorCol,
-    RejectsCol,
-} from './PreCheckColumnComponents';
+    BlifFlexGrid,
+    BlifFlexGridRow,
+    BlifFlexGridCol,
+} from '../Common/BlifFlexGrid/BlifFlexGrid';
+import {Spacer} from '@telus-uds/ds-allium';
+
+import PreCheckFilters from './PreCheckFilters';
 
 // search onClick handler
 const clickHandler = (e) => {
@@ -23,49 +20,25 @@ const clickHandler = (e) => {
 
 // PreCheck Component
 const PreCheck = () => {
-    const [showEntriesDropdown, setShowEntriesDropdown] = useState({});
-
     return (
         <BlifFlexGrid gutter={false}>
-            <BlifFlexGrid.Row>
-                <BlifFlexGrid.Col>
-                    <BlifFlexGrid.Row>
+            <BlifStackView tokens={{justifyContent: 'center'}}>
+                <BlifFlexGridCol xs={12} lg={10} verticalAlign="center">
+                    <BlifFlexGridRow>
                         <BlifTypography variant={{size: 'h2'}}>
                             Pre-Check
                         </BlifTypography>
-                    </BlifFlexGrid.Row>
+                    </BlifFlexGridRow>
                     <Spacer space={1} />
-                    <BlifBox
-                        variant={{background: 'light'}}
-                        tokens={boxCss}
-                        flex={1}>
-                        <form>
-                            <Spacer space={1} />
-                            <BlifFlexGrid.Row
-                                verticalAlign="center"
-                                horizontalAlign="center">
-                                <FileCol />
-                                <ProvinceCol />
-                                <BrgIndicatorCol />
-                                <RejectsCol />
-                            </BlifFlexGrid.Row>
-                            <Spacer space={4} />
-                            <BlifFlexGrid.Row>
-                                <BlifFlexGrid.Col>
-                                    <BlifBox tokens={{paddingLeft: '113px'}}>
-                                        <BlifButton
-                                            tokens={btnCss}
-                                            variant={{size: 'small'}}
-                                            onClick={clickHandler}>
-                                            Search
-                                        </BlifButton>
-                                    </BlifBox>
-                                </BlifFlexGrid.Col>
-                            </BlifFlexGrid.Row>
-                        </form>
+                    <BlifBox variant={{background: 'light'}} flex={1}>
+                        <BlifFlexGridRow
+                            verticalAlign="center"
+                            horizontalAlign="center">
+                            <PreCheckFilters clickHandler={clickHandler} />
+                        </BlifFlexGridRow>
                     </BlifBox>
-                </BlifFlexGrid.Col>
-            </BlifFlexGrid.Row>
+                </BlifFlexGridCol>
+            </BlifStackView>
         </BlifFlexGrid>
     );
 };

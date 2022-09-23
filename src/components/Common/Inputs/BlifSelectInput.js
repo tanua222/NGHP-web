@@ -66,6 +66,7 @@ const BlifSelectInput = (props) => {
             ${smallInputWidth && 'Select-input-small-width'}
             Select-input-BlifSelectInput`}>
             <Select
+                label={label || ' '}
                 hint={hint}
                 hintPosition={hintPosition}
                 id={id}

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './Home.scss';
 import useAxiosGet from '../../hooks/useAxiosGet';
-import BlifSelectInput from '../Common/BlifInput/BlifSelectInput';
+import BlifSelectInput from '../Common/Inputs/BlifSelectInput';
 
 let options = [
     {text: '1', value: '1'},

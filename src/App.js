@@ -4,10 +4,11 @@ import {ROUTER_KEYS} from './utils/routeKeys';
 
 import CSSReset from '@tds/core-css-reset';
 import {AlliumProvider} from '@telus-uds/ds-allium';
-import GlobalStylesAllium from './IvsGlobalStyle.js';
+import BlifGlobalStyle from './BlifGlobalStyle.js';
 import useRoutes from './hooks/useRoutes';
 import './App.scss';
 import Header from './components/Header/Header';
+import Box from './components/Common/Box/BlifBox';
 
 const App = () => {
     const getRoutes = useRoutes();
@@ -15,7 +16,7 @@ const App = () => {
     return (
         <AlliumProvider>
             <CSSReset />
-            <GlobalStylesAllium />
+            <BlifGlobalStyle />
             <Header />
             <Suspense fallback={<></>}>
                 <Routes>
@@ -28,11 +29,9 @@ const App = () => {
                             <Route
                                 path={item[ROUTER_KEYS.PATH_NAME]}
                                 element={
-                                    <>
-                                        <div className="header-margin-top px-15px">
-                                            <GET_COMPONENT />
-                                        </div>
-                                    </>
+                                    <Box vertical={5}>
+                                        <GET_COMPONENT />
+                                    </Box>
                                 }
                                 key={index}
                             />

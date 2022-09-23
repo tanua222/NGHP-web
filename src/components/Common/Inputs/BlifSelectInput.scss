@@ -25,10 +25,10 @@
     }
 
     &-BlifSelectInput > div > div:hover > select:not(:focus) {
-        border-color: #66afe9 !important;
+        border-color: rgb(124, 83, 165) !important;
     }
 
     &-BlifSelectInput > div > div > select:focus {
-        border-color: #66afe9 !important;
+        border-color: rgb(124, 83, 165) !important;
     }
 }
