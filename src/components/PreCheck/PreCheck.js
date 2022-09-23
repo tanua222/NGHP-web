@@ -3,8 +3,8 @@ import BlifTypography from '../Common/BlifTypography/BlifTypography';
 import BlifStackView from '../Common/BlifStackView/BlifStackView';
 import {ARRAY_MAP_KEYS, FILTER_TYPES} from '../../utils/commonKeys';
 import {FiltersView} from '../Common/Filters/Filters';
-
 import BlifBox from '../Common/Box/BlifBox';
+
 import {
     BlifFlexGrid,
     BlifFlexGridRow,
@@ -37,55 +37,71 @@ export const CLEC_FILTER_OPTIONS = [
 ];
 
 //Form Schema
-const FORM_SCHEMA_KEYS = {
+const PRECHECK_FORM_SCHEMA_KEYS = {
     FILE_INPUT: 'FILE_INPUT',
+    PROVINCE_INPUT: 'PROVINCE_INPUT',
+    BRG_INDICATOR_INPUT: 'BRG_INDICATOR_INPUT',
+    REJECTS_INPUT: 'REJECTS_INPUT',
+    CLEC_INPUT: 'CLEC_INPUT',
 };
 
-const FORM_SCHMEA = {
-    [FORM_SCHEMA_KEYS.FILE_INPUT]: '',
+const PRECHECK_FORM_SCHEMA = {
+    [PRECHECK_FORM_SCHEMA_KEYS.FILE_INPUT]: '',
+    [PRECHECK_FORM_SCHEMA_KEYS.PROVINCE_INPUT]:
+        PROVINCE_FILTER_OPTIONS[0].value,
+    [PRECHECK_FORM_SCHEMA_KEYS.BRG_INDICATOR_INPUT]:
+        BRG_INDICATOR_FILTER_OPTIONS[0].value,
+    [PRECHECK_FORM_SCHEMA_KEYS.REJECTS_INPUT]: REJECTS_FILTER_OPTIONS[0].value,
+    [PRECHECK_FORM_SCHEMA_KEYS.CLEC_INPUT]: CLEC_FILTER_OPTIONS[0].value,
 };
 
 //OPTIONS
-
 const FILTER_SCHEMA = [
     {
         [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
         [ARRAY_MAP_KEYS.LABEL]: 'File',
+        [ARRAY_MAP_KEYS.ON_CHANGE]: PRECHECK_FORM_SCHEMA_KEYS.FILE_INPUT,
     },
     {
         [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
         [ARRAY_MAP_KEYS.LABEL]: 'Province',
         [ARRAY_MAP_KEYS.OPTIONS]: PROVINCE_FILTER_OPTIONS,
+        [ARRAY_MAP_KEYS.ON_CHANGE]: PRECHECK_FORM_SCHEMA_KEYS.PROVINCE_INPUT,
     },
     {
         [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
         [ARRAY_MAP_KEYS.LABEL]: 'CLEC',
         [ARRAY_MAP_KEYS.OPTIONS]: CLEC_FILTER_OPTIONS,
+        [ARRAY_MAP_KEYS.ON_CHANGE]: PRECHECK_FORM_SCHEMA_KEYS.CLEC_INPUT,
     },
     {
         [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
         [ARRAY_MAP_KEYS.LABEL]: 'BRG Indicator',
         [ARRAY_MAP_KEYS.OPTIONS]: BRG_INDICATOR_FILTER_OPTIONS,
+        [ARRAY_MAP_KEYS.ON_CHANGE]:
+            PRECHECK_FORM_SCHEMA_KEYS.BRG_INDICATOR_INPUT,
     },
     {
         [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
         [ARRAY_MAP_KEYS.LABEL]: 'Rejects',
         [ARRAY_MAP_KEYS.OPTIONS]: REJECTS_FILTER_OPTIONS,
+        [ARRAY_MAP_KEYS.ON_CHANGE]: PRECHECK_FORM_SCHEMA_KEYS.REJECTS_INPUT,
     },
 ];
 
-// search onClick handler
-const clickHandler = (e) => {
-    e.preventDefault();
-    alert('Search Query');
-};
-
 // PreCheck Component
 const PreCheck = () => {
-    const [filterQuery, setFilterQuery] = useState(FORM_SCHMEA);
+    const [filterQuery, setFilterQuery] = useState(PRECHECK_FORM_SCHEMA);
 
-    const handleSelectInputChange = (val, filterKey) => {
+    const handleInputChange = (filterKey, val) => {
         setFilterQuery((prev) => ({...prev, [filterKey]: val}));
+    };
+
+    // search onClick handler
+    const clickHandler = (e) => {
+        e.preventDefault();
+        // console.log(filterQuery);
+        alert('search query');
     };
 
     return (
@@ -105,6 +121,7 @@ const PreCheck = () => {
                             <FiltersView
                                 clickHandler={clickHandler}
                                 schema={FILTER_SCHEMA}
+                                handleInputChange={handleInputChange}
                             />
                         </BlifFlexGridRow>
                     </BlifBox>

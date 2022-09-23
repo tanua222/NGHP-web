@@ -5,36 +5,38 @@ import BlifSelectInput from '../Inputs/BlifSelectInput';
 import BlifStackView from '../BlifStackView/BlifStackView';
 import BlifSpacer from '../BlifSpacer/BlifSpacer';
 import BlifButton from '../Buttons/BlifButton';
-
 import {useState, useEffect} from 'react';
 import {ARRAY_MAP_KEYS, FILTER_TYPES} from '../../../utils/commonKeys';
 
 const ITEMS_IN_ROW = 3;
 const ZERO_NUMBER = 0;
 
-const TextInputFilter = ({label = ''}) => {
+const TextInputFilter = ({label = '', onChangeText}) => {
     return (
         <BlifFlexGridCol md={3}>
             <BlifBox vertical={1} horizontal={3}>
-                <BlifTextInput label={label} />
+                <BlifTextInput label={label} onChange={onChangeText} />
             </BlifBox>
         </BlifFlexGridCol>
     );
 };
 
-const SelectInputFilter = ({label = '', options = []}) => {
+const SelectInputFilter = ({label = '', options = [], onChangeSelect}) => {
     return (
         <BlifFlexGridCol md={3}>
             <BlifBox vertical={1} horizontal={3}>
-                <BlifSelectInput label={label} options={options} />
+                <BlifSelectInput
+                    label={label}
+                    options={options}
+                    onChange={onChangeSelect}
+                />
             </BlifBox>
         </BlifFlexGridCol>
     );
 };
 
-const FiltersView = ({clickHandler, schema = []}) => {
+const FiltersView = ({clickHandler, schema = [], handleInputChange}) => {
     const [modifySchemaFormat, setModifySchemaFormat] = useState([]);
-
     useEffect(() => {
         if (schema) {
             // Convert Array to 3 cols per row structure
@@ -78,6 +80,14 @@ const FiltersView = ({clickHandler, schema = []}) => {
                                             label={
                                                 rowItem[ARRAY_MAP_KEYS.LABEL]
                                             }
+                                            onChangeText={(e) => {
+                                                handleInputChange(
+                                                    rowItem[
+                                                        ARRAY_MAP_KEYS.ON_CHANGE
+                                                    ],
+                                                    e.target.value,
+                                                );
+                                            }}
                                         />
                                     );
                                 } else
@@ -89,6 +99,14 @@ const FiltersView = ({clickHandler, schema = []}) => {
                                             options={
                                                 rowItem[ARRAY_MAP_KEYS.OPTIONS]
                                             }
+                                            onChangeSelect={(e) => {
+                                                handleInputChange(
+                                                    rowItem[
+                                                        ARRAY_MAP_KEYS.ON_CHANGE
+                                                    ],
+                                                    e.target.value,
+                                                );
+                                            }}
                                         />
                                     );
                             })}

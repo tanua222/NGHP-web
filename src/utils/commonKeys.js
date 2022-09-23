@@ -6,6 +6,7 @@ export const ARRAY_MAP_KEYS = {
     ON_CLICK: 'ON_CLICK',
     FILTER_TYPE: 'FILTER_TYPE',
     OPTIONS: 'OPTIONS',
+    ON_CHANGE: 'ON_CHANGE',
 };
 
 export const FILTER_TYPES = {
