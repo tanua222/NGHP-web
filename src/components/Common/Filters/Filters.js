@@ -68,8 +68,6 @@ const FiltersView = ({clickHandler, schema = []}) => {
                     return (
                         <BlifStackView space={3} key={index}>
                             {item.map((rowItem, index) => {
-                                console.log(rowItem);
-
                                 if (
                                     rowItem[ARRAY_MAP_KEYS.FILTER_TYPE] ===
                                     FILTER_TYPES.TEXT_INPUT

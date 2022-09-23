@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import BlifTypography from '../Common/BlifTypography/BlifTypography';
 import BlifStackView from '../Common/BlifStackView/BlifStackView';
 
@@ -11,6 +11,38 @@ import {
 import {Spacer} from '@telus-uds/ds-allium';
 
 import PreCheckFilters from './PreCheckFilters';
+// OPTIONS
+export const PROVINCE_FILTER_OPTIONS = [
+    {text: 'ALL', value: 'ALL'},
+    {text: 'QC', value: 'QC'},
+];
+
+export const BRG_INDICATOR_FILTER_OPTIONS = [
+    {text: 'ALL', value: 'ALL'},
+    {text: 'Business', value: 'Business'},
+    {text: 'Residential', value: 'Residential'},
+];
+
+export const REJECTS_FILTER_OPTIONS = [
+    {text: 'ALL', value: 'ALL'},
+    {text: 'Only Rejects', value: 'Only Rejects'},
+    {text: 'No Rejects', value: 'No Rejects'},
+];
+
+export const CLEC_FILTER_OPTIONS = [
+    {text: 'ALL', value: 'ALL'},
+
+    {text: 'FIDO', value: 'FIDO'},
+];
+
+//Form Schema
+const FORM_SCHEMA_KEYS = {
+    FILE_INPUT: 'FILE_INPUT',
+};
+
+const FORM_SCHMEA = {
+    [FORM_SCHEMA_KEYS.FILE_INPUT]: '',
+};
 
 // search onClick handler
 const clickHandler = (e) => {
@@ -20,6 +52,12 @@ const clickHandler = (e) => {
 
 // PreCheck Component
 const PreCheck = () => {
+    const [filterQuery, setFilterQuery] = useState(FORM_SCHMEA);
+
+    const handleSelectInputChange = (val, filterKey) => {
+        setFilterQuery((prev) => ({...prev, [filterKey]: val}));
+    };
+
     return (
         <BlifFlexGrid gutter={false}>
             <BlifStackView tokens={{justifyContent: 'center'}}>
