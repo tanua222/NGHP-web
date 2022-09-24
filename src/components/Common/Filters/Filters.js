@@ -80,12 +80,12 @@ const FiltersView = ({clickHandler, schema = [], handleInputChange}) => {
                                             label={
                                                 rowItem[ARRAY_MAP_KEYS.LABEL]
                                             }
-                                            onChangeText={(e) => {
+                                            onChangeText={(val) => {
                                                 handleInputChange(
                                                     rowItem[
                                                         ARRAY_MAP_KEYS.ON_CHANGE
                                                     ],
-                                                    e.target.value,
+                                                    val,
                                                 );
                                             }}
                                         />
