@@ -1,14 +1,11 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect} from 'react';
 import validate from '../../../Validations/FieldValidation';
 import {useTranslation} from 'react-i18next';
 import {Select} from '@telus-uds/ds-allium';
-import './BlifSelectInput.scss';
 
-const BlifSelectInput = (props) => {
+const BlifSelectInput = React.forwardRef((props, ref) => {
     const {
         label,
-        smallInputHeight,
-        smallInputWidth,
         hint,
         hintPosition,
         id,
@@ -23,12 +20,10 @@ const BlifSelectInput = (props) => {
         stopValidate,
         name,
         disabled,
-        tokens,
     } = props;
     const {t} = useTranslation();
     const [error, setError] = useState();
     const [localVal, setLocalVal] = useState();
-    const ref = useRef();
 
     const validateFn = () => {
         const result = validate(validationRule, localVal);
@@ -60,12 +55,7 @@ const BlifSelectInput = (props) => {
     }, [triggerValidate]);
 
     return (
-        <React.Fragment
-        // ref={ref}
-        // className={`${smallInputHeight && 'Select-input-small-height'}
-        // ${smallInputWidth && 'Select-input-small-width'}
-        // Select-input-BlifSelectInput`}
-        >
+        <React.Fragment>
             <Select
                 label={label || ' '}
                 hint={hint}
@@ -95,14 +85,16 @@ const BlifSelectInput = (props) => {
             </Select>
         </React.Fragment>
     );
-};
+});
 
 const IvsSelectGroup = ({group}) => (
-    <Select.Group label={group.text}>
-        {group.options &&
-            group.options.map((option, index) => (
-                <IvsSelectOption option={option} key={index} />
-            ))}
+    <Select.Group>
+        <optgroup label={group.text}>
+            {group.options &&
+                group.options.map((option, index) => (
+                    <IvsSelectOption option={option} key={index} />
+                ))}
+        </optgroup>
     </Select.Group>
 );
 
@@ -110,4 +102,5 @@ const IvsSelectOption = ({option}) => (
     <Select.Item value={option.value}>{option.text}</Select.Item>
 );
 
+BlifSelectInput.displayName = 'BlifSelectInput';
 export default BlifSelectInput;
