@@ -1,0 +1,4279 @@
+{
+    "sEcho": 1,
+    "iTotalRecords": 603,
+    "iTotalDisplayRecords": 603,
+    "aaData": [
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "1",
+            "abbrev": "100 M H",
+            "bookNum": "25",
+            "exchangeFullName": "100 MILE HOUSE",
+            "secondAbbrev": "",
+            "sectionNum": "13",
+            "npa": "250,236,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 3023,
+                    "npa": "250",
+                    "exchAbbrev": "100 M H"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 3022,
+                    "npa": "236",
+                    "exchAbbrev": "100 M H"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 3024,
+                    "npa": "778",
+                    "exchAbbrev": "100 M H"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "2",
+            "abbrev": "108 M H",
+            "bookNum": "25",
+            "exchangeFullName": "108 MILE HOUSE",
+            "secondAbbrev": "",
+            "sectionNum": "13",
+            "npa": "250,236,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 2,
+                    "npa": "250",
+                    "exchAbbrev": "108 M H"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1206,
+                    "npa": "236",
+                    "exchAbbrev": "108 M H"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 604,
+                    "npa": "778",
+                    "exchAbbrev": "108 M H"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "3",
+            "abbrev": "70",
+            "bookNum": null,
+            "exchangeFullName": null,
+            "secondAbbrev": "",
+            "sectionNum": null,
+            "npa": "",
+            "totalFilteredRows": 603,
+            "npas": null
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "4",
+            "abbrev": "70 M H",
+            "bookNum": "25",
+            "exchangeFullName": "70 MILE HOUSE",
+            "secondAbbrev": "",
+            "sectionNum": "13",
+            "npa": "250,236,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 3,
+                    "npa": "250",
+                    "exchAbbrev": "70 M H"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1207,
+                    "npa": "236",
+                    "exchAbbrev": "70 M H"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 605,
+                    "npa": "778",
+                    "exchAbbrev": "70 M H"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "5",
+            "abbrev": "ABB",
+            "bookNum": "12",
+            "exchangeFullName": "ABBOTSFORD",
+            "secondAbbrev": "",
+            "sectionNum": "01",
+            "npa": "604,236,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 4,
+                    "npa": "604",
+                    "exchAbbrev": "ABB"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1208,
+                    "npa": "236",
+                    "exchAbbrev": "ABB"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 606,
+                    "npa": "778",
+                    "exchAbbrev": "ABB"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "6",
+            "abbrev": "ACME",
+            "bookNum": "03",
+            "exchangeFullName": "ACME",
+            "secondAbbrev": "",
+            "sectionNum": "01",
+            "npa": "403,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 6,
+                    "npa": "403",
+                    "exchAbbrev": "ACME"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1210,
+                    "npa": "825",
+                    "exchAbbrev": "ACME"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 608,
+                    "npa": "587",
+                    "exchAbbrev": "ACME"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "7",
+            "abbrev": "ACVY",
+            "bookNum": "13",
+            "exchangeFullName": "ACADIA VALLEY",
+            "secondAbbrev": "",
+            "sectionNum": "01",
+            "npa": "403,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 5,
+                    "npa": "403",
+                    "exchAbbrev": "ACVY"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1209,
+                    "npa": "825",
+                    "exchAbbrev": "ACVY"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 607,
+                    "npa": "587",
+                    "exchAbbrev": "ACVY"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "8",
+            "abbrev": "ADFL",
+            "bookNum": "15",
+            "exchangeFullName": "ALDER FLATS",
+            "secondAbbrev": "",
+            "sectionNum": "01",
+            "npa": "780,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 11,
+                    "npa": "780",
+                    "exchAbbrev": "ADFL"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1215,
+                    "npa": "825",
+                    "exchAbbrev": "ADFL"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 613,
+                    "npa": "587",
+                    "exchAbbrev": "ADFL"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "9",
+            "abbrev": "ADSN",
+            "bookNum": "25",
+            "exchangeFullName": "ARDROSSAN",
+            "secondAbbrev": "",
+            "sectionNum": "02",
+            "npa": "780,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 20,
+                    "npa": "780",
+                    "exchAbbrev": "ADSN"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1224,
+                    "npa": "825",
+                    "exchAbbrev": "ADSN"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 622,
+                    "npa": "587",
+                    "exchAbbrev": "ADSN"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "10",
+            "abbrev": "AGAS",
+            "bookNum": "04",
+            "exchangeFullName": "AGASSIZ-HARRISON",
+            "secondAbbrev": "",
+            "sectionNum": "01",
+            "npa": "604,236,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 7,
+                    "npa": "604",
+                    "exchAbbrev": "AGAS"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1211,
+                    "npa": "236",
+                    "exchAbbrev": "AGAS"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 609,
+                    "npa": "778",
+                    "exchAbbrev": "AGAS"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "11",
+            "abbrev": "AHOUST",
+            "bookNum": "13",
+            "exchangeFullName": "AHOUSAT",
+            "secondAbbrev": "",
+            "sectionNum": "01",
+            "npa": "250,236,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 8,
+                    "npa": "250",
+                    "exchAbbrev": "AHOUST"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1212,
+                    "npa": "236",
+                    "exchAbbrev": "AHOUST"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 610,
+                    "npa": "778",
+                    "exchAbbrev": "AHOUST"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "12",
+            "abbrev": "AIYNSH",
+            "bookNum": "10",
+            "exchangeFullName": "AIYANSH",
+            "secondAbbrev": "",
+            "sectionNum": "01",
+            "npa": "250,236,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 10,
+                    "npa": "250",
+                    "exchAbbrev": "AIYNSH"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1214,
+                    "npa": "236",
+                    "exchAbbrev": "AIYNSH"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 612,
+                    "npa": "778",
+                    "exchAbbrev": "AIYNSH"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "13",
+            "abbrev": "ALBN",
+            "bookNum": "13",
+            "exchangeFullName": "PORT ALBERNI",
+            "secondAbbrev": "",
+            "sectionNum": "12",
+            "npa": "236,778,250",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1605,
+                    "npa": "236",
+                    "exchAbbrev": "ALBN"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1003,
+                    "npa": "778",
+                    "exchAbbrev": "ALBN"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 401,
+                    "npa": "250",
+                    "exchAbbrev": "ALBN"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "14",
+            "abbrev": "ALD",
+            "bookNum": "21",
+            "exchangeFullName": "VANCOUVER",
+            "secondAbbrev": "",
+            "sectionNum": "02",
+            "npa": "236,778,604",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1726,
+                    "npa": "236",
+                    "exchAbbrev": "ALD"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1124,
+                    "npa": "778",
+                    "exchAbbrev": "ALD"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 522,
+                    "npa": "604",
+                    "exchAbbrev": "ALD"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "15",
+            "abbrev": "ALIX",
+            "bookNum": "23",
+            "exchangeFullName": "ALIX",
+            "secondAbbrev": "",
+            "sectionNum": "01",
+            "npa": "403,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 14,
+                    "npa": "403",
+                    "exchAbbrev": "ALIX"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1218,
+                    "npa": "825",
+                    "exchAbbrev": "ALIX"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 616,
+                    "npa": "587",
+                    "exchAbbrev": "ALIX"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "16",
+            "abbrev": "ALKLI L",
+            "bookNum": "25",
+            "exchangeFullName": "ALKALI LAKE",
+            "secondAbbrev": "",
+            "sectionNum": "02",
+            "npa": "250,236,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 15,
+                    "npa": "250",
+                    "exchAbbrev": "ALKLI L"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1219,
+                    "npa": "236",
+                    "exchAbbrev": "ALKLI L"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 617,
+                    "npa": "778",
+                    "exchAbbrev": "ALKLI L"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "17",
+            "abbrev": "ALNC",
+            "bookNum": "10",
+            "exchangeFullName": "ALNC",
+            "secondAbbrev": "",
+            "sectionNum": "01",
+            "npa": "825,780,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1220,
+                    "npa": "825",
+                    "exchAbbrev": "ALNC"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 16,
+                    "npa": "780",
+                    "exchAbbrev": "ALNC"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 618,
+                    "npa": "587",
+                    "exchAbbrev": "ALNC"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "18",
+            "abbrev": "ALRO",
+            "bookNum": "23",
+            "exchangeFullName": "ALTARIO",
+            "secondAbbrev": "",
+            "sectionNum": "02",
+            "npa": "403,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 17,
+                    "npa": "403",
+                    "exchAbbrev": "ALRO"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1221,
+                    "npa": "825",
+                    "exchAbbrev": "ALRO"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 619,
+                    "npa": "587",
+                    "exchAbbrev": "ALRO"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "19",
+            "abbrev": "ALRT B",
+            "bookNum": "06",
+            "exchangeFullName": "ALERT BAY",
+            "secondAbbrev": "",
+            "sectionNum": "01",
+            "npa": "250,236,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 12,
+                    "npa": "250",
+                    "exchAbbrev": "ALRT B"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1216,
+                    "npa": "236",
+                    "exchAbbrev": "ALRT B"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 614,
+                    "npa": "778",
+                    "exchAbbrev": "ALRT B"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "20",
+            "abbrev": "ALX CK",
+            "bookNum": "25",
+            "exchangeFullName": "ALEXIS CREEK",
+            "secondAbbrev": "",
+            "sectionNum": "01",
+            "npa": "250,236,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 13,
+                    "npa": "250",
+                    "exchAbbrev": "ALX CK"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1217,
+                    "npa": "236",
+                    "exchAbbrev": "ALX CK"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 615,
+                    "npa": "778",
+                    "exchAbbrev": "ALX CK"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "21",
+            "abbrev": "ANDR",
+            "bookNum": "25",
+            "exchangeFullName": "ANDREW",
+            "secondAbbrev": "",
+            "sectionNum": "01",
+            "npa": "780,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 18,
+                    "npa": "780",
+                    "exchAbbrev": "ANDR"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1222,
+                    "npa": "825",
+                    "exchAbbrev": "ANDR"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 620,
+                    "npa": "587",
+                    "exchAbbrev": "ANDR"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "22",
+            "abbrev": "ANZC",
+            "bookNum": "16",
+            "exchangeFullName": "ANZAC",
+            "secondAbbrev": "",
+            "sectionNum": "01",
+            "npa": "587,825,780",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 19,
+                    "npa": "587",
+                    "exchAbbrev": "ANZC"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 621,
+                    "npa": "825",
+                    "exchAbbrev": "ANZC"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1223,
+                    "npa": "780",
+                    "exchAbbrev": "ANZC"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "23",
+            "abbrev": "ARDR",
+            "bookNum": "03",
+            "exchangeFullName": "AIRDRIE",
+            "secondAbbrev": "",
+            "sectionNum": "02",
+            "npa": "403,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 9,
+                    "npa": "403",
+                    "exchAbbrev": "ARDR"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1213,
+                    "npa": "825",
+                    "exchAbbrev": "ARDR"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 611,
+                    "npa": "587",
+                    "exchAbbrev": "ARDR"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "24",
+            "abbrev": "ARM",
+            "bookNum": "15",
+            "exchangeFullName": "ARMSTRONG",
+            "secondAbbrev": "",
+            "sectionNum": "01",
+            "npa": "250,236,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 21,
+                    "npa": "250",
+                    "exchAbbrev": "ARM"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1225,
+                    "npa": "236",
+                    "exchAbbrev": "ARM"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 623,
+                    "npa": "778",
+                    "exchAbbrev": "ARM"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "25",
+            "abbrev": "ASHCRF",
+            "bookNum": "09",
+            "exchangeFullName": "ASHCROFT",
+            "secondAbbrev": "",
+            "sectionNum": "01",
+            "npa": "250,236,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 23,
+                    "npa": "250",
+                    "exchAbbrev": "ASHCRF"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1227,
+                    "npa": "236",
+                    "exchAbbrev": "ASHCRF"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 625,
+                    "npa": "778",
+                    "exchAbbrev": "ASHCRF"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "26",
+            "abbrev": "ASMP",
+            "bookNum": "17",
+            "exchangeFullName": "ASSUMPTION",
+            "secondAbbrev": "",
+            "sectionNum": "01",
+            "npa": "780,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 25,
+                    "npa": "780",
+                    "exchAbbrev": "ASMP"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1229,
+                    "npa": "825",
+                    "exchAbbrev": "ASMP"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 627,
+                    "npa": "587",
+                    "exchAbbrev": "ASMP"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "27",
+            "abbrev": "ASMT",
+            "bookNum": "06",
+            "exchangeFullName": "ASHMONT",
+            "secondAbbrev": "",
+            "sectionNum": "01",
+            "npa": "780,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 24,
+                    "npa": "780",
+                    "exchAbbrev": "ASMT"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1228,
+                    "npa": "825",
+                    "exchAbbrev": "ASMT"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 626,
+                    "npa": "587",
+                    "exchAbbrev": "ASMT"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "28",
+            "abbrev": "ASP PK",
+            "bookNum": "09",
+            "exchangeFullName": "KAMLOOPS",
+            "secondAbbrev": "Aspen Pk",
+            "sectionNum": "10",
+            "npa": "236,250,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1475,
+                    "npa": "236",
+                    "exchAbbrev": "ASP PK"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 271,
+                    "npa": "250",
+                    "exchAbbrev": "ASP PK"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 873,
+                    "npa": "778",
+                    "exchAbbrev": "ASP PK"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "29",
+            "abbrev": "ATBC",
+            "bookNum": "05",
+            "exchangeFullName": "ATHABASCA",
+            "secondAbbrev": "",
+            "sectionNum": "01",
+            "npa": "780,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 26,
+                    "npa": "780",
+                    "exchAbbrev": "ATBC"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1230,
+                    "npa": "825",
+                    "exchAbbrev": "ATBC"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 628,
+                    "npa": "587",
+                    "exchAbbrev": "ATBC"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "30",
+            "abbrev": "ATLIN",
+            "bookNum": "22",
+            "exchangeFullName": "ATLIN",
+            "secondAbbrev": "",
+            "sectionNum": "01",
+            "npa": "250,236,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 27,
+                    "npa": "250",
+                    "exchAbbrev": "ATLIN"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1231,
+                    "npa": "236",
+                    "exchAbbrev": "ATLIN"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 629,
+                    "npa": "778",
+                    "exchAbbrev": "ATLIN"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "31",
+            "abbrev": "AVOLA",
+            "bookNum": "09",
+            "exchangeFullName": "AVOLA",
+            "secondAbbrev": "",
+            "sectionNum": "02",
+            "npa": "250,236,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 28,
+                    "npa": "250",
+                    "exchAbbrev": "AVOLA"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1232,
+                    "npa": "236",
+                    "exchAbbrev": "AVOLA"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 630,
+                    "npa": "778",
+                    "exchAbbrev": "AVOLA"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "32",
+            "abbrev": "AWWD",
+            "bookNum": "19",
+            "exchangeFullName": "ARROWWOOD",
+            "secondAbbrev": "",
+            "sectionNum": "01",
+            "npa": "403,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 22,
+                    "npa": "403",
+                    "exchAbbrev": "AWWD"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1226,
+                    "npa": "825",
+                    "exchAbbrev": "AWWD"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 624,
+                    "npa": "587",
+                    "exchAbbrev": "AWWD"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "33",
+            "abbrev": "B GROVE",
+            "bookNum": "21",
+            "exchangeFullName": "VANCOUVER",
+            "secondAbbrev": "",
+            "sectionNum": "02",
+            "npa": "236,778,604",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1754,
+                    "npa": "236",
+                    "exchAbbrev": "B GROVE"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1152,
+                    "npa": "778",
+                    "exchAbbrev": "B GROVE"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 550,
+                    "npa": "604",
+                    "exchAbbrev": "B GROVE"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "34",
+            "abbrev": "BACD",
+            "bookNum": "25",
+            "exchangeFullName": "BON ACCORD",
+            "secondAbbrev": "",
+            "sectionNum": "03",
+            "npa": "780,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 52,
+                    "npa": "780",
+                    "exchAbbrev": "BACD"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1256,
+                    "npa": "825",
+                    "exchAbbrev": "BACD"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 654,
+                    "npa": "587",
+                    "exchAbbrev": "BACD"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "35",
+            "abbrev": "BALFR",
+            "bookNum": "24",
+            "exchangeFullName": "BALFOUR",
+            "secondAbbrev": "",
+            "sectionNum": "01",
+            "npa": "250,236,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 29,
+                    "npa": "250",
+                    "exchAbbrev": "BALFR"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1233,
+                    "npa": "236",
+                    "exchAbbrev": "BALFR"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 631,
+                    "npa": "778",
+                    "exchAbbrev": "BALFR"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "36",
+            "abbrev": "BAMFLD",
+            "bookNum": "13",
+            "exchangeFullName": "BAMFIELD",
+            "secondAbbrev": "",
+            "sectionNum": "02",
+            "npa": "250,236,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 30,
+                    "npa": "250",
+                    "exchAbbrev": "BAMFLD"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1234,
+                    "npa": "236",
+                    "exchAbbrev": "BAMFLD"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 632,
+                    "npa": "778",
+                    "exchAbbrev": "BAMFLD"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "37",
+            "abbrev": "BARR",
+            "bookNum": "09",
+            "exchangeFullName": "BARRIERE",
+            "secondAbbrev": "",
+            "sectionNum": "03",
+            "npa": "250,236,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 33,
+                    "npa": "250",
+                    "exchAbbrev": "BARR"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1237,
+                    "npa": "236",
+                    "exchAbbrev": "BARR"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 635,
+                    "npa": "778",
+                    "exchAbbrev": "BARR"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "38",
+            "abbrev": "BBY",
+            "bookNum": "21",
+            "exchangeFullName": "VANCOUVER",
+            "secondAbbrev": "Bby",
+            "sectionNum": "02",
+            "npa": "778,604,236",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1824,
+                    "npa": "778",
+                    "exchAbbrev": "BBY"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1823,
+                    "npa": "604",
+                    "exchAbbrev": "BBY"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1822,
+                    "npa": "236",
+                    "exchAbbrev": "BBY"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "39",
+            "abbrev": "BEAR LK",
+            "bookNum": "18",
+            "exchangeFullName": "BEAR LAKE",
+            "secondAbbrev": "",
+            "sectionNum": "01",
+            "npa": "780,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 37,
+                    "npa": "780",
+                    "exchAbbrev": "BEAR LK"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1241,
+                    "npa": "825",
+                    "exchAbbrev": "BEAR LK"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 639,
+                    "npa": "587",
+                    "exchAbbrev": "BEAR LK"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "40",
+            "abbrev": "BEAV V",
+            "bookNum": "25",
+            "exchangeFullName": "BEAVER VALLEY",
+            "secondAbbrev": "",
+            "sectionNum": "04",
+            "npa": "250,236,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 40,
+                    "npa": "250",
+                    "exchAbbrev": "BEAV V"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1244,
+                    "npa": "236",
+                    "exchAbbrev": "BEAV V"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 642,
+                    "npa": "778",
+                    "exchAbbrev": "BEAV V"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "41",
+            "abbrev": "BEAVR C",
+            "bookNum": "06",
+            "exchangeFullName": "BEAVER COVE",
+            "secondAbbrev": "",
+            "sectionNum": "02",
+            "npa": "250,236,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 39,
+                    "npa": "250",
+                    "exchAbbrev": "BEAVR C"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1243,
+                    "npa": "236",
+                    "exchAbbrev": "BEAVR C"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 641,
+                    "npa": "778",
+                    "exchAbbrev": "BEAVR C"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "42",
+            "abbrev": "BEAVRDL",
+            "bookNum": "24",
+            "exchangeFullName": "BEAVERDELL",
+            "secondAbbrev": "",
+            "sectionNum": "02",
+            "npa": "250,236,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 41,
+                    "npa": "250",
+                    "exchAbbrev": "BEAVRDL"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1245,
+                    "npa": "236",
+                    "exchAbbrev": "BEAVRDL"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 643,
+                    "npa": "778",
+                    "exchAbbrev": "BEAVRDL"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "43",
+            "abbrev": "BEL BEL",
+            "bookNum": "06",
+            "exchangeFullName": "BELLA BELLA",
+            "secondAbbrev": "",
+            "sectionNum": "03",
+            "npa": "250,236,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 44,
+                    "npa": "250",
+                    "exchAbbrev": "BEL BEL"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1248,
+                    "npa": "236",
+                    "exchAbbrev": "BEL BEL"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 646,
+                    "npa": "778",
+                    "exchAbbrev": "BEL BEL"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "44",
+            "abbrev": "BEL COL",
+            "bookNum": "25",
+            "exchangeFullName": "BELLA COOLA",
+            "secondAbbrev": "",
+            "sectionNum": "05",
+            "npa": "250,236,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 45,
+                    "npa": "250",
+                    "exchAbbrev": "BEL COL"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1249,
+                    "npa": "236",
+                    "exchAbbrev": "BEL COL"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 647,
+                    "npa": "778",
+                    "exchAbbrev": "BEL COL"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "45",
+            "abbrev": "BGCK",
+            "bookNum": "03 ",
+            "exchangeFullName": "BRAGG CREEK",
+            "secondAbbrev": "",
+            "sectionNum": "04",
+            "npa": "403,587,825",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 60,
+                    "npa": "403",
+                    "exchAbbrev": "BGCK"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 662,
+                    "npa": "587",
+                    "exchAbbrev": "BGCK"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1264,
+                    "npa": "825",
+                    "exchAbbrev": "BGCK"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "46",
+            "abbrev": "BGVY",
+            "bookNum": "23",
+            "exchangeFullName": "BIG VALLEY",
+            "secondAbbrev": "",
+            "sectionNum": "04",
+            "npa": "403,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 48,
+                    "npa": "403",
+                    "exchAbbrev": "BGVY"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1252,
+                    "npa": "825",
+                    "exchAbbrev": "BGVY"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 650,
+                    "npa": "587",
+                    "exchAbbrev": "BGVY"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "47",
+            "abbrev": "BLFD",
+            "bookNum": "23",
+            "exchangeFullName": "BLACKFALDS",
+            "secondAbbrev": "",
+            "sectionNum": "05",
+            "npa": "403,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 49,
+                    "npa": "403",
+                    "exchAbbrev": "BLFD"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1253,
+                    "npa": "825",
+                    "exchAbbrev": "BLFD"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 651,
+                    "npa": "587",
+                    "exchAbbrev": "BLFD"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "48",
+            "abbrev": "BLKE",
+            "bookNum": "19",
+            "exchangeFullName": "BLACKIE",
+            "secondAbbrev": "",
+            "sectionNum": "02",
+            "npa": "403,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 50,
+                    "npa": "403",
+                    "exchAbbrev": "BLKE"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1254,
+                    "npa": "825",
+                    "exchAbbrev": "BLKE"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 652,
+                    "npa": "587",
+                    "exchAbbrev": "BLKE"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "49",
+            "abbrev": "BLUE R",
+            "bookNum": "09",
+            "exchangeFullName": "BLUE RIVER",
+            "secondAbbrev": "",
+            "sectionNum": "04",
+            "npa": "250,236,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 51,
+                    "npa": "250",
+                    "exchAbbrev": "BLUE R"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1255,
+                    "npa": "236",
+                    "exchAbbrev": "BLUE R"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 653,
+                    "npa": "778",
+                    "exchAbbrev": "BLUE R"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "50",
+            "abbrev": "BNFF",
+            "bookNum": "04",
+            "exchangeFullName": "BANFF",
+            "secondAbbrev": "",
+            "sectionNum": "01",
+            "npa": "403,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 31,
+                    "npa": "403",
+                    "exchAbbrev": "BNFF"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1235,
+                    "npa": "825",
+                    "exchAbbrev": "BNFF"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 633,
+                    "npa": "587",
+                    "exchAbbrev": "BNFF"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "51",
+            "abbrev": "BNNZ",
+            "bookNum": "17",
+            "exchangeFullName": "BONANZA",
+            "secondAbbrev": "",
+            "sectionNum": "05",
+            "npa": "780,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 53,
+                    "npa": "780",
+                    "exchAbbrev": "BNNZ"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1257,
+                    "npa": "825",
+                    "exchAbbrev": "BNNZ"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 655,
+                    "npa": "587",
+                    "exchAbbrev": "BNNZ"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "52",
+            "abbrev": "BNTL",
+            "bookNum": "23",
+            "exchangeFullName": "BENTLEY",
+            "secondAbbrev": "",
+            "sectionNum": "03",
+            "npa": "403,587,825",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 46,
+                    "npa": "403",
+                    "exchAbbrev": "BNTL"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 648,
+                    "npa": "587",
+                    "exchAbbrev": "BNTL"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1250,
+                    "npa": "825",
+                    "exchAbbrev": "BNTL"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "53",
+            "abbrev": "BNVA",
+            "bookNum": "17",
+            "exchangeFullName": "BROWNVALE",
+            "secondAbbrev": "",
+            "sectionNum": "06",
+            "npa": "780,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 66,
+                    "npa": "780",
+                    "exchAbbrev": "BNVA"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1270,
+                    "npa": "825",
+                    "exchAbbrev": "BNVA"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 668,
+                    "npa": "587",
+                    "exchAbbrev": "BNVA"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "54",
+            "abbrev": "BNVL",
+            "bookNum": "06",
+            "exchangeFullName": "BONNYVILLE",
+            "secondAbbrev": "",
+            "sectionNum": "02",
+            "npa": "780,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 54,
+                    "npa": "780",
+                    "exchAbbrev": "BNVL"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1258,
+                    "npa": "825",
+                    "exchAbbrev": "BNVL"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 656,
+                    "npa": "587",
+                    "exchAbbrev": "BNVL"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "55",
+            "abbrev": "BOSTN B",
+            "bookNum": "04",
+            "exchangeFullName": "BOSTON BAR",
+            "secondAbbrev": "",
+            "sectionNum": "02",
+            "npa": "604,778,236",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 55,
+                    "npa": "604",
+                    "exchAbbrev": "BOSTN B"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 657,
+                    "npa": "778",
+                    "exchAbbrev": "BOSTN B"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1259,
+                    "npa": "236",
+                    "exchAbbrev": "BOSTN B"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "56",
+            "abbrev": "BOSWL",
+            "bookNum": "07",
+            "exchangeFullName": "BOSWELL",
+            "secondAbbrev": "",
+            "sectionNum": "01",
+            "npa": "250,778,236",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 56,
+                    "npa": "250",
+                    "exchAbbrev": "BOSWL"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 658,
+                    "npa": "778",
+                    "exchAbbrev": "BOSWL"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1260,
+                    "npa": "236",
+                    "exchAbbrev": "BOSWL"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "57",
+            "abbrev": "BOUCH L",
+            "bookNum": "20",
+            "exchangeFullName": "QUESNEL",
+            "secondAbbrev": "Bou Lk",
+            "sectionNum": "01",
+            "npa": "236,250,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1623,
+                    "npa": "236",
+                    "exchAbbrev": "BOUCH L"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 419,
+                    "npa": "250",
+                    "exchAbbrev": "BOUCH L"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1021,
+                    "npa": "778",
+                    "exchAbbrev": "BOUCH L"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "58",
+            "abbrev": "BOWSR",
+            "bookNum": "13",
+            "exchangeFullName": "PARKSVILLE-QUALICU",
+            "secondAbbrev": "Bowsr",
+            "sectionNum": "11",
+            "npa": "236,250,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1586,
+                    "npa": "236",
+                    "exchAbbrev": "BOWSR"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 382,
+                    "npa": "250",
+                    "exchAbbrev": "BOWSR"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 984,
+                    "npa": "778",
+                    "exchAbbrev": "BOWSR"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "59",
+            "abbrev": "BOYL",
+            "bookNum": "06",
+            "exchangeFullName": "BOYLE",
+            "secondAbbrev": "",
+            "sectionNum": "03",
+            "npa": "780,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 59,
+                    "npa": "780",
+                    "exchAbbrev": "BOYL"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1263,
+                    "npa": "825",
+                    "exchAbbrev": "BOYL"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 661,
+                    "npa": "587",
+                    "exchAbbrev": "BOYL"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "60",
+            "abbrev": "BRCK",
+            "bookNum": "12",
+            "exchangeFullName": "BROCKET",
+            "secondAbbrev": "",
+            "sectionNum": "01",
+            "npa": "403,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 64,
+                    "npa": "403",
+                    "exchAbbrev": "BRCK"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1268,
+                    "npa": "825",
+                    "exchAbbrev": "BRCK"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 666,
+                    "npa": "587",
+                    "exchAbbrev": "BRCK"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "61",
+            "abbrev": "BRCN",
+            "bookNum": "17",
+            "exchangeFullName": "BEAR CANYON",
+            "secondAbbrev": "",
+            "sectionNum": "02",
+            "npa": "780,587,825",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 36,
+                    "npa": "780",
+                    "exchAbbrev": "BRCN"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 638,
+                    "npa": "587",
+                    "exchAbbrev": "BRCN"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1240,
+                    "npa": "825",
+                    "exchAbbrev": "BRCN"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "62",
+            "abbrev": "BRDG LK",
+            "bookNum": "25",
+            "exchangeFullName": "BRIDGE LK-INTERLKS",
+            "secondAbbrev": "",
+            "sectionNum": "06",
+            "npa": "250,778,236",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 62,
+                    "npa": "250",
+                    "exchAbbrev": "BRDG LK"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 664,
+                    "npa": "778",
+                    "exchAbbrev": "BRDG LK"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1266,
+                    "npa": "236",
+                    "exchAbbrev": "BRDG LK"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "63",
+            "abbrev": "BRDT",
+            "bookNum": "22",
+            "exchangeFullName": "BURDETT",
+            "secondAbbrev": "",
+            "sectionNum": "03",
+            "npa": "403,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 68,
+                    "npa": "403",
+                    "exchAbbrev": "BRDT"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1272,
+                    "npa": "825",
+                    "exchAbbrev": "BRDT"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 670,
+                    "npa": "587",
+                    "exchAbbrev": "BRDT"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "64",
+            "abbrev": "BRENTB",
+            "bookNum": "03",
+            "exchangeFullName": "VICTORIA",
+            "secondAbbrev": "Brentwd B",
+            "sectionNum": "01",
+            "npa": "236,250,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1762,
+                    "npa": "236",
+                    "exchAbbrev": "BRENTB"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 558,
+                    "npa": "250",
+                    "exchAbbrev": "BRENTB"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1160,
+                    "npa": "778",
+                    "exchAbbrev": "BRENTB"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "65",
+            "abbrev": "BRHE",
+            "bookNum": "25",
+            "exchangeFullName": "BRUDERHEIM",
+            "secondAbbrev": "",
+            "sectionNum": "04",
+            "npa": "780,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 67,
+                    "npa": "780",
+                    "exchAbbrev": "BRHE"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1271,
+                    "npa": "825",
+                    "exchAbbrev": "BRHE"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 669,
+                    "npa": "587",
+                    "exchAbbrev": "BRHE"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "66",
+            "abbrev": "BRITBCH",
+            "bookNum": "23",
+            "exchangeFullName": "BRITANNIA BEACH",
+            "secondAbbrev": "",
+            "sectionNum": "01",
+            "npa": "604,778,236",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 63,
+                    "npa": "604",
+                    "exchAbbrev": "BRITBCH"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 665,
+                    "npa": "778",
+                    "exchAbbrev": "BRITBCH"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1267,
+                    "npa": "236",
+                    "exchAbbrev": "BRITBCH"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "67",
+            "abbrev": "BRKS",
+            "bookNum": "08",
+            "exchangeFullName": "Brooks",
+            "secondAbbrev": "",
+            "sectionNum": "02",
+            "npa": "403,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 65,
+                    "npa": "403",
+                    "exchAbbrev": "BRKS"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1269,
+                    "npa": "825",
+                    "exchAbbrev": "BRKS"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 667,
+                    "npa": "587",
+                    "exchAbbrev": "BRKS"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "68",
+            "abbrev": "BRLG",
+            "bookNum": "17",
+            "exchangeFullName": "Beaverlodge",
+            "secondAbbrev": "",
+            "sectionNum": "03",
+            "npa": "780,587,825",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 42,
+                    "npa": "780",
+                    "exchAbbrev": "BRLG"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 644,
+                    "npa": "587",
+                    "exchAbbrev": "BRLG"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1246,
+                    "npa": "825",
+                    "exchAbbrev": "BRLG"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "69",
+            "abbrev": "BRNS",
+            "bookNum": "20",
+            "exchangeFullName": "BARONS",
+            "secondAbbrev": "",
+            "sectionNum": "01",
+            "npa": "403,587,825",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 32,
+                    "npa": "403",
+                    "exchAbbrev": "BRNS"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 634,
+                    "npa": "587",
+                    "exchAbbrev": "BRNS"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1236,
+                    "npa": "825",
+                    "exchAbbrev": "BRNS"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "70",
+            "abbrev": "BRTN",
+            "bookNum": "10",
+            "exchangeFullName": "Breton",
+            "secondAbbrev": "",
+            "sectionNum": "05",
+            "npa": "780,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 61,
+                    "npa": "780",
+                    "exchAbbrev": "BRTN"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1265,
+                    "npa": "825",
+                    "exchAbbrev": "BRTN"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 663,
+                    "npa": "587",
+                    "exchAbbrev": "BRTN"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "71",
+            "abbrev": "BSHW",
+            "bookNum": "10",
+            "exchangeFullName": "BASHAW",
+            "secondAbbrev": "",
+            "sectionNum": "02",
+            "npa": "780,587,825",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 34,
+                    "npa": "780",
+                    "exchAbbrev": "BSHW"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 636,
+                    "npa": "587",
+                    "exchAbbrev": "BSHW"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1238,
+                    "npa": "825",
+                    "exchAbbrev": "BSHW"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "72",
+            "abbrev": "BSKR",
+            "bookNum": "03",
+            "exchangeFullName": "BEISEKER",
+            "secondAbbrev": "",
+            "sectionNum": "03",
+            "npa": "825,403,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1247,
+                    "npa": "825",
+                    "exchAbbrev": "BSKR"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 43,
+                    "npa": "403",
+                    "exchAbbrev": "BSKR"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 645,
+                    "npa": "587",
+                    "exchAbbrev": "BSKR"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "73",
+            "abbrev": "BUMT",
+            "bookNum": "10",
+            "exchangeFullName": "BEAUMONT",
+            "secondAbbrev": "",
+            "sectionNum": "04",
+            "npa": "780,587,825",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 38,
+                    "npa": "780",
+                    "exchAbbrev": "BUMT"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 640,
+                    "npa": "587",
+                    "exchAbbrev": "BUMT"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1242,
+                    "npa": "825",
+                    "exchAbbrev": "BUMT"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "74",
+            "abbrev": "BURNABY",
+            "bookNum": "21",
+            "exchangeFullName": "VANCOUVER",
+            "secondAbbrev": "Bby",
+            "sectionNum": "02",
+            "npa": "236,604,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1728,
+                    "npa": "236",
+                    "exchAbbrev": "BURNABY"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 524,
+                    "npa": "604",
+                    "exchAbbrev": "BURNABY"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1126,
+                    "npa": "778",
+                    "exchAbbrev": "BURNABY"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "75",
+            "abbrev": "BURNSLK",
+            "bookNum": "05",
+            "exchangeFullName": "BURNS LAKE",
+            "secondAbbrev": "",
+            "sectionNum": "01",
+            "npa": "250,778,236",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 69,
+                    "npa": "250",
+                    "exchAbbrev": "BURNSLK"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 671,
+                    "npa": "778",
+                    "exchAbbrev": "BURNSLK"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1273,
+                    "npa": "236",
+                    "exchAbbrev": "BURNSLK"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "76",
+            "abbrev": "BWDN",
+            "bookNum": "23",
+            "exchangeFullName": "BOWDEN",
+            "secondAbbrev": "",
+            "sectionNum": "06",
+            "npa": "403,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 58,
+                    "npa": "403",
+                    "exchAbbrev": "BWDN"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1262,
+                    "npa": "825",
+                    "exchAbbrev": "BWDN"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 660,
+                    "npa": "587",
+                    "exchAbbrev": "BWDN"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "77",
+            "abbrev": "BWIS",
+            "bookNum": "22",
+            "exchangeFullName": "BOW ISLAND",
+            "secondAbbrev": "",
+            "sectionNum": "02",
+            "npa": "403,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 57,
+                    "npa": "403",
+                    "exchAbbrev": "BWIS"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1261,
+                    "npa": "825",
+                    "exchAbbrev": "BWIS"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 659,
+                    "npa": "587",
+                    "exchAbbrev": "BWIS"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "78",
+            "abbrev": "BWLF",
+            "bookNum": "10",
+            "exchangeFullName": "BAWLF",
+            "secondAbbrev": "",
+            "sectionNum": "03",
+            "npa": "780,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 35,
+                    "npa": "780",
+                    "exchAbbrev": "BWLF"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1239,
+                    "npa": "825",
+                    "exchAbbrev": "BWLF"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 637,
+                    "npa": "587",
+                    "exchAbbrev": "BWLF"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "79",
+            "abbrev": "BWYN",
+            "bookNum": "17",
+            "exchangeFullName": "BERWYN",
+            "secondAbbrev": "",
+            "sectionNum": "04",
+            "npa": "825,780,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1251,
+                    "npa": "825",
+                    "exchAbbrev": "BWYN"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 47,
+                    "npa": "780",
+                    "exchAbbrev": "BWYN"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 649,
+                    "npa": "587",
+                    "exchAbbrev": "BWYN"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "80",
+            "abbrev": "BYMR",
+            "bookNum": "23",
+            "exchangeFullName": "BYEMOOR",
+            "secondAbbrev": "",
+            "sectionNum": "07",
+            "npa": "587,403,825",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 672,
+                    "npa": "587",
+                    "exchAbbrev": "BYMR"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 70,
+                    "npa": "403",
+                    "exchAbbrev": "BYMR"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1274,
+                    "npa": "825",
+                    "exchAbbrev": "BYMR"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "81",
+            "abbrev": "CACH CK",
+            "bookNum": "09",
+            "exchangeFullName": "CACHE CREEK",
+            "secondAbbrev": "",
+            "sectionNum": "05",
+            "npa": "236,778,250",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1275,
+                    "npa": "236",
+                    "exchAbbrev": "CACH CK"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 673,
+                    "npa": "778",
+                    "exchAbbrev": "CACH CK"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 71,
+                    "npa": "250",
+                    "exchAbbrev": "CACH CK"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "82",
+            "abbrev": "CAMP RV",
+            "bookNum": "06",
+            "exchangeFullName": "CAMPBELL RIVER",
+            "secondAbbrev": "",
+            "sectionNum": "04",
+            "npa": "778,250,236",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 679,
+                    "npa": "778",
+                    "exchAbbrev": "CAMP RV"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 77,
+                    "npa": "250",
+                    "exchAbbrev": "CAMP RV"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1281,
+                    "npa": "236",
+                    "exchAbbrev": "CAMP RV"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "83",
+            "abbrev": "CANL FL",
+            "bookNum": "07",
+            "exchangeFullName": "CANAL FLATS",
+            "secondAbbrev": "",
+            "sectionNum": "02",
+            "npa": "250,778,236",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 80,
+                    "npa": "250",
+                    "exchAbbrev": "CANL FL"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 682,
+                    "npa": "778",
+                    "exchAbbrev": "CANL FL"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1284,
+                    "npa": "236",
+                    "exchAbbrev": "CANL FL"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "84",
+            "abbrev": "CAST",
+            "bookNum": "23",
+            "exchangeFullName": "CASTOR",
+            "secondAbbrev": "",
+            "sectionNum": "09",
+            "npa": "587,403,825",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 690,
+                    "npa": "587",
+                    "exchAbbrev": "CAST"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 88,
+                    "npa": "403",
+                    "exchAbbrev": "CAST"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1292,
+                    "npa": "825",
+                    "exchAbbrev": "CAST"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "85",
+            "abbrev": "CASTLGR",
+            "bookNum": "24",
+            "exchangeFullName": "CASTLEGAR",
+            "secondAbbrev": "",
+            "sectionNum": "03",
+            "npa": "236,778,250",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1291,
+                    "npa": "236",
+                    "exchAbbrev": "CASTLGR"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 689,
+                    "npa": "778",
+                    "exchAbbrev": "CASTLGR"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 87,
+                    "npa": "250",
+                    "exchAbbrev": "CASTLGR"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "86",
+            "abbrev": "CCHR",
+            "bookNum": "03",
+            "exchangeFullName": "COCHRANE",
+            "secondAbbrev": "",
+            "sectionNum": "06",
+            "npa": "825,403,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1317,
+                    "npa": "825",
+                    "exchAbbrev": "CCHR"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 113,
+                    "npa": "403",
+                    "exchAbbrev": "CCHR"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 715,
+                    "npa": "587",
+                    "exchAbbrev": "CCHR"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "87",
+            "abbrev": "CDLK",
+            "bookNum": "06",
+            "exchangeFullName": "GRAND CENTRE",
+            "secondAbbrev": "",
+            "sectionNum": "05",
+            "npa": "587,780,825",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 813,
+                    "npa": "587",
+                    "exchAbbrev": "CDLK"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 211,
+                    "npa": "780",
+                    "exchAbbrev": "CDLK"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1415,
+                    "npa": "825",
+                    "exchAbbrev": "CDLK"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "88",
+            "abbrev": "CDMN",
+            "bookNum": "15",
+            "exchangeFullName": "CADOMIN",
+            "secondAbbrev": "",
+            "sectionNum": "02",
+            "npa": "825,587,780",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1276,
+                    "npa": "825",
+                    "exchAbbrev": "CDMN"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 674,
+                    "npa": "587",
+                    "exchAbbrev": "CDMN"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 72,
+                    "npa": "780",
+                    "exchAbbrev": "CDMN"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "89",
+            "abbrev": "CEDAR",
+            "bookNum": "13",
+            "exchangeFullName": "NANAIMO",
+            "secondAbbrev": "Ced",
+            "sectionNum": "10",
+            "npa": "236,250,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1563,
+                    "npa": "236",
+                    "exchAbbrev": "CEDAR"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 359,
+                    "npa": "250",
+                    "exchAbbrev": "CEDAR"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 961,
+                    "npa": "778",
+                    "exchAbbrev": "CEDAR"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "90",
+            "abbrev": "CELST",
+            "bookNum": "09",
+            "exchangeFullName": "CELISTA",
+            "secondAbbrev": "",
+            "sectionNum": "06",
+            "npa": "250,236,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 90,
+                    "npa": "250",
+                    "exchAbbrev": "CELST"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1294,
+                    "npa": "236",
+                    "exchAbbrev": "CELST"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 692,
+                    "npa": "778",
+                    "exchAbbrev": "CELST"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "91",
+            "abbrev": "CGMY",
+            "bookNum": "13",
+            "exchangeFullName": "CRAIGMYLE",
+            "secondAbbrev": "",
+            "sectionNum": "04",
+            "npa": "825,403,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1329,
+                    "npa": "825",
+                    "exchAbbrev": "CGMY"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 125,
+                    "npa": "403",
+                    "exchAbbrev": "CGMY"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 727,
+                    "npa": "587",
+                    "exchAbbrev": "CGMY"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "92",
+            "abbrev": "CHASE",
+            "bookNum": "09",
+            "exchangeFullName": "CHASE",
+            "secondAbbrev": "",
+            "sectionNum": "07",
+            "npa": "778,250,236",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 695,
+                    "npa": "778",
+                    "exchAbbrev": "CHASE"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 93,
+                    "npa": "250",
+                    "exchAbbrev": "CHASE"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1297,
+                    "npa": "236",
+                    "exchAbbrev": "CHASE"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "93",
+            "abbrev": "CHEMNS",
+            "bookNum": "13",
+            "exchangeFullName": "CHEMAINUS-CROFTON",
+            "secondAbbrev": "",
+            "sectionNum": "03",
+            "npa": "778,250,236",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 697,
+                    "npa": "778",
+                    "exchAbbrev": "CHEMNS"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 95,
+                    "npa": "250",
+                    "exchAbbrev": "CHEMNS"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1299,
+                    "npa": "236",
+                    "exchAbbrev": "CHEMNS"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "94",
+            "abbrev": "CHETWYN",
+            "bookNum": "22",
+            "exchangeFullName": "CHETWYND",
+            "secondAbbrev": "",
+            "sectionNum": "02",
+            "npa": "778,236,250",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 698,
+                    "npa": "778",
+                    "exchAbbrev": "CHETWYN"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1300,
+                    "npa": "236",
+                    "exchAbbrev": "CHETWYN"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 96,
+                    "npa": "250",
+                    "exchAbbrev": "CHETWYN"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "95",
+            "abbrev": "CHF LK",
+            "bookNum": "18",
+            "exchangeFullName": "CHIEF LAKE",
+            "secondAbbrev": "",
+            "sectionNum": "02",
+            "npa": "236,250,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1301,
+                    "npa": "236",
+                    "exchAbbrev": "CHF LK"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 97,
+                    "npa": "250",
+                    "exchAbbrev": "CHF LK"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 699,
+                    "npa": "778",
+                    "exchAbbrev": "CHF LK"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "96",
+            "abbrev": "CHILK",
+            "bookNum": "18",
+            "exchangeFullName": "CHILAKO",
+            "secondAbbrev": "",
+            "sectionNum": "03",
+            "npa": "778,236,250",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 700,
+                    "npa": "778",
+                    "exchAbbrev": "CHILK"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1302,
+                    "npa": "236",
+                    "exchAbbrev": "CHILK"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 98,
+                    "npa": "250",
+                    "exchAbbrev": "CHILK"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "97",
+            "abbrev": "CHMN",
+            "bookNum": "25",
+            "exchangeFullName": "CHIPMAN",
+            "secondAbbrev": "",
+            "sectionNum": "05",
+            "npa": "780,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 103,
+                    "npa": "780",
+                    "exchAbbrev": "CHMN"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1307,
+                    "npa": "825",
+                    "exchAbbrev": "CHMN"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 705,
+                    "npa": "587",
+                    "exchAbbrev": "CHMN"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "98",
+            "abbrev": "CHMP",
+            "bookNum": "20",
+            "exchangeFullName": "Champion",
+            "secondAbbrev": "",
+            "sectionNum": "04",
+            "npa": "403,587,825",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 92,
+                    "npa": "403",
+                    "exchAbbrev": "CHMP"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 694,
+                    "npa": "587",
+                    "exchAbbrev": "CHMP"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1296,
+                    "npa": "825",
+                    "exchAbbrev": "CHMP"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "99",
+            "abbrev": "CHRS LK",
+            "bookNum": "24",
+            "exchangeFullName": "CHRISTINA LAKE",
+            "secondAbbrev": "",
+            "sectionNum": "04",
+            "npa": "250,236,778",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 104,
+                    "npa": "250",
+                    "exchAbbrev": "CHRS LK"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1308,
+                    "npa": "236",
+                    "exchAbbrev": "CHRS LK"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 706,
+                    "npa": "778",
+                    "exchAbbrev": "CHRS LK"
+                }
+            ]
+        },
+        {
+            "createdUserId": null,
+            "lastUpdatedUserId": null,
+            "createdTs": null,
+            "lastUpdatedTs": null,
+            "exchIndex": "100",
+            "abbrev": "CHVN",
+            "bookNum": "06",
+            "exchangeFullName": "CHAUVIN",
+            "secondAbbrev": "",
+            "sectionNum": "04",
+            "npa": "780,825,587",
+            "totalFilteredRows": 603,
+            "npas": [
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 94,
+                    "npa": "780",
+                    "exchAbbrev": "CHVN"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 1298,
+                    "npa": "825",
+                    "exchAbbrev": "CHVN"
+                },
+                {
+                    "createdUserId": null,
+                    "lastUpdatedUserId": null,
+                    "createdTs": null,
+                    "lastUpdatedTs": null,
+                    "npaExchId": 696,
+                    "npa": "587",
+                    "exchAbbrev": "CHVN"
+                }
+            ]
+        }
+    ]
+}
