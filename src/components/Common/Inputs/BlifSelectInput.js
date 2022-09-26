@@ -60,11 +60,12 @@ const BlifSelectInput = (props) => {
     }, [triggerValidate]);
 
     return (
-        <div
-            ref={ref}
-            className={`${smallInputHeight && 'Select-input-small-height'}
-            ${smallInputWidth && 'Select-input-small-width'}
-            Select-input-BlifSelectInput`}>
+        <React.Fragment
+        // ref={ref}
+        // className={`${smallInputHeight && 'Select-input-small-height'}
+        // ${smallInputWidth && 'Select-input-small-width'}
+        // Select-input-BlifSelectInput`}
+        >
             <Select
                 label={label || ' '}
                 hint={hint}
@@ -92,7 +93,7 @@ const BlifSelectInput = (props) => {
                         ),
                     )}
             </Select>
-        </div>
+        </React.Fragment>
     );
 };
 

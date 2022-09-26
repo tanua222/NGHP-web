@@ -93,6 +93,7 @@ const FiltersView = ({clickHandler, schema = [], handleInputChange}) => {
                                 } else
                                     return (
                                         <SelectInputFilter
+                                            key={index}
                                             label={
                                                 rowItem[ARRAY_MAP_KEYS.LABEL]
                                             }
@@ -115,7 +116,7 @@ const FiltersView = ({clickHandler, schema = [], handleInputChange}) => {
                 })}
 
                 <BlifFlexGridCol>
-                    <BlifBox tokens={{paddingLeft: '15px'}}>
+                    <BlifBox horizontal={{xs: 1, sm: 2, md: 3}}>
                         <BlifButton onClick={clickHandler}>Search</BlifButton>
                     </BlifBox>
                 </BlifFlexGridCol>

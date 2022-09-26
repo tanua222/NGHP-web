@@ -100,14 +100,14 @@ const PreCheck = () => {
     // search onClick handler
     const clickHandler = (e) => {
         e.preventDefault();
-        // console.log(filterQuery);
+
         alert('search query');
     };
 
     return (
         <BlifFlexGrid gutter={false}>
             <BlifStackView tokens={{justifyContent: 'center'}}>
-                <BlifFlexGridCol xs={12} lg={10} verticalAlign="center">
+                <BlifFlexGridCol xs={12} lg={10}>
                     <BlifFlexGridRow>
                         <BlifTypography variant={{size: 'h2'}}>
                             Pre-Check
@@ -116,13 +116,14 @@ const PreCheck = () => {
                     <Spacer space={1} />
                     <BlifBox variant={{background: 'light'}} flex={1}>
                         <BlifFlexGridRow
-                            verticalAlign="center"
+                            verticalAlign="middle"
                             horizontalAlign="center">
                             <FiltersView
                                 clickHandler={clickHandler}
                                 schema={FILTER_SCHEMA}
                                 handleInputChange={handleInputChange}
                             />
+                            {/* {console.log(filterQuery)} */}
                         </BlifFlexGridRow>
                     </BlifBox>
                 </BlifFlexGridCol>
