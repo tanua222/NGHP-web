@@ -7,6 +7,7 @@ import BlifSpacer from '../BlifSpacer/BlifSpacer';
 import BlifButton from '../Buttons/BlifButton';
 import {useState, useEffect} from 'react';
 import {ARRAY_MAP_KEYS, FILTER_TYPES} from '../../../utils/commonKeys';
+import {DatePicker} from '@telus-uds/ds-allium';
 
 const ITEMS_IN_ROW = 3;
 const ZERO_NUMBER = 0;
@@ -90,7 +91,10 @@ const FiltersView = ({clickHandler, schema = [], handleInputChange}) => {
                                             }}
                                         />
                                     );
-                                } else
+                                } else if (
+                                    rowItem[ARRAY_MAP_KEYS.FILTER_TYPE] ===
+                                    FILTER_TYPES.SELECT_INPUT
+                                ) {
                                     return (
                                         <SelectInputFilter
                                             key={index}
@@ -110,6 +114,24 @@ const FiltersView = ({clickHandler, schema = [], handleInputChange}) => {
                                             }}
                                         />
                                     );
+                                } else {
+                                    return (
+                                        <DatePicker
+                                            key={index}
+                                            label={
+                                                rowItem[ARRAY_MAP_KEYS.LABEL]
+                                            }
+                                            onDateChange={(val) => {
+                                                handleInputChange(
+                                                    rowItem[
+                                                        ARRAY_MAP_KEYS.ON_CHANGE
+                                                    ],
+                                                    val,
+                                                );
+                                            }}
+                                        />
+                                    );
+                                }
                             })}
                         </BlifStackView>
                     );

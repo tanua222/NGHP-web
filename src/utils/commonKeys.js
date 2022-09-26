@@ -12,6 +12,7 @@ export const ARRAY_MAP_KEYS = {
 export const FILTER_TYPES = {
     SELECT_INPUT: 'SELECT_INPUT',
     TEXT_INPUT: 'TEXT_INPUT',
+    DATE_INPUT: 'DATE_INPUT',
 };
 
 export const LOCAL_LANGUAGE = 'LANGUAGE';
