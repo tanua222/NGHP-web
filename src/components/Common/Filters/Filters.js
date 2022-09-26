@@ -8,6 +8,8 @@ import BlifButton from '../Buttons/BlifButton';
 import {useState, useEffect} from 'react';
 import {ARRAY_MAP_KEYS, FILTER_TYPES} from '../../../utils/commonKeys';
 import {DatePicker} from '@telus-uds/ds-allium';
+import BlifDatePicker from '../BlifDatePicker/BlifDatePicker';
+import BlifTypography from '../BlifTypography/BlifTypography';
 
 const ITEMS_IN_ROW = 3;
 const ZERO_NUMBER = 0;
@@ -33,6 +35,30 @@ const SelectInputFilter = ({label = '', options = [], onChangeSelect}) => {
                 />
             </BlifBox>
         </BlifFlexGridCol>
+    );
+};
+
+const DateInputFilter = ({label, key}) => {
+    return (
+        <>
+            <BlifFlexGridCol md={3}>
+                <BlifBox vertical={1} horizontal={3}>
+                    <BlifTypography>{label}</BlifTypography>
+                    <BlifDatePicker
+                        key={key}
+                        datetime
+                        // onDateChange={(val) => {
+                        //     handleInputChange(
+                        //         rowItem[
+                        //             ARRAY_MAP_KEYS.ON_CHANGE
+                        //         ],
+                        //         val,
+                        //     );
+                        // }}
+                    />
+                </BlifBox>
+            </BlifFlexGridCol>
+        </>
     );
 };
 
@@ -116,19 +142,11 @@ const FiltersView = ({clickHandler, schema = [], handleInputChange}) => {
                                     );
                                 } else {
                                     return (
-                                        <DatePicker
+                                        <DateInputFilter
                                             key={index}
                                             label={
                                                 rowItem[ARRAY_MAP_KEYS.LABEL]
                                             }
-                                            onDateChange={(val) => {
-                                                handleInputChange(
-                                                    rowItem[
-                                                        ARRAY_MAP_KEYS.ON_CHANGE
-                                                    ],
-                                                    val,
-                                                );
-                                            }}
                                         />
                                     );
                                 }
