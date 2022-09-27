@@ -76,61 +76,61 @@ const SEARCH_FORM_SCHEMA = {
 const SEARCH_FILTER_SCHEMA = [
     {
         [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
-        [ARRAY_MAP_KEYS.LABEL]: 'Phone Number',
+        [ARRAY_MAP_KEYS.label]: 'Phone Number',
         [ARRAY_MAP_KEYS.ON_CHANGE]: SEARCH_FORM_SCHEMA_KEYS.PHONE_NUMBER_INPUT,
     },
     {
         [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
-        [ARRAY_MAP_KEYS.LABEL]: 'Bus Operating Name',
+        [ARRAY_MAP_KEYS.label]: 'Bus Operating Name',
         [ARRAY_MAP_KEYS.ON_CHANGE]:
             SEARCH_FORM_SCHEMA_KEYS.BUS_OPERATING_NAME_INPUT,
     },
     {
         [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-        [ARRAY_MAP_KEYS.LABEL]: 'Action Indicator',
+        [ARRAY_MAP_KEYS.label]: 'Action Indicator',
         [ARRAY_MAP_KEYS.OPTIONS]: getActionIndicatorFilterOption(),
         [ARRAY_MAP_KEYS.ON_CHANGE]:
             SEARCH_FORM_SCHEMA_KEYS.ACTION_INDICATOR_INPUT,
     },
     {
         [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-        [ARRAY_MAP_KEYS.LABEL]: 'Rejects',
+        [ARRAY_MAP_KEYS.label]: 'Rejects',
         [ARRAY_MAP_KEYS.OPTIONS]: getRejectsFilterOption,
         [ARRAY_MAP_KEYS.ON_CHANGE]: SEARCH_FORM_SCHEMA_KEYS.REJECTS_INPUT,
     },
     {
         [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-        [ARRAY_MAP_KEYS.LABEL]: 'BRG Indicator',
+        [ARRAY_MAP_KEYS.label]: 'BRG Indicator',
         [ARRAY_MAP_KEYS.OPTIONS]: getBrgIndicatorFilterOptions,
         [ARRAY_MAP_KEYS.ON_CHANGE]: SEARCH_FORM_SCHEMA_KEYS.BRG_INDICATOR_INPUT,
     },
 
     {
         [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-        [ARRAY_MAP_KEYS.LABEL]: 'Internal Status',
+        [ARRAY_MAP_KEYS.label]: 'Internal Status',
         [ARRAY_MAP_KEYS.OPTIONS]: getInternalStatusFilterOptions(),
         [ARRAY_MAP_KEYS.ON_CHANGE]:
             SEARCH_FORM_SCHEMA_KEYS.INTERNAL_STATUS_INPUT,
     },
     {
         [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
-        [ARRAY_MAP_KEYS.LABEL]: 'File',
+        [ARRAY_MAP_KEYS.label]: 'File',
         [ARRAY_MAP_KEYS.ON_CHANGE]: SEARCH_FORM_SCHEMA_KEYS.FILE_INPUT,
     },
     {
         [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-        [ARRAY_MAP_KEYS.LABEL]: 'Province',
+        [ARRAY_MAP_KEYS.label]: 'Province',
         [ARRAY_MAP_KEYS.OPTIONS]: getProvinceFilterOptions,
         [ARRAY_MAP_KEYS.ON_CHANGE]: SEARCH_FORM_SCHEMA_KEYS.PROVINCE_INPUT,
     },
     {
         [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.DATE_INPUT,
-        [ARRAY_MAP_KEYS.LABEL]: 'Start Date',
+        [ARRAY_MAP_KEYS.label]: 'Start Date',
         [ARRAY_MAP_KEYS.ON_CHANGE]: SEARCH_FORM_SCHEMA_KEYS.START_DATE_INPUT,
     },
     {
         [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.DATE_INPUT,
-        [ARRAY_MAP_KEYS.LABEL]: 'End Date',
+        [ARRAY_MAP_KEYS.label]: 'End Date',
         [ARRAY_MAP_KEYS.ON_CHANGE]: SEARCH_FORM_SCHEMA_KEYS.END_DATE_INPUT,
     },
 ];

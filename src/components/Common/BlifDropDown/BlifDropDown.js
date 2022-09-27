@@ -51,16 +51,16 @@ const BlifDropDown = ({
                         <div
                             className={`BlifDropDown-child ${
                                 selectedDropDownValue ===
-                                    item[ARRAY_MAP_KEYS.VALUE] &&
+                                    item[ARRAY_MAP_KEYS.value] &&
                                 'BlifDropDown-highlight-item'
                             }`}
                             key={index}
                             onClick={() =>
                                 item[ARRAY_MAP_KEYS.ON_CLICK](
-                                    item[ARRAY_MAP_KEYS.VALUE],
+                                    item[ARRAY_MAP_KEYS.value],
                                 )
                             }>
-                            {item[ARRAY_MAP_KEYS.LABEL]}
+                            {item[ARRAY_MAP_KEYS.label]}
                         </div>
                     ))}
                 </div>

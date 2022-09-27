@@ -26,19 +26,19 @@ const Header = () => {
     );
 
     const blifTabOptions = getRoutes?.map((item) => ({
-        [ARRAY_MAP_KEYS.LABEL]: item[ROUTER_KEYS.NAVBAR_NAME],
-        [ARRAY_MAP_KEYS.VALUE]: item[ROUTER_KEYS.PATH_NAME],
+        [ARRAY_MAP_KEYS.label]: item[ROUTER_KEYS.NAVBAR_NAME],
+        [ARRAY_MAP_KEYS.value]: item[ROUTER_KEYS.PATH_NAME],
         [ARRAY_MAP_KEYS.ID]: item[ARRAY_MAP_KEYS.ID],
     }));
 
     useEffect(() => {
         const getLocationPathname = location.pathname;
         const getSelectedRoute = blifTabOptions.find(
-            (item) => item[ARRAY_MAP_KEYS.VALUE] === getLocationPathname,
+            (item) => item[ARRAY_MAP_KEYS.value] === getLocationPathname,
         );
 
         if (getSelectedRoute) {
-            setHeaderTabsValue(getSelectedRoute[ARRAY_MAP_KEYS.VALUE]);
+            setHeaderTabsValue(getSelectedRoute[ARRAY_MAP_KEYS.value]);
         }
     }, [location.pathname, blifTabOptions]);
 

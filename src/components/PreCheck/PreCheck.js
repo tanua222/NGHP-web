@@ -145,27 +145,27 @@ const PreCheck = () => {
             const localFilterSchema = [
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
-                    [ARRAY_MAP_KEYS.LABEL]: 'File',
+                    [ARRAY_MAP_KEYS.label]: 'File',
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         PRECHECK_FORM_SCHEMA_KEYS.FILE_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-                    [ARRAY_MAP_KEYS.LABEL]: 'Province',
+                    [ARRAY_MAP_KEYS.label]: 'Province',
                     [ARRAY_MAP_KEYS.OPTIONS]: translatedProvinceFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         PRECHECK_FORM_SCHEMA_KEYS.PROVINCE_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-                    [ARRAY_MAP_KEYS.LABEL]: 'CLEC',
+                    [ARRAY_MAP_KEYS.label]: 'CLEC',
                     [ARRAY_MAP_KEYS.OPTIONS]: translatedClecFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         PRECHECK_FORM_SCHEMA_KEYS.CLEC_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-                    [ARRAY_MAP_KEYS.LABEL]: 'BRG Indicator',
+                    [ARRAY_MAP_KEYS.label]: 'BRG Indicator',
                     [ARRAY_MAP_KEYS.OPTIONS]:
                         translatedBrgIndicatorFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
@@ -173,7 +173,7 @@ const PreCheck = () => {
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-                    [ARRAY_MAP_KEYS.LABEL]: 'Rejects',
+                    [ARRAY_MAP_KEYS.label]: 'Rejects',
                     [ARRAY_MAP_KEYS.OPTIONS]: translatedRejectsFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         PRECHECK_FORM_SCHEMA_KEYS.REJECTS_INPUT,

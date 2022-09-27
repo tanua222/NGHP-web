@@ -14,8 +14,8 @@ const BlifTabs = ({options = [], value, handleChange}) => {
                 {options &&
                     options.map((item) => (
                         <Tab
-                            label={item[ARRAY_MAP_KEYS.LABEL]}
-                            value={item[ARRAY_MAP_KEYS.VALUE]}
+                            label={item[ARRAY_MAP_KEYS.label]}
+                            value={item[ARRAY_MAP_KEYS.value]}
                             key={item[ARRAY_MAP_KEYS.ID]}
                         />
                     ))}

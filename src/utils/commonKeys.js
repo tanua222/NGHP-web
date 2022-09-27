@@ -1,12 +1,14 @@
 export const ARRAY_MAP_KEYS = {
-    LABEL: 'LABEL',
-    VALUE: 'VALUE',
+    // All CAPS
     INDEX: 'INDEX',
     ID: 'ID',
     ON_CLICK: 'ON_CLICK',
     FILTER_TYPE: 'FILTER_TYPE',
     OPTIONS: 'OPTIONS',
     ON_CHANGE: 'ON_CHANGE',
+
+    //camelCase
+    label: 'label',
     text: 'text',
     value: 'value',
     languageTranslationKey: 'languageTranslationKey',

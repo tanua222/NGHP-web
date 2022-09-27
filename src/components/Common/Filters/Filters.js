@@ -100,7 +100,7 @@ const FiltersView = ({clickHandler, schema = [], handleInputChange}) => {
                                         <TextInputFilter
                                             key={index}
                                             label={
-                                                rowItem[ARRAY_MAP_KEYS.LABEL]
+                                                rowItem[ARRAY_MAP_KEYS.label]
                                             }
                                             onChangeText={(val) => {
                                                 handleInputChange(
@@ -120,7 +120,7 @@ const FiltersView = ({clickHandler, schema = [], handleInputChange}) => {
                                         <SelectInputFilter
                                             key={index}
                                             label={
-                                                rowItem[ARRAY_MAP_KEYS.LABEL]
+                                                rowItem[ARRAY_MAP_KEYS.label]
                                             }
                                             options={
                                                 rowItem[ARRAY_MAP_KEYS.OPTIONS]
@@ -140,7 +140,7 @@ const FiltersView = ({clickHandler, schema = [], handleInputChange}) => {
                                         <DateInputFilter
                                             key={index}
                                             label={
-                                                rowItem[ARRAY_MAP_KEYS.LABEL]
+                                                rowItem[ARRAY_MAP_KEYS.label]
                                             }
 
                                             // handleInputChange={(val) => {
