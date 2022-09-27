@@ -123,15 +123,16 @@ const PreCheck = () => {
 
     return (
         <BlifFlexGrid gutter={false}>
-            <BlifStackView tokens={{justifyContent: 'center'}}>
-                <BlifFlexGridCol xs={12} lg={10}>
+            <BlifStackView
+                tokens={{justifyContent: 'center', alignItems: 'center'}}>
+                <BlifFlexGridCol md={12} lg={10} xl={8}>
                     <BlifFlexGridRow>
                         <BlifTypography variant={{size: 'h2'}}>
                             Pre-Check
                         </BlifTypography>
                     </BlifFlexGridRow>
                     <Spacer space={1} />
-                    <BlifBox variant={{background: 'light'}} flex={1}>
+                    <BlifBox variant={{background: 'light'}} space={1} flex={1}>
                         <BlifFlexGridRow
                             verticalAlign="middle"
                             horizontalAlign="center">

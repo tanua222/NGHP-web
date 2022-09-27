@@ -162,7 +162,7 @@ const Search = () => {
                 <BlifFlexGridCol xs={12} lg={10}>
                     <BlifFlexGridRow>
                         <BlifTypography variant={{size: 'h2'}}>
-                            Pre-Check
+                            Search
                         </BlifTypography>
                     </BlifFlexGridRow>
                     <Spacer space={1} />
