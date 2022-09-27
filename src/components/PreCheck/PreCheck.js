@@ -8,11 +8,12 @@ import {checkIfArrayExists} from '../../utils/helperFunctions';
 import BlifBox from '../Common/Box/BlifBox';
 import useTranslationForOptions from '../../hooks/useTranslationForOptions';
 import {
-    PROVINCE_FILTER_OPTIONS_KEYS,
-    REJECTS_FILTER_OPTIONS_KEYS,
-    BRG_FILTER_OPTIONS_KEYS,
-    CLEC_FILTER_OPTIONS_KEYS,
+    PROVINCE_FILTER_LANGUAGE_KEYS,
+    REJECTS_FILTER_LANGUAGE_KEYS,
+    BRG_FILTER_LANGUAGE_KEYS,
+    CLEC_FILTER_LANGUAGE_KEYS,
     PRECHECK_LANGUAGE_KEYS,
+    FILE_SEARCH_FILTER_LANGUAGE_KEYS,
 } from '../../utils/languageKeys/components/preCheckKeys';
 
 import {
@@ -27,13 +28,13 @@ export const getProvinceFilterOptions = [
         [ARRAY_MAP_KEYS.text]: 'ALL',
         [ARRAY_MAP_KEYS.value]: 'ALL',
         [ARRAY_MAP_KEYS.languageTranslationKey]:
-            PROVINCE_FILTER_OPTIONS_KEYS.ALL,
+            PROVINCE_FILTER_LANGUAGE_KEYS.ALL,
     },
     {
         [ARRAY_MAP_KEYS.text]: 'QC',
         [ARRAY_MAP_KEYS.value]: 'QC',
         [ARRAY_MAP_KEYS.languageTranslationKey]:
-            PROVINCE_FILTER_OPTIONS_KEYS.QC,
+            PROVINCE_FILTER_LANGUAGE_KEYS.QC,
     },
 ];
 
@@ -41,19 +42,19 @@ export const getBrgIndicatorFilterOptions = [
     {
         [ARRAY_MAP_KEYS.text]: 'ALL',
         [ARRAY_MAP_KEYS.value]: 'ALL',
-        [ARRAY_MAP_KEYS.languageTranslationKey]: BRG_FILTER_OPTIONS_KEYS.ALL,
+        [ARRAY_MAP_KEYS.languageTranslationKey]: BRG_FILTER_LANGUAGE_KEYS.ALL,
     },
     {
         [ARRAY_MAP_KEYS.text]: 'Business',
         [ARRAY_MAP_KEYS.value]: 'Business',
         [ARRAY_MAP_KEYS.languageTranslationKey]:
-            BRG_FILTER_OPTIONS_KEYS.BUSINESS,
+            BRG_FILTER_LANGUAGE_KEYS.BUSINESS,
     },
     {
         [ARRAY_MAP_KEYS.text]: 'Residential',
         [ARRAY_MAP_KEYS.value]: 'Residential',
         [ARRAY_MAP_KEYS.languageTranslationKey]:
-            BRG_FILTER_OPTIONS_KEYS.RESIDENTIAL,
+            BRG_FILTER_LANGUAGE_KEYS.RESIDENTIAL,
     },
 ];
 
@@ -62,19 +63,19 @@ export const getRejectsFilterOption = [
         [ARRAY_MAP_KEYS.text]: 'ALL',
         [ARRAY_MAP_KEYS.value]: 'ALL',
         [ARRAY_MAP_KEYS.languageTranslationKey]:
-            REJECTS_FILTER_OPTIONS_KEYS.ALL,
+            REJECTS_FILTER_LANGUAGE_KEYS.ALL,
     },
     {
         [ARRAY_MAP_KEYS.text]: 'Only Rejects',
         [ARRAY_MAP_KEYS.value]: 'Only Rejects',
         [ARRAY_MAP_KEYS.languageTranslationKey]:
-            REJECTS_FILTER_OPTIONS_KEYS.ONLY_REJECTS,
+            REJECTS_FILTER_LANGUAGE_KEYS.ONLY_REJECTS,
     },
     {
         [ARRAY_MAP_KEYS.text]: 'No Rejects',
         [ARRAY_MAP_KEYS.value]: 'No Rejects',
         [ARRAY_MAP_KEYS.languageTranslationKey]:
-            REJECTS_FILTER_OPTIONS_KEYS.NO_REJECTS,
+            REJECTS_FILTER_LANGUAGE_KEYS.NO_REJECTS,
     },
 ];
 
@@ -82,12 +83,12 @@ export const getClecFilterOptions = [
     {
         [ARRAY_MAP_KEYS.text]: 'ALL',
         [ARRAY_MAP_KEYS.value]: 'ALL',
-        [ARRAY_MAP_KEYS.languageTranslationKey]: CLEC_FILTER_OPTIONS_KEYS.ALL,
+        [ARRAY_MAP_KEYS.languageTranslationKey]: CLEC_FILTER_LANGUAGE_KEYS.ALL,
     },
     {
         [ARRAY_MAP_KEYS.text]: 'FIDO',
         [ARRAY_MAP_KEYS.value]: 'FIDO',
-        [ARRAY_MAP_KEYS.languageTranslationKey]: CLEC_FILTER_OPTIONS_KEYS.FIDO,
+        [ARRAY_MAP_KEYS.languageTranslationKey]: CLEC_FILTER_LANGUAGE_KEYS.FIDO,
     },
 ];
 
@@ -145,27 +146,31 @@ const PreCheck = () => {
             const localFilterSchema = [
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
-                    [ARRAY_MAP_KEYS.label]: 'File',
+                    [ARRAY_MAP_KEYS.label]: t(
+                        FILE_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
+                    ),
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         PRECHECK_FORM_SCHEMA_KEYS.FILE_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-                    [ARRAY_MAP_KEYS.label]: 'Province',
+                    [ARRAY_MAP_KEYS.label]: t(
+                        PROVINCE_FILTER_LANGUAGE_KEYS.LABEL,
+                    ),
                     [ARRAY_MAP_KEYS.OPTIONS]: translatedProvinceFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         PRECHECK_FORM_SCHEMA_KEYS.PROVINCE_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-                    [ARRAY_MAP_KEYS.label]: 'CLEC',
+                    [ARRAY_MAP_KEYS.label]: t(CLEC_FILTER_LANGUAGE_KEYS.LABEL),
                     [ARRAY_MAP_KEYS.OPTIONS]: translatedClecFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         PRECHECK_FORM_SCHEMA_KEYS.CLEC_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-                    [ARRAY_MAP_KEYS.label]: 'BRG Indicator',
+                    [ARRAY_MAP_KEYS.label]: t(BRG_FILTER_LANGUAGE_KEYS.LABEL),
                     [ARRAY_MAP_KEYS.OPTIONS]:
                         translatedBrgIndicatorFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
@@ -173,7 +178,9 @@ const PreCheck = () => {
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-                    [ARRAY_MAP_KEYS.label]: 'Rejects',
+                    [ARRAY_MAP_KEYS.label]: t(
+                        REJECTS_FILTER_LANGUAGE_KEYS.LABEL,
+                    ),
                     [ARRAY_MAP_KEYS.OPTIONS]: translatedRejectsFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         PRECHECK_FORM_SCHEMA_KEYS.REJECTS_INPUT,
