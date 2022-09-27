@@ -38,7 +38,7 @@ const SelectInputFilter = ({label = '', options = [], onChangeSelect}) => {
     );
 };
 
-const DateInputFilter = ({label, key, handleInputChange}) => {
+const DateInputFilter = ({label, index, handleInputChange}) => {
     return (
         <>
             <BlifFlexGridCol md={3}>
@@ -46,7 +46,7 @@ const DateInputFilter = ({label, key, handleInputChange}) => {
                     {/* <BlifTypography>{label}</BlifTypography> */}
                     <DatePicker
                         id="DatePicker"
-                        key={key}
+                        key={index}
                         label={label}
                         copy="en"
                         // onDateChange={handleInputChange}
@@ -142,15 +142,15 @@ const FiltersView = ({clickHandler, schema = [], handleInputChange}) => {
                                             label={
                                                 rowItem[ARRAY_MAP_KEYS.LABEL]
                                             }
-                                            // language="en"
-                                            handleInputChange={(val) => {
-                                                handleInputChange(
-                                                    rowItem[
-                                                        ARRAY_MAP_KEYS.ON_CHANGE
-                                                    ],
-                                                    val._d,
-                                                );
-                                            }}
+
+                                            // handleInputChange={(val) => {
+                                            //     handleInputChange(
+                                            //         rowItem[
+                                            //             ARRAY_MAP_KEYS.ON_CHANGE
+                                            //         ],
+                                            //         val._d,
+                                            //     );
+                                            // }}
                                         />
                                     );
                                 }
