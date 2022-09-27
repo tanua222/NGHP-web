@@ -158,27 +158,29 @@ const Search = () => {
     };
     return (
         <BlifFlexGrid gutter={false}>
-            <BlifStackView tokens={{justifyContent: 'center'}}>
-                <BlifFlexGridCol xs={12} lg={10}>
-                    <BlifFlexGridRow>
-                        <BlifTypography variant={{size: 'h2'}}>
-                            Search
-                        </BlifTypography>
-                    </BlifFlexGridRow>
-                    <Spacer space={1} />
-                    <BlifBox variant={{background: 'light'}} flex={1}>
-                        <BlifFlexGridRow
-                            verticalAlign="middle"
-                            horizontalAlign="center">
-                            <FiltersView
-                                clickHandler={searchClickHandler}
-                                schema={SEARCH_FILTER_SCHEMA}
-                                handleInputChange={handleSearchInputChange}
-                            />
-                        </BlifFlexGridRow>
+            <BlifFlexGridRow>
+                <BlifFlexGridCol lg={12} md={12}>
+                    <BlifTypography variant={{size: 'h2'}}>
+                        Search
+                    </BlifTypography>
+                </BlifFlexGridCol>
+            </BlifFlexGridRow>
+            <BlifFlexGridRow verticalAlign="middle" horizontalAlign="center">
+                <BlifFlexGridCol lg={12} md={12}>
+                    <BlifBox
+                        variant={{background: 'light'}}
+                        bottom={{lg: 1}}
+                        left={{lg: 1}}
+                        right={{lg: 7, md: 11}}
+                        flex={1}>
+                        <FiltersView
+                            clickHandler={searchClickHandler}
+                            schema={SEARCH_FILTER_SCHEMA}
+                            handleInputChange={handleSearchInputChange}
+                        />
                     </BlifBox>
                 </BlifFlexGridCol>
-            </BlifStackView>
+            </BlifFlexGridRow>
         </BlifFlexGrid>
     );
 };
