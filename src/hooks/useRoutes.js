@@ -2,7 +2,7 @@ import React from 'react';
 import {ROUTER_KEYS} from '../utils/routeKeys';
 import {ARRAY_MAP_KEYS} from '../utils/commonKeys';
 import {useTranslation} from 'react-i18next';
-import {HEADER_LANGUAGE_KEYS} from '../utils/languageKeys/headerEnglishKeys';
+import {HEADER_LANGUAGE_KEYS} from '../utils/languageKeys/components/headerKeys';
 
 const Home = React.lazy(() => import('../components/Home/Home'));
 const Search = React.lazy(() => import('../components/Search/Search'));

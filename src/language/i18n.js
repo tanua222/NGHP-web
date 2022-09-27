@@ -1,13 +1,13 @@
 import i18n from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-import {headerEnglish, headerFrench} from './headerLanguage';
+import {headerEnglish, headerFrench} from './components/headerLanguage';
 import {
     miscellaneousFrench,
     miscellaneousEnglish,
 } from './miscellaneousLanguage';
 
-import {preCheckFrench, preCheckEnglish} from './preCheckLanguage';
+import {preCheckFrench, preCheckEnglish} from './components/preCheckLanguage';
 
 import COMMON_LANGUAGE_KEYS from '../utils/languageKeys/commonKeys';
 

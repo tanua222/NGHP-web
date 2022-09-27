@@ -1,4 +1,4 @@
-import {HEADER_LANGUAGE_KEYS} from '../utils/languageKeys/headerEnglishKeys';
+import {HEADER_LANGUAGE_KEYS} from '../../utils/languageKeys/components/headerKeys';
 
 export const headerEnglish = {
     [HEADER_LANGUAGE_KEYS.HEADER_HOME]: 'Home',

@@ -1,5 +1,5 @@
 import moment from 'moment-timezone';
-import {isNullOrUndefined} from '../../Util/Util';
+import {isNullOrUndefined} from '../../../utils/helperFunctions';
 import {createTheme} from '@material-ui/core';
 import BlifGreen from './BlifGreen';
 

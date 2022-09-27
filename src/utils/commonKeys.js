@@ -7,6 +7,9 @@ export const ARRAY_MAP_KEYS = {
     FILTER_TYPE: 'FILTER_TYPE',
     OPTIONS: 'OPTIONS',
     ON_CHANGE: 'ON_CHANGE',
+    text: 'text',
+    value: 'value',
+    languageTranslationKey: 'languageTranslationKey',
 };
 
 export const FILTER_TYPES = {
@@ -16,3 +19,4 @@ export const FILTER_TYPES = {
 };
 
 export const LOCAL_LANGUAGE = 'LANGUAGE';
+export const ZERO_INDEX = 0;

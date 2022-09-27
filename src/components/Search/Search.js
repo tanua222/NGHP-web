@@ -74,7 +74,7 @@ const SEARCH_FORM_SCHEMA = {
 };
 
 // Search Filter Schema
-const SEARCH_FILTER_SCHEMA = [
+const filterSchema = [
     {
         [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
         [ARRAY_MAP_KEYS.LABEL]: 'Phone Number',
@@ -172,7 +172,7 @@ const Search = () => {
                             horizontalAlign="center">
                             <FiltersView
                                 clickHandler={searchClickHandler}
-                                schema={SEARCH_FILTER_SCHEMA}
+                                schema={filterSchema}
                                 handleInputChange={handleSearchInputChange}
                             />
                         </BlifFlexGridRow>

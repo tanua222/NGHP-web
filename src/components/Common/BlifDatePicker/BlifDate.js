@@ -20,7 +20,7 @@ import {
 import {ThemeProvider} from '@material-ui/styles';
 import {isEnglish} from '../../../utils/Constants';
 import Text from '@tds/core-text';
-import {isNullOrUndefined} from '../../Util/Util';
+import {isNullOrUndefined} from '../../../utils/helperFunctions';
 
 const IVS_DATE_MODE = BlifDateMode.DATE;
 
