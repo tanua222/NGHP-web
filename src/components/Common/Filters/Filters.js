@@ -11,7 +11,7 @@ import {DatePicker} from '@telus-uds/ds-allium';
 import BlifDatePicker from '../BlifDatePicker/BlifDatePicker';
 import BlifTypography from '../BlifTypography/BlifTypography';
 
-const ITEMS_IN_ROW = 3;
+const ITEMS_IN_ROW = 4;
 const ZERO_NUMBER = 0;
 
 const TextInputFilter = ({label = '', onChangeText}) => {
@@ -38,23 +38,18 @@ const SelectInputFilter = ({label = '', options = [], onChangeSelect}) => {
     );
 };
 
-const DateInputFilter = ({label, key}) => {
+const DateInputFilter = ({label, index, handleInputChange}) => {
     return (
         <>
             <BlifFlexGridCol md={3}>
                 <BlifBox vertical={1} horizontal={3}>
-                    <BlifTypography>{label}</BlifTypography>
-                    <BlifDatePicker
-                        key={key}
-                        datetime
-                        // onDateChange={(val) => {
-                        //     handleInputChange(
-                        //         rowItem[
-                        //             ARRAY_MAP_KEYS.ON_CHANGE
-                        //         ],
-                        //         val,
-                        //     );
-                        // }}
+                    {/* <BlifTypography>{label}</BlifTypography> */}
+                    <DatePicker
+                        id="DatePicker"
+                        key={index}
+                        label={label}
+                        copy="en"
+                        // onDateChange={handleInputChange}
                     />
                 </BlifBox>
             </BlifFlexGridCol>
@@ -66,7 +61,7 @@ const FiltersView = ({clickHandler, schema = [], handleInputChange}) => {
     const [modifySchemaFormat, setModifySchemaFormat] = useState([]);
     useEffect(() => {
         if (schema) {
-            // Convert Array to 3 cols per row structure
+            // Convert Array to 4 cols per row structure
             let arrayIndex = 0;
             let modifiedArray = [];
 
@@ -147,6 +142,15 @@ const FiltersView = ({clickHandler, schema = [], handleInputChange}) => {
                                             label={
                                                 rowItem[ARRAY_MAP_KEYS.LABEL]
                                             }
+
+                                            // handleInputChange={(val) => {
+                                            //     handleInputChange(
+                                            //         rowItem[
+                                            //             ARRAY_MAP_KEYS.ON_CHANGE
+                                            //         ],
+                                            //         val._d,
+                                            //     );
+                                            // }}
                                         />
                                     );
                                 }
@@ -161,6 +165,7 @@ const FiltersView = ({clickHandler, schema = [], handleInputChange}) => {
                     </BlifBox>
                 </BlifFlexGridCol>
             </BlifStackView>
+            <BlifSpacer space={3} />
         </BlifFlexGrid>
     );
 };

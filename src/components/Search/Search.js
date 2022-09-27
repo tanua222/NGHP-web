@@ -62,19 +62,18 @@ const SEARCH_FORM_SCHEMA = {
     [SEARCH_FORM_SCHEMA_KEYS.FILE_INPUT]: '',
     [SEARCH_FORM_SCHEMA_KEYS.ACTION_INDICATOR_INPUT]:
         getActionIndicatorFilterOption()[0].value,
-    [SEARCH_FORM_SCHEMA_KEYS.REJECTS_INPUT]: getRejectsFilterOption()[0].value,
+    [SEARCH_FORM_SCHEMA_KEYS.REJECTS_INPUT]: getRejectsFilterOption[0].value,
     [SEARCH_FORM_SCHEMA_KEYS.BRG_INDICATOR_INPUT]:
-        getBrgIndicatorFilterOptions()[0].value,
+        getBrgIndicatorFilterOptions[0].value,
     [SEARCH_FORM_SCHEMA_KEYS.INTERNAL_STATUS_INPUT]:
         getInternalStatusFilterOptions()[0].value,
-    [SEARCH_FORM_SCHEMA_KEYS.PROVINCE_INPUT]:
-        getProvinceFilterOptions()[0].value,
+    [SEARCH_FORM_SCHEMA_KEYS.PROVINCE_INPUT]: getProvinceFilterOptions[0].value,
     [SEARCH_FORM_SCHEMA_KEYS.START_DATE_INPUT]: '',
     [SEARCH_FORM_SCHEMA_KEYS.END_DATE_INPUT]: '',
 };
 
 // Search Filter Schema
-const filterSchema = [
+const SEARCH_FILTER_SCHEMA = [
     {
         [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
         [ARRAY_MAP_KEYS.LABEL]: 'Phone Number',
@@ -96,13 +95,13 @@ const filterSchema = [
     {
         [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
         [ARRAY_MAP_KEYS.LABEL]: 'Rejects',
-        [ARRAY_MAP_KEYS.OPTIONS]: getRejectsFilterOption(),
+        [ARRAY_MAP_KEYS.OPTIONS]: getRejectsFilterOption,
         [ARRAY_MAP_KEYS.ON_CHANGE]: SEARCH_FORM_SCHEMA_KEYS.REJECTS_INPUT,
     },
     {
         [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
         [ARRAY_MAP_KEYS.LABEL]: 'BRG Indicator',
-        [ARRAY_MAP_KEYS.OPTIONS]: getBrgIndicatorFilterOptions(),
+        [ARRAY_MAP_KEYS.OPTIONS]: getBrgIndicatorFilterOptions,
         [ARRAY_MAP_KEYS.ON_CHANGE]: SEARCH_FORM_SCHEMA_KEYS.BRG_INDICATOR_INPUT,
     },
 
@@ -121,7 +120,7 @@ const filterSchema = [
     {
         [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
         [ARRAY_MAP_KEYS.LABEL]: 'Province',
-        [ARRAY_MAP_KEYS.OPTIONS]: getProvinceFilterOptions(),
+        [ARRAY_MAP_KEYS.OPTIONS]: getProvinceFilterOptions,
         [ARRAY_MAP_KEYS.ON_CHANGE]: SEARCH_FORM_SCHEMA_KEYS.PROVINCE_INPUT,
     },
     {
@@ -158,27 +157,29 @@ const Search = () => {
     };
     return (
         <BlifFlexGrid gutter={false}>
-            <BlifStackView tokens={{justifyContent: 'center'}}>
-                <BlifFlexGridCol xs={12} lg={10}>
-                    <BlifFlexGridRow>
-                        <BlifTypography variant={{size: 'h2'}}>
-                            Pre-Check
-                        </BlifTypography>
-                    </BlifFlexGridRow>
-                    <Spacer space={1} />
-                    <BlifBox variant={{background: 'light'}} flex={1}>
-                        <BlifFlexGridRow
-                            verticalAlign="middle"
-                            horizontalAlign="center">
-                            <FiltersView
-                                clickHandler={searchClickHandler}
-                                schema={filterSchema}
-                                handleInputChange={handleSearchInputChange}
-                            />
-                        </BlifFlexGridRow>
+            <BlifFlexGridRow>
+                <BlifFlexGridCol lg={12} md={12}>
+                    <BlifTypography variant={{size: 'h2'}}>
+                        Search
+                    </BlifTypography>
+                </BlifFlexGridCol>
+            </BlifFlexGridRow>
+            <BlifFlexGridRow verticalAlign="middle" horizontalAlign="center">
+                <BlifFlexGridCol lg={12} md={12}>
+                    <BlifBox
+                        variant={{background: 'light'}}
+                        bottom={{lg: 1}}
+                        left={{lg: 1}}
+                        right={{lg: 7, md: 11}}
+                        flex={1}>
+                        <FiltersView
+                            clickHandler={searchClickHandler}
+                            schema={SEARCH_FILTER_SCHEMA}
+                            handleInputChange={handleSearchInputChange}
+                        />
                     </BlifBox>
                 </BlifFlexGridCol>
-            </BlifStackView>
+            </BlifFlexGridRow>
         </BlifFlexGrid>
     );
 };

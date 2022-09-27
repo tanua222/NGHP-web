@@ -203,15 +203,20 @@ const PreCheck = () => {
     return (
         <BlifFlexGrid gutter={false}>
             <BlifFlexGridRow>
-                <BlifFlexGridCol xs={12} lg={10} md={12}>
+                <BlifFlexGridCol lg={12} md={10}>
                     <BlifTypography variant={{size: 'h2'}}>
                         {t(PRECHECK_LANGUAGE_KEYS.PRECHECK_HEADING)}
                     </BlifTypography>
                 </BlifFlexGridCol>
             </BlifFlexGridRow>
-            <BlifFlexGridRow>
-                <BlifFlexGridCol xs={12} lg={10} md={12}>
-                    <BlifBox variant={{background: 'light'}} flex={1}>
+            <BlifFlexGridRow verticalAlign="middle" horizontalAlign="center">
+                <BlifFlexGridCol lg={12} md={10}>
+                    <BlifBox
+                        variant={{background: 'light'}}
+                        bottom={{lg: 1}}
+                        left={{lg: 1}}
+                        right={{lg: 7}}
+                        flex={1}>
                         <FiltersView
                             clickHandler={clickHandler}
                             schema={filterSchema}
