@@ -123,27 +123,24 @@ const PreCheck = () => {
 
     return (
         <BlifFlexGrid gutter={false}>
-            <BlifStackView tokens={{justifyContent: 'center'}}>
-                <BlifFlexGridCol xs={12} lg={10}>
-                    <BlifFlexGridRow>
-                        <BlifTypography variant={{size: 'h2'}}>
-                            Pre-Check
-                        </BlifTypography>
-                    </BlifFlexGridRow>
-                    <Spacer space={1} />
+            <BlifFlexGridRow>
+                <BlifFlexGridCol xs={12} lg={10} md={12}>
+                    <BlifTypography variant={{size: 'h2'}}>
+                        Pre-Check
+                    </BlifTypography>
+                </BlifFlexGridCol>
+            </BlifFlexGridRow>
+            <BlifFlexGridRow>
+                <BlifFlexGridCol xs={12} lg={10} md={12}>
                     <BlifBox variant={{background: 'light'}} flex={1}>
-                        <BlifFlexGridRow
-                            verticalAlign="middle"
-                            horizontalAlign="center">
-                            <FiltersView
-                                clickHandler={clickHandler}
-                                schema={FILTER_SCHEMA}
-                                handleInputChange={handleInputChange}
-                            />
-                        </BlifFlexGridRow>
+                        <FiltersView
+                            clickHandler={clickHandler}
+                            schema={FILTER_SCHEMA}
+                            handleInputChange={handleInputChange}
+                        />
                     </BlifBox>
                 </BlifFlexGridCol>
-            </BlifStackView>
+            </BlifFlexGridRow>
         </BlifFlexGrid>
     );
 };
