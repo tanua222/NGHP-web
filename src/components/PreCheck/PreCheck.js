@@ -1,9 +1,9 @@
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import BlifTypography from '../Common/BlifTypography/BlifTypography';
-import {ARRAY_MAP_KEYS, FILTER_TYPES, ZERO_INDEX} from '../../utils/commonKeys';
-import {FiltersView} from '../Common/Filters/Filters';
-import {useTranslation} from 'react-i18next';
-import {checkIfArrayExists} from '../../utils/helperFunctions';
+import { ARRAY_MAP_KEYS, FILTER_TYPES, ZERO_INDEX } from '../../utils/commonKeys';
+import { FiltersView } from '../Common/Filters/Filters';
+import { useTranslation } from 'react-i18next';
+import { checkIfArrayExists } from '../../utils/helperFunctions';
 
 import BlifBox from '../Common/Box/BlifBox';
 import useTranslationForOptions from '../../hooks/useTranslationForOptions';
@@ -26,12 +26,12 @@ import {
 export const getProvinceFilterOptions = [
     {
         [ARRAY_MAP_KEYS.value]: 'ALL',
-        [ARRAY_MAP_KEYS.languageTranslationKey]:
+        [ARRAY_MAP_KEYS.text]:
             PROVINCE_FILTER_LANGUAGE_KEYS.ALL,
     },
     {
         [ARRAY_MAP_KEYS.value]: 'QC',
-        [ARRAY_MAP_KEYS.languageTranslationKey]:
+        [ARRAY_MAP_KEYS.text]:
             PROVINCE_FILTER_LANGUAGE_KEYS.QC,
     },
 ];
@@ -39,16 +39,16 @@ export const getProvinceFilterOptions = [
 export const getBrgIndicatorFilterOptions = [
     {
         [ARRAY_MAP_KEYS.value]: 'ALL',
-        [ARRAY_MAP_KEYS.languageTranslationKey]: BRG_FILTER_LANGUAGE_KEYS.ALL,
+        [ARRAY_MAP_KEYS.text]: BRG_FILTER_LANGUAGE_KEYS.ALL,
     },
     {
         [ARRAY_MAP_KEYS.value]: 'Business',
-        [ARRAY_MAP_KEYS.languageTranslationKey]:
+        [ARRAY_MAP_KEYS.text]:
             BRG_FILTER_LANGUAGE_KEYS.BUSINESS,
     },
     {
         [ARRAY_MAP_KEYS.value]: 'Residential',
-        [ARRAY_MAP_KEYS.languageTranslationKey]:
+        [ARRAY_MAP_KEYS.text]:
             BRG_FILTER_LANGUAGE_KEYS.RESIDENTIAL,
     },
 ];
@@ -56,17 +56,17 @@ export const getBrgIndicatorFilterOptions = [
 export const getRejectsFilterOption = [
     {
         [ARRAY_MAP_KEYS.value]: 'ALL',
-        [ARRAY_MAP_KEYS.languageTranslationKey]:
+        [ARRAY_MAP_KEYS.text]:
             REJECTS_FILTER_LANGUAGE_KEYS.ALL,
     },
     {
         [ARRAY_MAP_KEYS.value]: 'Only Rejects',
-        [ARRAY_MAP_KEYS.languageTranslationKey]:
+        [ARRAY_MAP_KEYS.text]:
             REJECTS_FILTER_LANGUAGE_KEYS.ONLY_REJECTS,
     },
     {
         [ARRAY_MAP_KEYS.value]: 'No Rejects',
-        [ARRAY_MAP_KEYS.languageTranslationKey]:
+        [ARRAY_MAP_KEYS.text]:
             REJECTS_FILTER_LANGUAGE_KEYS.NO_REJECTS,
     },
 ];
@@ -74,11 +74,11 @@ export const getRejectsFilterOption = [
 export const getClecFilterOptions = [
     {
         [ARRAY_MAP_KEYS.value]: 'ALL',
-        [ARRAY_MAP_KEYS.languageTranslationKey]: CLEC_FILTER_LANGUAGE_KEYS.ALL,
+        [ARRAY_MAP_KEYS.text]: CLEC_FILTER_LANGUAGE_KEYS.ALL,
     },
     {
         [ARRAY_MAP_KEYS.value]: 'FIDO',
-        [ARRAY_MAP_KEYS.languageTranslationKey]: CLEC_FILTER_LANGUAGE_KEYS.FIDO,
+        [ARRAY_MAP_KEYS.text]: CLEC_FILTER_LANGUAGE_KEYS.FIDO,
     },
 ];
 
@@ -105,16 +105,12 @@ const PRECHECK_FORM_SCHEMA = {
 
 // PreCheck Component
 const PreCheck = () => {
-    const {t} = useTranslation();
+    const { t } = useTranslation();
 
     //Translate options
-    const translatedProvinceFilterOptions = useTranslationForOptions(
-        getProvinceFilterOptions,
-    );
+    const translatedProvinceFilterOptions = getProvinceFilterOptions;
 
-    const translatedBrgIndicatorFilterOptions = useTranslationForOptions(
-        getBrgIndicatorFilterOptions,
-    );
+    const translatedBrgIndicatorFilterOptions = getBrgIndicatorFilterOptions;
 
     const translatedRejectsFilterOptions = useTranslationForOptions(
         getRejectsFilterOption,
@@ -187,7 +183,7 @@ const PreCheck = () => {
     ]);
 
     const handleInputChange = (filterKey, val) => {
-        setFilterQuery((prev) => ({...prev, [filterKey]: val}));
+        setFilterQuery((prev) => ({ ...prev, [filterKey]: val }));
     };
 
     // search onClick handler
@@ -201,7 +197,7 @@ const PreCheck = () => {
         <BlifFlexGrid gutter={false}>
             <BlifFlexGridRow>
                 <BlifFlexGridCol lg={12} md={10}>
-                    <BlifTypography variant={{size: 'h2'}}>
+                    <BlifTypography variant={{ size: 'h2' }}>
                         {t(PRECHECK_LANGUAGE_KEYS.PRECHECK_HEADING)}
                     </BlifTypography>
                 </BlifFlexGridCol>
@@ -209,10 +205,10 @@ const PreCheck = () => {
             <BlifFlexGridRow verticalAlign="middle" horizontalAlign="center">
                 <BlifFlexGridCol lg={12} md={10}>
                     <BlifBox
-                        variant={{background: 'light'}}
-                        bottom={{lg: 1}}
-                        left={{lg: 1}}
-                        right={{lg: 7}}
+                        variant={{ background: 'light' }}
+                        bottom={{ lg: 1 }}
+                        left={{ lg: 1 }}
+                        right={{ lg: 7 }}
                         flex={1}>
                         <FiltersView
                             clickHandler={clickHandler}
