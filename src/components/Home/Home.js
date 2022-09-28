@@ -9,7 +9,7 @@ let options = [
     {text: '3', value: '3'},
 ];
 const Home = () => {
-    const [showEntriesDropdown, setShowEntriesDropdown] = useState({});
+    const [showEntriesDropdown, setShowEntriesDropdown] = useState('');
     console.log('showEntriesDropdown', showEntriesDropdown);
 
     return (
@@ -20,9 +20,6 @@ const Home = () => {
             <div className="home-entries-dropdown">
                 <div className="font-14px">Show</div>
                 <BlifSelectInput
-                    smallInputHeight
-                    smallInputWidth
-                    placeholder={' '}
                     options={options}
                     value={showEntriesDropdown ?? ''}
                     onChange={(e) => {
