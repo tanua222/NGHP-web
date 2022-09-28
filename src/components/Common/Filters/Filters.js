@@ -46,7 +46,6 @@ const DateInputFilter = ({label, index, handleInputChange}) => {
                     {/* <BlifTypography>{label}</BlifTypography> */}
                     <DatePicker
                         id="DatePicker"
-                        key={index}
                         label={label}
                         copy="en"
                         // onDateChange={handleInputChange}

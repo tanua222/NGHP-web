@@ -1,12 +1,11 @@
-import { useState, useEffect } from 'react';
+import {useState, useEffect} from 'react';
 import BlifTypography from '../Common/BlifTypography/BlifTypography';
-import { ARRAY_MAP_KEYS, FILTER_TYPES, ZERO_INDEX } from '../../utils/commonKeys';
-import { FiltersView } from '../Common/Filters/Filters';
-import { useTranslation } from 'react-i18next';
-import { checkIfArrayExists } from '../../utils/helperFunctions';
+import {ARRAY_MAP_KEYS, FILTER_TYPES, ZERO_INDEX} from '../../utils/commonKeys';
+import {FiltersView} from '../Common/Filters/Filters';
+import {useTranslation} from 'react-i18next';
+import {checkIfArrayExists} from '../../utils/helperFunctions';
 
 import BlifBox from '../Common/Box/BlifBox';
-import useTranslationForOptions from '../../hooks/useTranslationForOptions';
 import {
     PROVINCE_FILTER_LANGUAGE_KEYS,
     REJECTS_FILTER_LANGUAGE_KEYS,
@@ -26,13 +25,11 @@ import {
 export const getProvinceFilterOptions = [
     {
         [ARRAY_MAP_KEYS.value]: 'ALL',
-        [ARRAY_MAP_KEYS.text]:
-            PROVINCE_FILTER_LANGUAGE_KEYS.ALL,
+        [ARRAY_MAP_KEYS.text]: PROVINCE_FILTER_LANGUAGE_KEYS.ALL,
     },
     {
         [ARRAY_MAP_KEYS.value]: 'QC',
-        [ARRAY_MAP_KEYS.text]:
-            PROVINCE_FILTER_LANGUAGE_KEYS.QC,
+        [ARRAY_MAP_KEYS.text]: PROVINCE_FILTER_LANGUAGE_KEYS.QC,
     },
 ];
 
@@ -43,31 +40,26 @@ export const getBrgIndicatorFilterOptions = [
     },
     {
         [ARRAY_MAP_KEYS.value]: 'Business',
-        [ARRAY_MAP_KEYS.text]:
-            BRG_FILTER_LANGUAGE_KEYS.BUSINESS,
+        [ARRAY_MAP_KEYS.text]: BRG_FILTER_LANGUAGE_KEYS.BUSINESS,
     },
     {
         [ARRAY_MAP_KEYS.value]: 'Residential',
-        [ARRAY_MAP_KEYS.text]:
-            BRG_FILTER_LANGUAGE_KEYS.RESIDENTIAL,
+        [ARRAY_MAP_KEYS.text]: BRG_FILTER_LANGUAGE_KEYS.RESIDENTIAL,
     },
 ];
 
 export const getRejectsFilterOption = [
     {
         [ARRAY_MAP_KEYS.value]: 'ALL',
-        [ARRAY_MAP_KEYS.text]:
-            REJECTS_FILTER_LANGUAGE_KEYS.ALL,
+        [ARRAY_MAP_KEYS.text]: REJECTS_FILTER_LANGUAGE_KEYS.ALL,
     },
     {
         [ARRAY_MAP_KEYS.value]: 'Only Rejects',
-        [ARRAY_MAP_KEYS.text]:
-            REJECTS_FILTER_LANGUAGE_KEYS.ONLY_REJECTS,
+        [ARRAY_MAP_KEYS.text]: REJECTS_FILTER_LANGUAGE_KEYS.ONLY_REJECTS,
     },
     {
         [ARRAY_MAP_KEYS.value]: 'No Rejects',
-        [ARRAY_MAP_KEYS.text]:
-            REJECTS_FILTER_LANGUAGE_KEYS.NO_REJECTS,
+        [ARRAY_MAP_KEYS.text]: REJECTS_FILTER_LANGUAGE_KEYS.NO_REJECTS,
     },
 ];
 
@@ -105,29 +97,17 @@ const PRECHECK_FORM_SCHEMA = {
 
 // PreCheck Component
 const PreCheck = () => {
-    const { t } = useTranslation();
-
-    //Translate options
-    const translatedProvinceFilterOptions = getProvinceFilterOptions;
-
-    const translatedBrgIndicatorFilterOptions = getBrgIndicatorFilterOptions;
-
-    const translatedRejectsFilterOptions = useTranslationForOptions(
-        getRejectsFilterOption,
-    );
-
-    const translatedClecFilterOptions =
-        useTranslationForOptions(getClecFilterOptions);
+    const {t} = useTranslation();
 
     const [filterQuery, setFilterQuery] = useState(PRECHECK_FORM_SCHEMA);
     const [filterSchema, setFilterSchema] = useState([]);
 
     useEffect(() => {
         if (
-            checkIfArrayExists(translatedProvinceFilterOptions) &&
-            checkIfArrayExists(translatedBrgIndicatorFilterOptions) &&
-            checkIfArrayExists(translatedRejectsFilterOptions) &&
-            checkIfArrayExists(translatedClecFilterOptions)
+            checkIfArrayExists(getProvinceFilterOptions) &&
+            checkIfArrayExists(getBrgIndicatorFilterOptions) &&
+            checkIfArrayExists(getRejectsFilterOption) &&
+            checkIfArrayExists(getClecFilterOptions)
         ) {
             const localFilterSchema = [
                 {
@@ -143,22 +123,21 @@ const PreCheck = () => {
                     [ARRAY_MAP_KEYS.label]: t(
                         PROVINCE_FILTER_LANGUAGE_KEYS.LABEL,
                     ),
-                    [ARRAY_MAP_KEYS.OPTIONS]: translatedProvinceFilterOptions,
+                    [ARRAY_MAP_KEYS.OPTIONS]: getProvinceFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         PRECHECK_FORM_SCHEMA_KEYS.PROVINCE_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
                     [ARRAY_MAP_KEYS.label]: t(CLEC_FILTER_LANGUAGE_KEYS.LABEL),
-                    [ARRAY_MAP_KEYS.OPTIONS]: translatedClecFilterOptions,
+                    [ARRAY_MAP_KEYS.OPTIONS]: getClecFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         PRECHECK_FORM_SCHEMA_KEYS.CLEC_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
                     [ARRAY_MAP_KEYS.label]: t(BRG_FILTER_LANGUAGE_KEYS.LABEL),
-                    [ARRAY_MAP_KEYS.OPTIONS]:
-                        translatedBrgIndicatorFilterOptions,
+                    [ARRAY_MAP_KEYS.OPTIONS]: getBrgIndicatorFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         PRECHECK_FORM_SCHEMA_KEYS.BRG_INDICATOR_INPUT,
                 },
@@ -167,7 +146,7 @@ const PreCheck = () => {
                     [ARRAY_MAP_KEYS.label]: t(
                         REJECTS_FILTER_LANGUAGE_KEYS.LABEL,
                     ),
-                    [ARRAY_MAP_KEYS.OPTIONS]: translatedRejectsFilterOptions,
+                    [ARRAY_MAP_KEYS.OPTIONS]: getRejectsFilterOption,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         PRECHECK_FORM_SCHEMA_KEYS.REJECTS_INPUT,
                 },
@@ -176,14 +155,14 @@ const PreCheck = () => {
             setFilterSchema(localFilterSchema);
         }
     }, [
-        translatedProvinceFilterOptions,
-        translatedBrgIndicatorFilterOptions,
-        translatedRejectsFilterOptions,
-        translatedClecFilterOptions,
+        getProvinceFilterOptions,
+        getBrgIndicatorFilterOptions,
+        getRejectsFilterOption,
+        getClecFilterOptions,
     ]);
 
     const handleInputChange = (filterKey, val) => {
-        setFilterQuery((prev) => ({ ...prev, [filterKey]: val }));
+        setFilterQuery((prev) => ({...prev, [filterKey]: val}));
     };
 
     // search onClick handler
@@ -197,7 +176,7 @@ const PreCheck = () => {
         <BlifFlexGrid gutter={false}>
             <BlifFlexGridRow>
                 <BlifFlexGridCol lg={12} md={10}>
-                    <BlifTypography variant={{ size: 'h2' }}>
+                    <BlifTypography variant={{size: 'h2'}}>
                         {t(PRECHECK_LANGUAGE_KEYS.PRECHECK_HEADING)}
                     </BlifTypography>
                 </BlifFlexGridCol>
@@ -205,10 +184,10 @@ const PreCheck = () => {
             <BlifFlexGridRow verticalAlign="middle" horizontalAlign="center">
                 <BlifFlexGridCol lg={12} md={10}>
                     <BlifBox
-                        variant={{ background: 'light' }}
-                        bottom={{ lg: 1 }}
-                        left={{ lg: 1 }}
-                        right={{ lg: 7 }}
+                        variant={{background: 'light'}}
+                        bottom={{lg: 1}}
+                        left={{lg: 1}}
+                        right={{lg: 7}}
                         flex={1}>
                         <FiltersView
                             clickHandler={clickHandler}
