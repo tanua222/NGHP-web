@@ -25,13 +25,11 @@ import {
 // OPTIONS
 export const getProvinceFilterOptions = [
     {
-        [ARRAY_MAP_KEYS.text]: 'ALL',
         [ARRAY_MAP_KEYS.value]: 'ALL',
         [ARRAY_MAP_KEYS.languageTranslationKey]:
             PROVINCE_FILTER_LANGUAGE_KEYS.ALL,
     },
     {
-        [ARRAY_MAP_KEYS.text]: 'QC',
         [ARRAY_MAP_KEYS.value]: 'QC',
         [ARRAY_MAP_KEYS.languageTranslationKey]:
             PROVINCE_FILTER_LANGUAGE_KEYS.QC,
@@ -40,18 +38,15 @@ export const getProvinceFilterOptions = [
 
 export const getBrgIndicatorFilterOptions = [
     {
-        [ARRAY_MAP_KEYS.text]: 'ALL',
         [ARRAY_MAP_KEYS.value]: 'ALL',
         [ARRAY_MAP_KEYS.languageTranslationKey]: BRG_FILTER_LANGUAGE_KEYS.ALL,
     },
     {
-        [ARRAY_MAP_KEYS.text]: 'Business',
         [ARRAY_MAP_KEYS.value]: 'Business',
         [ARRAY_MAP_KEYS.languageTranslationKey]:
             BRG_FILTER_LANGUAGE_KEYS.BUSINESS,
     },
     {
-        [ARRAY_MAP_KEYS.text]: 'Residential',
         [ARRAY_MAP_KEYS.value]: 'Residential',
         [ARRAY_MAP_KEYS.languageTranslationKey]:
             BRG_FILTER_LANGUAGE_KEYS.RESIDENTIAL,
@@ -60,19 +55,16 @@ export const getBrgIndicatorFilterOptions = [
 
 export const getRejectsFilterOption = [
     {
-        [ARRAY_MAP_KEYS.text]: 'ALL',
         [ARRAY_MAP_KEYS.value]: 'ALL',
         [ARRAY_MAP_KEYS.languageTranslationKey]:
             REJECTS_FILTER_LANGUAGE_KEYS.ALL,
     },
     {
-        [ARRAY_MAP_KEYS.text]: 'Only Rejects',
         [ARRAY_MAP_KEYS.value]: 'Only Rejects',
         [ARRAY_MAP_KEYS.languageTranslationKey]:
             REJECTS_FILTER_LANGUAGE_KEYS.ONLY_REJECTS,
     },
     {
-        [ARRAY_MAP_KEYS.text]: 'No Rejects',
         [ARRAY_MAP_KEYS.value]: 'No Rejects',
         [ARRAY_MAP_KEYS.languageTranslationKey]:
             REJECTS_FILTER_LANGUAGE_KEYS.NO_REJECTS,
@@ -81,12 +73,10 @@ export const getRejectsFilterOption = [
 
 export const getClecFilterOptions = [
     {
-        [ARRAY_MAP_KEYS.text]: 'ALL',
         [ARRAY_MAP_KEYS.value]: 'ALL',
         [ARRAY_MAP_KEYS.languageTranslationKey]: CLEC_FILTER_LANGUAGE_KEYS.ALL,
     },
     {
-        [ARRAY_MAP_KEYS.text]: 'FIDO',
         [ARRAY_MAP_KEYS.value]: 'FIDO',
         [ARRAY_MAP_KEYS.languageTranslationKey]: CLEC_FILTER_LANGUAGE_KEYS.FIDO,
     },
