@@ -57,7 +57,7 @@ const BlifSelectInput = React.forwardRef((props, ref) => {
     return (
         <React.Fragment>
             <Select
-                label={label || ' '}
+                label={t(label) || ' '}
                 hint={hint}
                 hintPosition={hintPosition}
                 id={id}
