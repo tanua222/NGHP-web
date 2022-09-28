@@ -8,7 +8,7 @@ import {
 } from './miscellaneousLanguage';
 
 import {preCheckFrench, preCheckEnglish} from './components/preCheckLanguage';
-
+import {searchEnglish, searchFrench} from './components/searchLanguage';
 import COMMON_LANGUAGE_KEYS from '../utils/languageKeys/commonKeys';
 
 i18n.use(LanguageDetector).init({
@@ -19,6 +19,7 @@ i18n.use(LanguageDetector).init({
             translations: {
                 ...headerEnglish,
                 ...preCheckEnglish,
+                ...searchEnglish,
                 ...miscellaneousEnglish,
             },
         },
@@ -28,6 +29,7 @@ i18n.use(LanguageDetector).init({
             translations: {
                 ...headerFrench,
                 ...preCheckFrench,
+                ...searchFrench,
                 ...miscellaneousFrench,
             },
         },
