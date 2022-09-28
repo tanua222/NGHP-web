@@ -4,6 +4,9 @@ import {ARRAY_MAP_KEYS, FILTER_TYPES, ZERO_INDEX} from '../../utils/commonKeys';
 import {FiltersView} from '../Common/Filters/Filters';
 import {useTranslation} from 'react-i18next';
 import {checkIfArrayExists} from '../../utils/helperFunctions';
+import BlifTable from '../Common/BlifTables/BlifTable';
+import BlifSpacer from '../Common/BlifSpacer/BlifSpacer';
+import dummyTableData from '../Common/BlifTables/dummyTableData.json';
 
 import BlifBox from '../Common/Box/BlifBox';
 import {
@@ -149,12 +152,7 @@ const PreCheck = () => {
 
             setFilterSchema(localFilterSchema);
         }
-    }, [
-        getProvinceFilterOptions,
-        getBrgIndicatorFilterOptions,
-        getRejectsFilterOption,
-        getClecFilterOptions,
-    ]);
+    }, []);
 
     const handleInputChange = (filterKey, val) => {
         setFilterQuery((prev) => ({...prev, [filterKey]: val}));
@@ -165,6 +163,10 @@ const PreCheck = () => {
         e.preventDefault();
 
         alert('search query');
+    };
+
+    const selectRowCallback = (rowData) => {
+        //empty
     };
 
     return (
@@ -191,6 +193,16 @@ const PreCheck = () => {
                         />
                     </BlifBox>
                 </BlifFlexGridCol>
+            </BlifFlexGridRow>
+
+            <BlifSpacer space={8} />
+
+            <BlifFlexGridRow md={12}>
+                <BlifTable
+                    data={dummyTableData.clients}
+                    selectRow={(row) => selectRowCallback(row)}
+                    loaded={false}
+                />
             </BlifFlexGridRow>
         </BlifFlexGrid>
     );
