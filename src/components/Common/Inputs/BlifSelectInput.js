@@ -57,7 +57,7 @@ const BlifSelectInput = React.forwardRef((props, ref) => {
     return (
         <React.Fragment>
             <Select
-                label={label || ' '}
+                label={t(label) || ' '}
                 hint={hint}
                 hintPosition={hintPosition}
                 id={id}
@@ -77,10 +77,10 @@ const BlifSelectInput = React.forwardRef((props, ref) => {
                 {options &&
                     options.map((option, index) =>
                         option.options ? (
-                            <IvsSelectGroup group={option} key={index} />
+                            <IvsSelectGroup group={option} key={index} t={t} />
                         ) : (
                             <Select.Item key={index} value={option.value}>
-                                {option.text}
+                                {t(option.text)}
                             </Select.Item>
                         ),
                     )}
@@ -89,13 +89,13 @@ const BlifSelectInput = React.forwardRef((props, ref) => {
     );
 });
 
-const IvsSelectGroup = ({group}) => (
+const IvsSelectGroup = ({group, t}) => (
     <Select.Group>
         <optgroup label={group.text}>
             {group.options &&
                 group.options.map((option, index) => (
                     <Select.Item key={index} value={option.value}>
-                        {option.text}
+                        {t(option.text)}
                     </Select.Item>
                 ))}
         </optgroup>
