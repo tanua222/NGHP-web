@@ -4,6 +4,9 @@ import {ARRAY_MAP_KEYS, FILTER_TYPES, ZERO_INDEX} from '../../utils/commonKeys';
 import {FiltersView} from '../Common/Filters/Filters';
 import {useTranslation} from 'react-i18next';
 import {checkIfArrayExists} from '../../utils/helperFunctions';
+import BlifTable from '../Common/BlifTables/BlifTable';
+import BlifSpacer from '../Common/BlifSpacer/BlifSpacer';
+import dummyTableData from '../Common/BlifTables/dummyTableData.json';
 
 import BlifBox from '../Common/Box/BlifBox';
 import {
@@ -149,12 +152,7 @@ const PreCheck = () => {
 
             setFilterSchema(localFilterSchema);
         }
-    }, [
-        getProvinceFilterOptions,
-        getBrgIndicatorFilterOptions,
-        getRejectsFilterOptions,
-        getClecFilterOptions,
-    ]);
+    }, []);
 
     const handleInputChange = (filterKey, val) => {
         setFilterQuery((prev) => ({...prev, [filterKey]: val}));
@@ -167,32 +165,54 @@ const PreCheck = () => {
         alert('search query');
     };
 
+    const selectRowCallback = (rowData) => {
+        //empty
+    };
+
     return (
-        <BlifFlexGrid gutter={false}>
-            <BlifFlexGridRow>
-                <BlifFlexGridCol>
-                    <BlifTypography variant={{size: 'h2'}}>
-                        {t(PRECHECK_LANGUAGE_KEYS.PRECHECK_HEADING)}
-                    </BlifTypography>
-                </BlifFlexGridCol>
-            </BlifFlexGridRow>
-            <BlifFlexGridRow verticalAlign="middle" horizontalAlign="center">
-                <BlifFlexGridCol>
-                    <BlifBox
-                        variant={{background: 'light'}}
-                        bottom={{md: 1}}
-                        left={{md: 1}}
-                        right={{md: 7}}
-                        flex={1}>
-                        <FiltersView
-                            clickHandler={clickHandler}
-                            schema={filterSchema}
-                            handleInputChange={handleInputChange}
+        <>
+            <BlifFlexGrid gutter={false}>
+                <BlifFlexGridRow>
+                    <BlifFlexGridCol lg={12} md={10}>
+                        <BlifTypography variant={{size: 'h2'}}>
+                            {t(PRECHECK_LANGUAGE_KEYS.PRECHECK_HEADING)}
+                        </BlifTypography>
+                    </BlifFlexGridCol>
+                </BlifFlexGridRow>
+                <BlifFlexGridRow
+                    verticalAlign="middle"
+                    horizontalAlign="center">
+                    <BlifFlexGridCol lg={12} md={10}>
+                        <BlifBox
+                            variant={{background: 'light'}}
+                            bottom={{md: 1}}
+                            left={{md: 1}}
+                            right={{md: 7}}
+                            flex={1}>
+                            <FiltersView
+                                clickHandler={clickHandler}
+                                schema={filterSchema}
+                                handleInputChange={handleInputChange}
+                            />
+                        </BlifBox>
+                    </BlifFlexGridCol>
+                </BlifFlexGridRow>
+            </BlifFlexGrid>
+
+            <BlifSpacer space={8} />
+
+            <BlifFlexGrid limitWidth={false}>
+                <BlifFlexGridRow md={12}>
+                    <BlifFlexGridCol>
+                        <BlifTable
+                            data={dummyTableData.clients}
+                            selectRow={(row) => selectRowCallback(row)}
+                            loaded={false}
                         />
-                    </BlifBox>
-                </BlifFlexGridCol>
-            </BlifFlexGridRow>
-        </BlifFlexGrid>
+                    </BlifFlexGridCol>
+                </BlifFlexGridRow>
+            </BlifFlexGrid>
+        </>
     );
 };
 
