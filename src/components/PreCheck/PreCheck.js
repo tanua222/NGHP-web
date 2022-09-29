@@ -51,7 +51,7 @@ export const getBrgIndicatorFilterOptions = [
     },
 ];
 
-export const getRejectsFilterOption = [
+export const getRejectsFilterOptions = [
     {
         [ARRAY_MAP_KEYS.value]: 'ALL',
         [ARRAY_MAP_KEYS.text]: REJECTS_FILTER_LANGUAGE_KEYS.ALL,
@@ -93,7 +93,7 @@ const PRECHECK_FORM_SCHEMA = {
     [PRECHECK_FORM_SCHEMA_KEYS.BRG_INDICATOR_INPUT]:
         getBrgIndicatorFilterOptions[ZERO_INDEX].value,
     [PRECHECK_FORM_SCHEMA_KEYS.REJECTS_INPUT]:
-        getRejectsFilterOption[ZERO_INDEX].value,
+        getRejectsFilterOptions[ZERO_INDEX].value,
     [PRECHECK_FORM_SCHEMA_KEYS.CLEC_INPUT]:
         getClecFilterOptions[ZERO_INDEX].value,
 };
@@ -109,7 +109,7 @@ const PreCheck = () => {
         if (
             checkIfArrayExists(getProvinceFilterOptions) &&
             checkIfArrayExists(getBrgIndicatorFilterOptions) &&
-            checkIfArrayExists(getRejectsFilterOption) &&
+            checkIfArrayExists(getRejectsFilterOptions) &&
             checkIfArrayExists(getClecFilterOptions)
         ) {
             const localFilterSchema = [
@@ -144,7 +144,7 @@ const PreCheck = () => {
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
                     [ARRAY_MAP_KEYS.label]: REJECTS_FILTER_LANGUAGE_KEYS.LABEL,
-                    [ARRAY_MAP_KEYS.OPTIONS]: getRejectsFilterOption,
+                    [ARRAY_MAP_KEYS.OPTIONS]: getRejectsFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         PRECHECK_FORM_SCHEMA_KEYS.REJECTS_INPUT,
                 },
@@ -185,9 +185,9 @@ const PreCheck = () => {
                     <BlifFlexGridCol lg={12} md={10}>
                         <BlifBox
                             variant={{background: 'light'}}
-                            bottom={{lg: 1}}
-                            left={{lg: 1}}
-                            right={{lg: 7}}
+                            bottom={{md: 1}}
+                            left={{md: 1}}
+                            right={{md: 7}}
                             flex={1}>
                             <FiltersView
                                 clickHandler={clickHandler}

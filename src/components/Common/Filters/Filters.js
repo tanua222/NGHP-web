@@ -5,11 +5,12 @@ import BlifSelectInput from '../Inputs/BlifSelectInput';
 import BlifStackView from '../BlifStackView/BlifStackView';
 import BlifSpacer from '../BlifSpacer/BlifSpacer';
 import BlifButton from '../Buttons/BlifButton';
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useLayoutEffect} from 'react';
 import {ARRAY_MAP_KEYS, FILTER_TYPES} from '../../../utils/commonKeys';
 import {DatePicker} from '@telus-uds/ds-allium';
 import BlifDatePicker from '../BlifDatePicker/BlifDatePicker';
 import BlifTypography from '../BlifTypography/BlifTypography';
+import {useTranslation} from 'react-i18next';
 
 const ITEMS_IN_ROW = 4;
 const ZERO_NUMBER = 0;
@@ -38,7 +39,7 @@ const SelectInputFilter = ({label = '', options = [], onChangeSelect}) => {
     );
 };
 
-const DateInputFilter = ({label, index, handleInputChange}) => {
+const DateInputFilter = ({label, index, handleInputChange, t}) => {
     return (
         <>
             <BlifFlexGridCol md={3}>
@@ -46,7 +47,7 @@ const DateInputFilter = ({label, index, handleInputChange}) => {
                     {/* <BlifTypography>{label}</BlifTypography> */}
                     <DatePicker
                         id="DatePicker"
-                        label={label}
+                        label={t(label)}
                         copy="en"
                         // onDateChange={handleInputChange}
                     />
@@ -58,7 +59,8 @@ const DateInputFilter = ({label, index, handleInputChange}) => {
 
 const FiltersView = ({clickHandler, schema = [], handleInputChange}) => {
     const [modifySchemaFormat, setModifySchemaFormat] = useState([]);
-    useEffect(() => {
+    const {t} = useTranslation();
+    useLayoutEffect(() => {
         if (schema) {
             // Convert Array to 4 cols per row structure
             let arrayIndex = 0;
@@ -141,6 +143,7 @@ const FiltersView = ({clickHandler, schema = [], handleInputChange}) => {
                                             label={
                                                 rowItem[ARRAY_MAP_KEYS.label]
                                             }
+                                            t={t}
 
                                             // handleInputChange={(val) => {
                                             //     handleInputChange(

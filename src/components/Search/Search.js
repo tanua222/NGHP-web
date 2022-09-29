@@ -1,46 +1,93 @@
 import React, {useState, useEffect} from 'react';
 import BlifTypography from '../Common/BlifTypography/BlifTypography';
 import BlifStackView from '../Common/BlifStackView/BlifStackView';
-import {ARRAY_MAP_KEYS, FILTER_TYPES} from '../../utils/commonKeys';
+import {ARRAY_MAP_KEYS, FILTER_TYPES, ZERO_INDEX} from '../../utils/commonKeys';
 import {FiltersView} from '../Common/Filters/Filters';
 import BlifBox from '../Common/Box/BlifBox';
+import {checkIfArrayExists} from '../../utils/helperFunctions';
+import {
+    SEARCH_LANGUAGE_KEYS,
+    PROVINCE_FILTER_LANGUAGE_KEYS,
+    REJECTS_FILTER_LANGUAGE_KEYS,
+    BRG_FILTER_LANGUAGE_KEYS,
+    FILE_SEARCH_FILTER_LANGUAGE_KEYS,
+    BUS_OPERATING_NAME_FILTER_LANGUAGE_KEYS,
+    PHONE_NUMBER_FILTER_LANGUAGE_KEYS,
+    START_DATE_FILTER_LANGUAGE_KEYS,
+    END_DATE_FILTER_LANGUAGE_KEYS,
+    ACTION_INDICATOR_FILTER_LANGUAGE_KEYS,
+    INTERNAL_STATUS_FILTER_LANGUAGE_KEYS,
+} from '../../utils/languageKeys/components/searchKeys';
+import {
+    getProvinceFilterOptions,
+    getBrgIndicatorFilterOptions,
+    getRejectsFilterOptions,
+} from '../PreCheck/PreCheck';
 import {
     BlifFlexGrid,
     BlifFlexGridRow,
     BlifFlexGridCol,
 } from '../Common/BlifFlexGrid/BlifFlexGrid';
-import {Spacer} from '@telus-uds/ds-allium';
-import {
-    getRejectsFilterOption,
-    getBrgIndicatorFilterOptions,
-    getProvinceFilterOptions,
-} from '../PreCheck/PreCheck';
+import {useTranslation} from 'react-i18next';
 
 // Options
-export const getActionIndicatorFilterOption = () => {
-    let ACTION_INDICATOR_FILTER_OPTIONS = [
-        {text: 'ALL', value: 'ALL'},
-        {text: 'A', value: 'A'},
-        {text: 'O/I', value: 'O/I'},
-        {text: 'D', value: 'D'},
-    ];
-    return ACTION_INDICATOR_FILTER_OPTIONS;
-};
+export const getActionIndicatorFilterOptions = [
+    {
+        [ARRAY_MAP_KEYS.text]: ACTION_INDICATOR_FILTER_LANGUAGE_KEYS.ALL,
+        [ARRAY_MAP_KEYS.value]: 'ALL',
+    },
+    {
+        [ARRAY_MAP_KEYS.text]: ACTION_INDICATOR_FILTER_LANGUAGE_KEYS.A,
+        [ARRAY_MAP_KEYS.value]: 'A',
+    },
+    {
+        [ARRAY_MAP_KEYS.text]: ACTION_INDICATOR_FILTER_LANGUAGE_KEYS.OI,
+        [ARRAY_MAP_KEYS.value]: 'O/I',
+    },
+    {
+        [ARRAY_MAP_KEYS.text]: ACTION_INDICATOR_FILTER_LANGUAGE_KEYS.D,
+        [ARRAY_MAP_KEYS.value]: 'D',
+    },
+];
 
-export const getInternalStatusFilterOptions = () => {
-    let INTERNAL_STATUS_FILTER_OPTIONS = [
-        {text: 'ALL', value: 'ALL'},
-        {text: '0000', value: 'NEW'},
-        {text: '0001', value: 'Awaiting manual pre-check'},
-        {text: '0002', value: 'Awaiting BLIF to Direction automation'},
-        {text: '0010', value: 'Locked by automation'},
-        {text: '0015', value: 'Failed BLIF to Direction automation'},
-        {text: '0031', value: 'Rejected'},
-        {text: '0032', value: 'Accepted'},
-        {text: '0050', value: 'Completed'},
-    ];
-    return INTERNAL_STATUS_FILTER_OPTIONS;
-};
+export const getInternalStatusFilterOptions = [
+    {
+        [ARRAY_MAP_KEYS.text]: INTERNAL_STATUS_FILTER_LANGUAGE_KEYS.ALL,
+        [ARRAY_MAP_KEYS.value]: 'ALL',
+    },
+    {
+        [ARRAY_MAP_KEYS.text]: INTERNAL_STATUS_FILTER_LANGUAGE_KEYS['0000'],
+        [ARRAY_MAP_KEYS.value]: '0000',
+    },
+    {
+        [ARRAY_MAP_KEYS.text]: INTERNAL_STATUS_FILTER_LANGUAGE_KEYS['0001'],
+        [ARRAY_MAP_KEYS.value]: '0001',
+    },
+    {
+        [ARRAY_MAP_KEYS.text]: INTERNAL_STATUS_FILTER_LANGUAGE_KEYS['0002'],
+        [ARRAY_MAP_KEYS.value]: '0002',
+    },
+    {
+        [ARRAY_MAP_KEYS.text]: INTERNAL_STATUS_FILTER_LANGUAGE_KEYS['0010'],
+        [ARRAY_MAP_KEYS.value]: '0010',
+    },
+    {
+        [ARRAY_MAP_KEYS.text]: INTERNAL_STATUS_FILTER_LANGUAGE_KEYS['0015'],
+        [ARRAY_MAP_KEYS.value]: '0015',
+    },
+    {
+        [ARRAY_MAP_KEYS.text]: INTERNAL_STATUS_FILTER_LANGUAGE_KEYS['0031'],
+        [ARRAY_MAP_KEYS.value]: '0031',
+    },
+    {
+        [ARRAY_MAP_KEYS.text]: INTERNAL_STATUS_FILTER_LANGUAGE_KEYS['0032'],
+        [ARRAY_MAP_KEYS.value]: '0032',
+    },
+    {
+        [ARRAY_MAP_KEYS.text]: INTERNAL_STATUS_FILTER_LANGUAGE_KEYS['0050'],
+        [ARRAY_MAP_KEYS.value]: '0050',
+    },
+];
 
 //Form Schema
 const SEARCH_FORM_SCHEMA_KEYS = {
@@ -61,83 +108,119 @@ const SEARCH_FORM_SCHEMA = {
     [SEARCH_FORM_SCHEMA_KEYS.BUS_OPERATING_NAME_INPUT]: '',
     [SEARCH_FORM_SCHEMA_KEYS.FILE_INPUT]: '',
     [SEARCH_FORM_SCHEMA_KEYS.ACTION_INDICATOR_INPUT]:
-        getActionIndicatorFilterOption()[0].value,
-    [SEARCH_FORM_SCHEMA_KEYS.REJECTS_INPUT]: getRejectsFilterOption[0].value,
+        getActionIndicatorFilterOptions[ZERO_INDEX].value,
+    [SEARCH_FORM_SCHEMA_KEYS.REJECTS_INPUT]:
+        getRejectsFilterOptions[ZERO_INDEX].value,
     [SEARCH_FORM_SCHEMA_KEYS.BRG_INDICATOR_INPUT]:
-        getBrgIndicatorFilterOptions[0].value,
+        getBrgIndicatorFilterOptions[ZERO_INDEX].value,
     [SEARCH_FORM_SCHEMA_KEYS.INTERNAL_STATUS_INPUT]:
-        getInternalStatusFilterOptions()[0].value,
-    [SEARCH_FORM_SCHEMA_KEYS.PROVINCE_INPUT]: getProvinceFilterOptions[0].value,
+        getInternalStatusFilterOptions[ZERO_INDEX].value,
+    [SEARCH_FORM_SCHEMA_KEYS.PROVINCE_INPUT]:
+        getProvinceFilterOptions[ZERO_INDEX].value,
     [SEARCH_FORM_SCHEMA_KEYS.START_DATE_INPUT]: '',
     [SEARCH_FORM_SCHEMA_KEYS.END_DATE_INPUT]: '',
 };
 
-// Search Filter Schema
-const SEARCH_FILTER_SCHEMA = [
-    {
-        [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
-        [ARRAY_MAP_KEYS.label]: 'Phone Number',
-        [ARRAY_MAP_KEYS.ON_CHANGE]: SEARCH_FORM_SCHEMA_KEYS.PHONE_NUMBER_INPUT,
-    },
-    {
-        [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
-        [ARRAY_MAP_KEYS.label]: 'Bus Operating Name',
-        [ARRAY_MAP_KEYS.ON_CHANGE]:
-            SEARCH_FORM_SCHEMA_KEYS.BUS_OPERATING_NAME_INPUT,
-    },
-    {
-        [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-        [ARRAY_MAP_KEYS.label]: 'Action Indicator',
-        [ARRAY_MAP_KEYS.OPTIONS]: getActionIndicatorFilterOption(),
-        [ARRAY_MAP_KEYS.ON_CHANGE]:
-            SEARCH_FORM_SCHEMA_KEYS.ACTION_INDICATOR_INPUT,
-    },
-    {
-        [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-        [ARRAY_MAP_KEYS.label]: 'Rejects',
-        [ARRAY_MAP_KEYS.OPTIONS]: getRejectsFilterOption,
-        [ARRAY_MAP_KEYS.ON_CHANGE]: SEARCH_FORM_SCHEMA_KEYS.REJECTS_INPUT,
-    },
-    {
-        [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-        [ARRAY_MAP_KEYS.label]: 'BRG Indicator',
-        [ARRAY_MAP_KEYS.OPTIONS]: getBrgIndicatorFilterOptions,
-        [ARRAY_MAP_KEYS.ON_CHANGE]: SEARCH_FORM_SCHEMA_KEYS.BRG_INDICATOR_INPUT,
-    },
-
-    {
-        [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-        [ARRAY_MAP_KEYS.label]: 'Internal Status',
-        [ARRAY_MAP_KEYS.OPTIONS]: getInternalStatusFilterOptions(),
-        [ARRAY_MAP_KEYS.ON_CHANGE]:
-            SEARCH_FORM_SCHEMA_KEYS.INTERNAL_STATUS_INPUT,
-    },
-    {
-        [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
-        [ARRAY_MAP_KEYS.label]: 'File',
-        [ARRAY_MAP_KEYS.ON_CHANGE]: SEARCH_FORM_SCHEMA_KEYS.FILE_INPUT,
-    },
-    {
-        [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-        [ARRAY_MAP_KEYS.label]: 'Province',
-        [ARRAY_MAP_KEYS.OPTIONS]: getProvinceFilterOptions,
-        [ARRAY_MAP_KEYS.ON_CHANGE]: SEARCH_FORM_SCHEMA_KEYS.PROVINCE_INPUT,
-    },
-    {
-        [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.DATE_INPUT,
-        [ARRAY_MAP_KEYS.label]: 'Start Date',
-        [ARRAY_MAP_KEYS.ON_CHANGE]: SEARCH_FORM_SCHEMA_KEYS.START_DATE_INPUT,
-    },
-    {
-        [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.DATE_INPUT,
-        [ARRAY_MAP_KEYS.label]: 'End Date',
-        [ARRAY_MAP_KEYS.ON_CHANGE]: SEARCH_FORM_SCHEMA_KEYS.END_DATE_INPUT,
-    },
-];
-
 const Search = () => {
+    const {t} = useTranslation();
+
     const [searchFilterQuery, setSearchFilterQuery] =
         useState(SEARCH_FORM_SCHEMA);
+
+    const [filterSchema, setFilterSchema] = useState([]);
+
+    useEffect(() => {
+        if (
+            checkIfArrayExists(getProvinceFilterOptions) &&
+            checkIfArrayExists(getBrgIndicatorFilterOptions) &&
+            checkIfArrayExists(getRejectsFilterOptions) &&
+            checkIfArrayExists(getActionIndicatorFilterOptions) &&
+            checkIfArrayExists(getInternalStatusFilterOptions)
+        ) {
+            const localFilterSchema = [
+                {
+                    [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
+                    [ARRAY_MAP_KEYS.label]:
+                        PHONE_NUMBER_FILTER_LANGUAGE_KEYS.LABEL,
+                    [ARRAY_MAP_KEYS.ON_CHANGE]:
+                        SEARCH_FORM_SCHEMA_KEYS.PHONE_NUMBER_INPUT,
+                },
+                {
+                    [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
+                    [ARRAY_MAP_KEYS.label]:
+                        BUS_OPERATING_NAME_FILTER_LANGUAGE_KEYS.LABEL,
+                    [ARRAY_MAP_KEYS.ON_CHANGE]:
+                        SEARCH_FORM_SCHEMA_KEYS.BUS_OPERATING_NAME_INPUT,
+                },
+                {
+                    [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
+                    [ARRAY_MAP_KEYS.label]:
+                        ACTION_INDICATOR_FILTER_LANGUAGE_KEYS.LABEL,
+                    [ARRAY_MAP_KEYS.OPTIONS]: getActionIndicatorFilterOptions,
+                    [ARRAY_MAP_KEYS.ON_CHANGE]:
+                        SEARCH_FORM_SCHEMA_KEYS.ACTION_INDICATOR_INPUT,
+                },
+                {
+                    [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
+                    [ARRAY_MAP_KEYS.label]: REJECTS_FILTER_LANGUAGE_KEYS.LABEL,
+                    [ARRAY_MAP_KEYS.OPTIONS]: getRejectsFilterOptions,
+                    [ARRAY_MAP_KEYS.ON_CHANGE]:
+                        SEARCH_FORM_SCHEMA_KEYS.REJECTS_INPUT,
+                },
+                {
+                    [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
+                    [ARRAY_MAP_KEYS.label]: BRG_FILTER_LANGUAGE_KEYS.LABEL,
+                    [ARRAY_MAP_KEYS.OPTIONS]: getBrgIndicatorFilterOptions,
+                    [ARRAY_MAP_KEYS.ON_CHANGE]:
+                        SEARCH_FORM_SCHEMA_KEYS.BRG_INDICATOR_INPUT,
+                },
+
+                {
+                    [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
+                    [ARRAY_MAP_KEYS.label]:
+                        INTERNAL_STATUS_FILTER_LANGUAGE_KEYS.LABEL,
+                    [ARRAY_MAP_KEYS.OPTIONS]: getInternalStatusFilterOptions,
+                    [ARRAY_MAP_KEYS.ON_CHANGE]:
+                        SEARCH_FORM_SCHEMA_KEYS.INTERNAL_STATUS_INPUT,
+                },
+                {
+                    [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
+                    [ARRAY_MAP_KEYS.label]:
+                        FILE_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
+                    [ARRAY_MAP_KEYS.ON_CHANGE]:
+                        SEARCH_FORM_SCHEMA_KEYS.FILE_INPUT,
+                },
+                {
+                    [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
+                    [ARRAY_MAP_KEYS.label]: PROVINCE_FILTER_LANGUAGE_KEYS.LABEL,
+                    [ARRAY_MAP_KEYS.OPTIONS]: getProvinceFilterOptions,
+                    [ARRAY_MAP_KEYS.ON_CHANGE]:
+                        SEARCH_FORM_SCHEMA_KEYS.PROVINCE_INPUT,
+                },
+                {
+                    [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.DATE_INPUT,
+                    [ARRAY_MAP_KEYS.label]:
+                        START_DATE_FILTER_LANGUAGE_KEYS.LABEL,
+                    [ARRAY_MAP_KEYS.ON_CHANGE]:
+                        SEARCH_FORM_SCHEMA_KEYS.START_DATE_INPUT,
+                },
+                {
+                    [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.DATE_INPUT,
+                    [ARRAY_MAP_KEYS.label]: END_DATE_FILTER_LANGUAGE_KEYS.LABEL,
+                    [ARRAY_MAP_KEYS.ON_CHANGE]:
+                        SEARCH_FORM_SCHEMA_KEYS.END_DATE_INPUT,
+                },
+            ];
+
+            setFilterSchema(localFilterSchema);
+        }
+    }, [
+        getProvinceFilterOptions,
+        getBrgIndicatorFilterOptions,
+        getRejectsFilterOptions,
+        getActionIndicatorFilterOptions,
+        getInternalStatusFilterOptions,
+    ]);
 
     const handleSearchInputChange = (searchFilterKey, searchVal) => {
         setSearchFilterQuery((prev) => ({
@@ -146,9 +229,9 @@ const Search = () => {
         }));
     };
 
-    useEffect(() => {
-        console.log(searchFilterQuery);
-    }, [searchFilterQuery]);
+    // useEffect(() => {
+    //     console.log(searchFilterQuery);
+    // }, [searchFilterQuery]);
 
     // search onClick handler
     const searchClickHandler = (e) => {
@@ -158,23 +241,24 @@ const Search = () => {
     return (
         <BlifFlexGrid gutter={false}>
             <BlifFlexGridRow>
-                <BlifFlexGridCol lg={12} md={12}>
+                <BlifFlexGridCol>
                     <BlifTypography variant={{size: 'h2'}}>
-                        Search
+                        {t(SEARCH_LANGUAGE_KEYS.SEARCH_HEADING)}
                     </BlifTypography>
                 </BlifFlexGridCol>
             </BlifFlexGridRow>
             <BlifFlexGridRow verticalAlign="middle" horizontalAlign="center">
-                <BlifFlexGridCol lg={12} md={12}>
+                <BlifFlexGridCol>
                     <BlifBox
                         variant={{background: 'light'}}
-                        bottom={{lg: 1}}
-                        left={{lg: 1}}
-                        right={{lg: 7, md: 11}}
+                        bottom={{md: 1}}
+                        left={{md: 1}}
+                        right={{md: 7}}
+                        top={{md: 1}}
                         flex={1}>
                         <FiltersView
                             clickHandler={searchClickHandler}
-                            schema={SEARCH_FILTER_SCHEMA}
+                            schema={filterSchema}
                             handleInputChange={handleSearchInputChange}
                         />
                     </BlifBox>
