@@ -3,6 +3,7 @@ import {customStyles} from './TableStyle';
 import {useTranslation} from 'react-i18next';
 // components
 import DataTable from 'react-data-table-component';
+import './BlifTable.scss';
 
 // utils
 // import {
@@ -94,7 +95,7 @@ const BlifTable = ({data, selectRow, loaded}) => {
     ];
     console.log('data', data);
     return (
-        <>
+        <div className="BlifTable_hide_Scrollbar">
             <DataTable
                 fixedHeader
                 pointerOnHover
@@ -109,7 +110,7 @@ const BlifTable = ({data, selectRow, loaded}) => {
                 {...{data}}
                 onRowDoubleClicked={(row) => selectRowCallback(row)}
             />
-        </>
+        </div>
     );
 };
 
