@@ -5,7 +5,7 @@ import BlifSelectInput from '../Inputs/BlifSelectInput';
 import BlifStackView from '../BlifStackView/BlifStackView';
 import BlifSpacer from '../BlifSpacer/BlifSpacer';
 import BlifButton from '../Buttons/BlifButton';
-import {useState, useEffect, useLayoutEffect} from 'react';
+import {useState, useLayoutEffect} from 'react';
 import {ARRAY_MAP_KEYS, FILTER_TYPES} from '../../../utils/commonKeys';
 import BlifDate from '../BlifDatePicker/BlifDate';
 import BlifTypography from '../BlifTypography/BlifTypography';
@@ -58,7 +58,22 @@ const DateInputFilter = ({label, handleInputChange, t}) => {
     );
 };
 
-const FiltersView = ({clickHandler, schema = [], handleInputChange}) => {
+const QueryButton = ({heading, clickHandler, t}) => {
+    return (
+        <BlifFlexGridCol>
+            <BlifBox horizontal={{xs: 1, sm: 2, md: 3}}>
+                <BlifButton onClick={clickHandler}>{t(heading)}</BlifButton>
+            </BlifBox>
+        </BlifFlexGridCol>
+    );
+};
+
+const FiltersView = ({
+    clickHandler,
+    schema = [],
+    handleInputChange,
+    heading,
+}) => {
     const [modifySchemaFormat, setModifySchemaFormat] = useState([]);
     const {t} = useTranslation();
     useLayoutEffect(() => {
@@ -160,12 +175,11 @@ const FiltersView = ({clickHandler, schema = [], handleInputChange}) => {
                         </BlifStackView>
                     );
                 })}
-
-                <BlifFlexGridCol>
-                    <BlifBox horizontal={{xs: 1, sm: 2, md: 3}}>
-                        <BlifButton onClick={clickHandler}>Search</BlifButton>
-                    </BlifBox>
-                </BlifFlexGridCol>
+                <QueryButton
+                    heading={heading}
+                    clickHandler={clickHandler}
+                    t={t}
+                />
             </BlifStackView>
             <BlifSpacer space={3} />
         </BlifFlexGrid>

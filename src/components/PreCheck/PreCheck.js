@@ -190,6 +190,7 @@ const PreCheck = () => {
                             right={{md: 7}}
                             flex={1}>
                             <FiltersView
+                                heading={'Search'}
                                 clickHandler={clickHandler}
                                 schema={filterSchema}
                                 handleInputChange={handleInputChange}

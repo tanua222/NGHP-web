@@ -98,6 +98,7 @@ const Search = () => {
                         top={{md: 1}}
                         flex={1}>
                         <FiltersView
+                            heading={'Search'}
                             clickHandler={searchClickHandler}
                             schema={filterSchema}
                             handleInputChange={handleDownloadsInputChange}
