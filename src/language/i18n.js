@@ -9,6 +9,10 @@ import {
 
 import {preCheckFrench, preCheckEnglish} from './components/preCheckLanguage';
 import {searchEnglish, searchFrench} from './components/searchLanguage';
+import {
+    downloadsEnglish,
+    downloadsFrench,
+} from './components/downloadsLanguage';
 import COMMON_LANGUAGE_KEYS from '../utils/languageKeys/commonKeys';
 
 i18n.use(LanguageDetector).init({
@@ -20,6 +24,7 @@ i18n.use(LanguageDetector).init({
                 ...headerEnglish,
                 ...preCheckEnglish,
                 ...searchEnglish,
+                ...downloadsEnglish,
                 ...miscellaneousEnglish,
             },
         },
@@ -30,6 +35,7 @@ i18n.use(LanguageDetector).init({
                 ...headerFrench,
                 ...preCheckFrench,
                 ...searchFrench,
+                ...downloadsFrench,
                 ...miscellaneousFrench,
             },
         },
