@@ -229,9 +229,9 @@ const Search = () => {
         }));
     };
 
-    // useEffect(() => {
-    //     console.log(searchFilterQuery);
-    // }, [searchFilterQuery]);
+    useEffect(() => {
+        console.log(searchFilterQuery);
+    }, [searchFilterQuery]);
 
     // search onClick handler
     const searchClickHandler = (e) => {
