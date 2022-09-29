@@ -5,7 +5,7 @@ import BlifSelectInput from '../Inputs/BlifSelectInput';
 import BlifStackView from '../BlifStackView/BlifStackView';
 import BlifSpacer from '../BlifSpacer/BlifSpacer';
 import BlifButton from '../Buttons/BlifButton';
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useLayoutEffect} from 'react';
 import {ARRAY_MAP_KEYS, FILTER_TYPES} from '../../../utils/commonKeys';
 import {DatePicker} from '@telus-uds/ds-allium';
 import BlifDatePicker from '../BlifDatePicker/BlifDatePicker';
@@ -60,7 +60,7 @@ const DateInputFilter = ({label, index, handleInputChange, t}) => {
 const FiltersView = ({clickHandler, schema = [], handleInputChange}) => {
     const [modifySchemaFormat, setModifySchemaFormat] = useState([]);
     const {t} = useTranslation();
-    useEffect(() => {
+    useLayoutEffect(() => {
         if (schema) {
             // Convert Array to 4 cols per row structure
             let arrayIndex = 0;
