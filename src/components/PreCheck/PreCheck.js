@@ -16,6 +16,7 @@ import {
     CLEC_FILTER_LANGUAGE_KEYS,
     PRECHECK_LANGUAGE_KEYS,
     FILE_SEARCH_FILTER_LANGUAGE_KEYS,
+    PRE_CHECK_TABLE_HEADER_KEYS,
 } from '../../utils/languageKeys/components/preCheckKeys';
 
 import {
@@ -169,6 +170,98 @@ const PreCheck = () => {
         //empty
     };
 
+    const columns = [
+        {
+            name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_EXCHANGE),
+            width: 'auto',
+            selector: (row) => row.clientId,
+            // sortFunction: (a, b) => sortCollatorByKey(a, b, 'clientId'),
+        },
+        {
+            name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_SL),
+            minWidth: '120px',
+            selector: (row) => row.groupId || row.clientId,
+            // sortFunction: (a, b) => sortCollatorByKey(a, b, 'groupId'),
+        },
+        {
+            name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_SPID),
+            minWidth: '200px',
+            wrap: true,
+            selector: (row) => row.groupName,
+            // sortFunction: (a, b) => sortCollatorByKey(a, b, 'groupName'),
+        },
+        {
+            name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_ACTION),
+            minWidth: '140px',
+            selector: (row) => row.clientType,
+            sortable: true,
+        },
+        {
+            name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_NL),
+            minWidth: '300px',
+            wrap: true,
+            selector: (row) => row.clientName,
+            // sortFunction: (a, b) => sortCollatorByKey(a, b, 'clientName'),
+        },
+        {
+            name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_NUMBER),
+            minWidth: '120px',
+            selector: (row) => row.clientName,
+
+            // sortFunction: (a, b) => sortCollatorByKey(a, b, 'reportId'),
+        },
+        {
+            name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_BRG),
+            minWidth: '200px',
+            wrap: true,
+            selector: (row) => row.clientName,
+
+            // sortFunction: (a, b) => sortCollatorByKey(a, b, 'clientKey'),
+        },
+        {
+            name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_NAME),
+
+            minWidth: '120px',
+            sortable: true,
+            selector: (row) => row.clientName,
+        },
+        {
+            name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_LOCATION),
+            minWidth: '120px',
+            sortable: true,
+            selector: (row) => row.clientName,
+        },
+        {
+            name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_ADDRESS),
+            sortable: true,
+            selector: (row) => row.clientName,
+        },
+        {
+            name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_CFC),
+            minWidth: '180px',
+            selector: (row) => row.clientName,
+
+            sortFunction: (a, b) =>
+                new Date(a.deactivateDate) - new Date(b.deactivateDate),
+        },
+        {
+            name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_REJECT_CODE),
+            minWidth: '180px',
+            selector: (row) => row.clientName,
+
+            sortFunction: (a, b) =>
+                new Date(a.deactivateDate) - new Date(b.deactivateDate),
+        },
+        {
+            name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_POLICY_CODE),
+            minWidth: '180px',
+            selector: (row) => row.clientName,
+
+            sortFunction: (a, b) =>
+                new Date(a.deactivateDate) - new Date(b.deactivateDate),
+        },
+    ];
+
     return (
         <>
             <BlifFlexGrid gutter={false}>
@@ -208,6 +301,7 @@ const PreCheck = () => {
                             data={dummyTableData.clients}
                             selectRow={(row) => selectRowCallback(row)}
                             loaded={false}
+                            columns={columns}
                         />
                     </BlifFlexGridCol>
                 </BlifFlexGridRow>

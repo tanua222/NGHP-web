@@ -1,3 +1,4 @@
 .BlifTable_hide_Scrollbar > div::-webkit-scrollbar {
-    display: none;
+    display: none !important;
+    max-height: initial !important;
 }
