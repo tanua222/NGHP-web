@@ -7,6 +7,7 @@ import {
     FILE_SEARCH_FILTER_LANGUAGE_KEYS,
     PRE_CHECK_TABLE_HEADER_KEYS,
 } from '../../utils/languageKeys/components/preCheckKeys';
+import {BUTTON_TITLE} from '../../utils/commonKeys';
 
 export const preCheckEnglish = {
     [PRECHECK_LANGUAGE_KEYS.PRECHECK_HEADING]: ' Pre-Check',
@@ -23,6 +24,7 @@ export const preCheckEnglish = {
     [PRECHECK_LANGUAGE_KEYS.PRECHECK_ONLY_REJECTS]: 'Only Rejects',
     [PRECHECK_LANGUAGE_KEYS.PRECHECK_NO_REJECTS]: 'No Rejects',
     [PRECHECK_LANGUAGE_KEYS.PRECHECK_PRE_CHECK]: 'PRE-CHECK',
+    [BUTTON_TITLE.SEARCH_BUTTON_TITLE]: 'Search',
 
     // Filter options
     [FILE_SEARCH_FILTER_LANGUAGE_KEYS.LABEL]: 'File',
@@ -76,6 +78,7 @@ export const preCheckFrench = {
     [PRECHECK_LANGUAGE_KEYS.PRECHECK_ONLY_REJECTS]: 'Seuls les rejets',
     [PRECHECK_LANGUAGE_KEYS.PRECHECK_NO_REJECTS]: 'Aucun rejet',
     [PRECHECK_LANGUAGE_KEYS.PRECHECK_PRE_CHECK]: 'CONTRÔLE PRÉALABLE',
+    [BUTTON_TITLE.SEARCH_BUTTON_TITLE]: 'Search-fr',
 
     // Filter options
     [FILE_SEARCH_FILTER_LANGUAGE_KEYS.LABEL]: 'File in french',

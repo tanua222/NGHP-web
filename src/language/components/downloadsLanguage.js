@@ -4,6 +4,7 @@ import {
     START_DATE_FILTER_LANGUAGE_KEYS,
     END_DATE_FILTER_LANGUAGE_KEYS,
 } from '../../utils/languageKeys/components/downloadsKeys';
+import {BUTTON_TITLE} from '../../utils/commonKeys';
 
 export const downloadsEnglish = {
     [DOWNLOADS_LANGUAGE_KEYS.DOWNLOADS_HEADING]: 'Telus Downloads',
@@ -17,6 +18,7 @@ export const downloadsEnglish = {
     [START_DATE_FILTER_LANGUAGE_KEYS.LABEL]: 'Start Date(Download)',
 
     [END_DATE_FILTER_LANGUAGE_KEYS.LABEL]: 'End Date(Download)',
+    [BUTTON_TITLE.SEARCH_BUTTON_TITLE]: 'Search',
 };
 
 export const downloadsFrench = {
@@ -31,4 +33,5 @@ export const downloadsFrench = {
     [START_DATE_FILTER_LANGUAGE_KEYS.LABEL]: 'Start Date-French',
 
     [END_DATE_FILTER_LANGUAGE_KEYS.LABEL]: 'End Date-French',
+    [BUTTON_TITLE.SEARCH_BUTTON_TITLE]: 'Search-fr',
 };

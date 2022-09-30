@@ -7,7 +7,7 @@ import BlifSpacer from '../BlifSpacer/BlifSpacer';
 import BlifButton from '../Buttons/BlifButton';
 import {useState, useLayoutEffect} from 'react';
 import {ARRAY_MAP_KEYS, FILTER_TYPES} from '../../../utils/commonKeys';
-import BlifDate from '../BlifDatePicker/BlifDate';
+import BlifDatePicker from '../BlifDatePicker/BlifDatePicker';
 import BlifTypography from '../BlifTypography/BlifTypography';
 import {useTranslation} from 'react-i18next';
 
@@ -47,7 +47,8 @@ const DateInputFilter = ({label, handleInputChange, t}) => {
                         {t(label)}
                     </BlifTypography>
                     <BlifSpacer space={1} />
-                    <BlifDate
+                    <BlifDatePicker
+                        date
                         // label={t(label)}
 
                         onSelectionChange={handleInputChange}

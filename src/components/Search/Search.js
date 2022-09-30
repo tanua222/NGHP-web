@@ -14,8 +14,8 @@ import {
     FILE_SEARCH_FILTER_LANGUAGE_KEYS,
     BUS_OPERATING_NAME_FILTER_LANGUAGE_KEYS,
     PHONE_NUMBER_FILTER_LANGUAGE_KEYS,
-    START_DATE_FILTER_LANGUAGE_KEYS,
-    END_DATE_FILTER_LANGUAGE_KEYS,
+    START_DATE_SEARCH_FILTER_LANGUAGE_KEYS,
+    END_DATE_SEARCH_FILTER_LANGUAGE_KEYS,
     ACTION_INDICATOR_FILTER_LANGUAGE_KEYS,
     INTERNAL_STATUS_FILTER_LANGUAGE_KEYS,
 } from '../../utils/languageKeys/components/searchKeys';
@@ -202,13 +202,14 @@ const Search = () => {
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.DATE_INPUT,
                     [ARRAY_MAP_KEYS.label]:
-                        START_DATE_FILTER_LANGUAGE_KEYS.LABEL,
+                        START_DATE_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         SEARCH_FORM_SCHEMA_KEYS.START_DATE_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.DATE_INPUT,
-                    [ARRAY_MAP_KEYS.label]: END_DATE_FILTER_LANGUAGE_KEYS.LABEL,
+                    [ARRAY_MAP_KEYS.label]:
+                        END_DATE_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         SEARCH_FORM_SCHEMA_KEYS.END_DATE_INPUT,
                 },

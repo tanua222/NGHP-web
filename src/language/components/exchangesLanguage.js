@@ -7,6 +7,7 @@ import {
     SECTION_SEARCH_FILTER_LANGUAGE_KEYS,
     NPA_SEARCH_FILTER_LANGUAGE_KEYS,
 } from '../../utils/languageKeys/components/exchangesKeys';
+import {BUTTON_TITLE} from '../../utils/commonKeys';
 
 export const exchangesEnglish = {
     [EXCHANGES_LANGUAGE_KEYS.EXCHANGES_HEADING]: 'Exchanges',
@@ -20,6 +21,7 @@ export const exchangesEnglish = {
     [BOOK_SEARCH_FILTER_LANGUAGE_KEYS.LABEL]: 'Book#',
     [SECTION_SEARCH_FILTER_LANGUAGE_KEYS.LABEL]: 'Section#',
     [NPA_SEARCH_FILTER_LANGUAGE_KEYS.LABEL]: 'NPA',
+    [BUTTON_TITLE.ADD_EXCHANGE_BUTTON_TITLE]: 'Add Exchange',
 };
 
 export const exchangesFrench = {
@@ -34,4 +36,5 @@ export const exchangesFrench = {
     [BOOK_SEARCH_FILTER_LANGUAGE_KEYS.LABEL]: 'Book#-fr',
     [SECTION_SEARCH_FILTER_LANGUAGE_KEYS.LABEL]: 'Section#-fr',
     [NPA_SEARCH_FILTER_LANGUAGE_KEYS.LABEL]: 'NPA-fr',
+    [BUTTON_TITLE.ADD_EXCHANGE_BUTTON_TITLE]: 'Add Exchange-fr',
 };
