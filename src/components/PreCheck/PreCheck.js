@@ -273,6 +273,7 @@ const PreCheck = () => {
                         </BlifTypography>
                     </BlifFlexGridCol>
                 </BlifFlexGridRow>
+                <BlifSpacer space={2} />
                 <BlifFlexGridRow
                     verticalAlign="middle"
                     horizontalAlign="center">

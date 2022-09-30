@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import BlifTypography from '../Common/BlifTypography/BlifTypography';
-import BlifStackView from '../Common/BlifStackView/BlifStackView';
 import {ARRAY_MAP_KEYS, FILTER_TYPES, ZERO_INDEX} from '../../utils/commonKeys';
 import {FiltersView} from '../Common/Filters/Filters';
 import BlifBox from '../Common/Box/BlifBox';
 import {checkIfArrayExists} from '../../utils/helperFunctions';
+import BlifSpacer from '../Common/BlifSpacer/BlifSpacer';
+
 import {
     SEARCH_LANGUAGE_KEYS,
     PROVINCE_FILTER_LANGUAGE_KEYS,
@@ -248,6 +249,7 @@ const Search = () => {
                     </BlifTypography>
                 </BlifFlexGridCol>
             </BlifFlexGridRow>
+            <BlifSpacer space={2} />
             <BlifFlexGridRow verticalAlign="middle" horizontalAlign="center">
                 <BlifFlexGridCol>
                     <BlifBox

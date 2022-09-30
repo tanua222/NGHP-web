@@ -9,7 +9,7 @@ import {
 } from '../../utils/languageKeys/components/exchangesKeys';
 
 export const exchangesEnglish = {
-    [EXCHANGES_LANGUAGE_KEYS.EXCHANGES_HEADING]: 'EXCHANGES',
+    [EXCHANGES_LANGUAGE_KEYS.EXCHANGES_HEADING]: 'Exchanges',
 
     // Filter options
     [ABBREV_SEARCH_FILTER_LANGUAGE_KEYS.LABEL]: 'Abbrev',

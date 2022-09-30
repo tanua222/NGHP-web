@@ -1,5 +1,5 @@
 import BlifBox from '../Box/BlifBox';
-import {BlifFlexGrid, BlifFlexGridCol} from '../BlifFlexGrid/BlifFlexGrid';
+import {BlifFlexGridCol} from '../BlifFlexGrid/BlifFlexGrid';
 import BlifTextInput from '../Inputs/BlifTextInput';
 import BlifSelectInput from '../Inputs/BlifSelectInput';
 import BlifStackView from '../BlifStackView/BlifStackView';
@@ -102,7 +102,7 @@ const FiltersView = ({
     }, [schema]);
 
     return (
-        <BlifFlexGrid limitWidth={false}>
+        <>
             <BlifSpacer space={3} />
             <BlifStackView space={4} direction="column">
                 {modifySchemaFormat?.map((item, index) => {
@@ -182,7 +182,7 @@ const FiltersView = ({
                 />
             </BlifStackView>
             <BlifSpacer space={3} />
-        </BlifFlexGrid>
+        </>
     );
 };
 
