@@ -5,10 +5,9 @@ import BlifSelectInput from '../Inputs/BlifSelectInput';
 import BlifStackView from '../BlifStackView/BlifStackView';
 import BlifSpacer from '../BlifSpacer/BlifSpacer';
 import BlifButton from '../Buttons/BlifButton';
-import {useState, useEffect, useLayoutEffect} from 'react';
+import {useState, useLayoutEffect} from 'react';
 import {ARRAY_MAP_KEYS, FILTER_TYPES} from '../../../utils/commonKeys';
-import {DatePicker} from '@telus-uds/ds-allium';
-import BlifDatePicker from '../BlifDatePicker/BlifDatePicker';
+import BlifDate from '../BlifDatePicker/BlifDate';
 import BlifTypography from '../BlifTypography/BlifTypography';
 import {useTranslation} from 'react-i18next';
 
@@ -39,17 +38,19 @@ const SelectInputFilter = ({label = '', options = [], onChangeSelect}) => {
     );
 };
 
-const DateInputFilter = ({label, index, handleInputChange, t}) => {
+const DateInputFilter = ({label, handleInputChange, t}) => {
     return (
         <>
-            <BlifFlexGridCol md={3}>
+            <BlifFlexGridCol md={3} horizontalAlign="left">
                 <BlifBox vertical={1} horizontal={3}>
-                    {/* <BlifTypography>{label}</BlifTypography> */}
-                    <DatePicker
-                        id="DatePicker"
-                        label={t(label)}
-                        copy="en"
-                        // onDateChange={handleInputChange}
+                    <BlifTypography tokens={{fontWeight: '700'}}>
+                        {t(label)}
+                    </BlifTypography>
+                    <BlifSpacer space={1} />
+                    <BlifDate
+                        // label={t(label)}
+
+                        onSelectionChange={handleInputChange}
                     />
                 </BlifBox>
             </BlifFlexGridCol>
@@ -57,7 +58,22 @@ const DateInputFilter = ({label, index, handleInputChange, t}) => {
     );
 };
 
-const FiltersView = ({clickHandler, schema = [], handleInputChange}) => {
+const QueryButton = ({heading, clickHandler, t}) => {
+    return (
+        <BlifFlexGridCol>
+            <BlifBox horizontal={{xs: 1, sm: 2, md: 3}}>
+                <BlifButton onClick={clickHandler}>{t(heading)}</BlifButton>
+            </BlifBox>
+        </BlifFlexGridCol>
+    );
+};
+
+const FiltersView = ({
+    clickHandler,
+    schema = [],
+    handleInputChange,
+    heading,
+}) => {
     const [modifySchemaFormat, setModifySchemaFormat] = useState([]);
     const {t} = useTranslation();
     useLayoutEffect(() => {
@@ -144,15 +160,14 @@ const FiltersView = ({clickHandler, schema = [], handleInputChange}) => {
                                                 rowItem[ARRAY_MAP_KEYS.label]
                                             }
                                             t={t}
-
-                                            // handleInputChange={(val) => {
-                                            //     handleInputChange(
-                                            //         rowItem[
-                                            //             ARRAY_MAP_KEYS.ON_CHANGE
-                                            //         ],
-                                            //         val._d,
-                                            //     );
-                                            // }}
+                                            handleInputChange={(val) => {
+                                                handleInputChange(
+                                                    rowItem[
+                                                        ARRAY_MAP_KEYS.ON_CHANGE
+                                                    ],
+                                                    val,
+                                                );
+                                            }}
                                         />
                                     );
                                 }
@@ -160,12 +175,11 @@ const FiltersView = ({clickHandler, schema = [], handleInputChange}) => {
                         </BlifStackView>
                     );
                 })}
-
-                <BlifFlexGridCol>
-                    <BlifBox horizontal={{xs: 1, sm: 2, md: 3}}>
-                        <BlifButton onClick={clickHandler}>Search</BlifButton>
-                    </BlifBox>
-                </BlifFlexGridCol>
+                <QueryButton
+                    heading={heading}
+                    clickHandler={clickHandler}
+                    t={t}
+                />
             </BlifStackView>
             <BlifSpacer space={3} />
         </BlifFlexGrid>

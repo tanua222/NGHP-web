@@ -29,6 +29,7 @@ import {
     BlifFlexGridCol,
 } from '../Common/BlifFlexGrid/BlifFlexGrid';
 import {useTranslation} from 'react-i18next';
+import {BUTTON_TITLE} from '../../utils/commonKeys';
 
 // Options
 export const getActionIndicatorFilterOptions = [
@@ -229,9 +230,9 @@ const Search = () => {
         }));
     };
 
-    // useEffect(() => {
-    //     console.log(searchFilterQuery);
-    // }, [searchFilterQuery]);
+    useEffect(() => {
+        console.log(searchFilterQuery);
+    }, [searchFilterQuery]);
 
     // search onClick handler
     const searchClickHandler = (e) => {
@@ -257,6 +258,7 @@ const Search = () => {
                         top={{md: 1}}
                         flex={1}>
                         <FiltersView
+                            heading={BUTTON_TITLE.SEARCH_BUTTON_TITLE}
                             clickHandler={searchClickHandler}
                             schema={filterSchema}
                             handleInputChange={handleSearchInputChange}

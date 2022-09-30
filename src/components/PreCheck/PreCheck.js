@@ -7,6 +7,7 @@ import {checkIfArrayExists} from '../../utils/helperFunctions';
 import BlifTable from '../Common/BlifTables/BlifTable';
 import BlifSpacer from '../Common/BlifSpacer/BlifSpacer';
 import dummyTableData from '../Common/BlifTables/dummyTableData.json';
+import {BUTTON_TITLE} from '../../utils/commonKeys';
 
 import BlifBox from '../Common/Box/BlifBox';
 import {
@@ -283,6 +284,7 @@ const PreCheck = () => {
                             right={{md: 7}}
                             flex={1}>
                             <FiltersView
+                                heading={BUTTON_TITLE.SEARCH_BUTTON_TITLE}
                                 clickHandler={clickHandler}
                                 schema={filterSchema}
                                 handleInputChange={handleInputChange}
