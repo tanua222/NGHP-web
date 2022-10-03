@@ -47,12 +47,7 @@ const DateInputFilter = ({label, handleInputChange, t}) => {
                         {t(label)}
                     </BlifTypography>
                     <BlifSpacer space={1} />
-                    <BlifDatePicker
-                        date
-                        // label={t(label)}
-
-                        onSelectionChange={handleInputChange}
-                    />
+                    <BlifDatePicker onChange={handleInputChange} />
                 </BlifBox>
             </BlifFlexGridCol>
         </>
