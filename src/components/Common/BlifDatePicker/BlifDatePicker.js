@@ -5,23 +5,22 @@ The adapter (@date-io) exposes your favorite date-library under a unified api us
 */
 
 import {React, useState, useEffect} from 'react';
-import {DatePicker, LocalizationProvider} from '@mui/x-date-pickers';
+
+import {DatePicker, LocalizationProvider, bgBG} from '@mui/x-date-pickers';
 import {AdapterMoment} from '@mui/x-date-pickers/AdapterMoment';
 import {TextField} from '@mui/material';
 
-const BlifDatePicker = ({handleInputChange}) => {
+const BlifDatePicker = ({onChange, filterKey}) => {
     const [value, setValue] = useState();
-
-    // const clickHandler = (handleInputChange, val) => {
-    //     setValue(val);
-    //     // handleInputChange(val);
-    // };
-
+    function changeHandler(val) {
+        setValue(val);
+        onChange(filterKey, val);
+    }
     return (
         <LocalizationProvider dateAdapter={AdapterMoment}>
             <DatePicker
                 value={value}
-                onChange={(val) => setValue(val)}
+                onChange={changeHandler}
                 renderInput={(params) => <TextField {...params} />}
             />
         </LocalizationProvider>
