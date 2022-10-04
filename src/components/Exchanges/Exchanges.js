@@ -21,7 +21,7 @@ import {
 } from '../Common/BlifFlexGrid/BlifFlexGrid';
 import {useTranslation} from 'react-i18next';
 import {BUTTON_TITLE} from '../../utils/commonKeys';
-
+import {TranslationKeys} from '../../language/TranslationKeys';
 //Form Schema
 const EXCHANGES_FORM_SCHEMA_KEYS = {
     ABBREV_INPUT: 'ABBREV_INPUT',
@@ -117,7 +117,7 @@ const Search = () => {
             <BlifFlexGridRow>
                 <BlifFlexGridCol>
                     <BlifTypography variant={{size: 'h2'}}>
-                        {t(EXCHANGES_LANGUAGE_KEYS.EXCHANGES_HEADING)}
+                        {t(TranslationKeys.exchange.EXCHANGES_HEADING)}
                     </BlifTypography>
                 </BlifFlexGridCol>
             </BlifFlexGridRow>

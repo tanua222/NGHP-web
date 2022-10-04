@@ -1,52 +1,22 @@
 import i18n from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
-
-import {headerEnglish, headerFrench} from './components/headerLanguage';
-import {
-    miscellaneousFrench,
-    miscellaneousEnglish,
-} from './miscellaneousLanguage';
-
-import {preCheckFrench, preCheckEnglish} from './components/preCheckLanguage';
-import {searchEnglish, searchFrench} from './components/searchLanguage';
-import {
-    exchangesEnglish,
-    exchangesFrench,
-} from './components/exchangesLanguage';
-import {
-    downloadsEnglish,
-    downloadsFrench,
-} from './components/downloadsLanguage';
-import COMMON_LANGUAGE_KEYS from '../utils/languageKeys/commonKeys';
+import {EnglishTranslations} from './EnglishTranslations';
+import {FrenchTranslations} from './FrenchTranslations';
 
 i18n.use(LanguageDetector).init({
     // we init with resources
     resources: {
         // English
-        [COMMON_LANGUAGE_KEYS.ENGLISH]: {
-            translations: {
-                ...headerEnglish,
-                ...preCheckEnglish,
-                ...searchEnglish,
-                ...downloadsEnglish,
-                ...exchangesEnglish,
-                ...miscellaneousEnglish,
-            },
+        en: {
+            translations: {...EnglishTranslations},
         },
 
         // French
-        [COMMON_LANGUAGE_KEYS.FRENCH]: {
-            translations: {
-                ...headerFrench,
-                ...preCheckFrench,
-                ...searchFrench,
-                ...downloadsFrench,
-                ...exchangesFrench,
-                ...miscellaneousFrench,
-            },
+        fn: {
+            translations: {...FrenchTranslations},
         },
     },
-    fallbackLng: COMMON_LANGUAGE_KEYS.ENGLISH,
+    fallbackLng: 'en',
     debug: false,
 
     // have a common namespace used around the full app

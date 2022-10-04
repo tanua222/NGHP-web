@@ -8,13 +8,13 @@ import {ARRAY_MAP_KEYS, LOCAL_LANGUAGE} from '../../utils/commonKeys';
 import {useNavigate, useLocation} from 'react-router-dom';
 import useRoutes, {HOME_ROUTE_INDEX} from '../../hooks/useRoutes';
 import {ROUTER_KEYS} from '../../utils/routeKeys';
-import {MISCELLANEOUS_KEYS} from '../../utils/languageKeys/miscellaneousKeys';
-import COMMON_LANGUAGE_KEYS from '../../utils/languageKeys/commonKeys';
 import {FlexGrid} from '@telus-uds/ds-allium';
 import {Typography} from '@telus-uds/ds-allium';
 import {Divider} from '@telus-uds/ds-allium';
 import {Spacer} from '@telus-uds/ds-allium';
 import {TextButton} from '@telus-uds/ds-allium';
+import {EnglishTranslations} from '../../language/EnglishTranslations';
+import {FrenchTranslations} from '../../language/FrenchTranslations';
 
 const Header = () => {
     const location = useLocation();
@@ -106,10 +106,10 @@ const Header = () => {
                                         <TextButton
                                             onPress={() =>
                                                 changeLanguage(
-                                                    COMMON_LANGUAGE_KEYS.ENGLISH,
+                                                    EnglishTranslations.en,
                                                 )
                                             }>
-                                            {t(MISCELLANEOUS_KEYS.ENGLISH)}
+                                            {t(EnglishTranslations.ENGLISH)}
                                         </TextButton>
                                         <Typography bold>
                                             &nbsp;|&nbsp;
@@ -117,10 +117,10 @@ const Header = () => {
                                         <TextButton
                                             onPress={() =>
                                                 changeLanguage(
-                                                    COMMON_LANGUAGE_KEYS.FRENCH,
+                                                    FrenchTranslations.fn,
                                                 )
                                             }>
-                                            {t(MISCELLANEOUS_KEYS.FRENCH)}
+                                            {t(EnglishTranslations.FRENCH)}
                                         </TextButton>
                                         {/* <Typography bold>
                                             &nbsp;|&nbsp;
