@@ -4,4 +4,6 @@ export const MISCELLANEOUS_KEYS = {
     TELUS: 'TELUS',
     ENGLISH: 'ENGLISH',
     FRENCH: 'FRENCH',
+    en: 'en',
+    fr: 'fr',
 };

@@ -6,6 +6,7 @@ export const miscellaneousEnglish = {
     [MISCELLANEOUS_KEYS.TELUS]: 'TELUS',
     [MISCELLANEOUS_KEYS.ENGLISH]: 'English',
     [MISCELLANEOUS_KEYS.FRENCH]: 'French',
+    [MISCELLANEOUS_KEYS.en]: 'en',
 };
 
 export const miscellaneousFrench = {
@@ -14,4 +15,5 @@ export const miscellaneousFrench = {
     [MISCELLANEOUS_KEYS.TELUS]: 'TELUS',
     [MISCELLANEOUS_KEYS.ENGLISH]: 'Anglais',
     [MISCELLANEOUS_KEYS.FRENCH]: 'Français',
+    [MISCELLANEOUS_KEYS.fr]: 'fr',
 };
