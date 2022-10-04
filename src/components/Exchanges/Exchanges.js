@@ -4,9 +4,9 @@ import {ARRAY_MAP_KEYS, FILTER_TYPES} from '../../utils/commonKeys';
 import {FiltersView} from '../Common/Filters/Filters';
 import BlifBox from '../Common/Box/BlifBox';
 import BlifSpacer from '../Common/BlifSpacer/BlifSpacer';
-
+import {TranslationKeys} from '../../language/TranslationKeys';
+import {useTranslation} from 'react-i18next';
 import {
-    EXCHANGES_LANGUAGE_KEYS,
     ABBREV_SEARCH_FILTER_LANGUAGE_KEYS,
     NAME_SEARCH_FILTER_LANGUAGE_KEYS,
     ABBREVIATION2_SEARCH_FILTER_LANGUAGE_KEYS,
@@ -19,9 +19,7 @@ import {
     BlifFlexGridRow,
     BlifFlexGridCol,
 } from '../Common/BlifFlexGrid/BlifFlexGrid';
-import {useTranslation} from 'react-i18next';
-import {BUTTON_TITLE} from '../../utils/commonKeys';
-import {TranslationKeys} from '../../language/TranslationKeys';
+
 //Form Schema
 const EXCHANGES_FORM_SCHEMA_KEYS = {
     ABBREV_INPUT: 'ABBREV_INPUT',
@@ -132,7 +130,8 @@ const Search = () => {
                         top={{md: 1}}
                         flex={1}>
                         <FiltersView
-                            heading={BUTTON_TITLE.ADD_EXCHANGE_BUTTON_TITLE}
+                            // eslint-disable-next-line prettier/prettier
+                            heading={TranslationKeys.exchange.ADD_EXCHANGE_BUTTON_TITLE}
                             clickHandler={searchClickHandler}
                             schema={filterSchema}
                             handleInputChange={handleExchangesInputChange}

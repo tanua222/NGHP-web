@@ -8,7 +8,7 @@ import BlifTable from '../Common/BlifTables/BlifTable';
 import BlifSpacer from '../Common/BlifSpacer/BlifSpacer';
 import dummyTableData from '../Common/BlifTables/dummyTableData.json';
 import {BUTTON_TITLE} from '../../utils/commonKeys';
-
+import {TranslationKeys} from '../../language/TranslationKeys';
 import BlifBox from '../Common/Box/BlifBox';
 import {
     PROVINCE_FILTER_LANGUAGE_KEYS,
@@ -269,7 +269,7 @@ const PreCheck = () => {
                 <BlifFlexGridRow>
                     <BlifFlexGridCol lg={12} md={10}>
                         <BlifTypography variant={{size: 'h2'}}>
-                            {t(PRECHECK_LANGUAGE_KEYS.PRECHECK_HEADING)}
+                            {t(TranslationKeys.preCheck.PRECHECK_HEADING)}
                         </BlifTypography>
                     </BlifFlexGridCol>
                 </BlifFlexGridRow>
@@ -285,7 +285,9 @@ const PreCheck = () => {
                             right={{md: 7}}
                             flex={1}>
                             <FiltersView
-                                heading={BUTTON_TITLE.SEARCH_BUTTON_TITLE}
+                                heading={t(
+                                    TranslationKeys.common.SEARCH_BUTTON,
+                                )}
                                 clickHandler={clickHandler}
                                 schema={filterSchema}
                                 handleInputChange={handleInputChange}

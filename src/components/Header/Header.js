@@ -15,6 +15,7 @@ import {Spacer} from '@telus-uds/ds-allium';
 import {TextButton} from '@telus-uds/ds-allium';
 import {EnglishTranslations} from '../../language/EnglishTranslations';
 import {FrenchTranslations} from '../../language/FrenchTranslations';
+import {TranslationKeys} from '../../language/TranslationKeys';
 
 const Header = () => {
     const location = useLocation();
@@ -47,7 +48,7 @@ const Header = () => {
     const changeLanguage = (language) => {
         if (!language) return;
 
-        localStorage.setItem(LOCAL_LANGUAGE, language);
+        localStorage.setItem(TranslationKeys.common.LANGUAGE, language);
         i18n.changeLanguage(language);
     };
 
