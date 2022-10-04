@@ -25,6 +25,8 @@ import {
     BlifFlexGridRow,
     BlifFlexGridCol,
 } from '../Common/BlifFlexGrid/BlifFlexGrid';
+import BlifDataTable from '../Common/BlifDataTable/BlifDataTable';
+import BlifDataTableClient from '../Common/BlifDataTable/BlifDataTableClient';
 
 // OPTIONS
 export const getProvinceFilterOptions = [
@@ -263,6 +265,12 @@ const PreCheck = () => {
         },
     ];
 
+    let schema = {
+        // idProperty: 'corporationName',
+        // idPropertySortOrder: 'asc',
+        headers: columns,
+    };
+
     return (
         <>
             <BlifFlexGrid gutter={false}>
@@ -306,6 +314,14 @@ const PreCheck = () => {
                             loaded={false}
                             columns={columns}
                         />
+                        {/* <BlifDataTable
+                            data
+                            retrieveData={dummyTableData.clients}
+                            selection
+                            dataOnSelectionChange
+                            resetCurrentPage
+                            translate
+                        /> */}
                     </BlifFlexGridCol>
                 </BlifFlexGridRow>
             </BlifFlexGrid>

@@ -10,3 +10,11 @@ export const isEnglish = (i18nLanguage) => {
     const englishValidValues = ['en', 'en-US', 'en-CA'];
     return englishValidValues.includes(i18nLanguage);
 };
+
+export function getLocalStoragePageSize() {
+    return localStorage.getItem('pageSize');
+}
+
+export function setLocalStoragePageSize(newPageSize) {
+    localStorage.setItem('pageSize', newPageSize);
+}
