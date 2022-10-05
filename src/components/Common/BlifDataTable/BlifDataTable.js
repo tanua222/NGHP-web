@@ -433,6 +433,7 @@ const BlifDataTable = ({
                                 </td>
                             </tr>
                         )}
+                        {console.log(data)}
                         {data.data && data.data.length === 0 && (
                             <tr>
                                 <td colSpan={numberOfColumns}>

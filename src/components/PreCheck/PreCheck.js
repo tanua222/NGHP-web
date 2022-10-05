@@ -4,7 +4,7 @@ import {ARRAY_MAP_KEYS, FILTER_TYPES, ZERO_INDEX} from '../../utils/commonKeys';
 import {FiltersView} from '../Common/Filters/Filters';
 import {useTranslation} from 'react-i18next';
 import {checkIfArrayExists} from '../../utils/helperFunctions';
-import BlifTable from '../Common/BlifTables/BlifTable';
+//import BlifTable from '../Common/BlifTables/BlifTable';
 import BlifSpacer from '../Common/BlifSpacer/BlifSpacer';
 import dummyTableData from '../Common/BlifTables/dummyTableData.json';
 import {BUTTON_TITLE} from '../../utils/commonKeys';
@@ -25,7 +25,7 @@ import {
     BlifFlexGridRow,
     BlifFlexGridCol,
 } from '../Common/BlifFlexGrid/BlifFlexGrid';
-import BlifDataTable from '../Common/BlifDataTable/BlifDataTable';
+//import BlifDataTable from '../Common/BlifDataTable/BlifDataTable';
 import BlifDataTableClient from '../Common/BlifDataTable/BlifDataTableClient';
 
 // OPTIONS
@@ -169,107 +169,133 @@ const PreCheck = () => {
         alert('search query');
     };
 
-    const selectRowCallback = (rowData) => {
-        //empty
-    };
+    // const selectRowCallback = (rowData) => {
+    //     //empty
+    // };
 
     const columns = [
         {
             name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_EXCHANGE),
             width: 'auto',
-            selector: (row) => row.clientId,
+            dataProperty: 'exchange',
+            sortable: true,
+            //selector: (row) => row.clientId,
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'clientId'),
         },
         {
             name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_SL),
-            minWidth: '120px',
-            selector: (row) => row.groupId || row.clientId,
+            Width: 'auto',
+            dataProperty: 'singleLine',
+            sortable: true,
+            //selector: (row) => row.groupId || row.clientId,
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'groupId'),
         },
         {
             name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_SPID),
-            minWidth: '200px',
+            Width: 'auto',
+            dataProperty: 'spID',
+            sortable: true,
             wrap: true,
-            selector: (row) => row.groupName,
+            //selector: (row) => row.groupName,
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'groupName'),
         },
         {
             name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_ACTION),
-            minWidth: '140px',
-            selector: (row) => row.clientType,
+            Width: 'auto',
+            dataProperty: 'actionIndicator',
+            //selector: (row) => row.clientType,
             sortable: true,
         },
         {
             name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_NL),
-            minWidth: '300px',
+            Width: 'auto',
+            dataProperty: 'nl',
+            sortable: true,
             wrap: true,
-            selector: (row) => row.clientName,
+            //selector: (row) => row.clientName,
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'clientName'),
         },
         {
             name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_NUMBER),
-            minWidth: '120px',
-            selector: (row) => row.clientName,
+            Width: 'auto',
+            dataProperty: 'phoneNumber',
+            sortable: true,
+            // selector: (row) => row.clientName,
 
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'reportId'),
         },
         {
             name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_BRG),
-            minWidth: '200px',
+            Width: 'auto',
+            dataProperty: 'brgIndicator',
+            sortable: true,
             wrap: true,
-            selector: (row) => row.clientName,
+            //selector: (row) => row.clientName,
 
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'clientKey'),
         },
         {
             name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_NAME),
-
+            Width: 'auto',
+            dataProperty: 'customerFullName',
             minWidth: '120px',
-            sortable: true,
-            selector: (row) => row.clientName,
+            //selector: (row) => row.clientName,
         },
         {
             name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_LOCATION),
-            minWidth: '120px',
+            Width: 'auto',
             sortable: true,
-            selector: (row) => row.clientName,
+            dataProperty: 'location',
+            //selector: (row) => row.clientName,
         },
         {
             name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_ADDRESS),
+            Width: 'auto',
+
             sortable: true,
-            selector: (row) => row.clientName,
+            dataProperty: 'address',
+            // selector: (row) => row.clientName,
         },
         {
             name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_CFC),
-            minWidth: '180px',
-            selector: (row) => row.clientName,
+            Width: 'auto',
+            sortable: true,
+            dataProperty: 'cfc',
+            //selector: (row) => row.clientName,
 
-            sortFunction: (a, b) =>
-                new Date(a.deactivateDate) - new Date(b.deactivateDate),
+            // sortFunction: (a, b) =>
+            //new Date(a.deactivateDate) - new Date(b.deactivateDate),
         },
         {
             name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_REJECT_CODE),
-            minWidth: '180px',
-            selector: (row) => row.clientName,
+            Width: 'auto',
+            sortable: true,
+            dataProperty: 'rejectCode',
+            // selector: (row) => row.clientName,
 
-            sortFunction: (a, b) =>
-                new Date(a.deactivateDate) - new Date(b.deactivateDate),
+            // sortFunction: (a, b) =>
+            //     new Date(a.deactivateDate) - new Date(b.deactivateDate),
         },
         {
             name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_POLICY_CODE),
-            minWidth: '180px',
-            selector: (row) => row.clientName,
+            Width: 'auto',
+            sortable: true,
+            dataProperty: 'policyCode',
+            //selector: (row) => row.clientName,
 
-            sortFunction: (a, b) =>
-                new Date(a.deactivateDate) - new Date(b.deactivateDate),
+            // sortFunction: (a, b) =>
+            //     new Date(a.deactivateDate) - new Date(b.deactivateDate),
         },
     ];
 
     let schema = {
-        // idProperty: 'corporationName',
+        // idProperty: 'precheckTable',
         // idPropertySortOrder: 'asc',
         headers: columns,
     };
+
+    // Get Precheck Table Data
+    //const getPrecheckTableData = () => dummyTableData.data;
 
     return (
         <>
@@ -308,20 +334,20 @@ const PreCheck = () => {
             <BlifFlexGrid limitWidth={false}>
                 <BlifFlexGridRow md={12}>
                     <BlifFlexGridCol>
-                        <BlifTable
+                        {/* <BlifTable
                             data={dummyTableData.clients}
                             selectRow={(row) => selectRowCallback(row)}
                             loaded={false}
                             columns={columns}
-                        />
-                        {/* <BlifDataTable
-                            data
-                            retrieveData={dummyTableData.clients}
-                            selection
-                            dataOnSelectionChange
-                            resetCurrentPage
-                            translate
                         /> */}
+                        <BlifDataTableClient
+                            schema={schema}
+                            retrieveData={dummyTableData.data}
+                            // selection
+                            // dataOnSelectionChange
+                            // resetCurrentPage
+                            // translate
+                        />
                     </BlifFlexGridCol>
                 </BlifFlexGridRow>
             </BlifFlexGrid>
