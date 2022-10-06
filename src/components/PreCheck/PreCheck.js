@@ -7,7 +7,6 @@ import {checkIfArrayExists} from '../../utils/helperFunctions';
 import BlifTable from '../Common/BlifTables/BlifTable';
 import BlifSpacer from '../Common/BlifSpacer/BlifSpacer';
 import dummyTableData from '../Common/BlifTables/dummyTableData.json';
-import {BUTTON_TITLE} from '../../utils/commonKeys';
 import {TranslationKeys} from '../../language/TranslationKeys';
 import BlifBox from '../Common/Box/BlifBox';
 import {
@@ -15,8 +14,6 @@ import {
     REJECTS_FILTER_LANGUAGE_KEYS,
     BRG_FILTER_LANGUAGE_KEYS,
     CLEC_FILTER_LANGUAGE_KEYS,
-    PRECHECK_LANGUAGE_KEYS,
-    FILE_SEARCH_FILTER_LANGUAGE_KEYS,
     PRE_CHECK_TABLE_HEADER_KEYS,
 } from '../../utils/languageKeys/components/preCheckKeys';
 
@@ -118,34 +115,38 @@ const PreCheck = () => {
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
                     [ARRAY_MAP_KEYS.label]:
-                        FILE_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
+                        TranslationKeys.preCheck.PRECHECK_FILE,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         PRECHECK_FORM_SCHEMA_KEYS.FILE_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-                    [ARRAY_MAP_KEYS.label]: PROVINCE_FILTER_LANGUAGE_KEYS.LABEL,
+                    [ARRAY_MAP_KEYS.label]:
+                        TranslationKeys.preCheck.PRECHECK_PROVINCE,
                     [ARRAY_MAP_KEYS.OPTIONS]: getProvinceFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         PRECHECK_FORM_SCHEMA_KEYS.PROVINCE_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-                    [ARRAY_MAP_KEYS.label]: CLEC_FILTER_LANGUAGE_KEYS.LABEL,
+                    [ARRAY_MAP_KEYS.label]:
+                        TranslationKeys.preCheck.PRECHECK_CLEC,
                     [ARRAY_MAP_KEYS.OPTIONS]: getClecFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         PRECHECK_FORM_SCHEMA_KEYS.CLEC_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-                    [ARRAY_MAP_KEYS.label]: BRG_FILTER_LANGUAGE_KEYS.LABEL,
+                    [ARRAY_MAP_KEYS.label]:
+                        TranslationKeys.preCheck.PRECHECK_BRG_INDICATOR,
                     [ARRAY_MAP_KEYS.OPTIONS]: getBrgIndicatorFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         PRECHECK_FORM_SCHEMA_KEYS.BRG_INDICATOR_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-                    [ARRAY_MAP_KEYS.label]: REJECTS_FILTER_LANGUAGE_KEYS.LABEL,
+                    [ARRAY_MAP_KEYS.label]:
+                        TranslationKeys.preCheck.PRECHECK_REJECTS,
                     [ARRAY_MAP_KEYS.OPTIONS]: getRejectsFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         PRECHECK_FORM_SCHEMA_KEYS.REJECTS_INPUT,

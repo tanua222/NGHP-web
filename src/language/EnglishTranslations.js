@@ -10,7 +10,7 @@ export const EnglishTranslations = {
     [TranslationKeys.common.en]: 'en',
     [TranslationKeys.common.fn]: 'fn',
     [TranslationKeys.common.SHOW]: 'Show',
-    [TranslationKeys.common.ENTRIES]: 'Entries',
+    [TranslationKeys.common.ENTRIES]: 'entries',
     [TranslationKeys.common.SEARCH_BUTTON]: 'Search',
     //Header:
     [TranslationKeys.header.HEADER_HOME]: 'Home',
