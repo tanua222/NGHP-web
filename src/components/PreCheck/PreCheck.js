@@ -114,15 +114,13 @@ const PreCheck = () => {
             const localFilterSchema = [
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
-                    [ARRAY_MAP_KEYS.label]:
-                        TranslationKeys.preCheck.PRECHECK_FILE,
+                    [ARRAY_MAP_KEYS.label]: TranslationKeys.common.FILE,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         PRECHECK_FORM_SCHEMA_KEYS.FILE_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-                    [ARRAY_MAP_KEYS.label]:
-                        TranslationKeys.preCheck.PRECHECK_PROVINCE,
+                    [ARRAY_MAP_KEYS.label]: TranslationKeys.common.PROVINCE,
                     [ARRAY_MAP_KEYS.OPTIONS]: getProvinceFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         PRECHECK_FORM_SCHEMA_KEYS.PROVINCE_INPUT,
@@ -138,15 +136,14 @@ const PreCheck = () => {
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
                     [ARRAY_MAP_KEYS.label]:
-                        TranslationKeys.preCheck.PRECHECK_BRG_INDICATOR,
+                        TranslationKeys.common.BRG_INDICATOR,
                     [ARRAY_MAP_KEYS.OPTIONS]: getBrgIndicatorFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         PRECHECK_FORM_SCHEMA_KEYS.BRG_INDICATOR_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-                    [ARRAY_MAP_KEYS.label]:
-                        TranslationKeys.preCheck.PRECHECK_REJECTS,
+                    [ARRAY_MAP_KEYS.label]: TranslationKeys.common.REJECTS,
                     [ARRAY_MAP_KEYS.OPTIONS]: getRejectsFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         PRECHECK_FORM_SCHEMA_KEYS.REJECTS_INPUT,
@@ -286,9 +283,7 @@ const PreCheck = () => {
                             right={{md: 7}}
                             flex={1}>
                             <FiltersView
-                                heading={t(
-                                    TranslationKeys.common.SEARCH_BUTTON,
-                                )}
+                                heading={t(TranslationKeys.common.SEARCH)}
                                 clickHandler={clickHandler}
                                 schema={filterSchema}
                                 handleInputChange={handleInputChange}
