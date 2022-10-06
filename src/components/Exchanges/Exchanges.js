@@ -7,14 +7,6 @@ import BlifSpacer from '../Common/BlifSpacer/BlifSpacer';
 import {TranslationKeys} from '../../language/TranslationKeys';
 import {useTranslation} from 'react-i18next';
 import {
-    ABBREV_SEARCH_FILTER_LANGUAGE_KEYS,
-    NAME_SEARCH_FILTER_LANGUAGE_KEYS,
-    ABBREVIATION2_SEARCH_FILTER_LANGUAGE_KEYS,
-    BOOK_SEARCH_FILTER_LANGUAGE_KEYS,
-    SECTION_SEARCH_FILTER_LANGUAGE_KEYS,
-    NPA_SEARCH_FILTER_LANGUAGE_KEYS,
-} from '../../utils/languageKeys/components/exchangesKeys';
-import {
     BlifFlexGrid,
     BlifFlexGridRow,
     BlifFlexGridCol,
@@ -53,39 +45,42 @@ const Search = () => {
             {
                 [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
                 [ARRAY_MAP_KEYS.label]:
-                    ABBREV_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
+                    TranslationKeys.exchange.ABBREV_SEARCH_FILTER,
                 [ARRAY_MAP_KEYS.ON_CHANGE]:
                     EXCHANGES_FORM_SCHEMA_KEYS.ABBREV_INPUT,
             },
             {
                 [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
-                [ARRAY_MAP_KEYS.label]: NAME_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
+                [ARRAY_MAP_KEYS.label]:
+                    TranslationKeys.exchange.NAME_SEARCH_FILTER,
                 [ARRAY_MAP_KEYS.ON_CHANGE]:
                     EXCHANGES_FORM_SCHEMA_KEYS.NAME_INPUT,
             },
             {
                 [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
                 [ARRAY_MAP_KEYS.label]:
-                    ABBREVIATION2_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
+                    TranslationKeys.exchange.ABBREVIATION2_SEARCH_FILTER,
                 [ARRAY_MAP_KEYS.ON_CHANGE]:
                     EXCHANGES_FORM_SCHEMA_KEYS.ABBREVIATION2_INPUT,
             },
             {
                 [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
-                [ARRAY_MAP_KEYS.label]: BOOK_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
+                [ARRAY_MAP_KEYS.label]:
+                    TranslationKeys.exchange.BOOK_SEARCH_FILTER,
                 [ARRAY_MAP_KEYS.ON_CHANGE]:
                     EXCHANGES_FORM_SCHEMA_KEYS.BOOK_INPUT,
             },
             {
                 [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
                 [ARRAY_MAP_KEYS.label]:
-                    SECTION_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
+                    TranslationKeys.exchange.SECTION_SEARCH_FILTER,
                 [ARRAY_MAP_KEYS.ON_CHANGE]:
                     EXCHANGES_FORM_SCHEMA_KEYS.SECTION_INPUT,
             },
             {
                 [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
-                [ARRAY_MAP_KEYS.label]: NPA_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
+                [ARRAY_MAP_KEYS.label]:
+                    TranslationKeys.exchange.NPA_SEARCH_FILTER,
                 [ARRAY_MAP_KEYS.ON_CHANGE]:
                     EXCHANGES_FORM_SCHEMA_KEYS.NPA_INPUT,
             },

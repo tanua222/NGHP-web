@@ -4,20 +4,12 @@ import {ARRAY_MAP_KEYS, FILTER_TYPES} from '../../utils/commonKeys';
 import {FiltersView} from '../Common/Filters/Filters';
 import BlifBox from '../Common/Box/BlifBox';
 import BlifSpacer from '../Common/BlifSpacer/BlifSpacer';
-
-import {
-    DOWNLOADS_LANGUAGE_KEYS,
-    FILE_SEARCH_FILTER_LANGUAGE_KEYS,
-    START_DATE_FILTER_LANGUAGE_KEYS,
-    END_DATE_FILTER_LANGUAGE_KEYS,
-} from '../../utils/languageKeys/components/downloadsKeys';
 import {
     BlifFlexGrid,
     BlifFlexGridRow,
     BlifFlexGridCol,
 } from '../Common/BlifFlexGrid/BlifFlexGrid';
 import {useTranslation} from 'react-i18next';
-import {BUTTON_TITLE} from '../../utils/commonKeys';
 import {TranslationKeys} from '../../language/TranslationKeys';
 
 //Form Schema

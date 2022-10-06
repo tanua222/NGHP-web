@@ -7,15 +7,6 @@ import {checkIfArrayExists} from '../../utils/helperFunctions';
 import BlifSpacer from '../Common/BlifSpacer/BlifSpacer';
 
 import {
-    SEARCH_LANGUAGE_KEYS,
-    PROVINCE_FILTER_LANGUAGE_KEYS,
-    REJECTS_FILTER_LANGUAGE_KEYS,
-    BRG_FILTER_LANGUAGE_KEYS,
-    FILE_SEARCH_FILTER_LANGUAGE_KEYS,
-    BUS_OPERATING_NAME_FILTER_LANGUAGE_KEYS,
-    PHONE_NUMBER_FILTER_LANGUAGE_KEYS,
-    START_DATE_SEARCH_FILTER_LANGUAGE_KEYS,
-    END_DATE_SEARCH_FILTER_LANGUAGE_KEYS,
     ACTION_INDICATOR_FILTER_LANGUAGE_KEYS,
     INTERNAL_STATUS_FILTER_LANGUAGE_KEYS,
 } from '../../utils/languageKeys/components/searchKeys';
@@ -29,8 +20,7 @@ import {
     BlifFlexGridRow,
     BlifFlexGridCol,
 } from '../Common/BlifFlexGrid/BlifFlexGrid';
-import {Trans, useTranslation} from 'react-i18next';
-import {BUTTON_TITLE} from '../../utils/commonKeys';
+import {useTranslation} from 'react-i18next';
 import {TranslationKeys} from '../../language/TranslationKeys';
 
 // Options

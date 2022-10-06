@@ -53,5 +53,11 @@ export const FrenchTranslations = {
     [TranslationKeys.blif_downloads.BLIF_END_DATE]: 'End Date (Download)-fr',
     //Exchange
     [TranslationKeys.exchange.EXCHANGES_HEADING]: 'Exchanges-fr',
+    [TranslationKeys.exchange.ABBREV_SEARCH_FILTER]: 'Abbrev-fr',
+    [TranslationKeys.exchange.NAME_SEARCH_FILTER]: 'Name-fr',
+    [TranslationKeys.exchange.ABBREVIATION2_SEARCH_FILTER]: 'Abbreviation 2-fr',
+    [TranslationKeys.exchange.BOOK_SEARCH_FILTER]: 'Book#-fr',
+    [TranslationKeys.exchange.SECTION_SEARCH_FILTER]: 'Section#-fr',
+    [TranslationKeys.exchange.NPA_SEARCH_FILTER]: 'NPA-fr',
     [TranslationKeys.exchange.ADD_EXCHANGE_BUTTON_TITLE]: 'Add Exchange-fr',
 };
