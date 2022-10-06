@@ -1,5 +1,5 @@
 {
-    "data": [
+    "result": [
     {
         "listingId": 5150861,
         "exchange": "BOSWL",
@@ -240,5 +240,6 @@
         "totalFilteredRows": 184,
         "createdUserId": "DOWNLOAD"
     }
-]
+], 
+"numberOfPages":4
 }

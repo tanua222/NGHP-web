@@ -81,32 +81,33 @@ const BlifDataTable = ({
             ? data.schema.headers.length + 1
             : data.schema.headers.length;
 
-    const toggleSelected = (idx) => {
-        let newSet;
-        if (selection === 'multi') newSet = new Set(selected);
-        else newSet = new Set();
-        if (selected.has(idx)) {
-            newSet.delete(idx);
-            setSelectAll(false);
-        } else if (!maxSelectionCnt || maxSelectionCnt > newSet.size) {
-            newSet.add(idx);
-            if (data.data.length === newSet.size) setSelectAll(true);
-        }
-        setSelected(newSet);
-    };
-    const toggleSelectAll = () => {
-        if (!data.data || data.data.length === 0) return;
-        setSelectAll((v) => {
-            setSelected(
-                new Set(
-                    v
-                        ? undefined
-                        : data.data.slice(0, maxSelectionCnt).map((v, i) => i),
-                ),
-            );
-            return !v;
-        });
-    };
+    // const toggleSelected = (idx) => {
+    //     let newSet;
+    //     if (selection === 'multi') newSet = new Set(selected);
+    //     else newSet = new Set();
+    //     if (selected.has(idx)) {
+    //         newSet.delete(idx);
+    //         setSelectAll(false);
+    //     } else if (!maxSelectionCnt || maxSelectionCnt > newSet.size) {
+    //         newSet.add(idx);
+    //         if (data.data.length === newSet.size) setSelectAll(true);
+    //     }
+    //     setSelected(newSet);
+    // };
+
+    // const toggleSelectAll = () => {
+    //     if (!data.data || data.data.length === 0) return;
+    //     setSelectAll((v) => {
+    //         setSelected(
+    //             new Set(
+    //                 v
+    //                     ? undefined
+    //                     : data.data.slice(0, maxSelectionCnt).map((v, i) => i),
+    //             ),
+    //         );
+    //         return !v;
+    //     });
+    // };
 
     return (
         <React.Fragment>
@@ -115,7 +116,9 @@ const BlifDataTable = ({
                 style={{width: data.schema.width, ...tableStyle}}>
                 {(pagination && (
                     <BlifBox
-                        viewTokens={{justifyContent: 'space-between'}}
+                        viewTokens={{
+                            justifyContent: 'space-between',
+                        }}
                         inline>
                         {pagination && (
                             <NumberOfItemsOnPageSelection
@@ -158,23 +161,6 @@ const BlifDataTable = ({
                                     </BlifTypography>
                                 </th>
                             )}
-                            {!selectionConditionFn && selection === 'multi' && (
-                                <th style={{...thStyle, width: '8%'}}>
-                                    {/* <IvsCheckboxInput
-                                        checked={selectAll}
-                                        onChange={toggleSelectAll}
-                                        name="selectAll"
-                                        value={translate(heading) || ''}
-                                        label=""
-                                        tokens={{
-                                            iconBackgroundColor:
-                                                BlifPalette.color
-                                                    .greenAccessible,
-                                        }}
-                                        searchField
-                                    /> */}
-                                </th>
-                            )}
                             {data.schema.headers.map((header, index) => {
                                 const headerName =
                                     (translateFn && translateFn(header.name)) ||
@@ -211,6 +197,10 @@ const BlifDataTable = ({
                                                             : 'asc',
                                                     )
                                                 }>
+                                                {console.log(
+                                                    'header.dataProperty',
+                                                    header.dataProperty,
+                                                )}
                                                 <BlifStackView>
                                                     <span
                                                         style={{
@@ -433,7 +423,7 @@ const BlifDataTable = ({
                                 </td>
                             </tr>
                         )}
-                        {console.log(data)}
+                        {console.log(displayData)}
                         {data.data && data.data.length === 0 && (
                             <tr>
                                 <td colSpan={numberOfColumns}>

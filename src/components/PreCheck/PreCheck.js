@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import BlifTypography from '../Common/BlifTypography/BlifTypography';
 import {ARRAY_MAP_KEYS, FILTER_TYPES, ZERO_INDEX} from '../../utils/commonKeys';
 import {FiltersView} from '../Common/Filters/Filters';
@@ -19,7 +19,7 @@ import {
     FILE_SEARCH_FILTER_LANGUAGE_KEYS,
     PRE_CHECK_TABLE_HEADER_KEYS,
 } from '../../utils/languageKeys/components/preCheckKeys';
-
+import {isNullOrUndefined} from '../../utils/helperFunctions';
 import {
     BlifFlexGrid,
     BlifFlexGridRow,
@@ -108,6 +108,14 @@ const PreCheck = () => {
 
     const [filterQuery, setFilterQuery] = useState(PRECHECK_FORM_SCHEMA);
     const [filterSchema, setFilterSchema] = useState([]);
+    // const [resetCurrentPage, setResetCurrentPage] = useState();
+    // // //const {loadOrderList} = useCorpOrder();
+
+    // // const [filterParameters, setFilterParameters] = useState();
+
+    // useEffect(() => {
+    //     !isNullOrUndefined(filterQuery) && setResetCurrentPage((r) => !r);
+    // }, [filterQuery]);
 
     useEffect(() => {
         if (
@@ -174,6 +182,14 @@ const PreCheck = () => {
     // };
 
     const columns = [
+        {
+            name: 'Listing ID',
+            width: 'auto',
+            dataProperty: 'listingId',
+            sortable: true,
+            //selector: (row) => row.clientId,
+            // sortFunction: (a, b) => sortCollatorByKey(a, b, 'clientId'),
+        },
         {
             name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_EXCHANGE),
             width: 'auto',
@@ -289,16 +305,22 @@ const PreCheck = () => {
     ];
 
     let schema = {
-        // idProperty: 'precheckTable',
-        // idPropertySortOrder: 'asc',
+        idProperty: 'listingId',
+        idPropertySortOrder: 'asc',
         headers: columns,
     };
 
-    // Get Precheck Table Data
-    //const getPrecheckTableData = () => dummyTableData.data;
+    //Get Precheck Table Data
+    const getPrecheckTableData = (params, setTableData) => {
+        if (!filterQuery) {
+            setTableData({numberOfPages: 0});
+            return;
+        }
+        setTableData(dummyTableData);
+    };
 
     return (
-        <>
+        <React.Fragment>
             <BlifFlexGrid gutter={false}>
                 <BlifFlexGridRow>
                     <BlifFlexGridCol lg={12} md={10}>
@@ -328,30 +350,18 @@ const PreCheck = () => {
                     </BlifFlexGridCol>
                 </BlifFlexGridRow>
             </BlifFlexGrid>
-
             <BlifSpacer space={8} />
-
-            <BlifFlexGrid limitWidth={false}>
-                <BlifFlexGridRow md={12}>
-                    <BlifFlexGridCol>
-                        {/* <BlifTable
-                            data={dummyTableData.clients}
-                            selectRow={(row) => selectRowCallback(row)}
-                            loaded={false}
-                            columns={columns}
-                        /> */}
-                        <BlifDataTableClient
-                            schema={schema}
-                            retrieveData={dummyTableData.data}
-                            // selection
-                            // dataOnSelectionChange
-                            // resetCurrentPage
-                            // translate
-                        />
-                    </BlifFlexGridCol>
-                </BlifFlexGridRow>
-            </BlifFlexGrid>
-        </>
+            <BlifBox space={4}>
+                <BlifDataTableClient
+                    schema={schema}
+                    retrieveData={getPrecheckTableData}
+                    // selection
+                    // dataOnSelectionChange
+                    //   resetCurrentPage={resetCurrentPage}
+                    // translate
+                />
+            </BlifBox>
+        </React.Fragment>
     );
 };
 
