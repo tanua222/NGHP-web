@@ -45,6 +45,10 @@ export const EnglishTranslations = {
     [TranslationKeys.search.ACTION_INDICATOR_FILTER_LANGUAGE]:
         'Action Indicator',
     [TranslationKeys.search.INTERNAL_STATUS_FILTER_LANGUAGE]: 'Internal Status',
+    //Blif Downloads:
+    [TranslationKeys.blif_downloads.DOWNLOADS_HEADING]: 'Telus Downloads',
+    [TranslationKeys.blif_downloads.BLIF_START_DATE]: 'Start Date (Download)',
+    [TranslationKeys.blif_downloads.BLIF_END_DATE]: 'End Date (Download)',
     //Exchange:
     [TranslationKeys.exchange.EXCHANGES_HEADING]: 'Exchanges',
     [TranslationKeys.exchange.ADD_EXCHANGE_BUTTON_TITLE]: 'Add Exchange',

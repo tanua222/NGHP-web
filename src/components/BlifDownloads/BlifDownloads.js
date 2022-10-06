@@ -18,6 +18,7 @@ import {
 } from '../Common/BlifFlexGrid/BlifFlexGrid';
 import {useTranslation} from 'react-i18next';
 import {BUTTON_TITLE} from '../../utils/commonKeys';
+import {TranslationKeys} from '../../language/TranslationKeys';
 
 //Form Schema
 const DOWNLOADS_FORM_SCHEMA_KEYS = {
@@ -45,19 +46,21 @@ const Search = () => {
         const localFilterSchema = [
             {
                 [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
-                [ARRAY_MAP_KEYS.label]: FILE_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
+                [ARRAY_MAP_KEYS.label]: TranslationKeys.common.FILE,
                 [ARRAY_MAP_KEYS.ON_CHANGE]:
                     DOWNLOADS_FORM_SCHEMA_KEYS.FILE_INPUT,
             },
             {
                 [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.DATE_INPUT,
-                [ARRAY_MAP_KEYS.label]: START_DATE_FILTER_LANGUAGE_KEYS.LABEL,
+                [ARRAY_MAP_KEYS.label]:
+                    TranslationKeys.blif_downloads.BLIF_START_DATE,
                 [ARRAY_MAP_KEYS.ON_CHANGE]:
                     DOWNLOADS_FORM_SCHEMA_KEYS.START_DATE_INPUT,
             },
             {
                 [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.DATE_INPUT,
-                [ARRAY_MAP_KEYS.label]: END_DATE_FILTER_LANGUAGE_KEYS.LABEL,
+                [ARRAY_MAP_KEYS.label]:
+                    TranslationKeys.blif_downloads.BLIF_END_DATE,
                 [ARRAY_MAP_KEYS.ON_CHANGE]:
                     DOWNLOADS_FORM_SCHEMA_KEYS.END_DATE_INPUT,
             },
@@ -87,7 +90,7 @@ const Search = () => {
             <BlifFlexGridRow>
                 <BlifFlexGridCol>
                     <BlifTypography variant={{size: 'h2'}}>
-                        {t(DOWNLOADS_LANGUAGE_KEYS.DOWNLOADS_HEADING)}
+                        {t(TranslationKeys.blif_downloads.DOWNLOADS_HEADING)}
                     </BlifTypography>
                 </BlifFlexGridCol>
             </BlifFlexGridRow>
@@ -102,7 +105,7 @@ const Search = () => {
                         top={{md: 1}}
                         flex={1}>
                         <FiltersView
-                            heading={BUTTON_TITLE.SEARCH_BUTTON_TITLE}
+                            heading={TranslationKeys.common.SEARCH}
                             clickHandler={searchClickHandler}
                             schema={filterSchema}
                             handleInputChange={handleDownloadsInputChange}

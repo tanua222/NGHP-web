@@ -46,6 +46,11 @@ export const FrenchTranslations = {
         'Action Indicator-fr',
     [TranslationKeys.search.INTERNAL_STATUS_FILTER_LANGUAGE]:
         'Internal Status-fr',
+    //Blif Downloads:
+    [TranslationKeys.blif_downloads.DOWNLOADS_HEADING]: 'Telus Downloads-fr',
+    [TranslationKeys.blif_downloads.BLIF_START_DATE]:
+        'Start Date (Download)-fr',
+    [TranslationKeys.blif_downloads.BLIF_END_DATE]: 'End Date (Download)-fr',
     //Exchange
     [TranslationKeys.exchange.EXCHANGES_HEADING]: 'Exchanges-fr',
     [TranslationKeys.exchange.ADD_EXCHANGE_BUTTON_TITLE]: 'Add Exchange-fr',
