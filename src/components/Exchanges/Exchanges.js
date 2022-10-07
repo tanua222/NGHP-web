@@ -4,7 +4,8 @@ import {ARRAY_MAP_KEYS, FILTER_TYPES} from '../../utils/commonKeys';
 import {FiltersView} from '../Common/Filters/Filters';
 import BlifBox from '../Common/Box/BlifBox';
 import BlifSpacer from '../Common/BlifSpacer/BlifSpacer';
-
+import dummyTableData from './dummyTableData.json';
+import BlifDataTableClient from '../Common/BlifDataTable/BlifDataTableClient';
 import {
     EXCHANGES_LANGUAGE_KEYS,
     ABBREV_SEARCH_FILTER_LANGUAGE_KEYS,
@@ -49,6 +50,9 @@ const Search = () => {
     );
 
     const [filterSchema, setFilterSchema] = useState([]);
+    const [selectedRow, setSelectedRow] = useState([]);
+    // const selectionType = 'multi';
+    const search = true;
 
     useEffect(() => {
         const localFilterSchema = [
@@ -112,35 +116,118 @@ const Search = () => {
         e.preventDefault();
         alert('search query');
     };
+
+    const columns = [
+        {
+            name: 'Abbrev',
+            width: 'auto',
+            dataProperty: 'abbrev',
+            sortable: true,
+            //selector: (row) => row.clientId,
+            // sortFunction: (a, b) => sortCollatorByKey(a, b, 'clientId'),
+        },
+        {
+            name: 'Name',
+            Width: 'auto',
+            dataProperty: 'exchangeFullName',
+            sortable: true,
+            //selector: (row) => row.groupId || row.clientId,
+            // sortFunction: (a, b) => sortCollatorByKey(a, b, 'groupId'),
+        },
+        {
+            name: 'Abbreviation 2',
+            Width: 'auto',
+            dataProperty: 'secondAbbrev',
+            sortable: true,
+            //selector: (row) => row.groupName,
+            // sortFunction: (a, b) => sortCollatorByKey(a, b, 'groupName'),
+        },
+        {
+            name: 'Book#',
+            Width: 'auto',
+            dataProperty: 'bookNum',
+            //selector: (row) => row.clientType,
+            sortable: true,
+        },
+        {
+            name: 'Section#',
+            Width: 'auto',
+            dataProperty: 'sectionNum',
+            sortable: true,
+            //selector: (row) => row.clientName,
+            // sortFunction: (a, b) => sortCollatorByKey(a, b, 'clientName'),
+        },
+        {
+            name: 'NPA',
+            Width: 'auto',
+            dataProperty: 'npa',
+            sortable: true,
+            // selector: (row) => row.clientName,
+
+            // sortFunction: (a, b) => sortCollatorByKey(a, b, 'reportId'),
+        },
+    ];
+
+    let schema = {
+        idProperty: 'abbrev',
+        idPropertySortOrder: 'asc',
+        headers: columns,
+    };
+
+    //get exchanges data for table
+    const getExchangesTableData = (params, setTableData) => {
+        if (!exchangesFilterQuery) {
+            setTableData({numberOfPages: 0});
+            return;
+        }
+        setTableData(dummyTableData);
+    };
+
     return (
-        <BlifFlexGrid gutter={false}>
-            <BlifFlexGridRow>
-                <BlifFlexGridCol>
-                    <BlifTypography variant={{size: 'h2'}}>
-                        {t(EXCHANGES_LANGUAGE_KEYS.EXCHANGES_HEADING)}
-                    </BlifTypography>
-                </BlifFlexGridCol>
-            </BlifFlexGridRow>
-            <BlifSpacer space={2} />
-            <BlifFlexGridRow verticalAlign="middle" horizontalAlign="center">
-                <BlifFlexGridCol>
-                    <BlifBox
-                        variant={{background: 'light'}}
-                        bottom={{md: 1}}
-                        left={{md: 1}}
-                        right={{md: 7}}
-                        top={{md: 1}}
-                        flex={1}>
-                        <FiltersView
-                            heading={BUTTON_TITLE.ADD_EXCHANGE_BUTTON_TITLE}
-                            clickHandler={searchClickHandler}
-                            schema={filterSchema}
-                            handleInputChange={handleExchangesInputChange}
-                        />
-                    </BlifBox>
-                </BlifFlexGridCol>
-            </BlifFlexGridRow>
-        </BlifFlexGrid>
+        <React.Fragment>
+            <BlifFlexGrid gutter={false}>
+                <BlifFlexGridRow>
+                    <BlifFlexGridCol>
+                        <BlifTypography variant={{size: 'h2'}}>
+                            {t(EXCHANGES_LANGUAGE_KEYS.EXCHANGES_HEADING)}
+                        </BlifTypography>
+                    </BlifFlexGridCol>
+                </BlifFlexGridRow>
+                <BlifSpacer space={2} />
+                <BlifFlexGridRow
+                    verticalAlign="middle"
+                    horizontalAlign="center">
+                    <BlifFlexGridCol>
+                        <BlifBox
+                            variant={{background: 'light'}}
+                            bottom={{md: 1}}
+                            left={{md: 1}}
+                            right={{md: 7}}
+                            top={{md: 1}}
+                            flex={1}>
+                            <FiltersView
+                                heading={BUTTON_TITLE.ADD_EXCHANGE_BUTTON_TITLE}
+                                clickHandler={searchClickHandler}
+                                schema={filterSchema}
+                                handleInputChange={handleExchangesInputChange}
+                            />
+                        </BlifBox>
+                    </BlifFlexGridCol>
+                </BlifFlexGridRow>
+            </BlifFlexGrid>
+            <BlifSpacer space={8} />
+            <BlifBox space={4}>
+                <BlifDataTableClient
+                    schema={schema}
+                    retrieveData={getExchangesTableData}
+                    search={search}
+                    // selection={selectionType}
+                    //dataOnSelectionChange={setSelectedRow}
+                    //   resetCurrentPage={resetCurrentPage}
+                    // translate
+                />
+            </BlifBox>
+        </React.Fragment>
     );
 };
 

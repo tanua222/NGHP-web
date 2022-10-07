@@ -17,6 +17,8 @@ import BlifDecorativeIcon from '../BlifIcons/BlifDecorativeIcon';
 import BlifCheckboxInput from '../Inputs/BlifCheckboxInput';
 import BlifBox from '../Box/BlifBox';
 import BlifSpacer from '../BlifSpacer/BlifSpacer';
+import BlifTextInput from '../Inputs/BlifTextInput';
+import BlifButton from '../Buttons/BlifButton';
 //import IvsSingleRadioInput from '../../IvsInput/IvsSingleRadioInput'; //TODO
 
 // clearSelection is a toogle flag to clear the current selection
@@ -33,10 +35,14 @@ const BlifDataTable = ({
     clearSelection,
     selectionConditionFn,
     maxSelectionCnt,
+    search,
 }) => {
     const [displayData, setDisplayData] = useState();
     const [selectAll, setSelectAll] = useState(false);
     const [selected, setSelected] = useState(new Set());
+
+    // search button in table
+    const [searchButton, setSearchButton] = useState('');
 
     useEffect(() => {
         if (data.data) {
@@ -109,6 +115,11 @@ const BlifDataTable = ({
         });
     };
 
+    // search button onClick handler in Table
+    const clickHandler = (e) => {
+        e.preventDefault();
+        alert(searchButton);
+    };
     return (
         <React.Fragment>
             <div
@@ -116,19 +127,33 @@ const BlifDataTable = ({
                 style={{width: data.schema.width, ...tableStyle}}>
                 {(pagination && (
                     <BlifBox
-                        viewTokens={{
-                            justifyContent: 'space-between',
-                        }}
+                        viewTokens={{justifyContent: 'space-between'}}
                         inline>
-                        {pagination && (
-                            <NumberOfItemsOnPageSelection
-                                pageSize={
-                                    getLocalStoragePageSize() ||
-                                    pagination.pageSize
-                                }
-                                onPageSizeChange={onPageSizeChange}
-                                translateFn={translateFn}
-                            />
+                        <BlifBox>
+                            {pagination && (
+                                <NumberOfItemsOnPageSelection
+                                    pageSize={
+                                        getLocalStoragePageSize() ||
+                                        pagination.pageSize
+                                    }
+                                    onPageSizeChange={onPageSizeChange}
+                                    translateFn={translateFn}
+                                />
+                            )}
+                        </BlifBox>
+                        {search && (
+                            <BlifBox inline>
+                                <BlifTypography>Search:</BlifTypography>
+                                <BlifTextInput
+                                    value={searchButton}
+                                    onChange={(val) => setSearchButton(val)}
+                                />
+                                <BlifButton
+                                    // tokens={btnCss}
+                                    onClick={clickHandler}>
+                                    search
+                                </BlifButton>
+                            </BlifBox>
                         )}
                     </BlifBox>
                 )) || <BlifSpacer space={6} />}
@@ -211,12 +236,12 @@ const BlifDataTable = ({
                                                             {headerName}
                                                         </BlifTypography>
                                                     </span>
-                                                    {console.log(
+                                                    {/* {console.log(
                                                         'sort = ',
                                                         sort,
                                                         'data = ',
                                                         data,
-                                                    )}
+                                                    )} */}
                                                     {sort &&
                                                         header.dataProperty ===
                                                             sort.sortBy &&

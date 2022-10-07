@@ -19,6 +19,7 @@ const BlifDataTableClient = ({
     paginationRequired = true,
     selectionConditionFn,
     maxSelectionCnt,
+    search,
 }) => {
     const ASC = 'asc';
     const [parameters, setParameters] = React.useState({
@@ -29,7 +30,7 @@ const BlifDataTableClient = ({
     });
 
     const [res, setRes] = React.useState();
-
+    console.log('search = ', search);
     const [tableData, setTableData] = React.useState({
         schema: schema,
         // data: retrieveData,
@@ -133,10 +134,8 @@ const BlifDataTableClient = ({
                 clearSelection={clearSelection}
                 selectionConditionFn={selectionConditionFn}
                 maxSelectionCnt={maxSelectionCnt}
+                search={search}
             />
-            <>
-                {console.log('table data =  ', tableData, 'params', parameters)}
-            </>
         </>
     );
 };

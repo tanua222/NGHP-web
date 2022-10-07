@@ -1,4 +1,5 @@
-[
+{
+"result":[
     {
         "createdUserId": null,
         "lastUpdatedUserId": null,
@@ -4271,4 +4272,6 @@
             }
         ]
     }
-]
+],
+"numberOfPages":4
+}
