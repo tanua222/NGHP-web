@@ -134,7 +134,9 @@ const BlifDataTableClient = ({
                 selectionConditionFn={selectionConditionFn}
                 maxSelectionCnt={maxSelectionCnt}
             />
-            <>{console.log('table data =  ', tableData)}</>
+            <>
+                {console.log('table data =  ', tableData, 'params', parameters)}
+            </>
         </>
     );
 };

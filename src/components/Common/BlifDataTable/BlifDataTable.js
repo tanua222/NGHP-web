@@ -14,7 +14,7 @@ import BlifSpinner from '../BlifSpinner/BlifSpinner';
 import BlifPalette from '../BlifPalette/BlifPalette';
 import BlifStackView from '../BlifStackView/BlifStackView';
 import BlifDecorativeIcon from '../BlifIcons/BlifDecorativeIcon';
-//import IvsCheckboxInput from '../../IvsInput/IvsCheckboxInput'; //TODO
+import BlifCheckboxInput from '../Inputs/BlifCheckboxInput';
 import BlifBox from '../Box/BlifBox';
 import BlifSpacer from '../BlifSpacer/BlifSpacer';
 //import IvsSingleRadioInput from '../../IvsInput/IvsSingleRadioInput'; //TODO
@@ -81,33 +81,33 @@ const BlifDataTable = ({
             ? data.schema.headers.length + 1
             : data.schema.headers.length;
 
-    // const toggleSelected = (idx) => {
-    //     let newSet;
-    //     if (selection === 'multi') newSet = new Set(selected);
-    //     else newSet = new Set();
-    //     if (selected.has(idx)) {
-    //         newSet.delete(idx);
-    //         setSelectAll(false);
-    //     } else if (!maxSelectionCnt || maxSelectionCnt > newSet.size) {
-    //         newSet.add(idx);
-    //         if (data.data.length === newSet.size) setSelectAll(true);
-    //     }
-    //     setSelected(newSet);
-    // };
+    const toggleSelected = (idx) => {
+        let newSet;
+        if (selection === 'multi') newSet = new Set(selected);
+        else newSet = new Set();
+        if (selected.has(idx)) {
+            newSet.delete(idx);
+            setSelectAll(false);
+        } else if (!maxSelectionCnt || maxSelectionCnt > newSet.size) {
+            newSet.add(idx);
+            if (data.data.length === newSet.size) setSelectAll(true);
+        }
+        setSelected(newSet);
+    };
 
-    // const toggleSelectAll = () => {
-    //     if (!data.data || data.data.length === 0) return;
-    //     setSelectAll((v) => {
-    //         setSelected(
-    //             new Set(
-    //                 v
-    //                     ? undefined
-    //                     : data.data.slice(0, maxSelectionCnt).map((v, i) => i),
-    //             ),
-    //         );
-    //         return !v;
-    //     });
-    // };
+    const toggleSelectAll = () => {
+        if (!data.data || data.data.length === 0) return;
+        setSelectAll((v) => {
+            setSelected(
+                new Set(
+                    v
+                        ? undefined
+                        : data.data.slice(0, maxSelectionCnt).map((v, i) => i),
+                ),
+            );
+            return !v;
+        });
+    };
 
     return (
         <React.Fragment>
@@ -130,8 +130,6 @@ const BlifDataTable = ({
                                 translateFn={translateFn}
                             />
                         )}
-                        {pagination &&
-                            getPaginationLinks(pagination, onPageChange)}
                     </BlifBox>
                 )) || <BlifSpacer space={6} />}
                 <table className="blifDataTableTable" style={tableTableStyle}>
@@ -197,10 +195,6 @@ const BlifDataTable = ({
                                                             : 'asc',
                                                     )
                                                 }>
-                                                {console.log(
-                                                    'header.dataProperty',
-                                                    header.dataProperty,
-                                                )}
                                                 <BlifStackView>
                                                     <span
                                                         style={{
@@ -217,6 +211,12 @@ const BlifDataTable = ({
                                                             {headerName}
                                                         </BlifTypography>
                                                     </span>
+                                                    {console.log(
+                                                        'sort = ',
+                                                        sort,
+                                                        'data = ',
+                                                        data,
+                                                    )}
                                                     {sort &&
                                                         header.dataProperty ===
                                                             sort.sortBy &&
@@ -331,7 +331,7 @@ const BlifDataTable = ({
                                             selection === 'multi' && (
                                                 <td>
                                                     {/* <td onClick={() => toggleSelected(idx)}> <input type="checkbox" onChange={()=>{}} checked={selected.has(idx)}/> */}
-                                                    {/* <IvsCheckboxInput
+                                                    {/* <BlifCheckboxInput
                                                         label=""
                                                         id={String(idx)}
                                                         checked={selected.has(
@@ -350,8 +350,8 @@ const BlifDataTable = ({
                                             if (p.link) {
                                                 return (
                                                     <td key={i}>
-                                                        {/* <IvsAuthPrivilege */}
-                                                        {/* privilegeName={
+                                                        {/* <IvsAuthPrivilege
+                                                            privilegeName={
                                                                 p.privilegeName
                                                             }
                                                             disable="true"> */}
@@ -376,8 +376,8 @@ const BlifDataTable = ({
                                             } else if (p.onClick) {
                                                 return (
                                                     <td key={i}>
-                                                        {/* <IvsAuthPrivilege */}
-                                                        {/* privilegeName={
+                                                        {/* <IvsAuthPrivilege
+                                                            privilegeName={
                                                                 p.privilegeName
                                                             }
                                                             disable="true"> */}
@@ -398,8 +398,8 @@ const BlifDataTable = ({
                                             } else {
                                                 return (
                                                     <td key={i}>
-                                                        {/* <IvsAuthPrivilege */}
-                                                        {/* privilegeName={
+                                                        {/* <IvsAuthPrivilege
+                                                            privilegeName={
                                                                 p.privilegeName
                                                             }
                                                             disable="true"> */}
@@ -423,7 +423,6 @@ const BlifDataTable = ({
                                 </td>
                             </tr>
                         )}
-                        {console.log(displayData)}
                         {data.data && data.data.length === 0 && (
                             <tr>
                                 <td colSpan={numberOfColumns}>
@@ -433,6 +432,13 @@ const BlifDataTable = ({
                         )}
                     </tbody>
                 </table>
+                <BlifBox
+                    viewTokens={{
+                        justifyContent: 'flex-end',
+                    }}
+                    inline>
+                    {pagination && getPaginationLinks(pagination, onPageChange)}
+                </BlifBox>
             </div>
         </React.Fragment>
     );

@@ -108,6 +108,8 @@ const PreCheck = () => {
 
     const [filterQuery, setFilterQuery] = useState(PRECHECK_FORM_SCHEMA);
     const [filterSchema, setFilterSchema] = useState([]);
+    const [selectedRow, setSelectedRow] = useState([]);
+    const selectionType = 'multi';
     // const [resetCurrentPage, setResetCurrentPage] = useState();
     // // //const {loadOrderList} = useCorpOrder();
 
@@ -182,14 +184,6 @@ const PreCheck = () => {
     // };
 
     const columns = [
-        {
-            name: 'Listing ID',
-            width: 'auto',
-            dataProperty: 'listingId',
-            sortable: true,
-            //selector: (row) => row.clientId,
-            // sortFunction: (a, b) => sortCollatorByKey(a, b, 'clientId'),
-        },
         {
             name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_EXCHANGE),
             width: 'auto',
@@ -305,7 +299,7 @@ const PreCheck = () => {
     ];
 
     let schema = {
-        idProperty: 'listingId',
+        idProperty: 'exchange',
         idPropertySortOrder: 'asc',
         headers: columns,
     };
@@ -355,8 +349,8 @@ const PreCheck = () => {
                 <BlifDataTableClient
                     schema={schema}
                     retrieveData={getPrecheckTableData}
-                    // selection
-                    // dataOnSelectionChange
+                    selection={selectionType}
+                    dataOnSelectionChange={setSelectedRow}
                     //   resetCurrentPage={resetCurrentPage}
                     // translate
                 />
