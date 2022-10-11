@@ -15,7 +15,8 @@ import {Spacer} from '@telus-uds/ds-allium';
 import {TextButton} from '@telus-uds/ds-allium';
 import {EnglishTranslations} from '../../language/EnglishTranslations';
 import {FrenchTranslations} from '../../language/FrenchTranslations';
-import {TranslationKeys} from '../../language/TranslationKeys';
+import {TRANSLATION_KEYS} from '../../language/TranslationKeys';
+import {LANGUAGES} from '../../language/Languages';
 
 const Header = () => {
     const location = useLocation();
@@ -48,7 +49,7 @@ const Header = () => {
     const changeLanguage = (language) => {
         if (!language) return;
 
-        localStorage.setItem(TranslationKeys.common.LANGUAGE, language);
+        localStorage.setItem(TRANSLATION_KEYS.COMMON.LANGUAGE, language);
         i18n.changeLanguage(language);
     };
 
@@ -107,21 +108,19 @@ const Header = () => {
                                         <TextButton
                                             onPress={() =>
                                                 changeLanguage(
-                                                    EnglishTranslations.en,
+                                                    LANGUAGES.ENGLISH,
                                                 )
                                             }>
-                                            {t(EnglishTranslations.ENGLISH)}
+                                            {t(TRANSLATION_KEYS.COMMON.ENGLISH)}
                                         </TextButton>
                                         <Typography bold>
                                             &nbsp;|&nbsp;
                                         </Typography>
                                         <TextButton
                                             onPress={() =>
-                                                changeLanguage(
-                                                    FrenchTranslations.fn,
-                                                )
+                                                changeLanguage(LANGUAGES.FRENCH)
                                             }>
-                                            {t(EnglishTranslations.FRENCH)}
+                                            {t(TRANSLATION_KEYS.COMMON.FRENCH)}
                                         </TextButton>
                                         {/* <Typography bold>
                                             &nbsp;|&nbsp;

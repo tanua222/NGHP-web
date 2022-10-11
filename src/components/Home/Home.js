@@ -3,7 +3,7 @@ import './Home.scss';
 import useAxiosGet from '../../hooks/useAxiosGet';
 import BlifSelectInput from '../Common/Inputs/BlifSelectInput';
 import {useTranslation} from 'react-i18next';
-import {TranslationKeys} from '../../language/TranslationKeys';
+import {TRANSLATION_KEYS} from '../../language/TranslationKeys';
 
 let options = [
     {text: '1', value: '1'},
@@ -18,11 +18,11 @@ const Home = () => {
     return (
         <div className="">
             <div className="home-title-root">
-                <h4 className="h4">{t(TranslationKeys.home.HOMEPAGE)}</h4>
+                <h4 className="h4">{t(TRANSLATION_KEYS.HOME.HOMEPAGE)}</h4>
             </div>
             <div className="home-entries-dropdown">
                 <div className="font-14px">
-                    {t(TranslationKeys.common.SHOW)}
+                    {t(TRANSLATION_KEYS.COMMON.SHOW)}
                 </div>
                 <BlifSelectInput
                     options={options}
@@ -36,7 +36,7 @@ const Home = () => {
                     }}
                 />
                 <div className="font-14px">
-                    {t(TranslationKeys.common.ENTRIES)}
+                    {t(TRANSLATION_KEYS.COMMON.ENTRIES)}
                 </div>
             </div>
         </div>

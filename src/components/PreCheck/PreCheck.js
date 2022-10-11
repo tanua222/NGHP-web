@@ -7,7 +7,7 @@ import {checkIfArrayExists} from '../../utils/helperFunctions';
 //import BlifTable from '../Common/BlifTables/BlifTable';
 import BlifSpacer from '../Common/BlifSpacer/BlifSpacer';
 import dummyTableData from '../Common/BlifTables/dummyTableData.json';
-import {TranslationKeys} from '../../language/TranslationKeys';
+import {TRANSLATION_KEYS} from '../../language/TranslationKeys';
 import BlifBox from '../Common/Box/BlifBox';
 import {
     PROVINCE_FILTER_LANGUAGE_KEYS,
@@ -127,21 +127,20 @@ const PreCheck = () => {
             const localFilterSchema = [
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
-                    [ARRAY_MAP_KEYS.label]: TranslationKeys.common.FILE,
+                    [ARRAY_MAP_KEYS.label]: TRANSLATION_KEYS.COMMON.FILE,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         PRECHECK_FORM_SCHEMA_KEYS.FILE_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-                    [ARRAY_MAP_KEYS.label]: TranslationKeys.common.PROVINCE,
+                    [ARRAY_MAP_KEYS.label]: TRANSLATION_KEYS.COMMON.PROVINCE,
                     [ARRAY_MAP_KEYS.OPTIONS]: getProvinceFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         PRECHECK_FORM_SCHEMA_KEYS.PROVINCE_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-                    [ARRAY_MAP_KEYS.label]:
-                        TranslationKeys.preCheck.PRECHECK_CLEC,
+                    [ARRAY_MAP_KEYS.label]: TRANSLATION_KEYS.PRECHECK.CLEC,
                     [ARRAY_MAP_KEYS.OPTIONS]: getClecFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         PRECHECK_FORM_SCHEMA_KEYS.CLEC_INPUT,
@@ -149,14 +148,14 @@ const PreCheck = () => {
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
                     [ARRAY_MAP_KEYS.label]:
-                        TranslationKeys.common.BRG_INDICATOR,
+                        TRANSLATION_KEYS.COMMON.BRG_INDICATOR,
                     [ARRAY_MAP_KEYS.OPTIONS]: getBrgIndicatorFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         PRECHECK_FORM_SCHEMA_KEYS.BRG_INDICATOR_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-                    [ARRAY_MAP_KEYS.label]: TranslationKeys.common.REJECTS,
+                    [ARRAY_MAP_KEYS.label]: TRANSLATION_KEYS.COMMON.REJECTS,
                     [ARRAY_MAP_KEYS.OPTIONS]: getRejectsFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         PRECHECK_FORM_SCHEMA_KEYS.REJECTS_INPUT,
@@ -318,7 +317,7 @@ const PreCheck = () => {
                 <BlifFlexGridRow>
                     <BlifFlexGridCol lg={12} md={10}>
                         <BlifTypography variant={{size: 'h2'}}>
-                            {t(TranslationKeys.preCheck.PRECHECK_HEADING)}
+                            {t(TRANSLATION_KEYS.PRECHECK.HEADING)}
                         </BlifTypography>
                     </BlifFlexGridCol>
                 </BlifFlexGridRow>
@@ -334,7 +333,7 @@ const PreCheck = () => {
                             right={{md: 7}}
                             flex={1}>
                             <FiltersView
-                                heading={t(TranslationKeys.common.SEARCH)}
+                                heading={t(TRANSLATION_KEYS.COMMON.SEARCH)}
                                 clickHandler={clickHandler}
                                 schema={filterSchema}
                                 handleInputChange={handleInputChange}

@@ -21,7 +21,7 @@ import {
     BlifFlexGridCol,
 } from '../Common/BlifFlexGrid/BlifFlexGrid';
 import {useTranslation} from 'react-i18next';
-import {TranslationKeys} from '../../language/TranslationKeys';
+import {TRANSLATION_KEYS} from '../../language/TranslationKeys';
 
 // Options
 export const getActionIndicatorFilterOptions = [
@@ -134,14 +134,14 @@ const Search = () => {
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
                     [ARRAY_MAP_KEYS.label]:
-                        TranslationKeys.search.PHONE_NUMBER_FILTER_LANGUAGE,
+                        TRANSLATION_KEYS.SEARCH.PHONE_NUMBER_FILTER_LANGUAGE,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         SEARCH_FORM_SCHEMA_KEYS.PHONE_NUMBER_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
                     [ARRAY_MAP_KEYS.label]:
-                        TranslationKeys.search
+                        TRANSLATION_KEYS.SEARCH
                             .BUS_OPERATING_NAME_FILTER_LANGUAGE,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         SEARCH_FORM_SCHEMA_KEYS.BUS_OPERATING_NAME_INPUT,
@@ -149,14 +149,15 @@ const Search = () => {
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
                     [ARRAY_MAP_KEYS.label]:
-                        TranslationKeys.search.ACTION_INDICATOR_FILTER_LANGUAGE,
+                        TRANSLATION_KEYS.SEARCH
+                            .ACTION_INDICATOR_FILTER_LANGUAGE,
                     [ARRAY_MAP_KEYS.OPTIONS]: getActionIndicatorFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         SEARCH_FORM_SCHEMA_KEYS.ACTION_INDICATOR_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-                    [ARRAY_MAP_KEYS.label]: TranslationKeys.common.REJECTS,
+                    [ARRAY_MAP_KEYS.label]: TRANSLATION_KEYS.COMMON.REJECTS,
                     [ARRAY_MAP_KEYS.OPTIONS]: getRejectsFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         SEARCH_FORM_SCHEMA_KEYS.REJECTS_INPUT,
@@ -164,7 +165,7 @@ const Search = () => {
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
                     [ARRAY_MAP_KEYS.label]:
-                        TranslationKeys.common.BRG_INDICATOR,
+                        TRANSLATION_KEYS.COMMON.BRG_INDICATOR,
                     [ARRAY_MAP_KEYS.OPTIONS]: getBrgIndicatorFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         SEARCH_FORM_SCHEMA_KEYS.BRG_INDICATOR_INPUT,
@@ -173,33 +174,33 @@ const Search = () => {
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
                     [ARRAY_MAP_KEYS.label]:
-                        TranslationKeys.search.INTERNAL_STATUS_FILTER_LANGUAGE,
+                        TRANSLATION_KEYS.SEARCH.INTERNAL_STATUS_FILTER_LANGUAGE,
                     [ARRAY_MAP_KEYS.OPTIONS]: getInternalStatusFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         SEARCH_FORM_SCHEMA_KEYS.INTERNAL_STATUS_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
-                    [ARRAY_MAP_KEYS.label]: TranslationKeys.common.FILE,
+                    [ARRAY_MAP_KEYS.label]: TRANSLATION_KEYS.COMMON.FILE,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         SEARCH_FORM_SCHEMA_KEYS.FILE_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-                    [ARRAY_MAP_KEYS.label]: TranslationKeys.common.PROVINCE,
+                    [ARRAY_MAP_KEYS.label]: TRANSLATION_KEYS.COMMON.PROVINCE,
                     [ARRAY_MAP_KEYS.OPTIONS]: getProvinceFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         SEARCH_FORM_SCHEMA_KEYS.PROVINCE_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.DATE_INPUT,
-                    [ARRAY_MAP_KEYS.label]: TranslationKeys.common.START_DATE,
+                    [ARRAY_MAP_KEYS.label]: TRANSLATION_KEYS.COMMON.START_DATE,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         SEARCH_FORM_SCHEMA_KEYS.START_DATE_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.DATE_INPUT,
-                    [ARRAY_MAP_KEYS.label]: TranslationKeys.common.END_DATE,
+                    [ARRAY_MAP_KEYS.label]: TRANSLATION_KEYS.COMMON.END_DATE,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         SEARCH_FORM_SCHEMA_KEYS.END_DATE_INPUT,
                 },
@@ -236,7 +237,7 @@ const Search = () => {
             <BlifFlexGridRow>
                 <BlifFlexGridCol>
                     <BlifTypography variant={{size: 'h2'}}>
-                        {t(TranslationKeys.common.SEARCH)}
+                        {t(TRANSLATION_KEYS.COMMON.SEARCH)}
                     </BlifTypography>
                 </BlifFlexGridCol>
             </BlifFlexGridRow>
@@ -251,7 +252,7 @@ const Search = () => {
                         top={{md: 1}}
                         flex={1}>
                         <FiltersView
-                            heading={t(TranslationKeys.common.SEARCH)}
+                            heading={t(TRANSLATION_KEYS.COMMON.SEARCH)}
                             clickHandler={searchClickHandler}
                             schema={filterSchema}
                             handleInputChange={handleSearchInputChange}
