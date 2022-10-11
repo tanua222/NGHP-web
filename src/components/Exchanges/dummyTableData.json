@@ -1,4 +1,5 @@
-[
+{
+"result":[
     {
         "createdUserId": null,
         "lastUpdatedUserId": null,
@@ -50,7 +51,7 @@
         "exchIndex": "2",
         "abbrev": "108 M H",
         "bookNum": "25",
-        "exchangeFullName": "108 MILE HOUSE",
+        "exchangeFullName": "1081 MILE HOUSE",
         "secondAbbrev": "",
         "sectionNum": "13",
         "npa": "250,236,778",
@@ -4271,4 +4272,6 @@
             }
         ]
     }
-]
+],
+"numberOfPages":4
+}

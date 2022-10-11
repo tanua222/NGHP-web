@@ -51,10 +51,14 @@
     "build": "react-scripts build"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
-  },
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ],
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix",
+        "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+    },
   "browserslist": {
     "production": [
       ">0.2%",

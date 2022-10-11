@@ -1,0 +1,76 @@
+.blifDataTable .blifDataTableTable td {
+    word-wrap: break-word;
+    max-width: 7em;
+    transition-duration: 50ms;
+    transition-delay: 50ms;
+    border-right: 1px solid #d9e4e6;
+    text-align: left;
+    margin: 0.5em 0.8em;
+    padding: 0.8em;
+}
+
+tr:hover td {
+    background: #d8d8d8;
+}
+
+div.blifDataTablePagination {
+    float: right;
+}
+
+.blifDataTablePagination a {
+    color: black;
+    padding: 4px 8px;
+}
+
+.blifDataTablePagination a.active {
+    background-color: #614caf;
+    color: white;
+    border-radius: 3px;
+}
+
+.blifDataTablePagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 3px;
+}
+
+.blifDataTable .blifDataTableTable th {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.blifDataTable th a.sort-by {
+    color: inherit;
+    padding-right: 15px;
+    /* position: -webkit-sticky; */
+    /* position: absolute;
+    white-space: nowrap; */
+}
+a.sort-by:before,
+a.sort-by:after {
+    border: 0.5em solid transparent;
+    content: '';
+    display: block;
+    height: 0;
+    right: 0em;
+    top: 10%;
+    position: absolute;
+    width: 0;
+}
+a.sort-by:before {
+    border-bottom-color: #71757b;
+    margin-top: 0.3em;
+}
+a.sort-by:after {
+    border-top-color: #71757b;
+    margin-top: 1.4em;
+}
+a.sort-by.desc:after {
+    border-top-color: white;
+    margin-top: 1.4em;
+}
+a.sort-by.asc:before {
+    border-bottom-color: white;
+    margin-top: 0.3em;
+}
