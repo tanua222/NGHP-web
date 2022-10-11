@@ -1,6 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {isNullOrUndefined} from '../../../utils/helperFunctions';
-import {BlifFlexGrid, BlifFlexGridRow, BlifFlexGridCol} from '../BlifFlexGrid/BlifFlexGrid';
+import {
+    BlifFlexGrid,
+    BlifFlexGridRow,
+    BlifFlexGridCol,
+} from '../BlifFlexGrid/BlifFlexGrid';
 import BlifDataTableClient from './BlifDataTableClient';
 
 const BlifFilterableDataTable = ({
