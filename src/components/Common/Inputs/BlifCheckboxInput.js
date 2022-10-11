@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Checkbox} from '@telus-uds/ds-allium';
-import useUnsavedChanges from '../../../hooks/useUnsavedChanges';
+//import useUnsavedChanges from '../../../hooks/useUnsavedChanges';
 import {isNullOrUndefined} from '../../../utils/helperFunctions';
 
 function BlifCheckboxInput({
@@ -17,15 +17,13 @@ function BlifCheckboxInput({
     value = '',
     variant,
     disabled,
-    searchField,
     accessibilityLabel,
 }) {
-    const {setDirty} = useUnsavedChanges();
+    //const {setDirty} = useUnsavedChanges();
     const [localInactive, setLocalInactive] = useState();
 
     const handleUpdateValueEvent = (event) => {
         if (localInactive) return;
-        !searchField && setDirty(true);
         onChange(event);
     };
 

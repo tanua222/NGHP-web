@@ -7,6 +7,7 @@ export const miscellaneousEnglish = {
     [MISCELLANEOUS_KEYS.ENGLISH]: 'English',
     [MISCELLANEOUS_KEYS.FRENCH]: 'French',
     [MISCELLANEOUS_KEYS.en]: 'en',
+    [MISCELLANEOUS_KEYS.DATA_TABLE_ITEMS_PER_PAGE]: 'Items per page',
 };
 
 export const miscellaneousFrench = {
@@ -16,4 +17,5 @@ export const miscellaneousFrench = {
     [MISCELLANEOUS_KEYS.ENGLISH]: 'Anglais',
     [MISCELLANEOUS_KEYS.FRENCH]: 'Français',
     [MISCELLANEOUS_KEYS.fr]: 'fr',
+    [MISCELLANEOUS_KEYS.DATA_TABLE_ITEMS_PER_PAGE]: 'Items per page - fr',
 };

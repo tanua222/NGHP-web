@@ -6,4 +6,5 @@ export const MISCELLANEOUS_KEYS = {
     FRENCH: 'FRENCH',
     en: 'en',
     fr: 'fr',
+    DATA_TABLE_ITEMS_PER_PAGE: 'Items per page',
 };

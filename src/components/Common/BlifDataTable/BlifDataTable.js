@@ -16,11 +16,8 @@ import BlifDecorativeIcon from '../BlifIcons/BlifDecorativeIcon';
 import BlifCheckboxInput from '../Inputs/BlifCheckboxInput';
 import BlifBox from '../Box/BlifBox';
 import BlifSpacer from '../BlifSpacer/BlifSpacer';
-import BlifTextInput from '../Inputs/BlifTextInput';
-import BlifButton from '../Buttons/BlifButton';
-import {Icon} from '@telus-uds/ds-allium';
-import {Search} from '@telus-uds/palette-allium/build/web/icons';
 import BlifSearch from '../BlifSearch/BlifSearch';
+import {MISCELLANEOUS_KEYS} from '../../../utils/languageKeys/miscellaneousKeys';
 //import IvsSingleRadioInput from '../../IvsInput/IvsSingleRadioInput'; //TODO
 
 // clearSelection is a toogle flag to clear the current selection
@@ -141,27 +138,14 @@ const BlifDataTable = ({
                                     }
                                     onPageSizeChange={onPageSizeChange}
                                     translateFn={translateFn}
+                                    translate={translate}
                                 />
                             )}
                         </BlifBox>
                         {search && (
                             <>
                                 <BlifBox inline>
-                                    {/* <div className="search-label">Search:</div> */}
-                                    {/* <BlifTextInput
-                                        value={searchButton}
-                                        onChange={(val) => setSearchButton(val)}
-                                    /> */}
                                     <BlifSpacer space={1} />
-                                    {/* <BlifButton
-                                        tokens={{
-                                            backgroundColor: 'white',
-                                            minWidth: 1,
-                                        }}
-                                        variant={{priority: 'low'}}
-                                        onClick={clickHandler}>
-                                        <Icon icon={Search} />
-                                    </BlifButton> */}
                                     <BlifSearch
                                         value={searchButtonVal}
                                         onChange={(val) =>
@@ -202,6 +186,22 @@ const BlifDataTable = ({
                                         variant={{bold: true, inverse: true}}>
                                         {translateFn('ivs.table.header.select')}
                                     </BlifTypography>
+                                </th>
+                            )}
+                            {!selectionConditionFn && selection === 'multi' && (
+                                <th style={{...thStyle, width: '8%'}}>
+                                    <BlifCheckboxInput
+                                        checked={selectAll}
+                                        onChange={toggleSelectAll}
+                                        name="selectAll"
+                                        //value={translate(heading) || ''}
+                                        label=""
+                                        tokens={{
+                                            iconBackgroundColor:
+                                                BlifPalette.color
+                                                    .greenAccessible,
+                                        }}
+                                    />
                                 </th>
                             )}
                             {data.schema.headers.map((header, index) => {
@@ -376,7 +376,7 @@ const BlifDataTable = ({
                                             selection === 'multi' && (
                                                 <td>
                                                     {/* <td onClick={() => toggleSelected(idx)}> <input type="checkbox" onChange={()=>{}} checked={selected.has(idx)}/> */}
-                                                    {/* <BlifCheckboxInput
+                                                    <BlifCheckboxInput
                                                         label=""
                                                         id={String(idx)}
                                                         checked={selected.has(
@@ -385,8 +385,7 @@ const BlifDataTable = ({
                                                         onChange={() =>
                                                             toggleSelected(idx)
                                                         }
-                                                        searchField
-                                                    /> */}
+                                                    />
                                                 </td>
                                             )}
                                         {data.schema.headers.map((p, i) => {
@@ -575,6 +574,7 @@ const NumberOfItemsOnPageSelection = ({
     pageSize,
     onPageSizeChange,
     translateFn,
+    translate,
 }) => {
     const [size] = useState(pageSize);
     const pageCounts = [1, 5, 10, 15, 20, 25, 30];
@@ -585,7 +585,8 @@ const NumberOfItemsOnPageSelection = ({
     return (
         <BlifBox inline between={1} vertical={2}>
             <BlifTypography>
-                {translateFn('ivs.title.common.items.per.page')}
+                {/* {translateFn('ivs.title.common.items.per.page')} */}
+                {translate(MISCELLANEOUS_KEYS.DATA_TABLE_ITEMS_PER_PAGE)}
             </BlifTypography>
             <select
                 name="count"

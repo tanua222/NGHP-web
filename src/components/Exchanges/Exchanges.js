@@ -51,7 +51,8 @@ const Search = () => {
 
     const [filterSchema, setFilterSchema] = useState([]);
     const [selectedRow, setSelectedRow] = useState([]);
-    // const selectionType = 'multi';
+    console.log('selectedRow', selectedRow);
+    const selectionType = 'multi';
     const search = true;
 
     useEffect(() => {
@@ -119,7 +120,7 @@ const Search = () => {
 
     const columns = [
         {
-            name: 'Abbrev',
+            name: ABBREV_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
             width: 'auto',
             dataProperty: 'abbrev',
             sortable: true,
@@ -127,7 +128,7 @@ const Search = () => {
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'clientId'),
         },
         {
-            name: 'Name',
+            name: NAME_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
             Width: 'auto',
             dataProperty: 'exchangeFullName',
             sortable: true,
@@ -135,7 +136,7 @@ const Search = () => {
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'groupId'),
         },
         {
-            name: 'Abbreviation 2',
+            name: ABBREVIATION2_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
             Width: 'auto',
             dataProperty: 'secondAbbrev',
             sortable: true,
@@ -143,14 +144,14 @@ const Search = () => {
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'groupName'),
         },
         {
-            name: 'Book#',
+            name: BOOK_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
             Width: 'auto',
             dataProperty: 'bookNum',
             //selector: (row) => row.clientType,
             sortable: true,
         },
         {
-            name: 'Section#',
+            name: SECTION_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
             Width: 'auto',
             dataProperty: 'sectionNum',
             sortable: true,
@@ -158,7 +159,7 @@ const Search = () => {
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'clientName'),
         },
         {
-            name: 'NPA',
+            name: NPA_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
             Width: 'auto',
             dataProperty: 'npa',
             sortable: true,
@@ -221,10 +222,11 @@ const Search = () => {
                     schema={schema}
                     retrieveData={getExchangesTableData}
                     search={search}
-                    // selection={selectionType}
-                    //dataOnSelectionChange={setSelectedRow}
+                    selection={selectionType}
+                    dataOnSelectionChange={setSelectedRow}
+                    //selectionConditionFn={true}
                     //   resetCurrentPage={resetCurrentPage}
-                    // translate
+                    translate={t}
                 />
             </BlifBox>
         </React.Fragment>

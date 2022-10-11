@@ -4,7 +4,6 @@ import {ARRAY_MAP_KEYS, FILTER_TYPES, ZERO_INDEX} from '../../utils/commonKeys';
 import {FiltersView} from '../Common/Filters/Filters';
 import {useTranslation} from 'react-i18next';
 import {checkIfArrayExists} from '../../utils/helperFunctions';
-//import BlifTable from '../Common/BlifTables/BlifTable';
 import BlifSpacer from '../Common/BlifSpacer/BlifSpacer';
 import dummyTableData from '../Common/BlifTables/dummyTableData.json';
 import {BUTTON_TITLE} from '../../utils/commonKeys';
@@ -19,14 +18,11 @@ import {
     FILE_SEARCH_FILTER_LANGUAGE_KEYS,
     PRE_CHECK_TABLE_HEADER_KEYS,
 } from '../../utils/languageKeys/components/preCheckKeys';
-import {isNullOrUndefined} from '../../utils/helperFunctions';
 import {
     BlifFlexGrid,
     BlifFlexGridRow,
     BlifFlexGridCol,
 } from '../Common/BlifFlexGrid/BlifFlexGrid';
-//import BlifDataTable from '../Common/BlifDataTable/BlifDataTable';
-import BlifDataTableClient from '../Common/BlifDataTable/BlifDataTableClient';
 import BlifFilterableDataTable from '../Common/BlifDataTable/BlifFilterableDataTable';
 
 // OPTIONS
@@ -111,7 +107,7 @@ const PreCheck = () => {
     const [filterSchema, setFilterSchema] = useState([]);
     const [selectedRow, setSelectedRow] = useState([]);
     const selectionType = 'multi';
-
+    console.log('selected row', selectedRow);
     // const [resetCurrentPage, setResetCurrentPage] = useState();
     // // //const {loadOrderList} = useCorpOrder();
 
@@ -187,7 +183,7 @@ const PreCheck = () => {
 
     const columns = [
         {
-            name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_EXCHANGE),
+            name: PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_EXCHANGE,
             width: 'auto',
             dataProperty: 'exchange',
             sortable: true,
@@ -195,7 +191,7 @@ const PreCheck = () => {
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'clientId'),
         },
         {
-            name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_SL),
+            name: PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_SL,
             Width: 'auto',
             dataProperty: 'singleLine',
             sortable: true,
@@ -203,7 +199,7 @@ const PreCheck = () => {
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'groupId'),
         },
         {
-            name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_SPID),
+            name: PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_SPID,
             Width: 'auto',
             dataProperty: 'spID',
             sortable: true,
@@ -212,14 +208,14 @@ const PreCheck = () => {
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'groupName'),
         },
         {
-            name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_ACTION),
+            name: PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_ACTION,
             Width: 'auto',
             dataProperty: 'actionIndicator',
             //selector: (row) => row.clientType,
             sortable: true,
         },
         {
-            name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_NL),
+            name: PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_NL,
             Width: 'auto',
             dataProperty: 'nl',
             sortable: true,
@@ -228,7 +224,7 @@ const PreCheck = () => {
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'clientName'),
         },
         {
-            name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_NUMBER),
+            name: PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_NUMBER,
             Width: 'auto',
             dataProperty: 'phoneNumber',
             sortable: true,
@@ -237,7 +233,7 @@ const PreCheck = () => {
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'reportId'),
         },
         {
-            name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_BRG),
+            name: PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_BRG,
             Width: 'auto',
             dataProperty: 'brgIndicator',
             sortable: true,
@@ -247,21 +243,21 @@ const PreCheck = () => {
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'clientKey'),
         },
         {
-            name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_NAME),
+            name: PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_NAME,
             Width: 'auto',
             dataProperty: 'customerFullName',
             minWidth: '120px',
             //selector: (row) => row.clientName,
         },
         {
-            name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_LOCATION),
+            name: PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_LOCATION,
             Width: 'auto',
             sortable: true,
             dataProperty: 'location',
             //selector: (row) => row.clientName,
         },
         {
-            name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_ADDRESS),
+            name: PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_ADDRESS,
             Width: 'auto',
 
             sortable: true,
@@ -269,7 +265,7 @@ const PreCheck = () => {
             // selector: (row) => row.clientName,
         },
         {
-            name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_CFC),
+            name: PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_CFC,
             Width: 'auto',
             sortable: true,
             dataProperty: 'cfc',
@@ -279,7 +275,7 @@ const PreCheck = () => {
             //new Date(a.deactivateDate) - new Date(b.deactivateDate),
         },
         {
-            name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_REJECT_CODE),
+            name: PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_REJECT_CODE,
             Width: 'auto',
             sortable: true,
             dataProperty: 'rejectCode',
@@ -289,7 +285,7 @@ const PreCheck = () => {
             //     new Date(a.deactivateDate) - new Date(b.deactivateDate),
         },
         {
-            name: t(PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_POLICY_CODE),
+            name: PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_POLICY_CODE,
             Width: 'auto',
             sortable: true,
             dataProperty: 'policyCode',
@@ -354,7 +350,7 @@ const PreCheck = () => {
                     selection={selectionType}
                     dataOnSelectionChange={setSelectedRow}
                     //   resetCurrentPage={resetCurrentPage}
-                    // translate
+                    translate={t}
                 />
             </BlifBox>
         </React.Fragment>

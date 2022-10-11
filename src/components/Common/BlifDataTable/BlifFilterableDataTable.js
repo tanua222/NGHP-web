@@ -34,14 +34,14 @@ const BlifFilterableDataTable = ({
 
     return (
         <BlifFlexGrid gutter={false} limitWidth={false}>
-            <BlifFlexGridRow horizontalAlign="start">
+            {/* <BlifFlexGridRow horizontalAlign="start">
                 <BlifFlexGridCol>
                     {filterDataComponent &&
                         React.createElement(filterDataComponent, {
                             onFilter: fetchFilteredData,
                         })}
                 </BlifFlexGridCol>
-            </BlifFlexGridRow>
+            </BlifFlexGridRow> */}
             <BlifFlexGridRow horizontalAlign="center">
                 <BlifFlexGridCol md={12}>
                     <BlifDataTableClient
