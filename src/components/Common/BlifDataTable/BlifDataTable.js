@@ -20,6 +20,7 @@ import BlifTextInput from '../Inputs/BlifTextInput';
 import BlifButton from '../Buttons/BlifButton';
 import {Icon} from '@telus-uds/ds-allium';
 import {Search} from '@telus-uds/palette-allium/build/web/icons';
+import BlifSearch from '../BlifSearch/BlifSearch';
 //import IvsSingleRadioInput from '../../IvsInput/IvsSingleRadioInput'; //TODO
 
 // clearSelection is a toogle flag to clear the current selection
@@ -43,7 +44,7 @@ const BlifDataTable = ({
     const [selected, setSelected] = useState(new Set());
 
     // search button in table
-    const [searchButton, setSearchButton] = useState('');
+    const [searchButtonVal, setSearchButtonVal] = useState('');
 
     useEffect(() => {
         if (data.data) {
@@ -117,10 +118,11 @@ const BlifDataTable = ({
     };
 
     // search button onClick handler in Table
-    const clickHandler = (e) => {
-        e.preventDefault();
-        alert(searchButton);
-    };
+    // const clickHandler = (e) => {
+    //     e.preventDefault();
+    //     alert(searchButtonVal);
+    // };
+
     return (
         <React.Fragment>
             <div
@@ -145,13 +147,13 @@ const BlifDataTable = ({
                         {search && (
                             <>
                                 <BlifBox inline>
-                                    <div className="search-label">Search:</div>
-                                    <BlifTextInput
+                                    {/* <div className="search-label">Search:</div> */}
+                                    {/* <BlifTextInput
                                         value={searchButton}
                                         onChange={(val) => setSearchButton(val)}
-                                    />
+                                    /> */}
                                     <BlifSpacer space={1} />
-                                    <BlifButton
+                                    {/* <BlifButton
                                         tokens={{
                                             backgroundColor: 'white',
                                             minWidth: 1,
@@ -159,7 +161,16 @@ const BlifDataTable = ({
                                         variant={{priority: 'low'}}
                                         onClick={clickHandler}>
                                         <Icon icon={Search} />
-                                    </BlifButton>
+                                    </BlifButton> */}
+                                    <BlifSearch
+                                        value={searchButtonVal}
+                                        onChange={(val) =>
+                                            setSearchButtonVal(val)
+                                        }
+                                        onSubmit={() => {
+                                            alert(searchButtonVal);
+                                        }}
+                                    />
                                 </BlifBox>
                             </>
                         )}
