@@ -7,15 +7,6 @@ import {checkIfArrayExists} from '../../utils/helperFunctions';
 import BlifSpacer from '../Common/BlifSpacer/BlifSpacer';
 
 import {
-    SEARCH_LANGUAGE_KEYS,
-    PROVINCE_FILTER_LANGUAGE_KEYS,
-    REJECTS_FILTER_LANGUAGE_KEYS,
-    BRG_FILTER_LANGUAGE_KEYS,
-    FILE_SEARCH_FILTER_LANGUAGE_KEYS,
-    BUS_OPERATING_NAME_FILTER_LANGUAGE_KEYS,
-    PHONE_NUMBER_FILTER_LANGUAGE_KEYS,
-    START_DATE_SEARCH_FILTER_LANGUAGE_KEYS,
-    END_DATE_SEARCH_FILTER_LANGUAGE_KEYS,
     ACTION_INDICATOR_FILTER_LANGUAGE_KEYS,
     INTERNAL_STATUS_FILTER_LANGUAGE_KEYS,
 } from '../../utils/languageKeys/components/searchKeys';
@@ -30,7 +21,7 @@ import {
     BlifFlexGridCol,
 } from '../Common/BlifFlexGrid/BlifFlexGrid';
 import {useTranslation} from 'react-i18next';
-import {BUTTON_TITLE} from '../../utils/commonKeys';
+import {TRANSLATION_KEYS} from '../../language/TranslationKeys';
 
 // Options
 export const getActionIndicatorFilterOptions = [
@@ -143,35 +134,38 @@ const Search = () => {
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
                     [ARRAY_MAP_KEYS.label]:
-                        PHONE_NUMBER_FILTER_LANGUAGE_KEYS.LABEL,
+                        TRANSLATION_KEYS.SEARCH.PHONE_NUMBER_FILTER_LANGUAGE,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         SEARCH_FORM_SCHEMA_KEYS.PHONE_NUMBER_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
                     [ARRAY_MAP_KEYS.label]:
-                        BUS_OPERATING_NAME_FILTER_LANGUAGE_KEYS.LABEL,
+                        TRANSLATION_KEYS.SEARCH
+                            .BUS_OPERATING_NAME_FILTER_LANGUAGE,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         SEARCH_FORM_SCHEMA_KEYS.BUS_OPERATING_NAME_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
                     [ARRAY_MAP_KEYS.label]:
-                        ACTION_INDICATOR_FILTER_LANGUAGE_KEYS.LABEL,
+                        TRANSLATION_KEYS.SEARCH
+                            .ACTION_INDICATOR_FILTER_LANGUAGE,
                     [ARRAY_MAP_KEYS.OPTIONS]: getActionIndicatorFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         SEARCH_FORM_SCHEMA_KEYS.ACTION_INDICATOR_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-                    [ARRAY_MAP_KEYS.label]: REJECTS_FILTER_LANGUAGE_KEYS.LABEL,
+                    [ARRAY_MAP_KEYS.label]: TRANSLATION_KEYS.COMMON.REJECTS,
                     [ARRAY_MAP_KEYS.OPTIONS]: getRejectsFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         SEARCH_FORM_SCHEMA_KEYS.REJECTS_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-                    [ARRAY_MAP_KEYS.label]: BRG_FILTER_LANGUAGE_KEYS.LABEL,
+                    [ARRAY_MAP_KEYS.label]:
+                        TRANSLATION_KEYS.COMMON.BRG_INDICATOR,
                     [ARRAY_MAP_KEYS.OPTIONS]: getBrgIndicatorFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         SEARCH_FORM_SCHEMA_KEYS.BRG_INDICATOR_INPUT,
@@ -180,36 +174,33 @@ const Search = () => {
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
                     [ARRAY_MAP_KEYS.label]:
-                        INTERNAL_STATUS_FILTER_LANGUAGE_KEYS.LABEL,
+                        TRANSLATION_KEYS.SEARCH.INTERNAL_STATUS_FILTER_LANGUAGE,
                     [ARRAY_MAP_KEYS.OPTIONS]: getInternalStatusFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         SEARCH_FORM_SCHEMA_KEYS.INTERNAL_STATUS_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
-                    [ARRAY_MAP_KEYS.label]:
-                        FILE_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
+                    [ARRAY_MAP_KEYS.label]: TRANSLATION_KEYS.COMMON.FILE,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         SEARCH_FORM_SCHEMA_KEYS.FILE_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-                    [ARRAY_MAP_KEYS.label]: PROVINCE_FILTER_LANGUAGE_KEYS.LABEL,
+                    [ARRAY_MAP_KEYS.label]: TRANSLATION_KEYS.COMMON.PROVINCE,
                     [ARRAY_MAP_KEYS.OPTIONS]: getProvinceFilterOptions,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         SEARCH_FORM_SCHEMA_KEYS.PROVINCE_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.DATE_INPUT,
-                    [ARRAY_MAP_KEYS.label]:
-                        START_DATE_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
+                    [ARRAY_MAP_KEYS.label]: TRANSLATION_KEYS.COMMON.START_DATE,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         SEARCH_FORM_SCHEMA_KEYS.START_DATE_INPUT,
                 },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.DATE_INPUT,
-                    [ARRAY_MAP_KEYS.label]:
-                        END_DATE_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
+                    [ARRAY_MAP_KEYS.label]: TRANSLATION_KEYS.COMMON.END_DATE,
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         SEARCH_FORM_SCHEMA_KEYS.END_DATE_INPUT,
                 },
@@ -246,7 +237,7 @@ const Search = () => {
             <BlifFlexGridRow>
                 <BlifFlexGridCol>
                     <BlifTypography variant={{size: 'h2'}}>
-                        {t(SEARCH_LANGUAGE_KEYS.SEARCH_HEADING)}
+                        {t(TRANSLATION_KEYS.COMMON.SEARCH)}
                     </BlifTypography>
                 </BlifFlexGridCol>
             </BlifFlexGridRow>
@@ -261,7 +252,7 @@ const Search = () => {
                         top={{md: 1}}
                         flex={1}>
                         <FiltersView
-                            heading={BUTTON_TITLE.SEARCH_BUTTON_TITLE}
+                            heading={t(TRANSLATION_KEYS.COMMON.SEARCH)}
                             clickHandler={searchClickHandler}
                             schema={filterSchema}
                             handleInputChange={handleSearchInputChange}

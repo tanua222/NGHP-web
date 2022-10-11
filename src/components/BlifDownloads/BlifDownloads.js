@@ -4,20 +4,13 @@ import {ARRAY_MAP_KEYS, FILTER_TYPES} from '../../utils/commonKeys';
 import {FiltersView} from '../Common/Filters/Filters';
 import BlifBox from '../Common/Box/BlifBox';
 import BlifSpacer from '../Common/BlifSpacer/BlifSpacer';
-
-import {
-    DOWNLOADS_LANGUAGE_KEYS,
-    FILE_SEARCH_FILTER_LANGUAGE_KEYS,
-    START_DATE_FILTER_LANGUAGE_KEYS,
-    END_DATE_FILTER_LANGUAGE_KEYS,
-} from '../../utils/languageKeys/components/downloadsKeys';
 import {
     BlifFlexGrid,
     BlifFlexGridRow,
     BlifFlexGridCol,
 } from '../Common/BlifFlexGrid/BlifFlexGrid';
 import {useTranslation} from 'react-i18next';
-import {BUTTON_TITLE} from '../../utils/commonKeys';
+import {TRANSLATION_KEYS} from '../../language/TranslationKeys';
 
 //Form Schema
 const DOWNLOADS_FORM_SCHEMA_KEYS = {
@@ -45,19 +38,21 @@ const Search = () => {
         const localFilterSchema = [
             {
                 [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
-                [ARRAY_MAP_KEYS.label]: FILE_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
+                [ARRAY_MAP_KEYS.label]: TRANSLATION_KEYS.COMMON.FILE,
                 [ARRAY_MAP_KEYS.ON_CHANGE]:
                     DOWNLOADS_FORM_SCHEMA_KEYS.FILE_INPUT,
             },
             {
                 [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.DATE_INPUT,
-                [ARRAY_MAP_KEYS.label]: START_DATE_FILTER_LANGUAGE_KEYS.LABEL,
+                [ARRAY_MAP_KEYS.label]:
+                    TRANSLATION_KEYS.BLIF_DOWNLOADS.START_DATE,
                 [ARRAY_MAP_KEYS.ON_CHANGE]:
                     DOWNLOADS_FORM_SCHEMA_KEYS.START_DATE_INPUT,
             },
             {
                 [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.DATE_INPUT,
-                [ARRAY_MAP_KEYS.label]: END_DATE_FILTER_LANGUAGE_KEYS.LABEL,
+                [ARRAY_MAP_KEYS.label]:
+                    TRANSLATION_KEYS.BLIF_DOWNLOADS.END_DATE,
                 [ARRAY_MAP_KEYS.ON_CHANGE]:
                     DOWNLOADS_FORM_SCHEMA_KEYS.END_DATE_INPUT,
             },
@@ -87,7 +82,7 @@ const Search = () => {
             <BlifFlexGridRow>
                 <BlifFlexGridCol>
                     <BlifTypography variant={{size: 'h2'}}>
-                        {t(DOWNLOADS_LANGUAGE_KEYS.DOWNLOADS_HEADING)}
+                        {t(TRANSLATION_KEYS.BLIF_DOWNLOADS.HEADING)}
                     </BlifTypography>
                 </BlifFlexGridCol>
             </BlifFlexGridRow>
@@ -102,7 +97,7 @@ const Search = () => {
                         top={{md: 1}}
                         flex={1}>
                         <FiltersView
-                            heading={BUTTON_TITLE.SEARCH_BUTTON_TITLE}
+                            heading={TRANSLATION_KEYS.COMMON.SEARCH}
                             clickHandler={searchClickHandler}
                             schema={filterSchema}
                             handleInputChange={handleDownloadsInputChange}

@@ -4,24 +4,15 @@ import {ARRAY_MAP_KEYS, FILTER_TYPES} from '../../utils/commonKeys';
 import {FiltersView} from '../Common/Filters/Filters';
 import BlifBox from '../Common/Box/BlifBox';
 import BlifSpacer from '../Common/BlifSpacer/BlifSpacer';
+import {TRANSLATION_KEYS} from '../../language/TranslationKeys';
+import {useTranslation} from 'react-i18next';
 import dummyTableData from './dummyTableData.json';
 import BlifDataTableClient from '../Common/BlifDataTable/BlifDataTableClient';
-import {
-    EXCHANGES_LANGUAGE_KEYS,
-    ABBREV_SEARCH_FILTER_LANGUAGE_KEYS,
-    NAME_SEARCH_FILTER_LANGUAGE_KEYS,
-    ABBREVIATION2_SEARCH_FILTER_LANGUAGE_KEYS,
-    BOOK_SEARCH_FILTER_LANGUAGE_KEYS,
-    SECTION_SEARCH_FILTER_LANGUAGE_KEYS,
-    NPA_SEARCH_FILTER_LANGUAGE_KEYS,
-} from '../../utils/languageKeys/components/exchangesKeys';
 import {
     BlifFlexGrid,
     BlifFlexGridRow,
     BlifFlexGridCol,
 } from '../Common/BlifFlexGrid/BlifFlexGrid';
-import {useTranslation} from 'react-i18next';
-import {BUTTON_TITLE} from '../../utils/commonKeys';
 
 //Form Schema
 const EXCHANGES_FORM_SCHEMA_KEYS = {
@@ -60,39 +51,42 @@ const Search = () => {
             {
                 [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
                 [ARRAY_MAP_KEYS.label]:
-                    ABBREV_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
+                    TRANSLATION_KEYS.EXCHANGE.ABBREV_SEARCH_FILTER,
                 [ARRAY_MAP_KEYS.ON_CHANGE]:
                     EXCHANGES_FORM_SCHEMA_KEYS.ABBREV_INPUT,
             },
             {
                 [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
-                [ARRAY_MAP_KEYS.label]: NAME_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
+                [ARRAY_MAP_KEYS.label]:
+                    TRANSLATION_KEYS.EXCHANGE.NAME_SEARCH_FILTER,
                 [ARRAY_MAP_KEYS.ON_CHANGE]:
                     EXCHANGES_FORM_SCHEMA_KEYS.NAME_INPUT,
             },
             {
                 [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
                 [ARRAY_MAP_KEYS.label]:
-                    ABBREVIATION2_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
+                    TRANSLATION_KEYS.EXCHANGE.ABBREVIATION2_SEARCH_FILTER,
                 [ARRAY_MAP_KEYS.ON_CHANGE]:
                     EXCHANGES_FORM_SCHEMA_KEYS.ABBREVIATION2_INPUT,
             },
             {
                 [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
-                [ARRAY_MAP_KEYS.label]: BOOK_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
+                [ARRAY_MAP_KEYS.label]:
+                    TRANSLATION_KEYS.EXCHANGE.BOOK_SEARCH_FILTER,
                 [ARRAY_MAP_KEYS.ON_CHANGE]:
                     EXCHANGES_FORM_SCHEMA_KEYS.BOOK_INPUT,
             },
             {
                 [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
                 [ARRAY_MAP_KEYS.label]:
-                    SECTION_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
+                    TRANSLATION_KEYS.EXCHANGE.SECTION_SEARCH_FILTER,
                 [ARRAY_MAP_KEYS.ON_CHANGE]:
                     EXCHANGES_FORM_SCHEMA_KEYS.SECTION_INPUT,
             },
             {
                 [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.TEXT_INPUT,
-                [ARRAY_MAP_KEYS.label]: NPA_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
+                [ARRAY_MAP_KEYS.label]:
+                    TRANSLATION_KEYS.EXCHANGE.NPA_SEARCH_FILTER,
                 [ARRAY_MAP_KEYS.ON_CHANGE]:
                     EXCHANGES_FORM_SCHEMA_KEYS.NPA_INPUT,
             },
@@ -190,7 +184,7 @@ const Search = () => {
                 <BlifFlexGridRow>
                     <BlifFlexGridCol>
                         <BlifTypography variant={{size: 'h2'}}>
-                            {t(EXCHANGES_LANGUAGE_KEYS.EXCHANGES_HEADING)}
+                            {t(TRANSLATION_KEYS.EXCHANGE.HEADING)}
                         </BlifTypography>
                     </BlifFlexGridCol>
                 </BlifFlexGridRow>
@@ -207,7 +201,10 @@ const Search = () => {
                             top={{md: 1}}
                             flex={1}>
                             <FiltersView
-                                heading={BUTTON_TITLE.ADD_EXCHANGE_BUTTON_TITLE}
+                                heading={t(
+                                    TRANSLATION_KEYS.EXCHANGE
+                                        .ADD_EXCHANGE_BUTTON_TITLE,
+                                )}
                                 clickHandler={searchClickHandler}
                                 schema={filterSchema}
                                 handleInputChange={handleExchangesInputChange}
