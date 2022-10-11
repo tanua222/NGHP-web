@@ -1,4 +1,3 @@
-// import BlifTypography from '../Typography/BlifTypography';
 import BlifTypography from '../BlifTypography/BlifTypography';
 import React, {useEffect, useState} from 'react';
 import {generatePath} from 'react-router';
@@ -19,6 +18,9 @@ import BlifBox from '../Box/BlifBox';
 import BlifSpacer from '../BlifSpacer/BlifSpacer';
 import BlifTextInput from '../Inputs/BlifTextInput';
 import BlifButton from '../Buttons/BlifButton';
+import {Icon} from '@telus-uds/ds-allium';
+import {Search} from '@telus-uds/palette-allium/build/web/icons';
+import BlifSearch from '../BlifSearch/BlifSearch';
 //import IvsSingleRadioInput from '../../IvsInput/IvsSingleRadioInput'; //TODO
 
 // clearSelection is a toogle flag to clear the current selection
@@ -42,7 +44,7 @@ const BlifDataTable = ({
     const [selected, setSelected] = useState(new Set());
 
     // search button in table
-    const [searchButton, setSearchButton] = useState('');
+    const [searchButtonVal, setSearchButtonVal] = useState('');
 
     useEffect(() => {
         if (data.data) {
@@ -116,10 +118,11 @@ const BlifDataTable = ({
     };
 
     // search button onClick handler in Table
-    const clickHandler = (e) => {
-        e.preventDefault();
-        alert(searchButton);
-    };
+    // const clickHandler = (e) => {
+    //     e.preventDefault();
+    //     alert(searchButtonVal);
+    // };
+
     return (
         <React.Fragment>
             <div
@@ -142,21 +145,38 @@ const BlifDataTable = ({
                             )}
                         </BlifBox>
                         {search && (
-                            <BlifBox inline>
-                                <BlifTypography>Search:</BlifTypography>
-                                <BlifTextInput
-                                    value={searchButton}
-                                    onChange={(val) => setSearchButton(val)}
-                                />
-                                <BlifButton
-                                    // tokens={btnCss}
-                                    onClick={clickHandler}>
-                                    search
-                                </BlifButton>
-                            </BlifBox>
+                            <>
+                                <BlifBox inline>
+                                    {/* <div className="search-label">Search:</div> */}
+                                    {/* <BlifTextInput
+                                        value={searchButton}
+                                        onChange={(val) => setSearchButton(val)}
+                                    /> */}
+                                    <BlifSpacer space={1} />
+                                    {/* <BlifButton
+                                        tokens={{
+                                            backgroundColor: 'white',
+                                            minWidth: 1,
+                                        }}
+                                        variant={{priority: 'low'}}
+                                        onClick={clickHandler}>
+                                        <Icon icon={Search} />
+                                    </BlifButton> */}
+                                    <BlifSearch
+                                        value={searchButtonVal}
+                                        onChange={(val) =>
+                                            setSearchButtonVal(val)
+                                        }
+                                        onSubmit={() => {
+                                            alert(searchButtonVal);
+                                        }}
+                                    />
+                                </BlifBox>
+                            </>
                         )}
                     </BlifBox>
                 )) || <BlifSpacer space={6} />}
+                <BlifSpacer space={2} />
                 <table className="blifDataTableTable" style={tableTableStyle}>
                     <thead>
                         {heading && (

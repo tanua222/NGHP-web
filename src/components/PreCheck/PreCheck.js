@@ -24,6 +24,7 @@ import {
 } from '../Common/BlifFlexGrid/BlifFlexGrid';
 //import BlifDataTable from '../Common/BlifDataTable/BlifDataTable';
 import BlifDataTableClient from '../Common/BlifDataTable/BlifDataTableClient';
+import BlifFilterableDataTable from '../Common/BlifDataTable/BlifFilterableDataTable';
 
 // OPTIONS
 export const getProvinceFilterOptions = [
@@ -344,7 +345,7 @@ const PreCheck = () => {
             </BlifFlexGrid>
             <BlifSpacer space={8} />
             <BlifBox space={4}>
-                <BlifDataTableClient
+                <BlifFilterableDataTable
                     schema={schema}
                     retrieveData={getPrecheckTableData}
                     selection={selectionType}

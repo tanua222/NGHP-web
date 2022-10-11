@@ -74,3 +74,10 @@ a.sort-by.asc:before {
     border-bottom-color: white;
     margin-top: 0.3em;
 }
+
+.search-label{
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
