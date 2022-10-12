@@ -114,7 +114,7 @@ const Search = () => {
 
     const columns = [
         {
-            name: ABBREV_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
+            name: TRANSLATION_KEYS.EXCHANGE.ABBREV_SEARCH_FILTER,
             width: 'auto',
             dataProperty: 'abbrev',
             sortable: true,
@@ -122,7 +122,7 @@ const Search = () => {
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'clientId'),
         },
         {
-            name: NAME_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
+            name: TRANSLATION_KEYS.EXCHANGE.NAME_SEARCH_FILTER,
             Width: 'auto',
             dataProperty: 'exchangeFullName',
             sortable: true,
@@ -130,7 +130,7 @@ const Search = () => {
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'groupId'),
         },
         {
-            name: ABBREVIATION2_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
+            name: TRANSLATION_KEYS.EXCHANGE.ABBREVIATION2_SEARCH_FILTER,
             Width: 'auto',
             dataProperty: 'secondAbbrev',
             sortable: true,
@@ -138,14 +138,14 @@ const Search = () => {
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'groupName'),
         },
         {
-            name: BOOK_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
+            name: TRANSLATION_KEYS.EXCHANGE.BOOK_SEARCH_FILTER,
             Width: 'auto',
             dataProperty: 'bookNum',
             //selector: (row) => row.clientType,
             sortable: true,
         },
         {
-            name: SECTION_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
+            name: TRANSLATION_KEYS.EXCHANGE.SECTION_SEARCH_FILTER,
             Width: 'auto',
             dataProperty: 'sectionNum',
             sortable: true,
@@ -153,7 +153,7 @@ const Search = () => {
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'clientName'),
         },
         {
-            name: NPA_SEARCH_FILTER_LANGUAGE_KEYS.LABEL,
+            name: TRANSLATION_KEYS.EXCHANGE.NPA_SEARCH_FILTER,
             Width: 'auto',
             dataProperty: 'npa',
             sortable: true,

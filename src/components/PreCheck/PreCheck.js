@@ -26,54 +26,54 @@ import BlifFilterableDataTable from '../Common/BlifDataTable/BlifFilterableDataT
 export const getProvinceFilterOptions = [
     {
         [ARRAY_MAP_KEYS.value]: 'ALL',
-        [ARRAY_MAP_KEYS.text]: PROVINCE_FILTER_LANGUAGE_KEYS.ALL,
+        [ARRAY_MAP_KEYS.text]: TRANSLATION_KEYS.PRECHECK.ALL,
     },
     {
         [ARRAY_MAP_KEYS.value]: 'QC',
-        [ARRAY_MAP_KEYS.text]: PROVINCE_FILTER_LANGUAGE_KEYS.QC,
+        [ARRAY_MAP_KEYS.text]: TRANSLATION_KEYS.PRECHECK.QC,
     },
 ];
 
 export const getBrgIndicatorFilterOptions = [
     {
         [ARRAY_MAP_KEYS.value]: 'ALL',
-        [ARRAY_MAP_KEYS.text]: BRG_FILTER_LANGUAGE_KEYS.ALL,
+        [ARRAY_MAP_KEYS.text]: TRANSLATION_KEYS.PRECHECK.ALL,
     },
     {
         [ARRAY_MAP_KEYS.value]: 'Business',
-        [ARRAY_MAP_KEYS.text]: BRG_FILTER_LANGUAGE_KEYS.BUSINESS,
+        [ARRAY_MAP_KEYS.text]: TRANSLATION_KEYS.PRECHECK.BUSINESS,
     },
     {
         [ARRAY_MAP_KEYS.value]: 'Residential',
-        [ARRAY_MAP_KEYS.text]: BRG_FILTER_LANGUAGE_KEYS.RESIDENTIAL,
+        [ARRAY_MAP_KEYS.text]: TRANSLATION_KEYS.PRECHECK.RESIDENTIAL,
     },
 ];
 
 export const getRejectsFilterOptions = [
     {
         [ARRAY_MAP_KEYS.value]: 'ALL',
-        [ARRAY_MAP_KEYS.text]: REJECTS_FILTER_LANGUAGE_KEYS.ALL,
+        [ARRAY_MAP_KEYS.text]: TRANSLATION_KEYS.PRECHECK.ALL,
     },
     {
         [ARRAY_MAP_KEYS.value]: 'Only Rejects',
-        [ARRAY_MAP_KEYS.text]: REJECTS_FILTER_LANGUAGE_KEYS.ONLY_REJECTS,
+        [ARRAY_MAP_KEYS.text]: TRANSLATION_KEYS.PRECHECK.ONLY_REJECTS,
     },
     {
         [ARRAY_MAP_KEYS.value]: 'No Rejects',
-        [ARRAY_MAP_KEYS.text]: REJECTS_FILTER_LANGUAGE_KEYS.NO_REJECTS,
+        [ARRAY_MAP_KEYS.text]: TRANSLATION_KEYS.PRECHECK.NO_REJECTS,
     },
 ];
 
-export const getClecFilterOptions = [
-    {
-        [ARRAY_MAP_KEYS.value]: 'ALL',
-        [ARRAY_MAP_KEYS.text]: CLEC_FILTER_LANGUAGE_KEYS.ALL,
-    },
-    {
-        [ARRAY_MAP_KEYS.value]: 'FIDO',
-        [ARRAY_MAP_KEYS.text]: CLEC_FILTER_LANGUAGE_KEYS.FIDO,
-    },
-];
+// export const getClecFilterOptions = [
+//     {
+//         [ARRAY_MAP_KEYS.value]: 'ALL',
+//         [ARRAY_MAP_KEYS.text]: CLEC_FILTER_LANGUAGE_KEYS.ALL,
+//     },
+//     {
+//         [ARRAY_MAP_KEYS.value]: 'FIDO',
+//         [ARRAY_MAP_KEYS.text]: CLEC_FILTER_LANGUAGE_KEYS.FIDO,
+//     },
+// ];
 
 //Form Schema
 const PRECHECK_FORM_SCHEMA_KEYS = {
@@ -81,7 +81,7 @@ const PRECHECK_FORM_SCHEMA_KEYS = {
     PROVINCE_INPUT: 'PROVINCE_INPUT',
     BRG_INDICATOR_INPUT: 'BRG_INDICATOR_INPUT',
     REJECTS_INPUT: 'REJECTS_INPUT',
-    CLEC_INPUT: 'CLEC_INPUT',
+    //CLEC_INPUT: 'CLEC_INPUT',
 };
 
 const PRECHECK_FORM_SCHEMA = {
@@ -92,8 +92,8 @@ const PRECHECK_FORM_SCHEMA = {
         getBrgIndicatorFilterOptions[ZERO_INDEX].value,
     [PRECHECK_FORM_SCHEMA_KEYS.REJECTS_INPUT]:
         getRejectsFilterOptions[ZERO_INDEX].value,
-    [PRECHECK_FORM_SCHEMA_KEYS.CLEC_INPUT]:
-        getClecFilterOptions[ZERO_INDEX].value,
+    // [PRECHECK_FORM_SCHEMA_KEYS.CLEC_INPUT]:
+    //     getClecFilterOptions[ZERO_INDEX].value,
 };
 
 // PreCheck Component
@@ -118,8 +118,7 @@ const PreCheck = () => {
         if (
             checkIfArrayExists(getProvinceFilterOptions) &&
             checkIfArrayExists(getBrgIndicatorFilterOptions) &&
-            checkIfArrayExists(getRejectsFilterOptions) &&
-            checkIfArrayExists(getClecFilterOptions)
+            checkIfArrayExists(getRejectsFilterOptions)
         ) {
             const localFilterSchema = [
                 {
@@ -135,13 +134,13 @@ const PreCheck = () => {
                     [ARRAY_MAP_KEYS.ON_CHANGE]:
                         PRECHECK_FORM_SCHEMA_KEYS.PROVINCE_INPUT,
                 },
-                {
-                    [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
-                    [ARRAY_MAP_KEYS.label]: TRANSLATION_KEYS.PRECHECK.CLEC,
-                    [ARRAY_MAP_KEYS.OPTIONS]: getClecFilterOptions,
-                    [ARRAY_MAP_KEYS.ON_CHANGE]:
-                        PRECHECK_FORM_SCHEMA_KEYS.CLEC_INPUT,
-                },
+                // {
+                //     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
+                //     [ARRAY_MAP_KEYS.label]: TRANSLATION_KEYS.PRECHECK.CLEC,
+                //     [ARRAY_MAP_KEYS.OPTIONS]: getClecFilterOptions,
+                //     [ARRAY_MAP_KEYS.ON_CHANGE]:
+                //         PRECHECK_FORM_SCHEMA_KEYS.CLEC_INPUT,
+                // },
                 {
                     [ARRAY_MAP_KEYS.FILTER_TYPE]: FILTER_TYPES.SELECT_INPUT,
                     [ARRAY_MAP_KEYS.label]:
@@ -180,7 +179,7 @@ const PreCheck = () => {
 
     const columns = [
         {
-            name: PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_EXCHANGE,
+            name: TRANSLATION_KEYS.PRECHECK.EXCH,
             width: 'auto',
             dataProperty: 'exchange',
             sortable: true,
@@ -188,7 +187,7 @@ const PreCheck = () => {
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'clientId'),
         },
         {
-            name: PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_SL,
+            name: TRANSLATION_KEYS.PRECHECK.SL,
             Width: 'auto',
             dataProperty: 'singleLine',
             sortable: true,
@@ -196,7 +195,7 @@ const PreCheck = () => {
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'groupId'),
         },
         {
-            name: PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_SPID,
+            name: TRANSLATION_KEYS.PRECHECK.SPID,
             Width: 'auto',
             dataProperty: 'spID',
             sortable: true,
@@ -205,14 +204,14 @@ const PreCheck = () => {
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'groupName'),
         },
         {
-            name: PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_ACTION,
+            name: TRANSLATION_KEYS.PRECHECK.ACTION,
             Width: 'auto',
             dataProperty: 'actionIndicator',
             //selector: (row) => row.clientType,
             sortable: true,
         },
         {
-            name: PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_NL,
+            name: TRANSLATION_KEYS.PRECHECK.NUMBER,
             Width: 'auto',
             dataProperty: 'nl',
             sortable: true,
@@ -221,7 +220,7 @@ const PreCheck = () => {
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'clientName'),
         },
         {
-            name: PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_NUMBER,
+            name: TRANSLATION_KEYS.PRECHECK.BRG,
             Width: 'auto',
             dataProperty: 'phoneNumber',
             sortable: true,
@@ -230,7 +229,7 @@ const PreCheck = () => {
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'reportId'),
         },
         {
-            name: PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_BRG,
+            name: TRANSLATION_KEYS.PRECHECK.NAME,
             Width: 'auto',
             dataProperty: 'brgIndicator',
             sortable: true,
@@ -240,21 +239,21 @@ const PreCheck = () => {
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'clientKey'),
         },
         {
-            name: PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_NAME,
+            name: TRANSLATION_KEYS.PRECHECK.LOCATION,
             Width: 'auto',
             dataProperty: 'customerFullName',
             minWidth: '120px',
             //selector: (row) => row.clientName,
         },
         {
-            name: PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_LOCATION,
+            name: TRANSLATION_KEYS.PRECHECK.ADDRESS,
             Width: 'auto',
             sortable: true,
             dataProperty: 'location',
             //selector: (row) => row.clientName,
         },
         {
-            name: PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_ADDRESS,
+            name: TRANSLATION_KEYS.PRECHECK.ADDRESS,
             Width: 'auto',
 
             sortable: true,
@@ -262,7 +261,7 @@ const PreCheck = () => {
             // selector: (row) => row.clientName,
         },
         {
-            name: PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_CFC,
+            name: TRANSLATION_KEYS.PRECHECK.CFC,
             Width: 'auto',
             sortable: true,
             dataProperty: 'cfc',
@@ -272,7 +271,7 @@ const PreCheck = () => {
             //new Date(a.deactivateDate) - new Date(b.deactivateDate),
         },
         {
-            name: PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_REJECT_CODE,
+            name: TRANSLATION_KEYS.PRECHECK.REJECT_CODE,
             Width: 'auto',
             sortable: true,
             dataProperty: 'rejectCode',
@@ -282,7 +281,7 @@ const PreCheck = () => {
             //     new Date(a.deactivateDate) - new Date(b.deactivateDate),
         },
         {
-            name: PRE_CHECK_TABLE_HEADER_KEYS.PRE_CHECK_POLICY_CODE,
+            name: TRANSLATION_KEYS.PRECHECK.POLICY_CODE,
             Width: 'auto',
             sortable: true,
             dataProperty: 'policyCode',

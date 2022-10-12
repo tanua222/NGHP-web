@@ -85,7 +85,7 @@ const Header = () => {
                                             variant={{size: 'h3'}}
                                             heading="h3"
                                             tokens={{fontWeight: '400'}}>
-                                            TELUS - CLEC
+                                            BLIF - TELUS
                                         </Typography>
                                     </FlexGrid.Col>
 
