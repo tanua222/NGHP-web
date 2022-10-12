@@ -1,4 +1,5 @@
 import {TRANSLATION_KEYS} from './TranslationKeys';
+import {MISCELLANEOUS_KEYS} from '../utils/languageKeys/miscellaneousKeys';
 
 export const FrenchTranslations = {
     //Common:
@@ -18,6 +19,8 @@ export const FrenchTranslations = {
     [TRANSLATION_KEYS.COMMON.PROVINCE]: 'Province-fr',
     [TRANSLATION_KEYS.COMMON.START_DATE]: 'Start Date-fr',
     [TRANSLATION_KEYS.COMMON.END_DATE]: 'End Date-fr',
+    [MISCELLANEOUS_KEYS.DATA_TABLE_ITEMS_PER_PAGE]: 'Items per page-fr',
+
     //Header:
     [TRANSLATION_KEYS.HEADER.HOME]: 'Maison',
     [TRANSLATION_KEYS.HEADER.PRE_CHECK]: 'Pré-vérification',

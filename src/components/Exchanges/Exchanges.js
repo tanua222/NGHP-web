@@ -13,6 +13,7 @@ import {
     BlifFlexGridRow,
     BlifFlexGridCol,
 } from '../Common/BlifFlexGrid/BlifFlexGrid';
+import BlifButton from '../Common/Buttons/BlifButton';
 
 //Form Schema
 const EXCHANGES_FORM_SCHEMA_KEYS = {
@@ -178,6 +179,17 @@ const Search = () => {
         setTableData(dummyTableData);
     };
 
+    // update and delete button click handler
+    const updateBtnClickHandler = (e) => {
+        e.preventDefault();
+        alert('row updated!!');
+    };
+
+    const delBtnClickHandler = (e) => {
+        e.preventDefault();
+        alert('row deleted!!');
+    };
+
     return (
         <React.Fragment>
             <BlifFlexGrid gutter={false}>
@@ -213,7 +225,24 @@ const Search = () => {
                     </BlifFlexGridCol>
                 </BlifFlexGridRow>
             </BlifFlexGrid>
-            <BlifSpacer space={8} />
+            <BlifSpacer space={4} />
+            <BlifBox space={4}>
+                <BlifBox
+                    space={6}
+                    variant={{background: 'light'}}
+                    between={3}
+                    inline>
+                    <BlifButton onClick={updateBtnClickHandler}>
+                        Update
+                    </BlifButton>
+                    <BlifButton
+                        onClick={delBtnClickHandler}
+                        tokens={{backgroundColor: '#333333'}}>
+                        Delete
+                    </BlifButton>
+                </BlifBox>
+            </BlifBox>
+            <BlifSpacer space={2} />
             <BlifBox space={4}>
                 <BlifDataTableClient
                     schema={schema}
@@ -225,6 +254,22 @@ const Search = () => {
                     //   resetCurrentPage={resetCurrentPage}
                     translate={t}
                 />
+            </BlifBox>
+            <BlifBox space={4}>
+                <BlifBox
+                    space={6}
+                    variant={{background: 'light'}}
+                    between={3}
+                    inline>
+                    <BlifButton onClick={updateBtnClickHandler}>
+                        Update
+                    </BlifButton>
+                    <BlifButton
+                        onClick={delBtnClickHandler}
+                        tokens={{backgroundColor: '#333333'}}>
+                        Delete
+                    </BlifButton>
+                </BlifBox>
             </BlifBox>
         </React.Fragment>
     );

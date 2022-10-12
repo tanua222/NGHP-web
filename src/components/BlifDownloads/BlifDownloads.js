@@ -77,6 +77,64 @@ const Search = () => {
         e.preventDefault();
         alert('search query');
     };
+
+    const columns = [
+        {
+            name: TRANSLATION_KEYS.EXCHANGE.ABBREV_SEARCH_FILTER,
+            width: 'auto',
+            dataProperty: 'abbrev',
+            sortable: true,
+            //selector: (row) => row.clientId,
+            // sortFunction: (a, b) => sortCollatorByKey(a, b, 'clientId'),
+        },
+        {
+            name: TRANSLATION_KEYS.EXCHANGE.NAME_SEARCH_FILTER,
+            Width: 'auto',
+            dataProperty: 'exchangeFullName',
+            sortable: true,
+            //selector: (row) => row.groupId || row.clientId,
+            // sortFunction: (a, b) => sortCollatorByKey(a, b, 'groupId'),
+        },
+        {
+            name: TRANSLATION_KEYS.EXCHANGE.ABBREVIATION2_SEARCH_FILTER,
+            Width: 'auto',
+            dataProperty: 'secondAbbrev',
+            sortable: true,
+            //selector: (row) => row.groupName,
+            // sortFunction: (a, b) => sortCollatorByKey(a, b, 'groupName'),
+        },
+        {
+            name: TRANSLATION_KEYS.EXCHANGE.BOOK_SEARCH_FILTER,
+            Width: 'auto',
+            dataProperty: 'bookNum',
+            //selector: (row) => row.clientType,
+            sortable: true,
+        },
+        {
+            name: TRANSLATION_KEYS.EXCHANGE.SECTION_SEARCH_FILTER,
+            Width: 'auto',
+            dataProperty: 'sectionNum',
+            sortable: true,
+            //selector: (row) => row.clientName,
+            // sortFunction: (a, b) => sortCollatorByKey(a, b, 'clientName'),
+        },
+        {
+            name: TRANSLATION_KEYS.EXCHANGE.NPA_SEARCH_FILTER,
+            Width: 'auto',
+            dataProperty: 'npa',
+            sortable: true,
+            // selector: (row) => row.clientName,
+
+            // sortFunction: (a, b) => sortCollatorByKey(a, b, 'reportId'),
+        },
+    ];
+
+    let schema = {
+        idProperty: 'abbrev',
+        idPropertySortOrder: 'asc',
+        headers: columns,
+    };
+
     return (
         <BlifFlexGrid gutter={false}>
             <BlifFlexGridRow>

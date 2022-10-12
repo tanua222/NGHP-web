@@ -1,4 +1,5 @@
-[
+{
+    "result":[
     {
         "blifFileId": 138986,
         "clecFileName": "CA12864",
@@ -169,4 +170,7 @@
         "preCheckStatus": null,
         "totalFilteredRows": 21766
     }
-]
+],
+"numberOfPages":4
+}
+
