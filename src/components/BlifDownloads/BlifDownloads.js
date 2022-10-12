@@ -11,6 +11,8 @@ import {
 } from '../Common/BlifFlexGrid/BlifFlexGrid';
 import {useTranslation} from 'react-i18next';
 import {TRANSLATION_KEYS} from '../../language/TranslationKeys';
+import dummyTableData from './dummyTableData.json';
+import BlifFilterableDataTable from '../Common/BlifDataTable/BlifFilterableDataTable';
 
 //Form Schema
 const DOWNLOADS_FORM_SCHEMA_KEYS = {
@@ -80,90 +82,92 @@ const Search = () => {
 
     const columns = [
         {
-            name: TRANSLATION_KEYS.EXCHANGE.ABBREV_SEARCH_FILTER,
+            name: TRANSLATION_KEYS.BLIF_DOWNLOADS.FILE_NAME,
             width: 'auto',
-            dataProperty: 'abbrev',
+            dataProperty: 'clecFileName',
             sortable: true,
             //selector: (row) => row.clientId,
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'clientId'),
         },
         {
-            name: TRANSLATION_KEYS.EXCHANGE.NAME_SEARCH_FILTER,
+            name: TRANSLATION_KEYS.BLIF_DOWNLOADS.DOWNLOAD_TIME,
             Width: 'auto',
-            dataProperty: 'exchangeFullName',
+            dataProperty: 'downloadTime',
             sortable: true,
             //selector: (row) => row.groupId || row.clientId,
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'groupId'),
         },
         {
-            name: TRANSLATION_KEYS.EXCHANGE.ABBREVIATION2_SEARCH_FILTER,
+            name: TRANSLATION_KEYS.BLIF_DOWNLOADS.STATUS,
             Width: 'auto',
-            dataProperty: 'secondAbbrev',
+            dataProperty: 'status',
             sortable: true,
             //selector: (row) => row.groupName,
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'groupName'),
         },
-        {
-            name: TRANSLATION_KEYS.EXCHANGE.BOOK_SEARCH_FILTER,
-            Width: 'auto',
-            dataProperty: 'bookNum',
-            //selector: (row) => row.clientType,
-            sortable: true,
-        },
-        {
-            name: TRANSLATION_KEYS.EXCHANGE.SECTION_SEARCH_FILTER,
-            Width: 'auto',
-            dataProperty: 'sectionNum',
-            sortable: true,
-            //selector: (row) => row.clientName,
-            // sortFunction: (a, b) => sortCollatorByKey(a, b, 'clientName'),
-        },
-        {
-            name: TRANSLATION_KEYS.EXCHANGE.NPA_SEARCH_FILTER,
-            Width: 'auto',
-            dataProperty: 'npa',
-            sortable: true,
-            // selector: (row) => row.clientName,
-
-            // sortFunction: (a, b) => sortCollatorByKey(a, b, 'reportId'),
-        },
     ];
 
     let schema = {
-        idProperty: 'abbrev',
+        idProperty: 'clecFileName',
         idPropertySortOrder: 'asc',
         headers: columns,
     };
 
+    // get telus downloads table data
+    const getTelusDownloadsTableData = (params, setTableData) => {
+        if (!downloadsFilterQuery) {
+            setTableData({numberOfPages: 0});
+            return;
+        }
+        setTableData(dummyTableData);
+    };
+
     return (
-        <BlifFlexGrid gutter={false}>
-            <BlifFlexGridRow>
-                <BlifFlexGridCol>
-                    <BlifTypography variant={{size: 'h2'}}>
-                        {t(TRANSLATION_KEYS.BLIF_DOWNLOADS.HEADING)}
-                    </BlifTypography>
-                </BlifFlexGridCol>
-            </BlifFlexGridRow>
-            <BlifSpacer space={2} />
-            <BlifFlexGridRow verticalAlign="middle" horizontalAlign="center">
-                <BlifFlexGridCol>
-                    <BlifBox
-                        variant={{background: 'light'}}
-                        bottom={{md: 1}}
-                        left={{md: 1}}
-                        right={{md: 7}}
-                        top={{md: 1}}
-                        flex={1}>
-                        <FiltersView
-                            heading={TRANSLATION_KEYS.COMMON.SEARCH}
-                            clickHandler={searchClickHandler}
-                            schema={filterSchema}
-                            handleInputChange={handleDownloadsInputChange}
-                        />
-                    </BlifBox>
-                </BlifFlexGridCol>
-            </BlifFlexGridRow>
-        </BlifFlexGrid>
+        <React.Fragment>
+            <BlifFlexGrid gutter={false}>
+                <BlifFlexGridRow>
+                    <BlifFlexGridCol>
+                        <BlifTypography variant={{size: 'h2'}}>
+                            {t(TRANSLATION_KEYS.BLIF_DOWNLOADS.HEADING)}
+                        </BlifTypography>
+                    </BlifFlexGridCol>
+                </BlifFlexGridRow>
+                <BlifSpacer space={2} />
+                <BlifFlexGridRow
+                    verticalAlign="middle"
+                    horizontalAlign="center">
+                    <BlifFlexGridCol>
+                        <BlifBox
+                            variant={{background: 'light'}}
+                            bottom={{md: 1}}
+                            left={{md: 1}}
+                            right={{md: 7}}
+                            top={{md: 1}}
+                            flex={1}>
+                            <FiltersView
+                                heading={TRANSLATION_KEYS.COMMON.SEARCH}
+                                clickHandler={searchClickHandler}
+                                schema={filterSchema}
+                                handleInputChange={handleDownloadsInputChange}
+                            />
+                        </BlifBox>
+                    </BlifFlexGridCol>
+                </BlifFlexGridRow>
+            </BlifFlexGrid>
+            <BlifSpacer space={8} />
+
+            <BlifBox space={4}>
+                <BlifTypography variant={{size: 'h2'}}>
+                    {t(TRANSLATION_KEYS.BLIF_DOWNLOADS.ALL_DOWNLOADED_FILES)}
+                </BlifTypography>
+                <BlifFilterableDataTable
+                    schema={schema}
+                    retrieveData={getTelusDownloadsTableData}
+                    //   resetCurrentPage={resetCurrentPage}
+                    translate={t}
+                />
+            </BlifBox>
+        </React.Fragment>
     );
 };
 
