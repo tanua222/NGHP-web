@@ -37,6 +37,7 @@ const BlifDataTable = ({
     search,
 }) => {
     const [displayData, setDisplayData] = useState();
+    const [dataCopy, setDataCopy] = useState();
     const [selectAll, setSelectAll] = useState(false);
     const [selected, setSelected] = useState(new Set());
 
@@ -45,17 +46,36 @@ const BlifDataTable = ({
 
     useEffect(() => {
         if (data.data) {
-            calculateAndSetDisplayData(
-                data.data,
-                data.schema.headers,
-                setDisplayData,
-            );
+            setDataCopy(JSON.parse(JSON.stringify(data.data)));
         } else {
-            setDisplayData(undefined);
+            setDataCopy(undefined);
         }
         setSelected(new Set());
         setSelectAll(false);
     }, [data, translate]);
+    useEffect(() => {
+        if (dataCopy) {
+            calculateAndSetDisplayData(
+                dataCopy,
+                data.schema.headers,
+                setDisplayData,
+                setDataCopyRow,
+            );
+        } else {
+            setDisplayData(undefined);
+        }
+    }, [dataCopy, translate]);
+    const setDataCopyRow = (i, valueObj) =>
+        setDataCopy((d) => {
+            console.log('d', d);
+            let newCopy = [];
+            for (let idx = 0; idx < d.length; idx++) {
+                if (idx === i) newCopy.push({...d[idx], ...valueObj});
+                else newCopy.push({...d[idx]});
+            }
+            console.log('newCopy', newCopy);
+            return newCopy;
+        });
 
     const translateFn =
         translate ||
@@ -72,8 +92,8 @@ const BlifDataTable = ({
     useEffect(() => {
         onSelectionChange && onSelectionChange([...selected]);
         dataOnSelectionChange &&
-            data.data &&
-            dataOnSelectionChange(data.data.filter((d, i) => selected.has(i)));
+            dataCopy &&
+            dataOnSelectionChange(dataCopy.filter((d, i) => selected.has(i)));
     }, [selected]);
 
     useEffect(() => {
@@ -95,19 +115,19 @@ const BlifDataTable = ({
             setSelectAll(false);
         } else if (!maxSelectionCnt || maxSelectionCnt > newSet.size) {
             newSet.add(idx);
-            if (data.data.length === newSet.size) setSelectAll(true);
+            if (dataCopy.length === newSet.size) setSelectAll(true);
         }
         setSelected(newSet);
     };
 
     const toggleSelectAll = () => {
-        if (!data.data || data.data.length === 0) return;
+        if (!dataCopy || dataCopy.length === 0) return;
         setSelectAll((v) => {
             setSelected(
                 new Set(
                     v
                         ? undefined
-                        : data.data.slice(0, maxSelectionCnt).map((v, i) => i),
+                        : dataCopy.slice(0, maxSelectionCnt).map((v, i) => i),
                 ),
             );
             return !v;
@@ -330,10 +350,10 @@ const BlifDataTable = ({
                         </tr>
                     </thead>
                     <tbody>
-                        {data.data &&
+                        {dataCopy &&
                             displayData &&
-                            data.data.length === displayData.length &&
-                            data.data.map((row, idx) => {
+                            dataCopy.length === displayData.length &&
+                            dataCopy.map((row, idx) => {
                                 return (
                                     <tr
                                         className={
@@ -458,7 +478,7 @@ const BlifDataTable = ({
                                     </tr>
                                 );
                             })}
-                        {isNullOrUndefined(data.data) && (
+                        {isNullOrUndefined(dataCopy) && (
                             <tr>
                                 <td
                                     colSpan={numberOfColumns}
@@ -610,7 +630,12 @@ const toggleSortOrder = (sortOrder) => {
     return sortOrder && sortOrder === 'asc' ? 'desc' : 'asc';
 };
 
-const calculateAndSetDisplayData = async (data, headers, setter) => {
+const calculateAndSetDisplayData = async (
+    data,
+    headers,
+    setter,
+    setDataCopyRow,
+) => {
     let newDisplayData = [];
     for (let index = 0; index < data.length; index++) {
         const row = data[index];
@@ -630,6 +655,10 @@ const calculateAndSetDisplayData = async (data, headers, setter) => {
                 } else {
                     displayVal = p.displayValFn(displayVal, row);
                 }
+            } else if (p.editValFn) {
+                displayVal = p.editValFn(displayVal, (newValue) =>
+                    setDataCopyRow(index, {[p.dataProperty]: newValue}),
+                );
             }
             newRow.push(displayVal);
         }

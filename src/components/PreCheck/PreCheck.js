@@ -21,6 +21,7 @@ import {
     BlifFlexGridCol,
 } from '../Common/BlifFlexGrid/BlifFlexGrid';
 import BlifFilterableDataTable from '../Common/BlifDataTable/BlifFilterableDataTable';
+import BlifTextInput from '../Common/Inputs/BlifTextInput';
 
 // OPTIONS
 export const getProvinceFilterOptions = [
@@ -224,6 +225,18 @@ const PreCheck = () => {
             Width: 'auto',
             dataProperty: 'phoneNumber',
             sortable: true,
+            displayValFn: (val, row) =>
+                row.rejectCode !== '0000' ? (
+                    <BlifBox variant={{background: 'critical'}} space={2}>
+                        <BlifTypography variant={{inverse: true}}>
+                            {val}
+                        </BlifTypography>
+                    </BlifBox>
+                ) : (
+                    <BlifBox space={2}>
+                        <BlifTypography>{val}</BlifTypography>
+                    </BlifBox>
+                ),
             // selector: (row) => row.clientName,
 
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'reportId'),
@@ -243,6 +256,14 @@ const PreCheck = () => {
             Width: 'auto',
             dataProperty: 'customerFullName',
             minWidth: '120px',
+            editValFn: (val, setValue) => {
+                return (
+                    <BlifTextInput
+                        value={val}
+                        onChange={setValue}
+                    />
+                );
+            },
             //selector: (row) => row.clientName,
         },
         {
