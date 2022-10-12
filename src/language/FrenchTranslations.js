@@ -1,5 +1,6 @@
 import {TRANSLATION_KEYS} from './TranslationKeys';
 import {MISCELLANEOUS_KEYS} from '../utils/languageKeys/miscellaneousKeys';
+import {BUTTON_TITLE} from '../utils/commonKeys';
 
 export const FrenchTranslations = {
     //Common:
@@ -20,6 +21,8 @@ export const FrenchTranslations = {
     [TRANSLATION_KEYS.COMMON.START_DATE]: 'Start Date-fr',
     [TRANSLATION_KEYS.COMMON.END_DATE]: 'End Date-fr',
     [MISCELLANEOUS_KEYS.DATA_TABLE_ITEMS_PER_PAGE]: 'Items per page-fr',
+    [BUTTON_TITLE.UPDATE_BUTTON_TITLE]: 'Update-fr',
+    [BUTTON_TITLE.DELETE_BUTTON_TITLE]: 'Delete-fr',
 
     //Header:
     [TRANSLATION_KEYS.HEADER.HOME]: 'Maison',
@@ -29,6 +32,20 @@ export const FrenchTranslations = {
     [TRANSLATION_KEYS.HEADER.EXCHANGES]: 'Echanges',
     //Home:
     [TRANSLATION_KEYS.HOME.HOMEPAGE]: 'Homepage-fr',
+    [TRANSLATION_KEYS.HOME.FILE]: 'File-fr',
+    [TRANSLATION_KEYS.HOME.DATE_DOWNLOADED]: 'Date Downloaded-fr',
+    [TRANSLATION_KEYS.HOME.NEW]: 'New-fr',
+    [TRANSLATION_KEYS.HOME.AWAITING_PRE_CHECK]: 'Awaiting Pre-Check-fr',
+    [TRANSLATION_KEYS.HOME.AWAITING_BLIF_TO_DIRECTION]:
+        'Awaiting Blif to Direction-fr',
+    [TRANSLATION_KEYS.HOME.LOCKED_BY_AUTOMATION]: 'Locked by Automation-fr',
+    [TRANSLATION_KEYS.HOME.FAILED_BLIF_TO_DIRECTION]:
+        'Failed Blif to Direction-fr',
+    [TRANSLATION_KEYS.HOME.ACCEPTED]: 'Accepted-fr',
+    [TRANSLATION_KEYS.HOME.REJECTED]: 'Rejected-fr',
+    [TRANSLATION_KEYS.HOME.TOTAL_PROCESSED]: 'Total Processed-fr',
+    [TRANSLATION_KEYS.HOME.TOTAL_RECEIVED_FROM_SERVICE_PROVIDER]:
+        'Total Received from Service Provider-fr',
     //PreCheck:
     [TRANSLATION_KEYS.PRECHECK.HEADING]: 'Pre-Check-fr',
     [TRANSLATION_KEYS.PRECHECK.PRECHECK_PROVINCE]: 'Province-fr',

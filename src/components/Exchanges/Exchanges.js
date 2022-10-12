@@ -1,6 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import BlifTypography from '../Common/BlifTypography/BlifTypography';
-import {ARRAY_MAP_KEYS, FILTER_TYPES} from '../../utils/commonKeys';
+import {
+    ARRAY_MAP_KEYS,
+    BUTTON_TITLE,
+    FILTER_TYPES,
+} from '../../utils/commonKeys';
 import {FiltersView} from '../Common/Filters/Filters';
 import BlifBox from '../Common/Box/BlifBox';
 import BlifSpacer from '../Common/BlifSpacer/BlifSpacer';
@@ -233,12 +237,12 @@ const Search = () => {
                     between={3}
                     inline>
                     <BlifButton onClick={updateBtnClickHandler}>
-                        Update
+                        {t(BUTTON_TITLE.UPDATE_BUTTON_TITLE)}
                     </BlifButton>
                     <BlifButton
                         onClick={delBtnClickHandler}
                         tokens={{backgroundColor: '#333333'}}>
-                        Delete
+                        {t(BUTTON_TITLE.DELETE_BUTTON_TITLE)}
                     </BlifButton>
                 </BlifBox>
             </BlifBox>
@@ -262,12 +266,12 @@ const Search = () => {
                     between={3}
                     inline>
                     <BlifButton onClick={updateBtnClickHandler}>
-                        Update
+                        {t(BUTTON_TITLE.UPDATE_BUTTON_TITLE)}
                     </BlifButton>
                     <BlifButton
                         onClick={delBtnClickHandler}
                         tokens={{backgroundColor: '#333333'}}>
-                        Delete
+                        {t(BUTTON_TITLE.DELETE_BUTTON_TITLE)}
                     </BlifButton>
                 </BlifBox>
             </BlifBox>

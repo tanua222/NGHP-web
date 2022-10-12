@@ -257,12 +257,7 @@ const PreCheck = () => {
             dataProperty: 'customerFullName',
             minWidth: '120px',
             editValFn: (val, setValue) => {
-                return (
-                    <BlifTextInput
-                        value={val}
-                        onChange={setValue}
-                    />
-                );
+                return <BlifTextInput value={val} onChange={setValue} />;
             },
             //selector: (row) => row.clientName,
         },
