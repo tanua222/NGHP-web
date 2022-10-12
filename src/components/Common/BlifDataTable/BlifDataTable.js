@@ -61,6 +61,11 @@ const BlifDataTable = ({
                 setDisplayData,
                 setDataCopyRow,
             );
+            dataOnSelectionChange &&
+                selected.size > 0 &&
+                dataOnSelectionChange(
+                    dataCopy.filter((d, i) => selected.has(i)),
+                );
         } else {
             setDisplayData(undefined);
         }
