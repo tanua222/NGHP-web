@@ -1,5 +1,5 @@
 {
-    "result":[
+    "result": [
     {
         "listingId": 5150861,
         "exchange": "BOSWL",
@@ -20,7 +20,7 @@
         "lineNum": "2230042",
         "comment": "Processor: Invalid BLIF data. Sort Word = olgi_test_operating_name.",
         "directionResult": "9999",
-        "internalStatus": "0001",
+        "internalStatus": "0000",
         "totalFilteredRows": 184,
         "createdUserId": "DOWNLOAD"
     },
@@ -236,10 +236,10 @@
         "lineNum": "2230022",
         "comment": "Processor: Check for proper Abbreviations",
         "directionResult": "0009",
-        "internalStatus": "0015",
+        "internalStatus": "0000",
         "totalFilteredRows": 184,
         "createdUserId": "DOWNLOAD"
     }
 ], 
-"numberOfPages": 4
+"numberOfPages":4
 }

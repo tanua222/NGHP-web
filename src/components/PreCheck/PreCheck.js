@@ -5,7 +5,7 @@ import {FiltersView} from '../Common/Filters/Filters';
 import {useTranslation} from 'react-i18next';
 import {checkIfArrayExists} from '../../utils/helperFunctions';
 import BlifSpacer from '../Common/BlifSpacer/BlifSpacer';
-import dummyTableData from '../Common/BlifTables/dummyTableData.json';
+import dummyTableData from './dummyTableData.json';
 import {TRANSLATION_KEYS} from '../../language/TranslationKeys';
 import BlifBox from '../Common/Box/BlifBox';
 import {
