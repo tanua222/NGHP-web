@@ -205,37 +205,28 @@ const PreCheck = () => {
             sortable: true,
         },
         {
-            name: TRANSLATION_KEYS.PRECHECK.NL,
-            Width: 'auto',
-            dataProperty: 'nl',
-            sortable: true,
-            wrap: true,
-            //selector: (row) => row.clientName,
-            // sortFunction: (a, b) => sortCollatorByKey(a, b, 'clientName'),
-        },
-        {
-            name: TRANSLATION_KEYS.PRECHECK.BRG,
+            name: TRANSLATION_KEYS.PRECHECK.NUMBER,
             Width: 'auto',
             dataProperty: 'phoneNumber',
             sortable: true,
-            displayValFn: (val, row) =>
-                row.rejectCode !== '0000' ? (
-                    <BlifBox variant={{background: 'critical'}} space={2}>
-                        <BlifTypography variant={{inverse: true}}>
-                            {val}
-                        </BlifTypography>
-                    </BlifBox>
-                ) : (
-                    <BlifBox space={2}>
-                        <BlifTypography>{val}</BlifTypography>
-                    </BlifBox>
-                ),
+            // displayValFn: (val, row) =>
+            //     row.rejectCode !== '0000' ? (
+            //         <BlifBox variant={{background: 'critical'}} space={2}>
+            //             <BlifTypography variant={{inverse: true}}>
+            //                 {val}
+            //             </BlifTypography>
+            //         </BlifBox>
+            //     ) : (
+            //         <BlifBox space={2}>
+            //             <BlifTypography>{val}</BlifTypography>
+            //         </BlifBox>
+            //     ),
             // selector: (row) => row.clientName,
 
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'reportId'),
         },
         {
-            name: TRANSLATION_KEYS.PRECHECK.NAME,
+            name: TRANSLATION_KEYS.PRECHECK.BRG,
             Width: 'auto',
             dataProperty: 'brgIndicator',
             sortable: true,
@@ -249,9 +240,9 @@ const PreCheck = () => {
             Width: 'auto',
             dataProperty: 'customerFullName',
             minWidth: '120px',
-            editValFn: (val, setValue) => {
-                return <BlifTextInput value={val} onChange={setValue} />;
-            },
+            // editValFn: (val, setValue) => {
+            //     return <BlifTextInput value={val} onChange={setValue} />;
+            // },
             //selector: (row) => row.clientName,
         },
         {
@@ -260,14 +251,6 @@ const PreCheck = () => {
             sortable: true,
             dataProperty: 'location',
             //selector: (row) => row.clientName,
-        },
-        {
-            name: TRANSLATION_KEYS.PRECHECK.ADDRESS,
-            Width: 'auto',
-
-            sortable: true,
-            dataProperty: 'address',
-            // selector: (row) => row.clientName,
         },
         {
             name: TRANSLATION_KEYS.PRECHECK.CFC,
@@ -347,7 +330,7 @@ const PreCheck = () => {
                     </BlifFlexGridCol>
                 </BlifFlexGridRow>
             </BlifFlexGrid>
-            <BlifSpacer space={8} />
+            <BlifSpacer space={6} />
             <BlifBox space={4}>
                 <BlifFilterableDataTable
                     schema={schema}
