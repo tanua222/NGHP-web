@@ -61,7 +61,7 @@ const QueryButton = ({heading, clickHandler, t}) => {
     return (
         <BlifFlexGridCol>
             <BlifBox horizontal={{xs: 1, sm: 2, md: 3}}>
-                <BlifButton onClick={clickHandler}>{t(heading)}</BlifButton>
+                <BlifButton onPress={clickHandler}>{t(heading)}</BlifButton>
             </BlifBox>
         </BlifFlexGridCol>
     );

@@ -236,11 +236,11 @@ const Search = () => {
                     variant={{background: 'light'}}
                     between={3}
                     inline>
-                    <BlifButton onClick={updateBtnClickHandler}>
+                    <BlifButton onPress={updateBtnClickHandler}>
                         {t(BUTTON_TITLE.UPDATE_BUTTON_TITLE)}
                     </BlifButton>
                     <BlifButton
-                        onClick={delBtnClickHandler}
+                        onPress={delBtnClickHandler}
                         tokens={{backgroundColor: '#333333'}}>
                         {t(BUTTON_TITLE.DELETE_BUTTON_TITLE)}
                     </BlifButton>
@@ -265,11 +265,11 @@ const Search = () => {
                     variant={{background: 'light'}}
                     between={3}
                     inline>
-                    <BlifButton onClick={updateBtnClickHandler}>
+                    <BlifButton onPress={updateBtnClickHandler}>
                         {t(BUTTON_TITLE.UPDATE_BUTTON_TITLE)}
                     </BlifButton>
                     <BlifButton
-                        onClick={delBtnClickHandler}
+                        onPress={delBtnClickHandler}
                         tokens={{backgroundColor: '#333333'}}>
                         {t(BUTTON_TITLE.DELETE_BUTTON_TITLE)}
                     </BlifButton>

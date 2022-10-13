@@ -9,13 +9,6 @@ import dummyTableData from './dummyTableData.json';
 import {TRANSLATION_KEYS} from '../../language/TranslationKeys';
 import BlifBox from '../Common/Box/BlifBox';
 import {
-    PROVINCE_FILTER_LANGUAGE_KEYS,
-    REJECTS_FILTER_LANGUAGE_KEYS,
-    BRG_FILTER_LANGUAGE_KEYS,
-    CLEC_FILTER_LANGUAGE_KEYS,
-    PRE_CHECK_TABLE_HEADER_KEYS,
-} from '../../utils/languageKeys/components/preCheckKeys';
-import {
     BlifFlexGrid,
     BlifFlexGridRow,
     BlifFlexGridCol,

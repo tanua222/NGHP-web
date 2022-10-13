@@ -90,4 +90,7 @@ const BlifFlexGridRow = ({
     );
 };
 
+BlifFlexGrid.Row = BlifFlexGridRow;
+BlifFlexGrid.Col = BlifFlexGridCol;
+
 export {BlifFlexGrid, BlifFlexGridCol, BlifFlexGridRow};

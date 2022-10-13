@@ -1,15 +1,17 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './Home.scss';
-import useAxiosGet from '../../hooks/useAxiosGet';
-import BlifSelectInput from '../Common/Inputs/BlifSelectInput';
 import {useTranslation} from 'react-i18next';
 import {TRANSLATION_KEYS} from '../../language/TranslationKeys';
 import BlifBox from '../Common/Box/BlifBox';
 import BlifDataTableClient from '../Common/BlifDataTable/BlifDataTableClient';
 import BlifTypography from '../Common/BlifTypography/BlifTypography';
+import BlifButton from '../Common/Buttons/BlifButton';
+import BlifFileDetails from '../PreCheck/FileDetails';
+import {useSidebar} from '../../hooks/useSidebar';
 
 const Home = () => {
     const {t} = useTranslation();
+    const {openSidebar, closeSidebar} = useSidebar();
     const columns = [
         {
             name: TRANSLATION_KEYS.HOME.FILE,
@@ -127,6 +129,19 @@ const Home = () => {
                     retrieveData={getHomePageTableData}
                     translate={t}
                 />
+                <BlifBox inline between={2}>
+                    <BlifButton
+                        onPress={() =>
+                            openSidebar(<BlifFileDetails />, {
+                                title: 'Title Example',
+                            })
+                        }>
+                        Open Sidebar
+                    </BlifButton>
+                    <BlifButton onPress={() => closeSidebar()}>
+                        Close Sidebar
+                    </BlifButton>
+                </BlifBox>
             </BlifBox>
         </React.Fragment>
     );
