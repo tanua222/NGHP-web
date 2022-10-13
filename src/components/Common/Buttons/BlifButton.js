@@ -1,7 +1,6 @@
-import React from 'react';
 import {Button} from '@telus-uds/ds-allium';
 
-const BlifButton = ({children, onClick, variant = {}, tokens}) => {
+const BlifButton = ({children, onPress, variant = {}, tokens}) => {
     return (
         <Button
             variant={{
@@ -11,7 +10,7 @@ const BlifButton = ({children, onClick, variant = {}, tokens}) => {
                 inverse: variant.inverse,
             }}
             tokens={tokens}
-            onPress={onClick}>
+            onPress={onPress}>
             {children}
         </Button>
     );

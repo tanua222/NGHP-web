@@ -9,36 +9,39 @@ import useRoutes from './hooks/useRoutes';
 import './App.scss';
 import Header from './components/Header/Header';
 import Box from './components/Common/Box/BlifBox';
+import {SidebarProvider} from './context/SidebarContext';
 
 const App = () => {
     const getRoutes = useRoutes();
 
     return (
         <AlliumProvider>
-            <CSSReset />
-            <BlifGlobalStyle />
-            <Header />
-            <Suspense fallback={<></>}>
-                <Routes>
-                    {getRoutes?.map((item, index) => {
-                        const GET_COMPONENT = item[ROUTER_KEYS.COMPONENT] ?? (
-                            <></>
-                        );
+            <SidebarProvider>
+                <CSSReset />
+                <BlifGlobalStyle />
+                <Header />
+                <Suspense fallback={<></>}>
+                    <Routes>
+                        {getRoutes?.map((item, index) => {
+                            const GET_COMPONENT = item[
+                                ROUTER_KEYS.COMPONENT
+                            ] ?? <></>;
 
-                        return (
-                            <Route
-                                path={item[ROUTER_KEYS.PATH_NAME]}
-                                element={
-                                    <Box vertical={5}>
-                                        <GET_COMPONENT />
-                                    </Box>
-                                }
-                                key={index}
-                            />
-                        );
-                    })}
-                </Routes>
-            </Suspense>
+                            return (
+                                <Route
+                                    path={item[ROUTER_KEYS.PATH_NAME]}
+                                    element={
+                                        <Box vertical={5}>
+                                            <GET_COMPONENT />
+                                        </Box>
+                                    }
+                                    key={index}
+                                />
+                            );
+                        })}
+                    </Routes>
+                </Suspense>
+            </SidebarProvider>
         </AlliumProvider>
     );
 };
