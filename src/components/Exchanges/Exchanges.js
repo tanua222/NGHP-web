@@ -246,7 +246,6 @@ const Search = () => {
                     </BlifButton>
                 </BlifBox>
             </BlifBox>
-            <BlifSpacer space={2} />
             <BlifBox space={4}>
                 <BlifDataTableClient
                     schema={schema}
@@ -254,7 +253,6 @@ const Search = () => {
                     search={search}
                     selection={selectionType}
                     dataOnSelectionChange={setSelectedRow}
-                    //selectionConditionFn={true}
                     //   resetCurrentPage={resetCurrentPage}
                     translate={t}
                 />

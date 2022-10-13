@@ -70,6 +70,7 @@ const BlifDataTable = ({
             setDisplayData(undefined);
         }
     }, [dataCopy, translate]);
+    console.log('displaydata', displayData);
     const setDataCopyRow = (i, valueObj) =>
         setDataCopy((d) => {
             console.log('d', d);
@@ -661,8 +662,13 @@ const calculateAndSetDisplayData = async (
                     displayVal = p.displayValFn(displayVal, row);
                 }
             } else if (p.editValFn) {
-                displayVal = p.editValFn(displayVal, (newValue) =>
-                    setDataCopyRow(index, {[p.dataProperty]: newValue}),
+                displayVal = p.editValFn(
+                    displayVal,
+                    (newValue) =>
+                        setDataCopyRow(index, {
+                            [p.dataProperty]: newValue.target.value,
+                        }),
+                    row,
                 );
             }
             newRow.push(displayVal);

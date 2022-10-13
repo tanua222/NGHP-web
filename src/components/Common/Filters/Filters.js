@@ -99,7 +99,6 @@ const FiltersView = ({
             if (modifiedArray) setModifySchemaFormat(modifiedArray);
         }
     }, [schema]);
-
     return (
         <>
             <BlifSpacer space={3} />

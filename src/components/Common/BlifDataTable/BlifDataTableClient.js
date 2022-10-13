@@ -30,7 +30,6 @@ const BlifDataTableClient = ({
     });
 
     const [res, setRes] = React.useState();
-    console.log('search = ', search);
     const [tableData, setTableData] = React.useState({
         schema: schema,
         // data: retrieveData,

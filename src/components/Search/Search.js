@@ -1,6 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import BlifTypography from '../Common/BlifTypography/BlifTypography';
-import {ARRAY_MAP_KEYS, FILTER_TYPES, ZERO_INDEX} from '../../utils/commonKeys';
+import {
+    ARRAY_MAP_KEYS,
+    FILTER_TYPES,
+    ZERO_INDEX,
+    BUTTON_TITLE,
+} from '../../utils/commonKeys';
 import {FiltersView} from '../Common/Filters/Filters';
 import BlifBox from '../Common/Box/BlifBox';
 import {checkIfArrayExists} from '../../utils/helperFunctions';
@@ -24,6 +29,8 @@ import {TRANSLATION_KEYS} from '../../language/TranslationKeys';
 import BlifTextInput from '../Common/Inputs/BlifTextInput';
 import dummyTableData from './dummyTableData.json';
 import BlifFilterableDataTable from '../Common/BlifDataTable/BlifFilterableDataTable';
+import BlifSelectInput from '../Common/Inputs/BlifSelectInput';
+import BlifButton from '../Common/Buttons/BlifButton';
 
 // Options
 export const getActionIndicatorFilterOptions = [
@@ -58,7 +65,7 @@ export const getInternalStatusFilterOptions = [
     },
     {
         [ARRAY_MAP_KEYS.text]:
-            TRANSLATION_KEYS.SEARCH.INTERNAL_STATUS_VALUE_0000,
+            TRANSLATION_KEYS.SEARCH.INTERNAL_STATUS_VALUE_0001,
         [ARRAY_MAP_KEYS.value]: '0001',
     },
     {
@@ -90,6 +97,58 @@ export const getInternalStatusFilterOptions = [
         [ARRAY_MAP_KEYS.text]:
             TRANSLATION_KEYS.SEARCH.INTERNAL_STATUS_VALUE_0050,
         [ARRAY_MAP_KEYS.value]: '0050',
+    },
+];
+
+// table header IS(internalStatus) select options
+const getTableHeaderISOptions = [
+    {
+        [ARRAY_MAP_KEYS.text]: TRANSLATION_KEYS.PRECHECK.ALL,
+        [ARRAY_MAP_KEYS.value]: 'ALL',
+    },
+    {
+        [ARRAY_MAP_KEYS.text]: '0000',
+        [ARRAY_MAP_KEYS.value]: '0000',
+    },
+    {
+        [ARRAY_MAP_KEYS.text]: '0001',
+        [ARRAY_MAP_KEYS.value]: '0001',
+    },
+    {
+        [ARRAY_MAP_KEYS.text]: '0002',
+        [ARRAY_MAP_KEYS.value]: '0002',
+    },
+    {
+        [ARRAY_MAP_KEYS.text]: '0010',
+        [ARRAY_MAP_KEYS.value]: '0010',
+    },
+    {
+        [ARRAY_MAP_KEYS.text]: '0015',
+        [ARRAY_MAP_KEYS.value]: '0015',
+    },
+    {
+        [ARRAY_MAP_KEYS.text]: '0031',
+        [ARRAY_MAP_KEYS.value]: '0031',
+    },
+    {
+        [ARRAY_MAP_KEYS.text]: '0032',
+        [ARRAY_MAP_KEYS.value]: '0032',
+    },
+    {
+        [ARRAY_MAP_KEYS.text]: '0050',
+        [ARRAY_MAP_KEYS.value]: '0050',
+    },
+];
+
+// table reject code options
+const getTableRejectCodeOptions = [
+    {
+        [ARRAY_MAP_KEYS.text]: '0000',
+        [ARRAY_MAP_KEYS.value]: '0000',
+    },
+    {
+        [ARRAY_MAP_KEYS.text]: '0001',
+        [ARRAY_MAP_KEYS.value]: '0001',
     },
 ];
 
@@ -280,7 +339,7 @@ const Search = () => {
             sortable: true,
         },
         {
-            name: TRANSLATION_KEYS.PRECHECK.NUMBER,
+            name: TRANSLATION_KEYS.PRECHECK.NL,
             Width: 'auto',
             dataProperty: 'nl',
             sortable: true,
@@ -289,10 +348,11 @@ const Search = () => {
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'clientName'),
         },
         {
-            name: TRANSLATION_KEYS.PRECHECK.BRG,
+            name: TRANSLATION_KEYS.PRECHECK.NUMBER,
             Width: 'auto',
             dataProperty: 'phoneNumber',
             sortable: true,
+            wrap: true,
             displayValFn: (val, row) =>
                 row.rejectCode !== '0000' ? (
                     <BlifBox variant={{background: 'critical'}} space={2}>
@@ -305,6 +365,15 @@ const Search = () => {
                         <BlifTypography>{val}</BlifTypography>
                     </BlifBox>
                 ),
+            //selector: (row) => row.clientName,
+
+            // sortFunction: (a, b) => sortCollatorByKey(a, b, 'clientKey'),
+        },
+        {
+            name: TRANSLATION_KEYS.PRECHECK.BRG,
+            Width: 'auto',
+            dataProperty: 'brgIndicator',
+            sortable: true,
             // selector: (row) => row.clientName,
 
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'reportId'),
@@ -312,25 +381,16 @@ const Search = () => {
         {
             name: TRANSLATION_KEYS.PRECHECK.NAME,
             Width: 'auto',
-            dataProperty: 'brgIndicator',
+            dataProperty: 'customerFullName',
+            //minWidth: '120px',
+            // editValFn: (val, setValue) => {
+            //     return <BlifTextInput value={val} onChange={setValue} />;
+            // },
             sortable: true,
-            wrap: true,
             //selector: (row) => row.clientName,
-
-            // sortFunction: (a, b) => sortCollatorByKey(a, b, 'clientKey'),
         },
         {
             name: TRANSLATION_KEYS.PRECHECK.LOCATION,
-            Width: 'auto',
-            dataProperty: 'customerFullName',
-            minWidth: '120px',
-            editValFn: (val, setValue) => {
-                return <BlifTextInput value={val} onChange={setValue} />;
-            },
-            //selector: (row) => row.clientName,
-        },
-        {
-            name: TRANSLATION_KEYS.PRECHECK.ADDRESS,
             Width: 'auto',
             sortable: true,
             dataProperty: 'location',
@@ -359,8 +419,14 @@ const Search = () => {
             Width: 'auto',
             sortable: true,
             dataProperty: 'rejectCode',
-            // selector: (row) => row.clientName,
-
+            editValFn: (val, setVal) => (
+                <BlifSelectInput
+                    value={val}
+                    options={getTableRejectCodeOptions}
+                    onChange={setVal}
+                />
+            ),
+            // selector: (row) => row.clientName
             // sortFunction: (a, b) =>
             //     new Date(a.deactivateDate) - new Date(b.deactivateDate),
         },
@@ -369,6 +435,16 @@ const Search = () => {
             Width: 'auto',
             sortable: true,
             dataProperty: 'policyCode',
+            editValFn: (val, setVal) => {
+                return (
+                    <BlifSelectInput
+                        value={val}
+                        options={getTableHeaderISOptions}
+                        onChange={setVal}
+                        disabled={true}
+                    />
+                );
+            },
             //selector: (row) => row.clientName,
 
             // sortFunction: (a, b) =>
@@ -379,6 +455,15 @@ const Search = () => {
             Width: 'auto',
             sortable: true,
             dataProperty: 'internalStatus',
+            editValFn: (val, setVal) => {
+                return (
+                    <BlifSelectInput
+                        value={val}
+                        options={getTableHeaderISOptions}
+                        onChange={setVal}
+                    />
+                );
+            },
             //selector: (row) => row.clientName,
 
             // sortFunction: (a, b) =>
@@ -409,6 +494,12 @@ const Search = () => {
             return;
         }
         setTableData(dummyTableData);
+    };
+
+    // update button click handler
+    const updateBtnClickHandler = (e) => {
+        e.preventDefault();
+        alert('row updated!!');
     };
 
     return (
@@ -443,7 +534,18 @@ const Search = () => {
                     </BlifFlexGridCol>
                 </BlifFlexGridRow>
             </BlifFlexGrid>
-            <BlifSpacer space={8} />
+            <BlifSpacer space={4} />
+            <BlifBox space={4}>
+                <BlifBox
+                    space={6}
+                    variant={{background: 'light'}}
+                    between={3}
+                    inline>
+                    <BlifButton onClick={updateBtnClickHandler}>
+                        {t(BUTTON_TITLE.UPDATE_BUTTON_TITLE)}
+                    </BlifButton>
+                </BlifBox>
+            </BlifBox>
             <BlifBox space={4}>
                 <BlifFilterableDataTable
                     schema={schema}
@@ -453,6 +555,17 @@ const Search = () => {
                     //   resetCurrentPage={resetCurrentPage}
                     translate={t}
                 />
+            </BlifBox>
+            <BlifBox space={4}>
+                <BlifBox
+                    space={6}
+                    variant={{background: 'light'}}
+                    between={3}
+                    inline>
+                    <BlifButton onClick={updateBtnClickHandler}>
+                        {t(BUTTON_TITLE.UPDATE_BUTTON_TITLE)}
+                    </BlifButton>
+                </BlifBox>
             </BlifBox>
         </React.Fragment>
     );

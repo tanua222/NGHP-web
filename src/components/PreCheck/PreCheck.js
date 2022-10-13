@@ -212,7 +212,7 @@ const PreCheck = () => {
             sortable: true,
         },
         {
-            name: TRANSLATION_KEYS.PRECHECK.NUMBER,
+            name: TRANSLATION_KEYS.PRECHECK.NL,
             Width: 'auto',
             dataProperty: 'nl',
             sortable: true,
