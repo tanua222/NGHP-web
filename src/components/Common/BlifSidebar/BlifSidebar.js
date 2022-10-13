@@ -19,7 +19,16 @@ const BlifSidebar = ({title, onClose, children}) => {
                         }}
                     />
                 </BlifStackView>
-                <BlifBox top={2}>{children}</BlifBox>
+                <BlifBox
+                    top={2}
+                    scroll={{
+                        contentContainerStyle: {
+                            maxHeight: '85vh',
+                            overflowY: 'auto',
+                        },
+                    }}>
+                    {children}
+                </BlifBox>
             </BlifBox>
         </div>
     );
