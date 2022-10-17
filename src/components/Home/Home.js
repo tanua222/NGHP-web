@@ -9,7 +9,7 @@ import BlifButton from '../Common/Buttons/BlifButton';
 import BlifFileDetails from '../PreCheck/FileDetails';
 import {useSidebar} from '../../hooks/useSidebar';
 import useExchange from '../../hooks/Exchange/useExchange';
-
+import dummyTableData from './dummyTableData.json';
 const Home = () => {
     const {t} = useTranslation();
     const {openSidebar, closeSidebar} = useSidebar();
@@ -41,6 +41,7 @@ const Home = () => {
             Width: 'auto',
             dataProperty: 'new',
             sortable: true,
+            link: '../../Search',
             //selector: (row) => row.groupName,
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'groupName'),
         },
@@ -49,6 +50,7 @@ const Home = () => {
             Width: 'auto',
             dataProperty: 'awaitingPreCheck',
             sortable: true,
+            link: '../../Pre-Check',
             //selector: (row) => row.groupName,
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'groupName'),
         },
@@ -57,6 +59,7 @@ const Home = () => {
             Width: 'auto',
             dataProperty: 'awaitingBlifToDirection',
             sortable: true,
+            link: '../../Search',
             //selector: (row) => row.groupName,
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'groupName'),
         },
@@ -65,6 +68,7 @@ const Home = () => {
             Width: 'auto',
             dataProperty: 'lockedByAutomation',
             sortable: true,
+            link: '../../Search',
             //selector: (row) => row.groupName,
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'groupName'),
         },
@@ -73,6 +77,7 @@ const Home = () => {
             Width: 'auto',
             dataProperty: 'failedBlifToDirection',
             sortable: true,
+            link: '../../Search',
             //selector: (row) => row.groupName,
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'groupName'),
         },
@@ -81,6 +86,7 @@ const Home = () => {
             Width: 'auto',
             dataProperty: 'accepted',
             sortable: true,
+            link: '../../Search',
             //selector: (row) => row.groupName,
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'groupName'),
         },
@@ -89,6 +95,7 @@ const Home = () => {
             Width: 'auto',
             dataProperty: 'rejected',
             sortable: true,
+            link: '../../Search',
             //selector: (row) => row.groupName,
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'groupName'),
         },
@@ -97,6 +104,7 @@ const Home = () => {
             Width: 'auto',
             dataProperty: 'totalProcessed',
             sortable: true,
+            link: '../../Search',
             //selector: (row) => row.groupName,
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'groupName'),
         },
@@ -105,6 +113,7 @@ const Home = () => {
             Width: 'auto',
             dataProperty: 'serviceProvider',
             sortable: true,
+            link: '../../Search',
             //selector: (row) => row.groupName,
             // sortFunction: (a, b) => sortCollatorByKey(a, b, 'groupName'),
         },
@@ -122,7 +131,7 @@ const Home = () => {
         //     setTableData({numberOfPages: 0});
         //     return;
         // }
-        setTableData({numberOfPages: 0});
+        setTableData(dummyTableData);
     };
 
     return (

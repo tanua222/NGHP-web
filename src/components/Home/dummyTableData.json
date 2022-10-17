@@ -1,0 +1,44 @@
+{
+    "result":[
+    {
+        "homeFile":"fileNum1",
+        "downloadDate":"10-17-2022",
+        "new":"new1",
+        "awaitingPreCheck":"awaitingPreCheck1",
+        "awaitingBlifToDirection": "awaitingBlifToDirection1",
+        "lockedByAutomation":"lockedByAutomation1",
+        "failedBlifToDirection":"failedBlifToDirection1",
+        "accepted":"accepted1",
+        "rejected":"rejected1",
+        "totalProcessed":"totalProcessed1",
+        "serviceProvider":"serviceProvider1"
+    },
+    {
+        "homeFile":"fileNum2",
+        "downloadDate":"10-17-2022",
+        "new":"new2",
+        "awaitingPreCheck":"awaitingPreCheck2",
+        "awaitingBlifToDirection": "awaitingBlifToDirection2",
+        "lockedByAutomation":"lockedByAutomation2",
+        "failedBlifToDirection":"failedBlifToDirection2",
+        "accepted":"accepted2",
+        "rejected":"rejected2",
+        "totalProcessed":"totalProcessed2",
+        "serviceProvider":"serviceProvider2"
+    },
+    {
+        "homeFile":"fileNum3",
+        "downloadDate":"10-17-2022",
+        "new":"new3",
+        "awaitingPreCheck":"awaitingPreCheck3",
+        "awaitingBlifToDirection": "awaitingBlifToDirection3",
+        "lockedByAutomation":"lockedByAutomation3",
+        "failedBlifToDirection":"failedBlifToDirection3",
+        "accepted":"accepted3",
+        "rejected":"rejected3",
+        "totalProcessed":"totalProcessed3",
+        "serviceProvider":"serviceProvider3"
+    }
+], 
+"numberOfPages": 4
+}
