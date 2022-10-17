@@ -308,7 +308,7 @@ const Search = () => {
     const columns = [
         {
             name: TRANSLATION_KEYS.PRECHECK.EXCH,
-            width: 'auto',
+            //width: 'auto',
             dataProperty: 'exchange',
             sortable: true,
             //selector: (row) => row.clientId,
@@ -316,7 +316,7 @@ const Search = () => {
         },
         {
             name: TRANSLATION_KEYS.PRECHECK.SL,
-            Width: 'auto',
+            //Width: 'auto',
             dataProperty: 'singleLine',
             sortable: true,
             //selector: (row) => row.groupId || row.clientId,
@@ -324,7 +324,7 @@ const Search = () => {
         },
         {
             name: TRANSLATION_KEYS.PRECHECK.SPID,
-            Width: 'auto',
+            //Width: 'auto',
             dataProperty: 'spID',
             sortable: true,
             wrap: true,
@@ -333,14 +333,14 @@ const Search = () => {
         },
         {
             name: TRANSLATION_KEYS.PRECHECK.ACTION,
-            Width: 'auto',
+            //Width: 'auto',
             dataProperty: 'actionIndicator',
             //selector: (row) => row.clientType,
             sortable: true,
         },
         {
             name: TRANSLATION_KEYS.PRECHECK.NL,
-            Width: 'auto',
+            //Width: 'auto',
             dataProperty: 'nl',
             sortable: true,
             wrap: true,
@@ -349,7 +349,7 @@ const Search = () => {
         },
         {
             name: TRANSLATION_KEYS.PRECHECK.NUMBER,
-            Width: 'auto',
+            //Width: 'auto',
             dataProperty: 'phoneNumber',
             sortable: true,
             wrap: true,
@@ -371,7 +371,7 @@ const Search = () => {
         },
         {
             name: TRANSLATION_KEYS.PRECHECK.BRG,
-            Width: 'auto',
+            //Width: 'auto',
             dataProperty: 'brgIndicator',
             sortable: true,
             // selector: (row) => row.clientName,
@@ -380,7 +380,7 @@ const Search = () => {
         },
         {
             name: TRANSLATION_KEYS.PRECHECK.NAME,
-            Width: 'auto',
+            //Width: 'auto',
             dataProperty: 'customerFullName',
             //minWidth: '120px',
             // editValFn: (val, setValue) => {
@@ -391,14 +391,14 @@ const Search = () => {
         },
         {
             name: TRANSLATION_KEYS.PRECHECK.LOCATION,
-            Width: 'auto',
+            //Width: 'auto',
             sortable: true,
             dataProperty: 'location',
             //selector: (row) => row.clientName,
         },
         {
             name: TRANSLATION_KEYS.PRECHECK.ADDRESS,
-            Width: 'auto',
+            //Width: 'auto',
 
             sortable: true,
             dataProperty: 'address',
@@ -406,7 +406,7 @@ const Search = () => {
         },
         {
             name: TRANSLATION_KEYS.PRECHECK.CFC,
-            Width: 'auto',
+            //Width: 'auto',
             sortable: true,
             dataProperty: 'cfc',
             //selector: (row) => row.clientName,
@@ -416,7 +416,7 @@ const Search = () => {
         },
         {
             name: TRANSLATION_KEYS.PRECHECK.REJECT_CODE,
-            Width: 'auto',
+            width: '11%',
             sortable: true,
             dataProperty: 'rejectCode',
             editValFn: (val, setVal) => (
@@ -431,8 +431,24 @@ const Search = () => {
             //     new Date(a.deactivateDate) - new Date(b.deactivateDate),
         },
         {
+            name: TRANSLATION_KEYS.SEARCH.TABLE_COMMENT,
+            //width: '11%',
+            sortable: true,
+            dataProperty: 'rejectCode',
+            editValFn: (val, setVal) => (
+                <BlifTextInput
+                    value={val}
+                    onChange={setVal}
+                    tokens={{width: '100%'}}
+                />
+            ),
+            // selector: (row) => row.clientName
+            // sortFunction: (a, b) =>
+            //     new Date(a.deactivateDate) - new Date(b.deactivateDate),
+        },
+        {
             name: TRANSLATION_KEYS.PRECHECK.POLICY_CODE,
-            Width: 'auto',
+            //Width: 'auto',
             sortable: true,
             dataProperty: 'policyCode',
             editValFn: (val, setVal) => {
@@ -452,7 +468,7 @@ const Search = () => {
         },
         {
             name: TRANSLATION_KEYS.SEARCH.TABLE_IS,
-            Width: 'auto',
+            //Width: 'auto',
             sortable: true,
             dataProperty: 'internalStatus',
             editValFn: (val, setVal) => {
@@ -471,7 +487,7 @@ const Search = () => {
         },
         {
             name: TRANSLATION_KEYS.SEARCH.TABLE_CREATED_BY,
-            Width: 'auto',
+            //Width: 'auto',
             sortable: true,
             dataProperty: 'createdUserId',
             //selector: (row) => row.clientName,

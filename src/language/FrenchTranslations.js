@@ -97,6 +97,8 @@ export const FrenchTranslations = {
     [TRANSLATION_KEYS.SEARCH.INTERNAL_STATUS_VALUE_0031]: '0031 - rejected-fr',
     [TRANSLATION_KEYS.SEARCH.INTERNAL_STATUS_VALUE_0032]: '0032 - accepted-fr',
     [TRANSLATION_KEYS.SEARCH.INTERNAL_STATUS_VALUE_0050]: '0050 - completed-fr',
+    [TRANSLATION_KEYS.SEARCH.TABLE_COMMENT]: 'Comments-fr',
+
     //Blif Downloads:
     [TRANSLATION_KEYS.BLIF_DOWNLOADS.HEADING]: 'Telus Downloads-fr',
     [TRANSLATION_KEYS.BLIF_DOWNLOADS.START_DATE]: 'Start Date (Download)-fr',
