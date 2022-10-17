@@ -3,7 +3,7 @@ import validate from '../../../Validations/FieldValidation';
 import {useTranslation} from 'react-i18next';
 import {Select} from '@telus-uds/ds-allium';
 
-const BlifSelectInput = React.forwardRef((props, ref) => {
+const BlifSelectInput = (props) => {
     const {
         label,
         hint,
@@ -37,10 +37,6 @@ const BlifSelectInput = React.forwardRef((props, ref) => {
         stopValidate && stopValidate();
     };
 
-    const updateValue = (event) => {
-        setLocalVal(event.target.value);
-    };
-
     useEffect(() => {
         if (defaultValue) setLocalVal(defaultValue);
     }, []);
@@ -57,20 +53,20 @@ const BlifSelectInput = React.forwardRef((props, ref) => {
     return (
         <React.Fragment>
             <Select
-                label={t(label) || ' '}
+                label={t(label) || ''}
                 hint={hint}
                 hintPosition={hintPosition}
                 id={id}
                 value={value || ''}
-                ref={ref}
                 placeholder={placeholder}
                 initialValue={defaultValue}
                 name={name}
                 feedback={error && t(error)}
                 validation={error && 'error'}
                 onChange={(_, event) => {
-                    onChange && onChange(event);
-                    updateValue(event);
+                    let value = event.target.value;
+                    onChange && onChange(value);
+                    setLocalVal(value);
                 }}
                 onBlur={validateFn}
                 inactive={disabled}>
@@ -87,7 +83,7 @@ const BlifSelectInput = React.forwardRef((props, ref) => {
             </Select>
         </React.Fragment>
     );
-});
+};
 
 const IvsSelectGroup = ({group, t}) => (
     <Select.Group>
@@ -101,10 +97,6 @@ const IvsSelectGroup = ({group, t}) => (
         </optgroup>
     </Select.Group>
 );
-
-// const IvsSelectOption = ({option}) => (
-//     <Select.Item value={option.value}>{option.text}</Select.Item>
-// );
 
 BlifSelectInput.displayName = 'BlifSelectInput';
 export default BlifSelectInput;

@@ -419,7 +419,7 @@ const Search = () => {
             width: '8%',
             sortable: true,
             dataProperty: 'rejectCode',
-            editSelectValFn: (val, setVal) => {
+            editValFn: (val, setVal) => {
                 return (
                     <BlifBox>
                         <BlifSelectInput
@@ -439,7 +439,7 @@ const Search = () => {
             //width: '11%',
             sortable: true,
             dataProperty: 'comment',
-            editTextValFn: (val, setVal) => {
+            editValFn: (val, setVal) => {
                 return (
                     <BlifBox>
                         <BlifTextInput
@@ -459,7 +459,7 @@ const Search = () => {
             width: '8%',
             sortable: true,
             dataProperty: 'policyCode',
-            editSelectValFn: (val, setVal) => {
+            editValFn: (val, setVal) => {
                 return (
                     <BlifBox>
                         <BlifSelectInput
@@ -481,7 +481,7 @@ const Search = () => {
             width: '8%',
             sortable: true,
             dataProperty: 'internalStatus',
-            editSelectValFn: (val, setVal) => {
+            editValFn: (val, setVal) => {
                 return (
                     <BlifBox>
                         <BlifSelectInput

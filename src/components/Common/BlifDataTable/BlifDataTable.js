@@ -662,25 +662,9 @@ const calculateAndSetDisplayData = async (
                 } else {
                     displayVal = p.displayValFn(displayVal, row);
                 }
-            }
-            if (p.editTextValFn) {
-                displayVal = p.editTextValFn(
-                    displayVal,
-                    (newValue) =>
-                        setDataCopyRow(index, {
-                            [p.dataProperty]: newValue,
-                        }),
-                    row,
-                );
-            }
-            if (p.editSelectValFn) {
-                displayVal = p.editSelectValFn(
-                    displayVal,
-                    (newValue) =>
-                        setDataCopyRow(index, {
-                            [p.dataProperty]: newValue.target.value,
-                        }),
-                    row,
+            } else if (p.editValFn) {
+                displayVal = p.editValFn(displayVal, (newValue) =>
+                    setDataCopyRow(index, {[p.dataProperty]: newValue}),
                 );
             }
 

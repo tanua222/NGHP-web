@@ -140,12 +140,12 @@ const FiltersView = ({
                                             options={
                                                 rowItem[ARRAY_MAP_KEYS.OPTIONS]
                                             }
-                                            onChangeSelect={(e) => {
+                                            onChangeSelect={(v) => {
                                                 handleInputChange(
                                                     rowItem[
                                                         ARRAY_MAP_KEYS.ON_CHANGE
                                                     ],
-                                                    e.target.value,
+                                                    v,
                                                 );
                                             }}
                                         />
@@ -184,4 +184,4 @@ const FiltersView = ({
     );
 };
 
-export {TextInputFilter, SelectInputFilter, FiltersView};
+export {TextInputFilter, FiltersView};
