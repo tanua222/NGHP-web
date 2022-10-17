@@ -216,7 +216,7 @@ const BlifDataTable = ({
                                 </th>
                             )}
                             {!selectionConditionFn && selection === 'multi' && (
-                                <th style={{...thStyle, width: '8%'}}>
+                                <th style={{...thStyle, width: '3%'}}>
                                     <BlifCheckboxInput
                                         checked={selectAll}
                                         onChange={toggleSelectAll}
@@ -662,8 +662,19 @@ const calculateAndSetDisplayData = async (
                 } else {
                     displayVal = p.displayValFn(displayVal, row);
                 }
-            } else if (p.editValFn) {
-                displayVal = p.editValFn(
+            }
+            if (p.editTextValFn) {
+                displayVal = p.editTextValFn(
+                    displayVal,
+                    (newValue) =>
+                        setDataCopyRow(index, {
+                            [p.dataProperty]: newValue,
+                        }),
+                    row,
+                );
+            }
+            if (p.editSelectValFn) {
+                displayVal = p.editSelectValFn(
                     displayVal,
                     (newValue) =>
                         setDataCopyRow(index, {
@@ -672,6 +683,7 @@ const calculateAndSetDisplayData = async (
                     row,
                 );
             }
+
             newRow.push(displayVal);
         }
         newDisplayData.push(newRow);

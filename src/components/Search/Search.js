@@ -416,16 +416,20 @@ const Search = () => {
         },
         {
             name: TRANSLATION_KEYS.PRECHECK.REJECT_CODE,
-            width: '11%',
+            width: '8%',
             sortable: true,
             dataProperty: 'rejectCode',
-            editValFn: (val, setVal) => (
-                <BlifSelectInput
-                    value={val}
-                    options={getTableRejectCodeOptions}
-                    onChange={setVal}
-                />
-            ),
+            editSelectValFn: (val, setVal) => {
+                return (
+                    <BlifBox>
+                        <BlifSelectInput
+                            value={val}
+                            options={getTableRejectCodeOptions}
+                            onChange={setVal}
+                        />
+                    </BlifBox>
+                );
+            },
             // selector: (row) => row.clientName
             // sortFunction: (a, b) =>
             //     new Date(a.deactivateDate) - new Date(b.deactivateDate),
@@ -434,31 +438,37 @@ const Search = () => {
             name: TRANSLATION_KEYS.SEARCH.TABLE_COMMENT,
             //width: '11%',
             sortable: true,
-            dataProperty: 'rejectCode',
-            editValFn: (val, setVal) => (
-                <BlifTextInput
-                    value={val}
-                    onChange={setVal}
-                    tokens={{width: '100%'}}
-                />
-            ),
+            dataProperty: 'comment',
+            editTextValFn: (val, setVal) => {
+                return (
+                    <BlifBox>
+                        <BlifTextInput
+                            value={val}
+                            onChange={setVal}
+                            tokens={{width: '100%'}}
+                        />
+                    </BlifBox>
+                );
+            },
             // selector: (row) => row.clientName
             // sortFunction: (a, b) =>
             //     new Date(a.deactivateDate) - new Date(b.deactivateDate),
         },
         {
             name: TRANSLATION_KEYS.PRECHECK.POLICY_CODE,
-            //Width: 'auto',
+            width: '8%',
             sortable: true,
             dataProperty: 'policyCode',
-            editValFn: (val, setVal) => {
+            editSelectValFn: (val, setVal) => {
                 return (
-                    <BlifSelectInput
-                        value={val}
-                        options={getTableHeaderISOptions}
-                        onChange={setVal}
-                        disabled={true}
-                    />
+                    <BlifBox>
+                        <BlifSelectInput
+                            value={val}
+                            options={getTableHeaderISOptions}
+                            onChange={setVal}
+                            disabled={true}
+                        />
+                    </BlifBox>
                 );
             },
             //selector: (row) => row.clientName,
@@ -468,16 +478,18 @@ const Search = () => {
         },
         {
             name: TRANSLATION_KEYS.SEARCH.TABLE_IS,
-            //Width: 'auto',
+            width: '8%',
             sortable: true,
             dataProperty: 'internalStatus',
-            editValFn: (val, setVal) => {
+            editSelectValFn: (val, setVal) => {
                 return (
-                    <BlifSelectInput
-                        value={val}
-                        options={getTableHeaderISOptions}
-                        onChange={setVal}
-                    />
+                    <BlifBox>
+                        <BlifSelectInput
+                            value={val}
+                            options={getTableHeaderISOptions}
+                            onChange={setVal}
+                        />
+                    </BlifBox>
                 );
             },
             //selector: (row) => row.clientName,
