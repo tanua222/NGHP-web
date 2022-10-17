@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Home.scss';
 import {useTranslation} from 'react-i18next';
 import {TRANSLATION_KEYS} from '../../language/TranslationKeys';
@@ -8,10 +8,17 @@ import BlifTypography from '../Common/BlifTypography/BlifTypography';
 import BlifButton from '../Common/Buttons/BlifButton';
 import BlifFileDetails from '../PreCheck/FileDetails';
 import {useSidebar} from '../../hooks/useSidebar';
+import useExchange from '../../hooks/Exchange/useExchange';
 
 const Home = () => {
     const {t} = useTranslation();
     const {openSidebar, closeSidebar} = useSidebar();
+    const {someRequestFunction} = useExchange();
+
+    useEffect(() => {
+        someRequestFunction().then(console.log).catch(console.err);
+    }, []);
+
     const columns = [
         {
             name: TRANSLATION_KEYS.HOME.FILE,
